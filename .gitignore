@@ -1,0 +1,41 @@
+# Quarto build output
+/_site/
+/.quarto/
+*_files/
+*_cache/
+
+# R
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+
+# Python / conda
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# OS cruft
+.DS_Store
+Thumbs.db
+
+# Large / generated data — keep real datasets OUT of git.
+# Store big data externally and download it in the tutorial steps instead.
+data/**/*.fastq
+data/**/*.fastq.gz
+data/**/*.fq
+data/**/*.fq.gz
+data/**/*.bam
+data/**/*.sam
+data/**/*.cram
+data/**/*.vcf
+data/**/*.vcf.gz
+data/**/*.h5
+data/**/*.h5ad
+data/**/*.rds
+# (Whitelist small toy files explicitly with a "!" rule if needed.)
+
+# Editor
+.vscode/
+
+**/*.quarto_ipynb

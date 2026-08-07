@@ -1,0 +1,15 @@
+/* Light custom styling for the tutorials site. Keep minimal. */
+
+/* Give code blocks a touch more breathing room */
+pre.sourceCode {
+  border-radius: 6px;
+  font-size: 0.9em;
+}
+
+/* Make the "check / verify / troubleshooting" callouts visually distinct
+   is handled by Quarto's built-in callout classes; nothing needed here. */
+
+/* Comfortable reading width for prose */
+.page-columns .content {
+  line-height: 1.6;
+}

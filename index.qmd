@@ -1,0 +1,82 @@
+---
+title: "Bioinformatics for Molecular Biology"
+subtitle: "Beginner-friendly, step-by-step tutorials for analysing molecular data"
+---
+
+Welcome! This is a growing collection of **hands-on, beginner-friendly tutorials**
+that introduce interested scientists and students to bioinformatics analysis of
+molecular data.
+
+The goal is simple: take someone with a biology background and little or no
+command-line experience, and walk them — one small, verifiable step at a time —
+toward running real analysis pipelines.
+
+[Start with Module 01 — Environment Setup →](modules/01-setup-environment/index.qmd){.btn .btn-primary .btn-lg role="button"}
+
+## Who this is for
+
+- Wet-lab biologists and students moving into computational analysis
+- **Windows and macOS** users who need a proper environment to run bioinformatics
+  tools (we cover both — WSL/Ubuntu on Windows, and native Terminal on Mac)
+- Anyone who wants clear, reproducible, copy-pasteable demos rather than dense theory
+
+No prior programming experience is assumed. We build up from zero.
+
+## Available modules
+
+The modules are designed to be followed in order — each one builds on the setup
+from the module before it.
+
+| # | Module |
+|---|--------|
+| 01 | [Environment Setup — Windows (WSL/Ubuntu) & macOS + Conda](modules/01-setup-environment/index.qmd) |
+
+*More modules are added here as they're completed. If you'd like to be notified
+when new ones land, you can "Watch" the repository on GitHub.*
+
+## A little encouragement first
+
+Learning bioinformatics can feel like being handed a foreign-language cookbook in a
+kitchen you've never seen. That feeling is completely normal — everyone starts
+there, and nobody is born knowing what a "conda environment" is.
+
+Here's the honest deal these tutorials make with you:
+
+- **We'll guide you into the process** — clearly, one small step at a time, with no
+  assumed jargon.
+- **You bring the effort.** These pages are a doorway, not the whole house. Real
+  comfort comes from *your* practice, curiosity, and willingness to read the
+  official docs when you want to go deeper.
+- **Getting stuck is part of it.** An error message is not a verdict on your
+  ability; it's just the next puzzle. (Seasoned bioinformaticians spend a
+  surprising amount of their day googling error messages too — you're in good
+  company.)
+
+Be patient with yourself, keep practising, and you *will* get comfortable. Let's go.
+
+## How to use these tutorials
+
+- **Follow along by typing**, not just reading. Muscle memory matters.
+- Every command block can be copied with the button in its top-right corner.
+- Each module opens with a **gentle introduction** — what the topic is, why it
+  matters, and what to expect — before any commands.
+- Look for the callout boxes:
+  - ✅ **Check** — how to confirm a step actually worked
+  - ⚠️ **Verify** — something that changes over time; confirm against current docs
+  - 🧰 **Troubleshooting** — common errors and fixes
+
+::: {.callout-important}
+## A note on accuracy
+
+Bioinformatics tooling changes fast. Tool versions, command flags, package APIs,
+and even installation methods are updated regularly and some may have changed
+since these tutorials were written. **Treat every version number as an example**,
+pin versions in your own environments, and verify commands against the current
+official documentation for each tool. Where something is known to change often,
+you'll see a ⚠️ **Verify** callout.
+:::
+
+---
+
+*Contributions and corrections are welcome — see the repository for how to open an
+issue or pull request.*

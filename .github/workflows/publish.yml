@@ -1,0 +1,62 @@
+# Renders the Quarto site and deploys it to GitHub Pages on pushes to the
+# default branch.
+#
+# ⚠️ VERIFY BEFORE RELYING ON THIS:
+#   - The action versions pinned below (actions/checkout, quarto-dev/quarto-actions,
+#     actions/upload-pages-artifact, actions/deploy-pages) go out of date. Check each
+#     action's official repository for the current recommended version and update the
+#     `@vN` tags accordingly.
+#   - If your tutorials EXECUTE R or Python code at render time, you must also install
+#     R / Python and the required packages in this workflow before rendering. As
+#     written, this only renders Markdown/QMD without a compute environment, which is
+#     enough for prose + static code blocks but NOT for executed code cells.
+#
+# The overall shape (checkout -> setup Quarto -> render -> upload artifact -> deploy)
+# is the standard GitHub Pages pattern, but treat the specifics as a starting point
+# to confirm against current GitHub and Quarto documentation.
+
+name: Publish site
+
+on:
+  push:
+    branches: [main]      # change if your default branch differs
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Render site
+        run: quarto render
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

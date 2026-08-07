@@ -1,0 +1,13 @@
+name: bioinfo-intro
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - fastqc
+  - samtools
+  # For reproducible work, pin exact versions, e.g.:
+  #   - samtools=1.XX      # <-- replace 1.XX with a REAL current version
+  #   - fastqc=0.XX.X      # <-- verify with `conda search fastqc`
+  #
+  # The version numbers above are intentionally placeholders, NOT real releases.
+  # Look up current versions on each tool's official page before pinning.

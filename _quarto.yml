@@ -1,0 +1,56 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Bioinformatics for Molecular Biology"
+  description: "Beginner-friendly, step-by-step tutorials for bioinformatics analysis of molecular data."
+  repo-url: https://github.com/Kishaz/bioinformatics-tutorials
+  repo-actions: [issue, source]
+  page-navigation: true
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - text: "Modules"
+        menu:
+          - href: modules/01-setup-environment/index.qmd
+            text: "01 · Environment Setup"
+  sidebar:
+    style: docked
+    search: true
+    contents:
+      - section: "Getting Started"
+        contents:
+          - href: index.qmd
+            text: "Welcome"
+      - section: "Modules"
+        contents:
+          - href: modules/01-setup-environment/index.qmd
+            text: "01 · Environment Setup (Windows/WSL + macOS + Conda)"
+          # Future modules (stubs to be added):
+          # - 02 · Intro to Bioinformatics & the Command Line
+          # - 03 · R & Bioconductor for Molecular Biology
+          # - 04 · Containers (Docker / Apptainer)
+          # - 05 · Bulk RNA-seq
+          # - 06 · DNA-seq / Variant Calling
+          # - 07 · Single-cell RNA-seq
+          # - 08 · Metagenomics
+  page-footer:
+    left: "© 2026 Samuel Mwamburi · CC BY 4.0"
+    center: "Educational material. Verify all tool commands against current official documentation before use."
+
+format:
+  html:
+    theme:
+      light: cosmo
+      dark: darkly
+    toc: true
+    toc-depth: 3
+    code-copy: true
+    code-overflow: wrap
+    css: styles.css
+
+# NOTE: Version numbers of Quarto, R, Python and every bioinformatics tool
+# referenced in these tutorials change over time. Treat all version strings
+# as examples and pin/verify against current official docs.
