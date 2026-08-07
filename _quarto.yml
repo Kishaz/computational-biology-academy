@@ -16,6 +16,9 @@ website:
         menu:
           - href: modules/01-setup-environment/index.qmd
             text: "01 · Environment Setup"
+    right:
+      - text: "by Samuel Mwamburi, PhD"
+        href: https://samuel-mwamburi.netlify.app/
   sidebar:
     style: docked
     search: true
@@ -37,8 +40,14 @@ website:
           # - 07 · Single-cell RNA-seq
           # - 08 · Metagenomics
   page-footer:
-    left: "© 2026 Samuel Mwamburi · CC BY 4.0"
+    left: "© 2026 Samuel Mwamburi, PhD · CC BY 4.0"
     center: "Educational material. Verify all tool commands against current official documentation before use."
+
+# Site-wide author metadata — gives every page a byline under its title.
+author:
+  - name: "Samuel Mwamburi, PhD"
+    url: https://samuel-mwamburi.netlify.app/
+    orcid: 0000-0003-4253-3967
 
 format:
   html:

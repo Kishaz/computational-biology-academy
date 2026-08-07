@@ -78,5 +78,25 @@ you'll see a ⚠️ **Verify** callout.
 
 ---
 
-*Contributions and corrections are welcome — see the repository for how to open an
-issue or pull request.*
+## About the author
+
+**Samuel Mwamburi, PhD** is a computational biologist and Postdoctoral Fellow at
+Johns Hopkins Medicine. His research spans microbes, model and non-model organisms,
+and human biology — a path that shapes how he thinks about understanding biological
+systems through data. He created these tutorials as a teaching resource for
+scientists and students stepping into bioinformatics.
+
+**Find me online:**
+
+- 🌐 Website: <https://samuel-mwamburi.netlify.app/>
+- GitHub: [\@Kishaz](https://github.com/Kishaz)
+- Google Scholar: [profile](https://scholar.google.com/citations?user=s_LXHcwAAAAJ)
+- ORCID: [0000-0003-4253-3967](https://orcid.org/0000-0003-4253-3967)
+- LinkedIn: [Samuel Mwamburi, PhD](https://www.linkedin.com/in/samuel-mwamburi-phd-10b85290)
+- X: [\@SMwakisha](https://x.com/SMwakisha)
+
+---
+
+*Spotted an error or out-of-date command? Please
+[open an issue](https://github.com/Kishaz/bioinformatics-tutorials/issues) —
+corrections are always welcome.*

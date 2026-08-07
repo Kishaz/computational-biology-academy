@@ -1,7 +1,6 @@
 ---
 title: "01 · Setting Up Your Bioinformatics Environment"
 subtitle: "A Unix shell on Windows (WSL/Ubuntu) or macOS + Conda + your first environment"
-author: "Bioinformatics for Molecular Biology"
 date: last-modified
 categories: [setup, beginner, windows, macos, conda, linux]
 ---
