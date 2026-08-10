@@ -1,0 +1,19 @@
+name: r-intro
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - r-base
+  # Optional convenience bundle (larger download) — uncomment if you want many
+  # popular packages (incl. the tidyverse) installed up front:
+  # - r-essentials
+  #
+  # Example R packages available through conda (uncomment as needed):
+  # - r-ggplot2
+  #
+  # Example Bioconductor package via conda (name uses a "bioconductor-" prefix):
+  # - bioconductor-deseq2
+  #
+  # For reproducible work, pin versions once you know what you need, e.g.:
+  #   - r-base=4.X.X       # <-- replace X.X with a REAL current version
+  # Verify current versions with `conda search r-base` before pinning.

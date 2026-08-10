@@ -25,7 +25,12 @@ of it, you'll be able to:
 - Create **isolated, reproducible environments** and rebuild them from a file — the
   single habit that keeps real analyses trustworthy and shareable.
 
-Beyond setup, the series grows toward the everyday skills for working with molecular
+**Also available — Module 02: An introduction to R for biologists.** What R is and
+why it's useful in biology, installing it via Conda, running it both interactively
+(the console) and from the command line (`Rscript`), and installing packages from
+**CRAN** and **Bioconductor**.
+
+Beyond these, the series grows toward the everyday skills for working with molecular
 data — from getting comfortable on the command line through to running real analysis
 pipelines. New modules appear on the live site (and in the list below) as they're
 ready.
@@ -55,6 +60,7 @@ ready.
 | # | Module |
 |---|--------|
 | 01 | [Environment Setup — Windows (WSL/Ubuntu) & macOS + Conda](modules/01-setup-environment/index.qmd) |
+| 02 | [An Introduction to R for Biologists](modules/02-r-for-biologists/index.qmd) |
 
 *New modules are added here as they're completed. "Watch" the repository on GitHub
 to be notified when they land.*

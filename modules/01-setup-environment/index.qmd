@@ -741,9 +741,10 @@ want to go deeper. You've got this.
 ## Where to go next
 
 You've finished the setup module — the foundation the rest of the series builds on.
-More modules are published as they're ready, so check back on the
-[home page](../../index.qmd) (or "Watch" the repository on GitHub) to catch new ones
-as they land.
+A natural next step is **[Module 02 — An Introduction to R for Biologists](../02-r-for-biologists/index.qmd)**,
+which uses the very Conda setup you just built. More modules are published as they're
+ready, so check back on the [home page](../../index.qmd) (or "Watch" the repository on
+GitHub) to catch new ones as they land.
 
 In the meantime, the most valuable thing you can do is **practise**: revisit the
 exercises above until creating, breaking, and rebuilding environments feels routine.

@@ -16,6 +16,8 @@ website:
         menu:
           - href: modules/01-setup-environment/index.qmd
             text: "01 · Environment Setup"
+          - href: modules/02-r-for-biologists/index.qmd
+            text: "02 · R for Biologists"
     right:
       - text: "by Samuel Mwamburi, PhD"
         href: https://samuel-mwamburi.netlify.app/
@@ -31,14 +33,8 @@ website:
         contents:
           - href: modules/01-setup-environment/index.qmd
             text: "01 · Environment Setup (Windows/WSL + macOS + Conda)"
-          # Future modules (stubs to be added):
-          # - 02 · Intro to Bioinformatics & the Command Line
-          # - 03 · R & Bioconductor for Molecular Biology
-          # - 04 · Containers (Docker / Apptainer)
-          # - 05 · Bulk RNA-seq
-          # - 06 · DNA-seq / Variant Calling
-          # - 07 · Single-cell RNA-seq
-          # - 08 · Metagenomics
+          - href: modules/02-r-for-biologists/index.qmd
+            text: "02 · An Introduction to R for Biologists"
   page-footer:
     left: "© 2026 Samuel Mwamburi, PhD · CC BY 4.0"
     center: "Educational material. Verify all tool commands against current official documentation before use."

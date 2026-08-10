@@ -1,0 +1,86 @@
+<svg viewBox="0 0 1000 664" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" role="img" aria-label="Labelled diagram of the RStudio window showing the toolbar, source editor, console, environment, and files panes.">
+  <!-- window -->
+  <rect x="2" y="2" width="996" height="660" rx="10" fill="#ffffff" stroke="#c7ced6" stroke-width="2"/>
+
+  <!-- title bar -->
+  <path d="M2 12 A10 10 0 0 1 12 2 H988 A10 10 0 0 1 998 12 V36 H2 Z" fill="#e9edf1"/>
+  <circle cx="26" cy="19" r="6" fill="#ff5f57"/>
+  <circle cx="46" cy="19" r="6" fill="#febc2e"/>
+  <circle cx="66" cy="19" r="6" fill="#28c840"/>
+  <text x="500" y="24" text-anchor="middle" font-size="14" fill="#41505f">RStudio</text>
+  <!-- project switcher (top-right) -->
+  <rect x="852" y="8" width="132" height="22" rx="5" fill="#ffffff" stroke="#c7ced6"/>
+  <text x="866" y="23" font-size="12.5" fill="#2b3138">▣ my_r_session ▾</text>
+
+  <!-- toolbar -->
+  <rect x="2" y="36" width="996" height="36" fill="#f5f7f9"/>
+  <line x1="2" y1="72" x2="998" y2="72" stroke="#dbe1e7"/>
+  <g fill="#ffffff" stroke="#c7ced6">
+    <rect x="16" y="46" width="26" height="18" rx="4"/>
+    <rect x="48" y="46" width="26" height="18" rx="4"/>
+    <rect x="86" y="46" width="26" height="18" rx="4"/>
+  </g>
+  <rect x="128" y="46" width="188" height="18" rx="9" fill="#ffffff" stroke="#c7ced6"/>
+  <text x="140" y="59" font-size="11.5" fill="#8894a2">Go to file/function</text>
+  <rect x="330" y="46" width="66" height="18" rx="4" fill="#ffffff" stroke="#c7ced6"/>
+  <text x="342" y="59" font-size="11.5" fill="#41505f">Addins ▾</text>
+  <text x="720" y="59" font-size="12" fill="#41505f">◈ Posit Assistant</text>
+
+  <!-- ================= PANES ================= -->
+  <!-- Source (top-left) -->
+  <rect x="10" y="80" width="484" height="276" rx="6" fill="#ffffff" stroke="#cfd6dd"/>
+  <path d="M10 86 A6 6 0 0 1 16 80 H478 A6 6 0 0 1 484 86 V104 H10 Z" fill="#eef1f4"/>
+  <text x="26" y="98" font-size="12.5" fill="#2b3138">Untitled.R  ×</text>
+  <text x="247" y="205" text-anchor="middle" font-size="13" fill="#8894a2">Source editor</text>
+  <text x="247" y="226" text-anchor="middle" font-size="11.5" fill="#a5aeb9">(write &amp; save your scripts here)</text>
+
+  <!-- Console (bottom-left) -->
+  <rect x="10" y="364" width="484" height="288" rx="6" fill="#ffffff" stroke="#cfd6dd"/>
+  <path d="M10 370 A6 6 0 0 1 16 364 H478 A6 6 0 0 1 484 370 V388 H10 Z" fill="#eef1f4"/>
+  <text x="26" y="382" font-size="12.5" fill="#2b3138" font-weight="600">Console</text>
+  <text x="96" y="382" font-size="12.5" fill="#8894a2">Terminal   Background Jobs</text>
+  <g font-family="ui-monospace, Menlo, Consolas, monospace" font-size="11.5" fill="#41505f">
+    <text x="26" y="410">R version 4.5.1 · ~/Desktop/R_test/my_r_session/</text>
+    <text x="26" y="432">Type 'q()' to quit R.</text>
+    <text x="26" y="462" fill="#2780e3">&gt;</text>
+    <rect x="40" y="453" width="7" height="13" fill="#2b3138"/>
+  </g>
+
+  <!-- Environment (top-right) -->
+  <rect x="506" y="80" width="484" height="276" rx="6" fill="#ffffff" stroke="#cfd6dd"/>
+  <path d="M506 86 A6 6 0 0 1 512 80 H974 A6 6 0 0 1 980 86 V104 H506 Z" fill="#eef1f4"/>
+  <text x="522" y="98" font-size="12.5" fill="#2b3138" font-weight="600">Environment</text>
+  <text x="612" y="98" font-size="12.5" fill="#8894a2">History   Connections   Tutorial</text>
+  <text x="748" y="210" text-anchor="middle" font-size="12.5" fill="#a5aeb9">Environment is empty</text>
+
+  <!-- Files/Plots (bottom-right) -->
+  <rect x="506" y="364" width="484" height="288" rx="6" fill="#ffffff" stroke="#cfd6dd"/>
+  <path d="M506 370 A6 6 0 0 1 512 364 H974 A6 6 0 0 1 980 370 V388 H506 Z" fill="#eef1f4"/>
+  <text x="522" y="382" font-size="12.5" fill="#2b3138" font-weight="600">Files</text>
+  <text x="566" y="382" font-size="12.5" fill="#8894a2">Plots   Packages   Help   Viewer</text>
+  <line x1="518" y1="402" x2="968" y2="402" stroke="#e6eaee"/>
+  <text x="524" y="428" font-size="12" fill="#41505f">▣ my_r_session.Rproj</text>
+  <text x="900" y="428" font-size="11.5" fill="#a5aeb9">205 B</text>
+
+  <!-- ================= NUMBER BADGES ================= -->
+  <g font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">
+    <!-- 1 toolbar -->
+    <circle cx="410" cy="54" r="12" fill="#2780e3" stroke="#ffffff" stroke-width="2"/>
+    <text x="410" y="59">1</text>
+    <!-- 2 source -->
+    <circle cx="470" cy="94" r="12" fill="#2780e3" stroke="#ffffff" stroke-width="2"/>
+    <text x="470" y="99">2</text>
+    <!-- 3 console -->
+    <circle cx="470" cy="378" r="12" fill="#2780e3" stroke="#ffffff" stroke-width="2"/>
+    <text x="470" y="383">3</text>
+    <!-- 4 environment -->
+    <circle cx="966" cy="94" r="12" fill="#2780e3" stroke="#ffffff" stroke-width="2"/>
+    <text x="966" y="99">4</text>
+    <!-- 5 files -->
+    <circle cx="966" cy="378" r="12" fill="#2780e3" stroke="#ffffff" stroke-width="2"/>
+    <text x="966" y="383">5</text>
+    <!-- 6 project -->
+    <circle cx="842" cy="19" r="12" fill="#f5a623" stroke="#ffffff" stroke-width="2"/>
+    <text x="842" y="24">6</text>
+  </g>
+</svg>
