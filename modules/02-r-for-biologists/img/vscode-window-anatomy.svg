@@ -1,0 +1,75 @@
+<svg viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" role="img" aria-label="Labelled diagram of the VS Code window: activity bar, explorer file tree, editor, integrated terminal, and status bar.">
+  <!-- window -->
+  <rect x="2" y="2" width="996" height="596" rx="10" fill="#ffffff" stroke="#c7ced6" stroke-width="2"/>
+
+  <!-- title bar -->
+  <path d="M2 12 A10 10 0 0 1 12 2 H988 A10 10 0 0 1 998 12 V34 H2 Z" fill="#e9edf1"/>
+  <circle cx="26" cy="18" r="6" fill="#ff5f57"/>
+  <circle cx="46" cy="18" r="6" fill="#febc2e"/>
+  <circle cx="66" cy="18" r="6" fill="#28c840"/>
+  <text x="500" y="23" text-anchor="middle" font-size="13" fill="#41505f">my-project — Visual Studio Code</text>
+
+  <!-- Activity Bar (far left, dark) -->
+  <rect x="2" y="34" width="52" height="540" fill="#37373d"/>
+  <g fill="#c9ccd1">
+    <rect x="18" y="56" width="20" height="16" rx="2"/>            <!-- explorer -->
+    <circle cx="28" cy="104" r="9" fill="none" stroke="#c9ccd1" stroke-width="2"/> <!-- search -->
+    <path d="M20 148 a8 8 0 1 0 0.01 0 M28 140 v16" stroke="#c9ccd1" stroke-width="2" fill="none"/> <!-- source control-ish -->
+    <path d="M20 196 l10 -6 l10 6 v14 h-20 z" />                  <!-- run -->
+    <rect x="18" y="244" width="9" height="9"/><rect x="31" y="244" width="9" height="9"/><rect x="18" y="257" width="9" height="9"/><rect x="31" y="257" width="9" height="9" fill="none" stroke="#c9ccd1" stroke-width="2"/> <!-- extensions -->
+  </g>
+
+  <!-- Side Bar: Explorer -->
+  <rect x="54" y="34" width="210" height="540" fill="#f3f4f6"/>
+  <text x="70" y="58" font-size="11" font-weight="700" letter-spacing="0.06em" fill="#6b7480">EXPLORER</text>
+  <text x="70" y="86" font-size="12.5" font-weight="700" fill="#3c4043">▾ MY-PROJECT</text>
+  <g font-size="12.5" fill="#3c4043">
+    <text x="86" y="110">▸ data/</text>
+    <text x="86" y="132">▸ scripts/</text>
+    <text x="86" y="154" fill="#2780e3">analysis.R</text>
+    <text x="86" y="176">gene-counts-demo.R</text>
+    <text x="86" y="198">notes.md</text>
+    <text x="86" y="220">environment.yml</text>
+  </g>
+
+  <!-- Editor area -->
+  <rect x="264" y="34" width="734" height="358" fill="#ffffff"/>
+  <!-- tabs -->
+  <rect x="264" y="34" width="734" height="28" fill="#eef1f4"/>
+  <rect x="264" y="34" width="130" height="28" fill="#ffffff" stroke="#e0e4e8"/>
+  <text x="280" y="53" font-size="12.5" fill="#2b3138">analysis.R</text>
+  <text x="410" y="53" font-size="12.5" fill="#8894a2">notes.md</text>
+  <!-- code lines -->
+  <g font-family="ui-monospace, Menlo, Consolas, monospace" font-size="12.5">
+    <text x="284" y="92" fill="#a5aeb9">1</text><text x="312" y="92" fill="#7a3e9d">counts</text><text x="372" y="92" fill="#3c4043">&lt;- </text><text x="404" y="92" fill="#2e8b57">c(</text><text x="424" y="92" fill="#b5651d">120, 85, 200</text><text x="536" y="92" fill="#2e8b57">)</text>
+    <text x="284" y="114" fill="#a5aeb9">2</text><text x="312" y="114" fill="#2e8b57">mean</text><text x="352" y="114" fill="#3c4043">(counts)</text>
+    <text x="284" y="136" fill="#a5aeb9">3</text><text x="312" y="136" fill="#2e8b57">barplot</text><text x="376" y="136" fill="#3c4043">(counts)</text>
+    <text x="284" y="170" fill="#9aa2ac" font-style="italic"># edit scripts with highlighting &amp; autocomplete</text>
+  </g>
+
+  <!-- Panel: integrated terminal (dark) -->
+  <rect x="264" y="392" width="734" height="182" fill="#1e1e1e"/>
+  <rect x="264" y="392" width="734" height="26" fill="#eef1f4"/>
+  <text x="280" y="410" font-size="11" font-weight="700" letter-spacing="0.05em" fill="#3c4043">TERMINAL</text>
+  <text x="372" y="410" font-size="11" fill="#8894a2">PROBLEMS   OUTPUT   DEBUG CONSOLE</text>
+  <g font-family="ui-monospace, Menlo, Consolas, monospace" font-size="12.5" fill="#d4d4d4">
+    <text x="280" y="444"><tspan fill="#4ec9b0">(r-intro)</tspan> <tspan fill="#569cd6">~/my-project</tspan> $ Rscript gene-counts-demo.R</text>
+    <text x="280" y="466">[1] 119</text>
+    <text x="280" y="488">Done — wrote gene_counts.png</text>
+    <text x="280" y="512"><tspan fill="#4ec9b0">(r-intro)</tspan> <tspan fill="#569cd6">~/my-project</tspan> $ </text>
+    <rect x="470" y="503" width="7" height="13" fill="#d4d4d4"/>
+  </g>
+
+  <!-- Status bar -->
+  <rect x="2" y="574" width="996" height="24" fill="#2780e3"/>
+  <text x="16" y="590" font-size="11.5" fill="#ffffff">⌥ WSL: Ubuntu   ⎇ main   R 4.5.1   UTF-8   R</text>
+
+  <!-- ===== number badges ===== -->
+  <g font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">
+    <circle cx="28" cy="300" r="12" fill="#2780e3" stroke="#ffffff" stroke-width="2"/><text x="28" y="305">1</text>
+    <circle cx="248" cy="52" r="12" fill="#2780e3" stroke="#ffffff" stroke-width="2"/><text x="248" y="57">2</text>
+    <circle cx="978" cy="80" r="12" fill="#2780e3" stroke="#ffffff" stroke-width="2"/><text x="978" y="85">3</text>
+    <circle cx="978" cy="410" r="12" fill="#2780e3" stroke="#ffffff" stroke-width="2"/><text x="978" y="415">4</text>
+    <circle cx="640" cy="586" r="12" fill="#f5a623" stroke="#ffffff" stroke-width="2"/><text x="640" y="591">5</text>
+  </g>
+</svg>

@@ -375,6 +375,96 @@ current [RStudio documentation from Posit](https://posit.co/products/open-source
 is the authoritative reference.
 :::
 
+### C.4 Another friendly option: VS Code
+
+RStudio is purpose-built for R. **Visual Studio Code** (usually just "VS Code") is a
+different flavour: a free, hugely popular, general-purpose **code editor** from
+Microsoft. It isn't only for R — it's equally at home with Python, Bash, and the very
+`.qmd` / `.R` / `.sh` files you'll write across this whole series. Many
+bioinformaticians live in it, because it puts three things you constantly need into one
+tidy window:
+
+- a **file explorer** to see and open your project's files and folders,
+- an **integrated terminal** to run commands (the same shell from Module 01) without
+  ever leaving the editor, and
+- a smart **editor** with syntax highlighting and autocomplete.
+
+Here's the anatomy of the VS Code window:
+
+![The anatomy of the VS Code window: (1) Activity Bar, (2) Explorer file tree, (3) editor, (4) integrated terminal, (5) status bar.](img/vscode-window-anatomy.svg){width=820 fig-alt="Labelled schematic of the VS Code window with five numbered regions."}
+
+Pane by pane (the numbers match the diagram):
+
+1. **Activity Bar (far left).** Icons that switch what the side panel shows — the file
+   **Explorer**, **Search**, source control (Git), **Run**, and **Extensions**.
+2. **Explorer (side panel).** A tree of your project's **files and folders** — click to
+   open, and see everything at a glance. This is the "easily visualise and access your
+   files" part you'll appreciate most.
+3. **Editor (main area).** Where you read and write files, with tabs across the top so
+   several can stay open at once. Highlighting and autocomplete make scripts easier to
+   write and read.
+4. **Integrated terminal (bottom panel).** A full shell built right in — run `Rscript`,
+   `conda`, `git`, or any command from Module 01 here, right beside your files. Open it
+   from the menu with **View → Terminal** (or press the `Ctrl` key together with the
+   backtick key).
+5. **Status bar (bottom).** Small but handy readouts — your Git branch, the file's
+   language, and (for Windows users) whether you're connected to WSL.
+
+#### Installing VS Code
+
+Download it from the official site,
+[code.visualstudio.com](https://code.visualstudio.com/):
+
+- **macOS:** download the app from the site, or install it with Homebrew:
+
+  ```bash
+  brew install --cask visual-studio-code
+  ```
+
+- **Windows:** download and run the installer from the site. Then — importantly —
+  install the **WSL extension**, which lets VS Code work *inside* your Ubuntu/WSL
+  environment (the one you set up in Module 01). With it in place, you can type `code .`
+  in any project folder from your Ubuntu terminal to open that folder in VS Code,
+  connected straight to Linux.
+
+#### Opening it
+
+Launch it like any other application, **or** from a terminal run:
+
+```bash
+code .
+```
+
+This opens your current folder in VS Code. (The first time, VS Code quietly installs the
+small `code` helper command for you.)
+
+#### Running R inside VS Code (optional)
+
+You *can* run R in VS Code as well, using an add-on called the **R extension** (search
+for "R" in the Extensions panel). It takes a little more setup than RStudio's
+out-of-the-box experience, so if you only want R, RStudio is the gentler choice. VS Code
+really shines when a project mixes R with Bash, Python, and other file types — you get a
+single home for all of it, terminal included.
+
+::: {.callout-warning}
+## ⚠️ Verify
+VS Code, its installers, and its extensions change frequently, and the Windows + WSL
+setup in particular has several moving parts. Follow the current official guides rather
+than trusting exact steps here: [code.visualstudio.com](https://code.visualstudio.com/),
+the [WSL in VS Code](https://code.visualstudio.com/docs/remote/wsl) guide, and — if you
+want R inside it — the [R in VS Code](https://code.visualstudio.com/docs/languages/r)
+guide.
+:::
+
+::: {.callout-tip}
+## RStudio or VS Code — which should I use?
+Either is fine, and you can switch any time. A rough rule of thumb: choose **RStudio**
+if your work is mostly R and statistics; choose **VS Code** if you juggle several
+languages and file types and want one editor (with a built-in terminal) for everything —
+including the terminal-heavy work in later modules. The plain-terminal approach in this
+series works perfectly alongside both.
+:::
+
 ---
 
 ## Part D — Installing packages
