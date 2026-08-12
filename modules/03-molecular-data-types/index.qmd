@@ -37,7 +37,10 @@ By the end of this module you'll be able to:
    (and what it actually looks like), and **where it's stored publicly** (with links).
 5. Understand why **metadata** (the information *about* your samples) must be compiled
    *before* analysis.
-6. Retrieve a **small public dataset** yourself using both **Bash** and **R**.
+6. Set up an **organised project folder** on the command line (`pwd`, `cd`, `mkdir`,
+   `ls`) and understand **absolute vs relative paths**.
+7. Retrieve a **small public dataset** yourself — into that folder — using both **Bash**
+   and **R**.
 
 ### Before you start
 
@@ -261,7 +264,7 @@ formats stop feeling like scary black boxes. Skim, enjoy the tour, and move on.
 #### FASTA — sequences
 
 This is a **real** snippet of the SARS-CoV-2 reference genome (the one you'll download
-in Part J):
+in Part K):
 
 ```text
 >NC_045512.2 Severe acute respiratory syndrome coronavirus 2 isolate Wuhan-Hu-1, complete genome
@@ -588,17 +591,126 @@ positions won't line up. Always record which reference (and version) you used.
 
 ---
 
-## Part J — Fetching a small public dataset
+## Part J — Set up a project folder
 
-Enough concepts — let's actually pull some real, public data. We'll grab a genuinely
-tiny genome (the **SARS-CoV-2 reference**, about 30 kilobytes) so nothing here
-downloads anything large. We'll do it two ways.
+Before we download anything, let's get **organised**. A tidy project folder from day one
+saves you from the classic mess of files called `final_FINAL_v2.csv` scattered
+everywhere. It's also the perfect moment to meet a handful of command-line moves you'll
+use in *every* module from here on. (You already have a working shell from
+[Module 01](../01-setup-environment/index.qmd).)
 
-### J.1 With Bash (using `curl`, no extra tools to install)
+::: {.callout-note}
+## We build your command-line skills gradually
+This module introduces just **four** essential commands — `pwd`, `cd`, `mkdir`, and
+`ls`. Later modules add a few more each time, so it never feels like drinking from a
+firehose. You don't need to master the terminal today — you just need these four.
+:::
+
+### J.1 "Where am I?" — `pwd`
+
+The terminal always has a **current location** (the folder you're "standing in"). To see
+it, type **`pwd`** — *print working directory*:
+
+```bash
+pwd
+```
+
+It prints something like `/home/yourname` (Linux/WSL) or `/Users/yourname` (macOS) —
+your **home** folder, where you usually start.
+
+### J.2 "Move around" — `cd`
+
+**`cd`** — *change directory* — moves you into a different folder:
+
+```bash
+cd projects      # go into a folder named "projects" in your current location
+cd ..            # go UP one level (into the parent folder)
+cd ~             # jump straight to your home folder
+```
+
+- `..` means "the folder above me."
+- `~` is a shortcut for your home folder.
+
+### Paths: absolute vs relative
+
+A **path** is simply an *address* for a file or folder. There are two kinds, and the
+difference trips up every beginner exactly once:
+
+- An **absolute path** starts from the very top (`/`, the "root") or from home (`~`).
+  It's the *full* address and works no matter where you currently are — e.g.
+  `/home/yourname/projects/covid-demo`.
+- A **relative path** starts from **where you are right now** — e.g. `data` (a folder in
+  your current location) or `../scripts` (up one level, then into `scripts`).
+
+::: {.callout-tip}
+Think of it like directions. An **absolute path** is a full postal address — it gets
+someone there from anywhere in the world. A **relative path** is "two doors down on your
+left" — only meaningful from where you happen to be standing. `pwd` is how you check
+where you're standing.
+:::
+
+### J.3 "Make folders" — `mkdir`, and a clean project layout
+
+**`mkdir`** — *make directory* — creates a new folder. Let's build a properly organised
+project in one go:
+
+```bash
+mkdir -p ~/projects/covid-demo          # create the project folder (and any parents)
+cd ~/projects/covid-demo                # move into it
+mkdir data scripts results references   # create four sub-folders at once
+ls                                      # list what's now inside
+```
+
+- **`-p`** tells `mkdir` to create any missing parent folders (and to stay quiet if the
+  folder already exists).
+- `mkdir` happily takes **several names at once**, so a single line makes all four
+  sub-folders.
+
+Here's the **real output** of that `ls`:
+
+```text
+data
+references
+results
+scripts
+```
+
+Each folder has a clear job — a convention you'll meet everywhere:
+
+| Folder | What goes in it |
+|---|---|
+| `data/` | raw input data you downloaded or were given (never hand-edit these) |
+| `scripts/` | your code — the Bash and R scripts that do the analysis |
+| `results/` | outputs your scripts produce (figures, tables, processed files) |
+| `references/` | reference genomes and annotations (the resources from Part I) |
+
+::: {.callout-tip}
+Keeping **raw data**, **code**, and **results** in separate folders is one of the
+simplest habits that makes an analysis reproducible and easy to share. Your future self
+will thank you.
+:::
+
+---
+
+## Part K — Download your first dataset (into your project)
+
+Enough setup — let's put a real file where it belongs. We'll grab a genuinely tiny
+genome, the **SARS-CoV-2 reference** (about 30 kilobytes, so nothing here downloads
+anything large). Because it's a *reference*, it belongs in the `references/` folder we
+just made — so we'll `cd` into that folder first, then download it two ways.
+
+### K.1 With Bash (using `curl`, no extra tools to install)
+
+First, move into the folder built for it:
+
+```bash
+cd ~/projects/covid-demo/references   # go to the references folder
+```
 
 Public archives at the National Center for Biotechnology Information (NCBI) offer a
 web address (an **API** — application programming interface) you can download from
-directly. This command asks for one genome record in FASTA format:
+directly. This command asks for one genome record in FASTA format and saves it right
+here:
 
 ```bash
 curl -s "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=NC_045512.2&rettype=fasta&retmode=text" -o sars2.fasta
@@ -607,11 +719,12 @@ curl -s "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id
 Then peek at what you got:
 
 ```bash
+pwd                      # confirm you're in .../covid-demo/references
 head -2 sars2.fasta      # first two lines
 grep -c "^>" sars2.fasta # count sequences (lines starting with ">")
 ```
 
-Here is the **real output** of running exactly this:
+Here is the **real output** of the `head` and `grep` peeks:
 
 ```text
 >NC_045512.2 Severe acute respiratory syndrome coronavirus 2 isolate Wuhan-Hu-1, complete genome
@@ -619,7 +732,8 @@ ATTAAAGGTTTATACCTTCCCAGGTAACAAACCAACCAACTTTCGATCTCTTGTAGATCTGTTCTCTAAA
 1
 ```
 
-You just downloaded a real reference genome — about 30,000 letters of it.
+You just downloaded a real reference genome — about 30,000 letters of it — straight into
+the folder built to hold it. *That's* a tidy workflow.
 
 ::: {.callout-note}
 ## For *real* sequencing data, use the proper tools
@@ -637,12 +751,15 @@ change over time — check each tool's current official documentation before a r
 download. (We'll use them properly in a later module.)
 :::
 
-### J.2 With R (using base R, no packages needed)
+### K.2 With R (using base R, no packages needed)
 
 R can download the same file with the built-in `download.file()` function — no extra
-packages required:
+packages required. R downloads into its own **current working directory**, which is R's
+version of `pwd`; you check it with `getwd()` (and could change it with `setwd()`):
 
 ```r
+getwd()   # where is R working right now? (R's version of pwd)
+
 url <- "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=NC_045512.2&rettype=fasta&retmode=text"
 download.file(url, "sars2.fasta", quiet = TRUE)
 
@@ -692,7 +809,8 @@ You've now got the lay of the land:
 - ✅ For each type: **how it's made**, its **file format** (and what it looks like), and
   **where it lives** publicly.
 - ✅ Why **metadata** must come first — and what a good sample sheet looks like.
-- ✅ How to fetch a small public dataset in both **Bash** and **R**.
+- ✅ How to set up a tidy **project folder** (`pwd`, `cd`, `mkdir`, `ls`; absolute vs
+  relative paths) and fetch a small public dataset into it, in both **Bash** and **R**.
 
 You don't need to memorise every acronym. What matters is the **mental map**: when you
 meet a new dataset, you can now place it, recognise its format, and know where to look
@@ -717,16 +835,21 @@ fluency. You're building real intuition — keep at it.
    measures, what format you'd receive, and one public repository where you'd find it.
 2. Draft a **metadata sample sheet** (like the table in Part H) for an imaginary
    experiment with 6 samples: 3 healthy and 3 diseased, across 2 processing batches.
-3. Run the **Bash** download in Part J. Then use `grep -c "^>" sars2.fasta` to confirm
-   it contains exactly one sequence.
-4. If you've done Module 02, run the **R** version too, and print the file size.
-5. **Thinking question:** why might "bulk" RNA-seq *hide* an important cell type that
+3. Build the **project folder** from Part J yourself (`mkdir`, then `ls` to check).
+   Use `pwd` before and after a `cd` so you can see your location change.
+4. `cd` into your `references/` folder and run the **Bash** download from Part K. Then
+   use `grep -c "^>" sars2.fasta` to confirm it contains exactly one sequence — and
+   `pwd` to confirm the file landed in the right place.
+5. If you've done Module 02, run the **R** version too, and print the file size.
+6. **Thinking question:** why might "bulk" RNA-seq *hide* an important cell type that
    single-cell RNA-seq would reveal? (Hint: think about averages.)
 
 ## Where to go next
 
 You now know *what* the data is and *where* to get it. Later modules put it to work —
-taking specific data types through real analysis. New modules appear on the
+taking specific data types through real analysis. You also picked up your first four
+command-line moves (`pwd`, `cd`, `mkdir`, `ls`); each module from here will add a few
+more, so your terminal toolkit grows steadily and painlessly. New modules appear on the
 [home page](../../index.qmd) as they're ready.
 
 In the meantime, browse one of the repositories linked above (GEO is a friendly place
