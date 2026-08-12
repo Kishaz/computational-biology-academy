@@ -1,7 +1,7 @@
 ---
 title: "02 · An Introduction to R for Biologists"
 subtitle: "What R is, why it's useful in biology, and how to install, run, and extend it"
-date: last-modified
+date: "2026-08-08"
 categories: [R, beginner, stats, packages, windows, macos]
 ---
 
@@ -29,8 +29,8 @@ By the end of this module you'll be able to:
 
 1. Explain **what R is** and why it's so widely used in biology.
 2. **Install R** cleanly using the Conda setup from Module 01.
-3. Run R **two ways** — interactively in the **console**, and from the **command
-   line** as scripts.
+3. Run R **two ways** — interactively in the **console** and from the **command
+   line** as scripts — and get oriented in the **RStudio** and **VS Code** editors.
 4. **Install packages** from the two repositories biologists rely on: **CRAN** and
    **Bioconductor**.
 5. Run a small, hands-on demo on some toy biological data.
@@ -167,8 +167,10 @@ WSL involves extra setup; the terminal-based approach in this module avoids that
 
 ## Part C — Running R two ways
 
-There are two everyday ways to run R, and it's worth understanding both from the
-start.
+There are **two fundamental ways** to run R — interactively in the **console** (C.1) and
+from the **command line** as scripts (C.2) — and it's worth understanding both from the
+start. Once you have those, we'll tour two popular **graphical environments** — RStudio
+(C.3) and VS Code (C.4) — which simply wrap those same two ways in a friendlier window.
 
 ### C.1 The interactive console (the "REPL")
 
@@ -469,8 +471,9 @@ series works perfectly alongside both.
 
 ## Part D — Installing packages
 
-R's real power comes from **packages** — bundles of extra functions others have
-written. Biologists draw from two main repositories.
+Now that you can *run* R, let's make it powerful. R's real power comes from
+**packages** — bundles of extra functions others have written. Biologists draw from two
+main repositories.
 
 ### D.1 CRAN packages — `install.packages()`
 

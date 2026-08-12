@@ -1,7 +1,7 @@
 ---
 title: "01 · Setting Up Your Bioinformatics Environment"
 subtitle: "A Unix shell on Windows (WSL/Ubuntu) or macOS + Conda + your first environment"
-date: last-modified
+date: "2026-08-05"
 categories: [setup, beginner, windows, macos, conda, linux]
 ---
 
@@ -486,6 +486,9 @@ already with the Command Line Tools in Part A (macOS). Apple-Silicon users: see 
 ---
 
 ## Part C — Configure channels and build your first environment
+
+Conda is installed — the final step is to tell it *where* to find bioinformatics
+software, and then build your very first environment.
 
 ### C.1 What are "channels"?
 
