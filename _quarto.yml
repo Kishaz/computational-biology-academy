@@ -18,6 +18,8 @@ website:
             text: "01 · Environment Setup"
           - href: modules/02-r-for-biologists/index.qmd
             text: "02 · R for Biologists"
+          - href: modules/03-molecular-data-types/index.qmd
+            text: "03 · Molecular Data Types"
     right:
       - text: "by Samuel Mwamburi, PhD"
         href: https://samuel-mwamburi.netlify.app/
@@ -35,6 +37,8 @@ website:
             text: "01 · Environment Setup (Windows/WSL + macOS + Conda)"
           - href: modules/02-r-for-biologists/index.qmd
             text: "02 · An Introduction to R for Biologists"
+          - href: modules/03-molecular-data-types/index.qmd
+            text: "03 · A Field Guide to Molecular Data Types"
   page-footer:
     left: "© 2026 Samuel Mwamburi, PhD · CC BY 4.0"
     center: "Educational material. Verify all tool commands against current official documentation before use."

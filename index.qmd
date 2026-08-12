@@ -31,6 +31,7 @@ from the module before it.
 |---|--------|
 | 01 | [Environment Setup — Windows (WSL/Ubuntu) & macOS + Conda](modules/01-setup-environment/index.qmd) |
 | 02 | [An Introduction to R for Biologists](modules/02-r-for-biologists/index.qmd) |
+| 03 | [A Field Guide to Molecular Data Types](modules/03-molecular-data-types/index.qmd) |
 
 *More modules are added here as they're completed. If you'd like to be notified
 when new ones land, you can "Watch" the repository on GitHub.*

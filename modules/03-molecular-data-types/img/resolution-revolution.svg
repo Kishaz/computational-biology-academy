@@ -1,0 +1,62 @@
+<svg viewBox="0 0 1000 400" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" role="img" aria-label="Diagram showing the progression from bulk (all cells averaged) to single-cell (each cell measured separately) to spatial (each cell measured with its location in the tissue).">
+  <defs>
+    <marker id="arw2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#5f6368"/>
+    </marker>
+  </defs>
+
+  <rect x="1" y="1" width="998" height="398" rx="10" fill="#ffffff" stroke="#d5dbe2"/>
+  <text x="500" y="30" text-anchor="middle" font-size="18" font-weight="700" fill="#2b3138">The resolution revolution: bulk → single-cell → spatial</text>
+
+  <!-- ============ PANEL 1: BULK ============ -->
+  <rect x="24" y="52" width="296" height="262" rx="10" fill="#f7f9fb" stroke="#cfd6dd"/>
+  <text x="172" y="80" text-anchor="middle" font-size="15" font-weight="700" fill="#1a56b0">BULK</text>
+  <!-- tube of mixed cells -->
+  <rect x="72" y="96" width="200" height="52" rx="10" fill="#eef2f6" stroke="#b9c2cc"/>
+  <g>
+    <circle cx="96" cy="122" r="7" fill="#4a86e8"/><circle cx="118" cy="115" r="7" fill="#34a853"/>
+    <circle cx="140" cy="128" r="7" fill="#a142f4"/><circle cx="162" cy="116" r="7" fill="#ea4335"/>
+    <circle cx="184" cy="127" r="7" fill="#f9ab00"/><circle cx="206" cy="118" r="7" fill="#12a4a4"/>
+    <circle cx="228" cy="126" r="7" fill="#34a853"/><circle cx="248" cy="116" r="7" fill="#4a86e8"/>
+  </g>
+  <line x1="172" y1="152" x2="172" y2="176" stroke="#5f6368" stroke-width="2" marker-end="url(#arw2)"/>
+  <rect x="132" y="180" width="80" height="22" rx="4" fill="#dfe4ea" stroke="#b9c2cc"/>
+  <text x="172" y="195" text-anchor="middle" font-size="11.5" fill="#3c4043">one average</text>
+  <text x="172" y="238" text-anchor="middle" font-size="12.5" fill="#3c4043">All cells blended together.</text>
+  <text x="172" y="257" text-anchor="middle" font-size="12.5" fill="#3c4043">You get one value for</text>
+  <text x="172" y="276" text-anchor="middle" font-size="12.5" fill="#3c4043">the whole sample.</text>
+  <text x="172" y="300" text-anchor="middle" font-size="12" font-style="italic" fill="#6b7480">like a smoothie</text>
+
+  <!-- ============ PANEL 2: SINGLE-CELL ============ -->
+  <rect x="352" y="52" width="296" height="262" rx="10" fill="#f7f9fb" stroke="#cfd6dd"/>
+  <text x="500" y="80" text-anchor="middle" font-size="15" font-weight="700" fill="#137333">SINGLE-CELL</text>
+  <g stroke="#ffffff" stroke-width="1.5">
+    <circle cx="430" cy="112" r="12" fill="#4a86e8"/><circle cx="470" cy="112" r="12" fill="#34a853"/>
+    <circle cx="510" cy="112" r="12" fill="#a142f4"/><circle cx="550" cy="112" r="12" fill="#ea4335"/>
+    <circle cx="430" cy="152" r="12" fill="#f9ab00"/><circle cx="470" cy="152" r="12" fill="#12a4a4"/>
+    <circle cx="510" cy="152" r="12" fill="#34a853"/><circle cx="550" cy="152" r="12" fill="#4a86e8"/>
+  </g>
+  <text x="500" y="200" text-anchor="middle" font-size="12.5" fill="#3c4043">Each cell measured</text>
+  <text x="500" y="219" text-anchor="middle" font-size="12.5" fill="#3c4043">on its own — you see</text>
+  <text x="500" y="238" text-anchor="middle" font-size="12.5" fill="#3c4043">cell-to-cell differences.</text>
+  <text x="500" y="300" text-anchor="middle" font-size="12" font-style="italic" fill="#6b7480">like a fruit salad</text>
+
+  <!-- ============ PANEL 3: SPATIAL ============ -->
+  <rect x="680" y="52" width="296" height="262" rx="10" fill="#f7f9fb" stroke="#cfd6dd"/>
+  <text x="828" y="80" text-anchor="middle" font-size="15" font-weight="700" fill="#0b7a7a">SPATIAL</text>
+  <!-- tissue outline -->
+  <path d="M718 100 q60 -18 110 -4 q60 16 108 2 q10 60 -8 108 q-70 20 -120 6 q-56 -14 -96 2 q-14 -58 6 -116 z" fill="#e0f7f7" stroke="#12a4a4"/>
+  <g stroke="#ffffff" stroke-width="1.5">
+    <circle cx="756" cy="126" r="11" fill="#4a86e8"/><circle cx="812" cy="118" r="11" fill="#34a853"/>
+    <circle cx="880" cy="130" r="11" fill="#a142f4"/><circle cx="770" cy="168" r="11" fill="#ea4335"/>
+    <circle cx="836" cy="160" r="11" fill="#f9ab00"/><circle cx="898" cy="172" r="11" fill="#12a4a4"/>
+    <circle cx="812" cy="196" r="11" fill="#34a853"/><circle cx="758" cy="204" r="11" fill="#4a86e8"/>
+  </g>
+  <text x="828" y="248" text-anchor="middle" font-size="12.5" fill="#3c4043">Each cell — plus</text>
+  <text x="828" y="267" text-anchor="middle" font-size="12.5" fill="#3c4043">where it sits in the tissue.</text>
+  <text x="828" y="300" text-anchor="middle" font-size="12" font-style="italic" fill="#6b7480">fruit salad + a seating map</text>
+
+  <!-- progression arrow -->
+  <line x1="60" y1="356" x2="940" y2="356" stroke="#5f6368" stroke-width="2.5" marker-end="url(#arw2)"/>
+  <text x="500" y="380" text-anchor="middle" font-size="12.5" fill="#5f6368">more detail / higher resolution — the direction the field has moved over time →</text>
+</svg>
