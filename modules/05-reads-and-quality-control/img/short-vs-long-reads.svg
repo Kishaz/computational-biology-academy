@@ -1,0 +1,45 @@
+<svg viewBox="0 0 1000 430" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" role="img" aria-label="Comparison of short reads (many tiny fragments) and long reads (a few long fragments) covering the same stretch of genome.">
+  <rect x="1" y="1" width="998" height="428" rx="10" fill="#ffffff" stroke="#d5dbe2"/>
+  <text x="500" y="30" text-anchor="middle" font-size="18" font-weight="700" fill="#2b3138">Short reads vs long reads — two ways to read the same genome</text>
+
+  <!-- ============ LEFT: SHORT READS ============ -->
+  <rect x="24" y="52" width="452" height="352" rx="10" fill="#f7f9fb" stroke="#cfd6dd"/>
+  <text x="250" y="82" text-anchor="middle" font-size="15" font-weight="700" fill="#1a56b0">SHORT READS</text>
+
+  <!-- genome bar -->
+  <rect x="48" y="250" width="404" height="10" rx="5" fill="#b9c2cc"/>
+  <text x="48" y="242" font-size="11" fill="#8894a2">a stretch of genome</text>
+  <!-- many small reads, staggered rows -->
+  <g>
+    <rect x="52"  y="110" width="46" height="9" rx="4" fill="#4a86e8"/><rect x="104" y="110" width="46" height="9" rx="4" fill="#34a853"/><rect x="156" y="110" width="46" height="9" rx="4" fill="#a142f4"/><rect x="208" y="110" width="46" height="9" rx="4" fill="#ea4335"/><rect x="260" y="110" width="46" height="9" rx="4" fill="#f9ab00"/><rect x="312" y="110" width="46" height="9" rx="4" fill="#12a4a4"/><rect x="364" y="110" width="46" height="9" rx="4" fill="#4a86e8"/>
+    <rect x="70"  y="126" width="46" height="9" rx="4" fill="#34a853"/><rect x="122" y="126" width="46" height="9" rx="4" fill="#a142f4"/><rect x="182" y="126" width="46" height="9" rx="4" fill="#ea4335"/><rect x="238" y="126" width="46" height="9" rx="4" fill="#f9ab00"/><rect x="296" y="126" width="46" height="9" rx="4" fill="#12a4a4"/><rect x="352" y="126" width="46" height="9" rx="4" fill="#4a86e8"/><rect x="404" y="126" width="42" height="9" rx="4" fill="#34a853"/>
+    <rect x="56"  y="142" width="46" height="9" rx="4" fill="#a142f4"/><rect x="110" y="142" width="46" height="9" rx="4" fill="#ea4335"/><rect x="168" y="142" width="46" height="9" rx="4" fill="#f9ab00"/><rect x="224" y="142" width="46" height="9" rx="4" fill="#12a4a4"/><rect x="286" y="142" width="46" height="9" rx="4" fill="#4a86e8"/><rect x="344" y="142" width="46" height="9" rx="4" fill="#34a853"/><rect x="400" y="142" width="46" height="9" rx="4" fill="#a142f4"/>
+    <rect x="74"  y="158" width="46" height="9" rx="4" fill="#ea4335"/><rect x="132" y="158" width="46" height="9" rx="4" fill="#f9ab00"/><rect x="196" y="158" width="46" height="9" rx="4" fill="#12a4a4"/><rect x="256" y="158" width="46" height="9" rx="4" fill="#4a86e8"/><rect x="316" y="158" width="46" height="9" rx="4" fill="#34a853"/><rect x="372" y="158" width="46" height="9" rx="4" fill="#a142f4"/>
+  </g>
+
+  <text x="48" y="296" font-size="12.5" fill="#3c4043"><tspan font-weight="700">~50–300 bp</tspan> each · <tspan font-weight="700">millions</tspan> of reads</text>
+  <text x="48" y="316" font-size="12" fill="#5f6368">e.g. Illumina · very accurate per base · inexpensive</text>
+  <text x="48" y="336" font-size="12" fill="#5f6368">Great for: counting, variant calling, most everyday work.</text>
+  <text x="48" y="368" font-size="12" font-style="italic" fill="#b06000">Trade-off: short pieces are harder to place across</text>
+  <text x="48" y="384" font-size="12" font-style="italic" fill="#b06000">repeats and large rearrangements.</text>
+
+  <!-- ============ RIGHT: LONG READS ============ -->
+  <rect x="524" y="52" width="452" height="352" rx="10" fill="#f7f9fb" stroke="#cfd6dd"/>
+  <text x="750" y="82" text-anchor="middle" font-size="15" font-weight="700" fill="#6b1fb0">LONG READS</text>
+
+  <rect x="548" y="250" width="404" height="10" rx="5" fill="#b9c2cc"/>
+  <text x="548" y="242" font-size="11" fill="#8894a2">the same stretch of genome</text>
+  <!-- a few long reads spanning -->
+  <g>
+    <rect x="556" y="118" width="330" height="11" rx="5" fill="#4a86e8"/>
+    <rect x="600" y="140" width="352" height="11" rx="5" fill="#34a853"/>
+    <rect x="560" y="162" width="300" height="11" rx="5" fill="#a142f4"/>
+    <rect x="620" y="184" width="330" height="11" rx="5" fill="#f9ab00"/>
+  </g>
+
+  <text x="548" y="296" font-size="12.5" fill="#3c4043"><tspan font-weight="700">~10,000–100,000+ bp</tspan> each · far <tspan font-weight="700">fewer</tspan></text>
+  <text x="548" y="316" font-size="12" fill="#5f6368">e.g. PacBio, Oxford Nanopore</text>
+  <text x="548" y="336" font-size="12" fill="#5f6368">Great for: assembly, repeats, structural changes, phasing.</text>
+  <text x="548" y="368" font-size="12" font-style="italic" fill="#b06000">Trade-off: historically higher error per base</text>
+  <text x="548" y="384" font-size="12" font-style="italic" fill="#b06000">(improving fast) and higher cost per sample.</text>
+</svg>
