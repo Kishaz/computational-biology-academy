@@ -1,0 +1,396 @@
+---
+title: "04 · The Command Line — Essential Commands"
+subtitle: "The handful of commands that will carry you through everything else"
+date: "2026-08-16"
+categories: [command-line, beginner, unix, shell]
+---
+
+::: {.callout-note appearance="simple"}
+## A gentle welcome before we begin
+
+In [Module 03](../03-molecular-data-types/index.qmd) you met your first four commands —
+`pwd`, `cd`, `mkdir`, `ls` — while setting up a project folder. This module builds on
+that foundation and gives you the rest of the everyday toolkit: how a command is
+actually *structured*, how to ask the computer for help, and the dozen or so commands
+you'll reach for again and again.
+
+Here's the reassuring truth: the command line looks intimidating, but it's really just
+a **conversation**. You type an instruction, the computer does it and replies. You do
+*not* need to memorise hundreds of commands — a small core does 90% of the work, and for
+everything else, the computer has a built-in manual you'll learn to summon in a second.
+
+Nobody is fluent overnight. But spend a little time here, keep the terminal open as you
+work, and it stops feeling foreign surprisingly fast.
+:::
+
+## What you'll learn
+
+By the end of this module you'll be able to:
+
+1. Read the **anatomy of a command** — the command, its options (flags), and its
+   arguments.
+2. Use **`man`** (and friends) to look up *any* command's details yourself.
+3. Confidently use the **essential commands** for moving around, managing files, and
+   peeking inside them.
+4. Save time with **Tab completion** and **command history**.
+5. Recognise **pipes and redirection** — a taste of how commands combine into pipelines.
+
+### Before you start
+
+- You have a working terminal from [Module 01](../01-setup-environment/index.qmd)
+  (Ubuntu/WSL on Windows, or Terminal on macOS).
+- You've met `pwd`, `cd`, `mkdir`, and `ls` in
+  [Module 03](../03-molecular-data-types/index.qmd) — we'll build straight on those.
+
+::: {.callout-warning}
+## ⚠️ Verify — small differences between systems
+Linux (including WSL) and macOS share the same core commands, but a few options differ
+between them (Linux tools are mostly "GNU"; macOS tools are mostly "BSD"). Where it
+matters, we'll flag it. When in doubt, **`man` is always the source of truth for *your*
+machine** — which is exactly why we teach it early.
+:::
+
+---
+
+## Part A — The anatomy of a command
+
+Almost every command you'll ever type follows the same simple pattern. Once you can see
+the pattern, commands stop looking like magic spells and start looking like sentences:
+
+![A command broken into its parts: the prompt, the command itself, its options/flags, and its argument.](img/anatomy-of-a-command.svg){width=820 fig-alt="Diagram labelling the parts of the command 'ls -lh ~/data'."}
+
+Reading it left to right:
+
+- **The prompt** (something like `you@computer:~$`) is printed *by the shell* to say
+  "I'm ready." You don't type it — you type after it.
+- **The command** is *what* you want to do (`ls` = list files).
+- **Options** (also called **flags**) tweak *how* it's done. They usually start with a
+  dash: `-l`, `-h`.
+- **Arguments** are *what* you want to act on — here, the folder `~/data`.
+
+### A word on flags
+
+Flags come in three flavours, and you'll see all three:
+
+| Style | Looks like | Example |
+|---|---|---|
+| **Short** | one dash, one letter | `ls -l` |
+| **Long** | two dashes, a whole word | `ls --all` |
+| **Combined** | several short flags together | `ls -lh` (same as `ls -l -h`) |
+
+::: {.callout-tip}
+Order is usually flexible — `ls -l -h ~/data`, `ls -lh ~/data`, and often
+`ls ~/data -lh` all work. And a command with **no arguments** just acts on a sensible
+default (plain `ls` lists your *current* folder).
+:::
+
+---
+
+## Part B — Getting help: `man` and friends
+
+You will never memorise every command and every flag — and you don't have to. Unix ships
+with its own manual, and knowing how to open it is one of the most empowering skills a
+beginner can have.
+
+### `man` — the manual
+
+**`man`** (short for **manual**) shows the official documentation for a command. Try:
+
+```bash
+man ls
+```
+
+The top of a manual page is always laid out the same way:
+
+```text
+LS(1)                       General Commands Manual                      LS(1)
+
+NAME
+     ls - list directory contents
+
+SYNOPSIS
+     ls [-@ABCF...abcd...1] [file ...]
+
+DESCRIPTION
+     For each operand that names a file of a type other than directory, ls
+     displays its name ...
+```
+
+How to read it:
+
+- **NAME** — the command and a one-line summary.
+- **SYNOPSIS** — the *shape* of the command. Two conventions to know:
+  square brackets `[ ]` mean **optional**, and `...` means **"one or more."** So
+  `ls [file ...]` reads as "`ls`, optionally followed by one or more files."
+- **DESCRIPTION / OPTIONS** — the detail, including what every flag does.
+
+::: {.callout-tip}
+## Moving around inside a `man` page
+`man` opens a full-screen reader. A few keys are all you need:
+
+- **Spacebar** — down a page · **`b`** — back a page
+- **`/word`** then Enter — search for *word*; **`n`** jumps to the next match
+- **`q`** — quit (back to the prompt)
+:::
+
+### Quicker help: `--help`
+
+Many commands also print a short help summary if you add `--help`:
+
+```bash
+mkdir --help
+```
+
+::: {.callout-warning}
+## ⚠️ Verify
+`--help` works for most Linux (GNU) tools, but several **macOS** commands don't support
+it (you'll get an error). On macOS, reach for `man` instead — it always works. This is a
+common early "why doesn't this work?" moment, and now you know why.
+:::
+
+### "Where does this command live?" — `which`
+
+`which` tells you which program actually runs when you type a name — handy for checking a
+tool is installed and on your `PATH`:
+
+```bash
+which ls
+which conda
+```
+
+---
+
+## Part C — The essential commands
+
+Here is the core toolkit, grouped by what you're trying to do. Skim it now; you'll
+internalise these by *using* them, not by memorising the table.
+
+### Looking around
+
+| Command | What it does | Example |
+|---|---|---|
+| `pwd` | print working directory (where am I?) | `pwd` |
+| `ls` | list files & folders | `ls -lh` |
+| `cd` | change directory (move) | `cd ~/projects` |
+
+Useful `ls` flags: **`-l`** (long, detailed list), **`-a`** (show hidden files, whose
+names start with `.`), **`-h`** (human-readable sizes like `30K` instead of `30429`).
+
+### Working with files and folders
+
+| Command | What it does | Example |
+|---|---|---|
+| `mkdir` | make a folder | `mkdir data` |
+| `touch` | create an empty file (or update its timestamp) | `touch notes.txt` |
+| `cp` | copy a file | `cp a.txt b.txt` |
+| `mv` | move **or rename** a file | `mv old.txt new.txt` |
+| `rm` | remove (delete) a file | `rm junk.txt` |
+
+- To copy or delete a **folder** and its contents, add **`-r`** (recursive):
+  `cp -r data backup`, `rm -r oldfolder`.
+- `mv` does double duty: move a file to a new folder, *or* rename it in place.
+
+::: {.callout-warning}
+## 🧰 `rm` is forever — handle with care
+On the command line there is **no Recycle Bin / Trash**. `rm` deletes *immediately and
+permanently*. Two habits keep you safe:
+
+- Add **`-i`** to be asked for confirmation first: `rm -i file.txt`.
+- Treat **`rm -rf`** (force, recursive) with real respect — it deletes a whole folder
+  tree with no questions asked. Double-check the path *before* you press Enter.
+:::
+
+### Peeking inside files
+
+| Command | What it does | Example |
+|---|---|---|
+| `cat` | print a whole file to the screen | `cat notes.txt` |
+| `less` | view a big file one page at a time (press `q` to quit) | `less big.txt` |
+| `head` | show the **first** lines (default 10) | `head -5 data.csv` |
+| `tail` | show the **last** lines (default 10) | `tail -5 data.csv` |
+| `wc` | count lines, words, characters | `wc -l data.csv` |
+
+::: {.callout-tip}
+For anything large — and biological data files are *huge* — use **`less`** or **`head`**,
+never `cat`. `cat` dumps the entire file, which can flood your terminal with millions of
+lines.
+:::
+
+### Finding things
+
+| Command | What it does | Example |
+|---|---|---|
+| `grep` | search for text inside files | `grep "TP53" genes.txt` |
+| `find` | search for files by name | `find . -name "*.fasta"` |
+
+Handy `grep` flags: **`-i`** (ignore upper/lower case), **`-c`** (count matches instead
+of showing them), **`-n`** (show line numbers). `grep` is one of the most useful
+commands in all of bioinformatics — you'll meet it constantly.
+
+### A few everyday conveniences
+
+| Command | What it does |
+|---|---|
+| `echo` | print text (e.g. `echo "hello"`) |
+| `clear` | clear the screen (or press `Ctrl` + `L`) |
+| `history` | show the commands you've run recently |
+
+---
+
+## Part D — Two genuine superpowers
+
+These two habits save more time than any single command. Learn them today.
+
+- **Tab completion.** Start typing a file or folder name and press **`Tab`** — the shell
+  finishes it for you. Type `cd ~/proj` then Tab, and it completes to `~/projects/`. This
+  prevents typos *and* saves enormous amounts of typing. (Press Tab twice to see all the
+  options when there's more than one match.)
+- **Command history.** Press the **Up arrow** to bring back your previous command (keep
+  pressing to go further back). Perfect for re-running something, or fixing a small typo
+  without retyping the whole line.
+
+::: {.callout-tip}
+Two more rescue keys: **`Ctrl` + `C`** cancels whatever is currently running (a lifesaver
+when something hangs), and **`Ctrl` + `L`** clears the screen.
+:::
+
+---
+
+## Part E — A first taste of pipes and redirection
+
+You don't need these yet, but you'll see them everywhere in bioinformatics, so here's a
+gentle preview of the idea: **small commands can be joined together.**
+
+- A **pipe** (`|`) sends the output of one command straight into another:
+
+  ```bash
+  cat genes.txt | grep "TP53" | wc -l
+  ```
+
+  Read left to right: print the file → keep only lines with "TP53" → count them. Each
+  command does one small job, and the pipe passes the result along.
+
+- **Redirection** sends output into a *file* instead of the screen: **`>`** writes (and
+  overwrites), **`>>`** adds to the end:
+
+  ```bash
+  grep "TP53" genes.txt > tp53_hits.txt
+  ```
+
+::: {.callout-note}
+This is just a taste — we'll use pipes properly in later modules. For now, simply
+recognise `|`, `>`, and `>>` when you see them: they're how a few simple commands become
+a powerful pipeline.
+:::
+
+---
+
+## Part F — Hands-on: put it together
+
+Let's use the real reference file from Module 03. If you still have it, move into that
+folder; if not, re-download it (Module 03, Part K). Then let's inspect it with the
+commands you just met — this is exactly how you'd first "look at" any new data file.
+
+```bash
+cd ~/projects/covid-demo/references   # go where the file lives
+ls -lh                                # what's here, and how big?
+```
+
+**Real output:**
+
+```text
+total 64
+-rw-r--r--  1 you  staff   30K Aug 16 04:19 sars2.fasta
+```
+
+That long line is what `-l` gives you: permissions, owner, group, **size** (`30K`,
+thanks to `-h`), the date, and the filename. Now peek inside:
+
+```bash
+head -2 sars2.fasta        # the first two lines
+wc -l sars2.fasta          # how many lines?
+grep -c "^>" sars2.fasta   # how many sequences? (FASTA headers start with ">")
+```
+
+**Real output:**
+
+```text
+>NC_045512.2 Severe acute respiratory syndrome coronavirus 2 isolate Wuhan-Hu-1, complete genome
+ATTAAAGGTTTATACCTTCCCAGGTAACAAACCAACCAACTTTCGATCTCTTGTAGATCTGTTCTCTAAA
+     430 sars2.fasta
+1
+```
+
+In four short commands you found where the file is, how big it is, what its first lines
+look like, that it has **430 lines**, and that it contains exactly **one sequence**.
+That's the everyday rhythm of working with data on the command line — and you just did
+it.
+
+::: {.callout-note collapse="true"}
+## ✅ Check
+If `grep -c "^>" sars2.fasta` printed `1`, and `wc -l` printed `430`, everything's
+working. (Don't worry if the file's date or size differ slightly — yours will reflect
+when *you* downloaded it.)
+:::
+
+---
+
+## Recap
+
+You now can:
+
+- ✅ Read any command as **command + options (flags) + arguments**.
+- ✅ Look up *anything* yourself with **`man`** (and `--help` / `which`).
+- ✅ Use the core toolkit — `ls`, `cp`, `mv`, `rm`, `cat`, `less`, `head`, `tail`, `wc`,
+  `grep`, `find`, and friends — safely (including respecting `rm`).
+- ✅ Move faster with **Tab completion** and **command history**.
+- ✅ Recognise **pipes (`|`)** and **redirection (`>`, `>>`)** when you meet them.
+
+That's genuinely most of what day-to-day command-line work involves. Everything else is
+variations on this handful of ideas.
+
+::: {.callout-tip appearance="simple"}
+## Keep going — a word of encouragement
+
+If some of this still feels awkward, that's completely expected — the command line is a
+skill, like riding a bike, and it clicks through *doing*, not reading. The single best
+thing you can do now is **keep the terminal open** while you work and reach for it for
+small tasks (listing a folder, peeking at a file) instead of the mouse. Within a couple
+of weeks it'll feel like second nature, and you'll wonder how you managed without it.
+
+And remember your safety net: whenever you forget what a command or flag does, **`man`**
+is one word away. You're never stuck.
+:::
+
+## Exercises
+
+1. Run `man wc`. Use it to find out what the **`-w`** flag does, then quit the manual
+   with `q`.
+2. In your `~/projects/covid-demo` folder, make a `notes.txt` with `touch`, write a line
+   into it (`echo "my first note" > notes.txt`), then read it back with `cat`.
+3. Copy `notes.txt` to `notes_backup.txt` with `cp`, then rename the copy to
+   `archive.txt` with `mv`. Confirm with `ls`.
+4. Use `head`, `tail`, and `wc -l` on your `references/sars2.fasta` file. How many lines
+   does it have?
+5. Practise **Tab completion**: type `cd ~/proj` and press Tab. Then press the **Up
+   arrow** a few times to see your recent commands.
+6. **Careful one:** delete `archive.txt` with `rm -i archive.txt` and notice how `-i`
+   asks you to confirm first.
+
+## Where to go next
+
+You've now got a real command-line foundation — the structure of commands, the manual,
+and the essential toolkit. Later modules lean on these constantly (aligning reads,
+running pipelines, wrangling results), adding new commands a few at a time. New modules
+appear on the [home page](../../index.qmd) as they're ready.
+
+Best next step: **use these commands for real.** Poke around your own folders, look
+inside files, and lean on `man` whenever you're unsure. The fluency comes from the doing.
+
+::: {.callout-important}
+## One more time on accuracy
+Command options can differ slightly between Linux (GNU) and macOS (BSD), and tools are
+occasionally updated. The authoritative reference for *your* machine is always **`man`**
+(and each tool's official documentation) — it supersedes this tutorial whenever they
+disagree.
+:::

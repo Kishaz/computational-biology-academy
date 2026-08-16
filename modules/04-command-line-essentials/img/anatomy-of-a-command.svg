@@ -1,0 +1,29 @@
+<svg viewBox="0 0 1000 372" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" role="img" aria-label="Diagram breaking a command into its parts: the prompt, the command, its options/flags, and its argument.">
+  <rect x="1" y="1" width="998" height="370" rx="10" fill="#ffffff" stroke="#d5dbe2"/>
+  <text x="500" y="30" text-anchor="middle" font-size="18" font-weight="700" fill="#2b3138">The anatomy of a command</text>
+
+  <!-- terminal box -->
+  <rect x="60" y="52" width="880" height="66" rx="8" fill="#1e1e1e"/>
+  <text x="86" y="94" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="22">
+    <tspan fill="#808a94">you@computer:~$ </tspan><tspan fill="#4fc1ff" font-weight="700">ls</tspan><tspan fill="#d4d4d4"> </tspan><tspan fill="#dcdcaa" font-weight="700">-lh</tspan><tspan fill="#d4d4d4"> </tspan><tspan fill="#4ec9b0" font-weight="700">~/data</tspan>
+  </text>
+
+  <!-- legend -->
+  <g font-size="14.5">
+    <!-- prompt -->
+    <rect x="90" y="150" width="18" height="18" rx="3" fill="#808a94"/>
+    <text x="118" y="164" fill="#2b3138"><tspan font-weight="700">the prompt</tspan> — the shell is ready and waiting. You don't type this part.</text>
+    <!-- command -->
+    <rect x="90" y="192" width="18" height="18" rx="3" fill="#4fc1ff"/>
+    <text x="118" y="206" fill="#2b3138"><tspan font-weight="700">command</tspan> — <tspan font-weight="700">what</tspan> you want to do. Here, <tspan font-family="ui-monospace, Menlo, monospace">ls</tspan> = "list files."</text>
+    <!-- options -->
+    <rect x="90" y="234" width="18" height="18" rx="3" fill="#dcdcaa"/>
+    <text x="118" y="248" fill="#2b3138"><tspan font-weight="700">options / flags</tspan> — <tspan font-weight="700">how</tspan> to do it. Here, <tspan font-family="ui-monospace, Menlo, monospace">-l</tspan> (long list) + <tspan font-family="ui-monospace, Menlo, monospace">-h</tspan> (human-readable sizes).</text>
+    <!-- argument -->
+    <rect x="90" y="276" width="18" height="18" rx="3" fill="#4ec9b0"/>
+    <text x="118" y="290" fill="#2b3138"><tspan font-weight="700">argument</tspan> — <tspan font-weight="700">what</tspan> to act on. Here, the folder <tspan font-family="ui-monospace, Menlo, monospace">~/data</tspan>.</text>
+  </g>
+
+  <line x1="90" y1="316" x2="910" y2="316" stroke="#e6eaee"/>
+  <text x="90" y="342" font-size="13.5" fill="#6b7480">Flags come in three styles: <tspan font-family="ui-monospace, Menlo, monospace" fill="#3c4043">short (-l)</tspan>, <tspan font-family="ui-monospace, Menlo, monospace" fill="#3c4043">long (--all)</tspan>, and <tspan font-family="ui-monospace, Menlo, monospace" fill="#3c4043">combined (-lh = -l -h)</tspan>.</text>
+</svg>

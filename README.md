@@ -62,6 +62,7 @@ ready.
 | 01 | [Environment Setup — Windows (WSL/Ubuntu) & macOS + Conda](modules/01-setup-environment/index.qmd) |
 | 02 | [An Introduction to R for Biologists](modules/02-r-for-biologists/index.qmd) |
 | 03 | [A Field Guide to Molecular Data Types](modules/03-molecular-data-types/index.qmd) |
+| 04 | [The Command Line — Essential Commands](modules/04-command-line-essentials/index.qmd) |
 
 *New modules are added here as they're completed. "Watch" the repository on GitHub
 to be notified when they land.*
