@@ -61,23 +61,47 @@ pre.sourceCode { border-radius: 6px; font-size: 0.9em; }
 .cba-band h2, .cba-band h3 { border: none; margin-top: 0; }
 .cba-philosophy { font-size: 1.15rem; font-weight: 600; text-align: center; }
 
-/* ---------- Learning-path ladder ---------- */
-.cba-paths { margin: 1rem 0; }
+/* ---------- Learning-path steps (horizontal) ---------- */
+.cba-paths {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
+  gap: 0.4rem;
+  margin: 1.2rem 0;
+}
 .cba-path {
+  flex: 1 1 240px;
+  max-width: 330px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.7rem;
+  padding: 1.5rem 1.2rem;
+  border: 1px solid rgba(128,128,128,0.2);
+  border-top: 4px solid var(--cba-accent, #2780e3);
+  border-radius: 12px;
+  background: rgba(128,128,128,0.04);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+.cba-path:hover { transform: translateY(-3px); box-shadow: 0 6px 18px rgba(0,0,0,0.08); }
+.cba-path .emoji {
+  display: block;
+  width: 3rem; height: 3rem; line-height: 3rem;
+  font-size: 1.7rem; text-align: center;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--cba-accent, #888) 15%, transparent);
+}
+.cba-path .line { font-size: 1rem; line-height: 1.45; }
+.cba-paths .arrow {
   display: flex;
   align-items: center;
-  gap: 0.9rem;
-  padding: 0.7rem 0.9rem;
-  border: 1px solid rgba(128,128,128,0.25);
-  border-left: 5px solid var(--cba-accent, #2780e3);
-  border-radius: 10px;
-  background: rgba(128,128,128,0.04);
-  margin: 0.5rem 0;
+  font-size: 1.5rem;
+  opacity: 0.3;
+  padding: 0 0.05rem;
 }
-.cba-path .emoji { font-size: 1.6rem; line-height: 1; }
-.cba-path .label { font-weight: 700; }
-.cba-path .quote { opacity: 0.7; font-style: italic; }
-.cba-path .arrow { text-align: center; opacity: 0.4; margin: -0.1rem 0; }
+@media (max-width: 560px) { .cba-paths .arrow { display: none; } }
 
 /* ---------- Cast cards ---------- */
 .cba-cast {

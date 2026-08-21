@@ -5,6 +5,14 @@ date: "2026-08-16"
 categories: [story, command-line, beginner, unix, shell]
 ---
 
+```{=html}
+<div class="cba-comic">
+```
+![](img/comic-terminal.svg){fig-alt="Three-panel comic: Prof. Zola says everything real happens in the terminal, Amina sees only a blinking cursor and wonders how to begin, then realises it is just a language she can learn."}
+```{=html}
+</div>
+```
+
 ## 🧩 The mystery
 
 Amina (that is you) sits down at the terminal for the first time. A black window. A

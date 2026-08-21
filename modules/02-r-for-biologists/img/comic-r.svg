@@ -1,0 +1,59 @@
+<svg viewBox="0 0 1000 300" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" role="img" aria-label="Three-panel comic. Pendo asks what R even is. Amina explains R is a language you speak to your data. You ask a question and it answers the same way every time.">
+  <rect x="1" y="1" width="998" height="298" rx="10" fill="#ffffff" stroke="#d5dbe2"/>
+  <line x1="334" y1="16" x2="334" y2="284" stroke="#e2e6ea"/>
+  <line x1="667" y1="16" x2="667" y2="284" stroke="#e2e6ea"/>
+
+  <!-- Panel 1: Pendo -->
+  <g stroke="#2b3138" stroke-width="3" fill="none" stroke-linecap="round">
+    <circle cx="80" cy="150" r="20" fill="#f0e8fd"/>
+    <line x1="80" y1="170" x2="80" y2="222"/>
+    <line x1="80" y1="185" x2="54" y2="205"/>
+    <line x1="80" y1="185" x2="106" y2="205"/>
+    <line x1="80" y1="222" x2="62" y2="256"/>
+    <line x1="80" y1="222" x2="98" y2="256"/>
+  </g>
+  <text x="80" y="284" text-anchor="middle" font-size="12" font-weight="700" fill="#6b1fb0">Pendo</text>
+  <g>
+    <rect x="150" y="46" width="176" height="70" rx="12" fill="#f7f9fb" stroke="#b9c2cc"/>
+    <path d="M150 100 l-16 14 l24 -4 z" fill="#f7f9fb" stroke="#b9c2cc"/>
+    <text x="164" y="72" font-size="12.5" fill="#2b3138">Everyone says</text>
+    <text x="164" y="92" font-size="12.5" fill="#2b3138">"just use R".</text>
+    <text x="164" y="112" font-size="12.5" fill="#2b3138">But what IS it?</text>
+  </g>
+
+  <!-- Panel 2: Amina -->
+  <g stroke="#2b3138" stroke-width="3" fill="none" stroke-linecap="round">
+    <circle cx="415" cy="150" r="20" fill="#e8f0fe"/>
+    <line x1="415" y1="170" x2="415" y2="222"/>
+    <line x1="415" y1="185" x2="389" y2="205"/>
+    <line x1="415" y1="185" x2="441" y2="205"/>
+    <line x1="415" y1="222" x2="397" y2="256"/>
+    <line x1="415" y1="222" x2="433" y2="256"/>
+  </g>
+  <text x="415" y="284" text-anchor="middle" font-size="12" font-weight="700" fill="#1a56b0">Amina</text>
+  <g>
+    <rect x="470" y="46" width="182" height="70" rx="12" fill="#f7f9fb" stroke="#b9c2cc"/>
+    <path d="M470 100 l-16 14 l24 -4 z" fill="#f7f9fb" stroke="#b9c2cc"/>
+    <text x="484" y="72" font-size="12.5" fill="#2b3138">It is a language</text>
+    <text x="484" y="92" font-size="12.5" fill="#2b3138">you speak to</text>
+    <text x="484" y="112" font-size="12.5" fill="#2b3138">your data.</text>
+  </g>
+
+  <!-- Panel 3: Amina -->
+  <g stroke="#2b3138" stroke-width="3" fill="none" stroke-linecap="round">
+    <circle cx="748" cy="150" r="20" fill="#e8f0fe"/>
+    <line x1="748" y1="170" x2="748" y2="222"/>
+    <line x1="748" y1="185" x2="722" y2="205"/>
+    <line x1="748" y1="185" x2="774" y2="205"/>
+    <line x1="748" y1="222" x2="730" y2="256"/>
+    <line x1="748" y1="222" x2="766" y2="256"/>
+  </g>
+  <text x="748" y="284" text-anchor="middle" font-size="12" font-weight="700" fill="#1a56b0">Amina</text>
+  <g>
+    <rect x="800" y="46" width="176" height="70" rx="12" fill="#e6f4ea" stroke="#8bd4a6"/>
+    <path d="M800 100 l-16 14 l24 -4 z" fill="#e6f4ea" stroke="#8bd4a6"/>
+    <text x="814" y="72" font-size="12.5" fill="#2b3138">You ask. It</text>
+    <text x="814" y="92" font-size="12.5" fill="#2b3138">answers. Same,</text>
+    <text x="814" y="112" font-size="12.5" fill="#2b3138">every time.</text>
+  </g>
+</svg>

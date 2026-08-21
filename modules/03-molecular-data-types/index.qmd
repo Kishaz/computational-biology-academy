@@ -5,6 +5,14 @@ date: "2026-08-12"
 categories: [story, data, beginner, genomics, transcriptomics, proteomics, spatial, metadata]
 ---
 
+```{=html}
+<div class="cba-comic">
+```
+![](img/comic-data.svg){fig-alt="Three-panel comic: Prof. Zola says go find me some data, Amina wonders what data and from where and in what shape, and Baraka says you cannot hunt until you know what you seek."}
+```{=html}
+</div>
+```
+
 ## 🧩 The mystery
 
 Prof. Zola sweeps into the lab, coffee in one hand, and drops a single sentence on the

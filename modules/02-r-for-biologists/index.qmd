@@ -5,6 +5,14 @@ date: "2026-08-08"
 categories: [story, R, beginner, stats, packages, windows, macos]
 ---
 
+```{=html}
+<div class="cba-comic">
+```
+![](img/comic-r.svg){fig-alt="Three-panel comic: Pendo asks what R even is, Amina explains it is a language you speak to your data, and that you ask a question and it answers the same way every time."}
+```{=html}
+</div>
+```
+
 ## 🧩 The mystery
 
 Pendo, a first-year PhD student, corners you by the coffee machine. He looks worried.

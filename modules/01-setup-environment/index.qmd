@@ -5,6 +5,14 @@ date: "2026-08-05"
 categories: [story, setup, beginner, windows, macos, conda, linux]
 ---
 
+```{=html}
+<div class="cba-comic">
+```
+![](img/comic-setup.svg){fig-alt="Three-panel comic: Prof. Zola tells Amina to get set up before real work starts, Amina finds no physical bench, and realises her bench is made of software."}
+```{=html}
+</div>
+```
+
 ## 🧩 The mystery
 
 It is your very first day. Prof. Zola waves you toward an empty desk with a

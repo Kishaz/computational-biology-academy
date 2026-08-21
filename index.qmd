@@ -21,18 +21,14 @@ sidebar: false
 The best way to learn computational biology is not by memorizing commands. It is by asking biological questions. Everything here follows from that one idea.
 </section>
 
-<h2>🧭 Choose your journey</h2>
-<p>Not tutorials. Adventures. You always know where you are, and what comes next.</p>
+<h2>🧭 Where are you right now?</h2>
+<p>Find the line that sounds like you. Each step builds on the one before, and the Academy carries you to the next.</p>
 <div class="cba-paths">
-  <div class="cba-path" style="--cba-accent:#22a06b"><span class="emoji">🌱</span><div><div class="label">Beginner</div><div class="quote">"I have never touched Linux."</div></div></div>
-  <div class="arrow">↓</div>
-  <div class="cba-path" style="--cba-accent:#2780e3"><span class="emoji">🧬</span><div><div class="label">Bioinformatics Explorer</div><div class="quote">"I know some commands."</div></div></div>
-  <div class="arrow">↓</div>
-  <div class="cba-path" style="--cba-accent:#8b5cf6"><span class="emoji">🔬</span><div><div class="label">Computational Biologist</div><div class="quote">"I can analyse data."</div></div></div>
-  <div class="arrow">↓</div>
-  <div class="cba-path" style="--cba-accent:#f5a623"><span class="emoji">🚀</span><div><div class="label">Research Scientist</div><div class="quote">"I can answer biological questions."</div></div></div>
-  <div class="arrow">↓</div>
-  <div class="cba-path" style="--cba-accent:#e5484d"><span class="emoji">🧠</span><div><div class="label">AI Scientist</div><div class="quote">"I build new tools."</div></div></div>
+  <div class="cba-path" style="--cba-accent:#22a06b"><span class="emoji">🌱</span><div class="line">"I have never opened a terminal, and that is fine."</div></div>
+  <div class="arrow">→</div>
+  <div class="cba-path" style="--cba-accent:#2780e3"><span class="emoji">🔬</span><div class="line">"I can run standard analyses and make sense of the results."</div></div>
+  <div class="arrow">→</div>
+  <div class="cba-path" style="--cba-accent:#8b5cf6"><span class="emoji">🧬</span><div class="line">"I can turn a biological question into the analysis that answers it, and sometimes invent a new way to answer."</div></div>
 </div>
 
 <h2>Meet your lab</h2>
