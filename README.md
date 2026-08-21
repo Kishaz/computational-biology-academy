@@ -56,6 +56,21 @@ Spotted a mistake or an out-of-date command? Please
 [open an issue](https://github.com/Kishaz/computational-biology-academy/issues). Accuracy
 is a priority here, so corrections are genuinely appreciated.
 
+## About the author
+
+The Computational Biology Academy is created and maintained by **Samuel Mwamburi, PhD**,
+a computational biologist and Postdoctoral Fellow at Johns Hopkins Medicine. His research
+spans microbes, model and non-model organisms, and human biology. He built the Academy to
+help scientists and students learn to think like computational biologists, not just run
+software.
+
+- Website: <https://samuel-mwamburi.netlify.app/>
+- GitHub: [@Kishaz](https://github.com/Kishaz)
+- Google Scholar: [profile](https://scholar.google.com/citations?user=s_LXHcwAAAAJ)
+- ORCID: [0000-0003-4253-3967](https://orcid.org/0000-0003-4253-3967)
+- LinkedIn: [Samuel Mwamburi, PhD](https://www.linkedin.com/in/samuel-mwamburi-phd-10b85290)
+- X: [@SMwakisha](https://x.com/SMwakisha)
+
 ## License
 
 © 2026 Samuel Mwamburi.
