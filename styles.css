@@ -1,15 +1,187 @@
-/* Light custom styling for the tutorials site. Keep minimal. */
+/* ============================================================
+   The Computational Biology Academy visual system
+   Theme-safe: uses translucent backgrounds + inherited text
+   so everything reads in both light and dark mode.
+   ============================================================ */
 
-/* Give code blocks a touch more breathing room */
-pre.sourceCode {
-  border-radius: 6px;
-  font-size: 0.9em;
+/* Code blocks: a touch more breathing room */
+pre.sourceCode { border-radius: 6px; font-size: 0.9em; }
+.page-columns .content { line-height: 1.6; }
+
+/* ---------- Homepage hero ---------- */
+.cba-hero {
+  text-align: center;
+  padding: 2.2rem 1rem 1.4rem;
+}
+.cba-hero .eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.8rem;
+  font-weight: 700;
+  opacity: 0.6;
+}
+.cba-hero h1 { border: none; }
+/* The big Academy name that pops */
+.cba-name {
+  font-size: clamp(2.4rem, 6.2vw, 4.2rem);
+  font-weight: 900;
+  line-height: 1.04;
+  letter-spacing: -0.01em;
+  margin: 0.05em 0 0.3em;
+}
+.cba-name .accent { color: #12a4a4; }
+/* The punchy promise under the name */
+.cba-punch {
+  font-size: clamp(1.15rem, 2.6vw, 1.6rem);
+  font-weight: 700;
+  max-width: 26ch;
+  margin: 0.2em auto 0.5em;
+  opacity: 0.92;
+}
+.cba-hero .tagline {
+  font-size: clamp(1rem, 2.1vw, 1.25rem);
+  max-width: 44ch;
+  margin: 0.4em auto 0.2em;
+  opacity: 0.8;
+}
+.cba-hero .fromto {
+  font-weight: 700;
+  margin-top: 0.6em;
+  opacity: 0.75;
 }
 
-/* Make the "check / verify / troubleshooting" callouts visually distinct
-   is handled by Quarto's built-in callout classes; nothing needed here. */
+/* ---------- Section band ---------- */
+.cba-band {
+  border: 1px solid rgba(128,128,128,0.25);
+  border-radius: 14px;
+  background: rgba(128,128,128,0.05);
+  padding: 1.3rem 1.4rem;
+  margin: 1.6rem 0;
+}
+.cba-band h2, .cba-band h3 { border: none; margin-top: 0; }
+.cba-philosophy { font-size: 1.15rem; font-weight: 600; text-align: center; }
 
-/* Comfortable reading width for prose */
-.page-columns .content {
-  line-height: 1.6;
+/* ---------- Learning-path ladder ---------- */
+.cba-paths { margin: 1rem 0; }
+.cba-path {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid rgba(128,128,128,0.25);
+  border-left: 5px solid var(--cba-accent, #2780e3);
+  border-radius: 10px;
+  background: rgba(128,128,128,0.04);
+  margin: 0.5rem 0;
+}
+.cba-path .emoji { font-size: 1.6rem; line-height: 1; }
+.cba-path .label { font-weight: 700; }
+.cba-path .quote { opacity: 0.7; font-style: italic; }
+.cba-path .arrow { text-align: center; opacity: 0.4; margin: -0.1rem 0; }
+
+/* ---------- Cast cards ---------- */
+.cba-cast {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.8rem;
+  margin: 1rem 0;
+}
+.cba-card {
+  border: 1px solid rgba(128,128,128,0.22);
+  border-top: 4px solid var(--card-accent, #888);
+  border-radius: 12px;
+  padding: 1rem;
+  background: rgba(128,128,128,0.04);
+  text-align: center;
+}
+.cba-card .avatar {
+  font-size: 2rem;
+  width: 3.2rem; height: 3.2rem; line-height: 3.2rem;
+  margin: 0 auto 0.2rem;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--card-accent, #888) 16%, transparent);
+}
+.cba-card .name { font-weight: 800; margin-top: 0.2rem; color: var(--card-accent, inherit); }
+.cba-card .role { opacity: 0.75; font-size: 0.92rem; }
+
+/* ---------- Template step chips ---------- */
+.cba-steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.8rem 0;
+}
+.cba-steps .chip {
+  border: 1px solid rgba(128,128,128,0.3);
+  border-radius: 999px;
+  padding: 0.35rem 0.8rem;
+  font-size: 0.9rem;
+  background: rgba(128,128,128,0.05);
+}
+
+/* ---------- Story flow (the continuous project) ---------- */
+.cba-flow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem 0.5rem;
+  justify-content: center;
+  margin: 0.8rem 0;
+}
+.cba-flow .node {
+  border: 1px solid rgba(128,128,128,0.3);
+  border-radius: 8px;
+  padding: 0.3rem 0.7rem;
+  font-weight: 600;
+  font-size: 0.92rem;
+  background: rgba(128,128,128,0.05);
+}
+.cba-flow .sep { opacity: 0.4; font-weight: 700; }
+
+/* ============================================================
+   Branded lesson boxes (used inside lessons)
+   Usage:  ::: {.think}  ...  :::
+   ============================================================ */
+.think, .story, .mistake, .takeaway, .reality, .insight, .didyouknow, .challenge {
+  border: 1px solid rgba(128,128,128,0.28);
+  border-left: 5px solid var(--box-accent, #888);
+  border-radius: 10px;
+  padding: 0.9rem 1.1rem;
+  margin: 1.2rem 0;
+  background: rgba(128,128,128,0.045);
+}
+.think    { --box-accent: #2780e3; }
+.story    { --box-accent: #22a06b; }
+.mistake  { --box-accent: #e5484d; }
+.takeaway { --box-accent: #f5a623; background: rgba(245,166,35,0.08); }
+.reality  { --box-accent: #8b5cf6; }
+.insight  { --box-accent: #12a4a4; }
+.didyouknow { --box-accent: #2780e3; }
+.challenge { --box-accent: #22a06b; }
+.think::before, .story::before, .mistake::before, .takeaway::before,
+.reality::before, .insight::before, .didyouknow::before, .challenge::before {
+  font-weight: 800;
+  display: block;
+  margin-bottom: 0.35rem;
+}
+.think::before    { content: "🧠 Think"; }
+.story::before    { content: "💬 Story"; }
+.mistake::before  { content: "⚠️ Common mistake"; }
+.takeaway::before { content: "🎯 Key takeaway"; }
+.reality::before  { content: "😂 Bioinformatics reality"; }
+.insight::before  { content: "🧬 Biological insight"; }
+.didyouknow::before { content: "💡 Did you know?"; }
+.challenge::before  { content: "🧩 Mini challenge"; }
+
+/* Comic figure */
+.cba-comic { text-align: center; margin: 1.4rem 0; }
+.cba-comic img { max-width: 100%; border-radius: 10px; }
+
+/* "Go make coffee" sign-off */
+.cba-signoff {
+  text-align: center;
+  font-weight: 700;
+  border-top: 1px dashed rgba(128,128,128,0.4);
+  padding-top: 1rem;
+  margin-top: 1.6rem;
 }

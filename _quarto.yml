@@ -3,9 +3,9 @@ project:
   output-dir: _site
 
 website:
-  title: "Bioinformatics for Molecular Biology"
-  description: "Beginner-friendly, step-by-step tutorials for bioinformatics analysis of molecular data."
-  repo-url: https://github.com/Kishaz/bioinformatics-tutorials
+  title: "The Computational Biology Academy"
+  description: "Learn computational biology through stories, real datasets, and hands-on projects. From FASTQ to Nature paper."
+  repo-url: https://github.com/Kishaz/computational-biology-academy
   repo-actions: [issue, source]
   page-navigation: true
   navbar:
@@ -15,15 +15,15 @@ website:
       - text: "Modules"
         menu:
           - href: modules/01-setup-environment/index.qmd
-            text: "01 · Environment Setup"
+            text: "01 · Build Your Dry Lab Bench"
           - href: modules/02-r-for-biologists/index.qmd
-            text: "02 · R for Biologists"
+            text: "02 · A Language for Asking Questions"
           - href: modules/03-molecular-data-types/index.qmd
-            text: "03 · Molecular Data Types"
+            text: "03 · A Field Guide to Your Data"
           - href: modules/04-command-line-essentials/index.qmd
-            text: "04 · Command-Line Essentials"
+            text: "04 · Talking to Computers"
           - href: modules/05-reads-and-quality-control/index.qmd
-            text: "05 · Reads & Quality Control"
+            text: "05 · Is This Data Any Good?"
     right:
       - text: "by Samuel Mwamburi, PhD"
         href: https://samuel-mwamburi.netlify.app/
@@ -31,27 +31,23 @@ website:
     style: docked
     search: true
     contents:
-      - section: "Getting Started"
-        contents:
-          - href: index.qmd
-            text: "Welcome"
       - section: "Modules"
         contents:
           - href: modules/01-setup-environment/index.qmd
-            text: "01 · Environment Setup (Windows/WSL + macOS + Conda)"
+            text: "01 · Build Your Dry Lab Bench"
           - href: modules/02-r-for-biologists/index.qmd
-            text: "02 · An Introduction to R for Biologists"
+            text: "02 · A Language for Asking Questions"
           - href: modules/03-molecular-data-types/index.qmd
-            text: "03 · A Field Guide to Molecular Data Types"
+            text: "03 · A Field Guide to Your Data"
           - href: modules/04-command-line-essentials/index.qmd
-            text: "04 · The Command Line — Essential Commands"
+            text: "04 · Talking to Computers"
           - href: modules/05-reads-and-quality-control/index.qmd
-            text: "05 · Reads & Quality Control"
+            text: "05 · Is This Data Any Good?"
   page-footer:
     left: "© 2026 Samuel Mwamburi, PhD · CC BY 4.0"
     center: "Educational material. Verify all tool commands against current official documentation before use."
 
-# Site-wide author metadata — gives every page a byline under its title.
+# Site-wide author metadata: gives every page a byline under its title.
 author:
   - name: "Samuel Mwamburi, PhD"
     url: https://samuel-mwamburi.netlify.app/

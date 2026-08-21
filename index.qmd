@@ -1,106 +1,86 @@
 ---
-title: "Bioinformatics for Molecular Biology"
-subtitle: "Beginner-friendly, step-by-step tutorials for analysing molecular data"
+pagetitle: "The Computational Biology Academy"
+page-layout: full
+toc: false
+author: []
+sidebar: false
 ---
 
-Welcome! This is a growing collection of **hands-on, beginner-friendly tutorials**
-that introduce interested scientists and students to bioinformatics analysis of
-molecular data.
+```{=html}
+<style>#title-block-header{ display:none !important; }</style>
+<section class="cba-hero">
+  <p class="eyebrow">Welcome to</p>
+  <h1 class="cba-name">The <span class="accent">Computational Biology</span> Academy</h1>
+  <p class="cba-punch">Stop memorizing commands. Start answering biological questions.</p>
+  <p class="tagline">Learn computational biology through stories, real datasets, and hands-on projects. No command memorizing. No walls of text. Just curiosity.</p>
+  <p class="fromto">From FASTQ to publication.</p>
+  <p><a class="btn btn-primary btn-lg" href="modules/01-setup-environment/" role="button">Start your first mystery →</a></p>
+</section>
 
-The goal is simple: take someone with a biology background and little or no
-command-line experience, and walk them — one small, verifiable step at a time —
-toward running real analysis pipelines.
+<section class="cba-band cba-philosophy">
+The best way to learn computational biology is not by memorizing commands. It is by asking biological questions. Everything here follows from that one idea.
+</section>
 
-[Start with Module 01 — Environment Setup →](modules/01-setup-environment/index.qmd){.btn .btn-primary .btn-lg role="button"}
+<h2>🧭 Choose your journey</h2>
+<p>Not tutorials. Adventures. You always know where you are, and what comes next.</p>
+<div class="cba-paths">
+  <div class="cba-path" style="--cba-accent:#22a06b"><span class="emoji">🌱</span><div><div class="label">Beginner</div><div class="quote">"I have never touched Linux."</div></div></div>
+  <div class="arrow">↓</div>
+  <div class="cba-path" style="--cba-accent:#2780e3"><span class="emoji">🧬</span><div><div class="label">Bioinformatics Explorer</div><div class="quote">"I know some commands."</div></div></div>
+  <div class="arrow">↓</div>
+  <div class="cba-path" style="--cba-accent:#8b5cf6"><span class="emoji">🔬</span><div><div class="label">Computational Biologist</div><div class="quote">"I can analyse data."</div></div></div>
+  <div class="arrow">↓</div>
+  <div class="cba-path" style="--cba-accent:#f5a623"><span class="emoji">🚀</span><div><div class="label">Research Scientist</div><div class="quote">"I can answer biological questions."</div></div></div>
+  <div class="arrow">↓</div>
+  <div class="cba-path" style="--cba-accent:#e5484d"><span class="emoji">🧠</span><div><div class="label">AI Scientist</div><div class="quote">"I build new tools."</div></div></div>
+</div>
 
-## Who this is for
+<h2>Meet your lab</h2>
+<p>You will not learn alone. The same four people show up in every story.</p>
+<div class="cba-cast">
+  <div class="cba-card" style="--card-accent:#2780e3"><div class="avatar">👩🏾‍🔬</div><div class="name">Amina</div><div class="role">The curious scientist. That is you.</div></div>
+  <div class="cba-card" style="--card-accent:#8b5cf6"><div class="avatar">🧑🏾‍🎓</div><div class="name">Pendo</div><div class="role">The PhD student, gloriously confused.</div></div>
+  <div class="cba-card" style="--card-accent:#22a06b"><div class="avatar">🧑🏿‍💻</div><div class="name">Baraka</div><div class="role">The programmer who fixes everything.</div></div>
+  <div class="cba-card" style="--card-accent:#f5a623"><div class="avatar">🧑🏾‍🏫</div><div class="name">Prof. Zola</div><div class="role">The PI. Wanted results yesterday.</div></div>
+</div>
 
-- Wet-lab biologists and students moving into computational analysis
-- **Windows and macOS** users who need a proper environment to run bioinformatics
-  tools (we cover both — WSL/Ubuntu on Windows, and native Terminal on Mac)
-- Anyone who wants clear, reproducible, copy-pasteable demos rather than dense theory
+<h2>Every module is a story</h2>
+<p>The same shape every time, so it never feels random. Complete, self-contained journeys, start to finish.</p>
+<div class="cba-steps">
+  <span class="chip">🧩 Start with a mystery</span>
+  <span class="chip">🤔 Think first</span>
+  <span class="chip">💬 Story</span>
+  <span class="chip">🛠 Let's do it</span>
+  <span class="chip">🎉 What just happened</span>
+  <span class="chip">⚠️ Common mistakes</span>
+  <span class="chip">🧩 Mini challenge</span>
+  <span class="chip">🎯 Key takeaway</span>
+</div>
 
-No prior programming experience is assumed. We build up from zero.
+<section class="cba-band">
+<h3>🧪 One lab. One story. From week one to publication.</h3>
+<p>You join a lab. The data arrives. You take it all the way.</p>
+<div class="cba-flow">
+  <span class="node">FASTQs arrive</span><span class="sep">→</span>
+  <span class="node">QC</span><span class="sep">→</span>
+  <span class="node">Alignment</span><span class="sep">→</span>
+  <span class="node">Counts</span><span class="sep">→</span>
+  <span class="node">Differential expression</span><span class="sep">→</span>
+  <span class="node">Single-cell</span><span class="sep">→</span>
+  <span class="node">Spatial</span><span class="sep">→</span>
+  <span class="node">Publication</span><span class="sep">→</span>
+  <span class="node">Reviewer #2</span>
+</div>
+<p style="text-align:center;opacity:0.7">Everything connects. Nothing is a random dataset.</p>
+</section>
 
-## Available modules
+<section class="cba-band" style="text-align:center">
+<h3>Teach why before how. Always.</h3>
+<p style="opacity:0.85">Anyone can copy a command. We want you to know what question it answers, and why the answer matters. That is the whole difference between running software and doing science.</p>
+</section>
 
-The modules are designed to be followed in order — each one builds on the setup
-from the module before it.
-
-| # | Module |
-|---|--------|
-| 01 | [Environment Setup — Windows (WSL/Ubuntu) & macOS + Conda](modules/01-setup-environment/index.qmd) |
-| 02 | [An Introduction to R for Biologists](modules/02-r-for-biologists/index.qmd) |
-| 03 | [A Field Guide to Molecular Data Types](modules/03-molecular-data-types/index.qmd) |
-| 04 | [The Command Line — Essential Commands](modules/04-command-line-essentials/index.qmd) |
-| 05 | [Reads & Quality Control](modules/05-reads-and-quality-control/index.qmd) |
-
-*More modules are added here as they're completed. If you'd like to be notified
-when new ones land, you can "Watch" the repository on GitHub.*
-
-## A little encouragement first
-
-Learning bioinformatics can feel like being handed a foreign-language cookbook in a
-kitchen you've never seen. That feeling is completely normal — everyone starts
-there, and nobody is born knowing what a "conda environment" is.
-
-Here's the honest deal these tutorials make with you:
-
-- **We'll guide you into the process** — clearly, one small step at a time, with no
-  assumed jargon.
-- **You bring the effort.** These pages are a doorway, not the whole house. Real
-  comfort comes from *your* practice, curiosity, and willingness to read the
-  official docs when you want to go deeper.
-- **Getting stuck is part of it.** An error message is not a verdict on your
-  ability; it's just the next puzzle. (Seasoned bioinformaticians spend a
-  surprising amount of their day googling error messages too — you're in good
-  company.)
-
-Be patient with yourself, keep practising, and you *will* get comfortable. Let's go.
-
-## How to use these tutorials
-
-- **Follow along by typing**, not just reading. Muscle memory matters.
-- Every command block can be copied with the button in its top-right corner.
-- Each module opens with a **gentle introduction** — what the topic is, why it
-  matters, and what to expect — before any commands.
-- Look for the callout boxes:
-  - ✅ **Check** — how to confirm a step actually worked
-  - ⚠️ **Verify** — something that changes over time; confirm against current docs
-  - 🧰 **Troubleshooting** — common errors and fixes
-
-::: {.callout-important}
-## A note on accuracy
-
-Bioinformatics tooling changes fast. Tool versions, command flags, package APIs,
-and even installation methods are updated regularly and some may have changed
-since these tutorials were written. **Treat every version number as an example**,
-pin versions in your own environments, and verify commands against the current
-official documentation for each tool. Where something is known to change often,
-you'll see a ⚠️ **Verify** callout.
-:::
-
----
-
-## About the author
-
-**Samuel Mwamburi, PhD** is a computational biologist and Postdoctoral Fellow at
-Johns Hopkins Medicine. His research spans microbes, model and non-model organisms,
-and human biology — a path that shapes how he thinks about understanding biological
-systems through data. He created these tutorials as a teaching resource for
-scientists and students stepping into bioinformatics.
-
-**Find me online:**
-
-- 🌐 Website: <https://samuel-mwamburi.netlify.app/>
-- GitHub: [\@Kishaz](https://github.com/Kishaz)
-- Google Scholar: [profile](https://scholar.google.com/citations?user=s_LXHcwAAAAJ)
-- ORCID: [0000-0003-4253-3967](https://orcid.org/0000-0003-4253-3967)
-- LinkedIn: [Samuel Mwamburi, PhD](https://www.linkedin.com/in/samuel-mwamburi-phd-10b85290)
-- X: [\@SMwakisha](https://x.com/SMwakisha)
-
----
-
-*Spotted an error or out-of-date command? Please
-[open an issue](https://github.com/Kishaz/bioinformatics-tutorials/issues) —
-corrections are always welcome.*
+<section class="cba-hero" style="padding-top:0.6rem">
+  <p><a class="btn btn-primary btn-lg" href="modules/01-setup-environment/" role="button">Start your first mystery →</a></p>
+  <p style="opacity:0.65">Built by <a href="https://samuel-mwamburi.netlify.app/">Samuel Mwamburi, PhD</a>. Free and open under CC BY 4.0.</p>
+</section>
+```

@@ -1,8 +1,42 @@
 # Contributing
 
-Thanks for helping improve these tutorials! The guiding principle of this project
-is **accuracy over polish**: a clear, correct, verifiable step beats an impressive
-but wrong one.
+Thanks for helping build **The Computational Biology Academy**. The guiding
+principle is **accuracy over polish**: a clear, correct, verifiable step beats an
+impressive but wrong one. The second principle is the whole point of the Academy:
+teach people to solve biological questions, not to memorize commands.
+
+## The Academy model (read this first)
+
+Every module is a **complete, self-contained story**, not a tiny snippet and not a
+wall of text. Follow this shape:
+
+1. 🧩 **Start with a mystery.** A real situation a scientist faces (a PI drops data
+   on your desk and asks a question).
+2. 🤔 **Think first.** Ask the reader a question before showing any commands.
+3. 💬 **Story.** A plain-language analogy that makes the idea click.
+4. 🛠 **Let's do it.** Only now, the commands.
+5. 🎉 **What just happened.** Explain the result in one clear idea.
+6. 🚧 **Common mistake.** What beginners get wrong, and why.
+7. 🧩 **Mini challenge** plus a short, ungraded self-quiz.
+8. 🎯 **Key takeaway.** One sentence. End with a "Go make coffee ☕" sign-off.
+
+**Hard style rules:**
+
+- **No em-dashes. Ever.** Use commas, periods, colons, or parentheses.
+- Short sentences. Teach **why before how**. Draw or use a box instead of a
+  paragraph where you can.
+- Say **"publication"**, not "Nature".
+- Recurring characters: **Amina** (the curious scientist, the reader's avatar),
+  **Pendo** (the PhD student), **Baraka** (the programmer), **Prof. Zola** (the
+  impossible PI).
+- Use the branded boxes (defined in `styles.css`, they auto-label themselves, so do
+  not repeat the label inside):
+  `::: {.think}`, `::: {.story}`, `::: {.mistake}`, `::: {.takeaway}`,
+  `::: {.reality}`, `::: {.insight}`, `::: {.didyouknow}`, `::: {.challenge}`.
+- Keep all technical content **complete and accurate**. Preserve real commands and
+  real captured output verbatim. The accuracy rules below still apply in full.
+
+The gold-standard example is `modules/05-reads-and-quality-control/index.qmd`.
 
 ## Ground rules for content
 
@@ -15,8 +49,8 @@ but wrong one.
 3. **Treat version numbers as examples.** Prefer telling readers *how to find* the
    current version (`conda search`, official docs) over hard-coding one that will
    go stale.
-4. **Flag anything that changes over time** — installation methods, licensing,
-   channel configuration, API syntax — with a **⚠️ Verify** note.
+4. **Flag anything that changes over time**, installation methods, licensing,
+   channel configuration, API syntax, with a **⚠️ Verify** note.
 5. **Keep it beginner-friendly.** Assume no prior programming experience. Explain
    *why*, not just *what*. Show how to check that a step worked (✅ **Check**).
 
@@ -27,17 +61,17 @@ These tutorials teach nervous beginners. The tone is as important as the accurac
 1. **Open every topic with a gentle introduction.** Before any commands, include a
    short, warm intro that (a) says what the topic is in plain language, (b)
    highlights *why it matters*, and (c) sets realistic expectations. Ease the
-   reader in — never open with a wall of commands.
+   reader in, never open with a wall of commands.
 2. **Reassure, and be honest about effort.** Make clear that the tutorial is a
    *guide into* the topic, not a complete education. Readers must put in their own
-   effort — reading official docs, experimenting — and must **practise** to get
+   effort, reading official docs, experimenting, and must **practise** to get
    comfortable. Say so, kindly.
 3. **Normalise getting stuck.** Errors are part of learning, not a sign of failure.
    Encourage and support the reader; never make them feel behind.
 4. **Use light humour where it fits.** A warm, human aside is welcome. Keep it
-   gentle and inclusive — never at anyone's expense, and never so much that it
+   gentle and inclusive, never at anyone's expense, and never so much that it
    buries the instructions.
-5. **Emoji rules — avoid brand/trademark glyphs.** Do **not** use platform or
+5. **Emoji rules, avoid brand/trademark glyphs.** Do **not** use platform or
    brand emoji/logos (e.g. the apple, the Windows squares, the penguin, or the
    Apple-logo glyph). They risk trademark trouble and render inconsistently. Use
    plain text labels instead ("On a Mac?", "On Windows?", "Apple menu → About This
@@ -55,9 +89,9 @@ These tutorials teach nervous beginners. The tone is as important as the accurac
 3. Register it in the sidebar in `_quarto.yml` and in the tables in `index.qmd`
    and `README.md`.
 4. Use the standard callouts:
-   - `::: {.callout-note}` ✅ **Check** — how to confirm a step worked
-   - `::: {.callout-warning}` ⚠️ **Verify** — something that changes over time
-   - `::: {.callout-warning}` 🧰 **Troubleshooting** — common errors and fixes
+   - `::: {.callout-note}` ✅ **Check**, how to confirm a step worked
+   - `::: {.callout-warning}` ⚠️ **Verify**, something that changes over time
+   - `::: {.callout-warning}` 🧰 **Troubleshooting**, common errors and fixes
 5. Preview locally with `quarto preview` before opening a pull request.
 
 ## Reporting problems
