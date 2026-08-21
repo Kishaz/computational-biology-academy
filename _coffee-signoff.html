@@ -1,0 +1,25 @@
+<script>
+(function () {
+  var lines = [
+    "Coffee beans are not beans at all. They are the seeds of a fruit, the coffee cherry. ☕",
+    "Espresso is Italian for pressed out, which is roughly how you feel after a long debug. ☕",
+    "Caffeine is the most widely used psychoactive substance on Earth. You are in good company. ☕",
+    "The first webcam ever built watched a coffee pot at Cambridge, so nobody walked over to an empty jug. ☕",
+    "Decaf is not caffeine free. It still carries a small dose. It is not a loophole. ☕",
+    "Legend says a goat herder in Ethiopia noticed his goats dancing after eating coffee cherries. ☕",
+    "Finland drinks more coffee per person than any country on the planet. Respect. ☕",
+    "Most of the world's coffee grows in a band around the equator known as the bean belt. ☕",
+    "Cold brew is usually less acidic than hot coffee, and it takes many patient hours to make. ☕",
+    "Instant coffee has been around for over a century. Convenience is not a new idea. ☕",
+    "Go and make a coffee. Your future self, three bugs from now, will thank you. ☕",
+    "Coffee break. If anyone asks, you are letting the results marinate. ☕",
+    "Reward yourself with a coffee. It is basically a pipeline: beans in, focus out. ☕",
+    "Take a break. Even a genome assembler needs a moment to cool down. ☕",
+    "Go and make a coffee. The data will still be there when you get back. Probably. ☕"
+  ];
+  var els = document.querySelectorAll(".coffee-line");
+  for (var i = 0; i < els.length; i++) {
+    els[i].textContent = lines[Math.floor(Math.random() * lines.length)];
+  }
+})();
+</script>

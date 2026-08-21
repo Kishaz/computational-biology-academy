@@ -282,7 +282,9 @@ about, the very first thing anyone did to the data was exactly what you just did
 ```{=html}
 <div class="cba-signoff">
 ```
-You took raw, messy data and made it trustworthy. That is a real skill. Go make coffee. ☕
+You took raw, messy data and made it trustworthy. That is a real skill.
+
+<span class="coffee-line">Go and make a coffee. ☕</span>
 
 Next time, Amina puts these clean reads to work: mapping them to a genome.
 ```{=html}

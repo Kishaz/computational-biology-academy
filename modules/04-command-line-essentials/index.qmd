@@ -492,7 +492,9 @@ are speaking a language that has quietly powered science for half a century.
 ```{=html}
 <div class="cba-signoff">
 ```
-You can talk to computers now. Go make coffee. ☕
+You can talk to computers now.
+
+<span class="coffee-line">Go and make a coffee. ☕</span>
 
 Next time, Amina faces 300 GB of raw sequencing data and one question from Prof. Zola: is any of it actually good?
 ```{=html}

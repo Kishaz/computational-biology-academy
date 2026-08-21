@@ -848,7 +848,9 @@ documentation. They supersede this tutorial whenever they disagree with it.
 ```{=html}
 <div class="cba-signoff">
 ```
-Nicely done. Go make coffee. ☕
+Nicely done.
+
+<span class="coffee-line">Go and make a coffee. ☕</span>
 
 Next time, Amina opens up the different kinds of molecular data you will actually be asking
 questions about: DNA, RNA, proteins, and the file formats that carry them.

@@ -63,6 +63,7 @@ format:
     code-copy: true
     code-overflow: wrap
     css: styles.css
+    include-after-body: _coffee-signoff.html
 
 # NOTE: Version numbers of Quarto, R, Python and every bioinformatics tool
 # referenced in these tutorials change over time. Treat all version strings

@@ -877,7 +877,9 @@ genome that the whole world was reading, into your own tidy folder.
 ```{=html}
 <div class="cba-signoff">
 ```
-Great map-reading. Go make coffee. ☕
+Great map-reading.
+
+<span class="coffee-line">Go and make a coffee. ☕</span>
 
 Next time, Amina stops pointing and clicking and learns to *talk* to the computer directly, one command-line conversation at a time.
 ```{=html}

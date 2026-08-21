@@ -880,7 +880,9 @@ and they supersede this tutorial whenever they disagree with it.
 ```{=html}
 <div class="cba-signoff">
 ```
-You did it. Go make coffee. ☕
+You did it.
+
+<span class="coffee-line">Go and make a coffee. ☕</span>
 
 Next time, Amina opens the toolbox she just built and learns to speak R, the
 language biologists use to wrangle and plot their data.
