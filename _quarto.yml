@@ -26,6 +26,8 @@ website:
             text: "05 · Is This Data Any Good?"
           - href: modules/06-read-alignment/index.qmd
             text: "06 · Where Did These Reads Come From?"
+          - href: modules/07-variant-calling/index.qmd
+            text: "07 · What Makes This Sample Different?"
     right:
       - text: "by Samuel Mwamburi, PhD"
         href: https://samuel-mwamburi.netlify.app/
@@ -47,6 +49,8 @@ website:
             text: "05 · Is This Data Any Good?"
           - href: modules/06-read-alignment/index.qmd
             text: "06 · Where Did These Reads Come From?"
+          - href: modules/07-variant-calling/index.qmd
+            text: "07 · What Makes This Sample Different?"
   page-footer:
     left: "© 2026 Samuel Mwamburi, PhD · CC BY 4.0"
     center: "Educational material. Verify all tool commands against current official documentation before use."
