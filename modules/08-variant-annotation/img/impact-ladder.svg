@@ -1,0 +1,53 @@
+<svg viewBox="0 0 820 270" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" role="img" aria-label="An impact scale from MODIFIER to LOW to MODERATE to HIGH. The variant at position 241 sits at MODIFIER as a non-coding change. Position 3037 sits at LOW as a synonymous change. Positions 14408 and 23403, including D614G, sit at MODERATE as missense changes. The HIGH band, for protein-breaking changes like stop-gained, is empty for this sample.">
+  <rect x="1" y="1" width="818" height="268" rx="10" fill="#ffffff" stroke="#d5dbe2"/>
+
+  <text x="24" y="36" font-size="15" font-weight="700" fill="#2b3138">How much might each variant matter? SnpEff's impact bands</text>
+
+  <!-- four bands -->
+  <g>
+    <rect x="24"  y="60" width="184" height="44" rx="6" fill="#eef1f4" stroke="#c4c9d0"/>
+    <rect x="216" y="60" width="184" height="44" rx="6" fill="#e6f4ea" stroke="#8bd4a6"/>
+    <rect x="408" y="60" width="184" height="44" rx="6" fill="#fde7cf" stroke="#e5b567"/>
+    <rect x="600" y="60" width="196" height="44" rx="6" fill="#fbe0dc" stroke="#e0928a"/>
+  </g>
+  <g font-size="13" font-weight="700" text-anchor="middle">
+    <text x="116" y="80" fill="#5b6675">MODIFIER</text>
+    <text x="308" y="80" fill="#2e7d46">LOW</text>
+    <text x="500" y="80" fill="#b7791f">MODERATE</text>
+    <text x="698" y="80" fill="#c0392b">HIGH</text>
+  </g>
+  <g font-size="10.5" text-anchor="middle" fill="#8a94a0">
+    <text x="116" y="97">non-coding</text>
+    <text x="308" y="97">silent</text>
+    <text x="500" y="97">changes an amino acid</text>
+    <text x="698" y="97">breaks the protein</text>
+  </g>
+
+  <!-- variant chips under the matching band -->
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12">
+    <!-- MODIFIER: 241 -->
+    <rect x="40" y="126" width="152" height="34" rx="6" fill="#ffffff" stroke="#c4c9d0"/>
+    <text x="116" y="141" text-anchor="middle" font-weight="700" fill="#2b3138">241 C&#8594;T</text>
+    <text x="116" y="154" text-anchor="middle" font-size="10" fill="#8a94a0" font-family="-apple-system, Segoe UI, sans-serif">upstream, no protein</text>
+
+    <!-- LOW: 3037 -->
+    <rect x="232" y="126" width="152" height="34" rx="6" fill="#ffffff" stroke="#8bd4a6"/>
+    <text x="308" y="141" text-anchor="middle" font-weight="700" fill="#2b3138">3037 C&#8594;T</text>
+    <text x="308" y="154" text-anchor="middle" font-size="10" fill="#8a94a0" font-family="-apple-system, Segoe UI, sans-serif">Phe924Phe, silent</text>
+
+    <!-- MODERATE: 14408 and 23403 -->
+    <rect x="416" y="126" width="168" height="34" rx="6" fill="#ffffff" stroke="#e5b567"/>
+    <text x="500" y="141" text-anchor="middle" font-weight="700" fill="#2b3138">14408 C&#8594;T</text>
+    <text x="500" y="154" text-anchor="middle" font-size="10" fill="#8a94a0" font-family="-apple-system, Segoe UI, sans-serif">Pro4715Leu (nsp12 P323L)</text>
+    <rect x="416" y="166" width="168" height="34" rx="6" fill="#fff8ec" stroke="#e5b567"/>
+    <text x="500" y="181" text-anchor="middle" font-weight="700" fill="#b7791f">23403 A&#8594;G</text>
+    <text x="500" y="194" text-anchor="middle" font-size="10" fill="#b7791f" font-family="-apple-system, Segoe UI, sans-serif">Asp614Gly = D614G, spike</text>
+
+    <!-- HIGH: empty -->
+    <rect x="608" y="126" width="180" height="34" rx="6" fill="#fafbfc" stroke="#e2e6ea" stroke-dasharray="4 3"/>
+    <text x="698" y="147" text-anchor="middle" font-size="11" fill="#b6bcc4" font-family="-apple-system, Segoe UI, sans-serif">none in this sample</text>
+  </g>
+
+  <text x="24" y="232" font-size="11.5" fill="#5b6675">The band is a computational guess at severity, not the final word. D614G is only "MODERATE" here, yet it</text>
+  <text x="24" y="250" font-size="11.5" fill="#5b6675">reshaped the pandemic. Annotation tells you where and what. It does not tell you how much it matters.</text>
+</svg>
