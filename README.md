@@ -33,6 +33,7 @@ impossible PI). Real tools, real data, real judgment.
 | 03 | [A Field Guide to Your Data](modules/03-molecular-data-types/index.qmd) | Recognise every kind of molecular data and where to find it |
 | 04 | [Talking to Computers](modules/04-command-line-essentials/index.qmd) | Ask a machine politely: the essential command line |
 | 05 | [Is This Data Any Good?](modules/05-reads-and-quality-control/index.qmd) | Check and clean raw sequencing reads with FastQC and fastp |
+| 06 | [Where Did These Reads Come From?](modules/06-read-alignment/index.qmd) | Map reads to a reference genome and meet SAM, BAM and CRAM |
 
 *New modules are added as they are ready. "Watch" the repository on GitHub to be notified
 when they land.*

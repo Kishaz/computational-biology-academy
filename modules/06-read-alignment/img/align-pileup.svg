@@ -1,0 +1,49 @@
+<svg viewBox="0 0 820 300" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" role="img" aria-label="A reference genome drawn as a horizontal bar with position numbers. Several short reads sit stacked above it, each at the position it matched. One read has a faded tail hanging off the end, showing soft-clipped adapter that the aligner refused to place.">
+  <rect x="1" y="1" width="818" height="298" rx="10" fill="#ffffff" stroke="#d5dbe2"/>
+
+  <text x="24" y="34" font-size="14" font-weight="700" fill="#2b3138">Each read is placed where it best matches the reference</text>
+
+  <!-- reads stacked above the genome -->
+  <g font-size="10" fill="#5b6675">
+    <!-- read A -->
+    <rect x="70"  y="70"  width="150" height="14" rx="3" fill="#cfe3ff" stroke="#4b8fe6"/>
+    <text x="76" y="66" font-size="9">read_11594   CIGAR 150M</text>
+    <!-- read B -->
+    <rect x="150" y="92"  width="150" height="14" rx="3" fill="#cfe3ff" stroke="#4b8fe6"/>
+    <!-- read C -->
+    <rect x="250" y="114" width="150" height="14" rx="3" fill="#cfe3ff" stroke="#4b8fe6"/>
+    <!-- soft-clipped read: 53 matched (solid) + 97 clipped (faded, dashed) -->
+    <rect x="360" y="136" width="53"  height="14" rx="3" fill="#cfe3ff" stroke="#4b8fe6"/>
+    <rect x="413" y="136" width="97"  height="14" rx="3" fill="#f0f1f3" stroke="#c4c9d0" stroke-dasharray="4 3"/>
+    <text x="360" y="132" font-size="9" fill="#5b6675">read_9100   CIGAR 53M97S</text>
+    <text x="418" y="147" font-size="8.5" fill="#9aa2ad">soft-clipped adapter</text>
+    <!-- read E -->
+    <rect x="470" y="114" width="150" height="14" rx="3" fill="#cfe3ff" stroke="#4b8fe6"/>
+    <!-- read F -->
+    <rect x="560" y="92"  width="150" height="14" rx="3" fill="#cfe3ff" stroke="#4b8fe6"/>
+    <rect x="640" y="70"  width="130" height="14" rx="3" fill="#cfe3ff" stroke="#4b8fe6"/>
+  </g>
+
+  <!-- the reference genome bar -->
+  <rect x="70" y="184" width="700" height="20" rx="4" fill="#6b1fb0" opacity="0.12" stroke="#6b1fb0"/>
+  <text x="78" y="199" font-size="11" font-weight="700" fill="#6b1fb0">reference genome  (NC_045512.2, 29,903 bp)</text>
+
+  <!-- position ruler -->
+  <g stroke="#9aa2ad" stroke-width="1">
+    <line x1="70" y1="214" x2="770" y2="214"/>
+    <line x1="70" y1="214" x2="70" y2="222"/>
+    <line x1="245" y1="214" x2="245" y2="222"/>
+    <line x1="420" y1="214" x2="420" y2="222"/>
+    <line x1="595" y1="214" x2="595" y2="222"/>
+    <line x1="770" y1="214" x2="770" y2="222"/>
+  </g>
+  <g font-size="10" fill="#5b6675" text-anchor="middle">
+    <text x="70"  y="236">1</text>
+    <text x="245" y="236">7,500</text>
+    <text x="420" y="236">15,000</text>
+    <text x="595" y="236">22,500</text>
+    <text x="770" y="236">29,903</text>
+  </g>
+
+  <text x="24" y="274" font-size="11.5" fill="#5b6675">The depth of the stack at any spot is the <tspan font-weight="700" fill="#2b3138">coverage</tspan>. The faded tail is sequence the aligner would not force onto the genome.</text>
+</svg>
