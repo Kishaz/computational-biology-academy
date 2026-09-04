@@ -1,0 +1,44 @@
+<svg viewBox="0 0 820 380" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif" role="img" aria-label="Three genes on a stretch of genome. Reads pile up over each gene. A highly expressed gene has a tall pile and a large count, a moderate gene a medium pile, a low gene a short pile. Expression is the number of reads counted in each gene.">
+<rect x="0.5" y="0.5" width="819" height="379" rx="14" fill="#ffffff" stroke="#dde3ea"/>
+<text x="34" y="44" font-size="17" font-weight="800" fill="#28303a">Expression is just counting</text>
+<text x="34" y="66" font-size="12.5" fill="#5b6675">A gene with more RNA sheds more reads. Count the reads landing in each gene, and you have measured how active it is.</text>
+<rect x="145" y="250" width="90" height="7" rx="3" fill="#3f8fd6" opacity="0.85"/>
+<rect x="141" y="240" width="90" height="7" rx="3" fill="#3f8fd6" opacity="0.85"/>
+<rect x="153" y="230" width="90" height="7" rx="3" fill="#3f8fd6" opacity="0.85"/>
+<rect x="145" y="220" width="90" height="7" rx="3" fill="#3f8fd6" opacity="0.85"/>
+<rect x="149" y="210" width="90" height="7" rx="3" fill="#3f8fd6" opacity="0.85"/>
+<rect x="137" y="200" width="90" height="7" rx="3" fill="#3f8fd6" opacity="0.85"/>
+<rect x="145" y="190" width="90" height="7" rx="3" fill="#3f8fd6" opacity="0.85"/>
+<rect x="141" y="180" width="90" height="7" rx="3" fill="#3f8fd6" opacity="0.85"/>
+<rect x="153" y="170" width="90" height="7" rx="3" fill="#3f8fd6" opacity="0.85"/>
+<rect x="145" y="160" width="90" height="7" rx="3" fill="#3f8fd6" opacity="0.85"/>
+<rect x="149" y="150" width="90" height="7" rx="3" fill="#3f8fd6" opacity="0.85"/>
+<rect x="137" y="140" width="90" height="7" rx="3" fill="#3f8fd6" opacity="0.85"/>
+<rect x="145" y="130" width="90" height="7" rx="3" fill="#3f8fd6" opacity="0.85"/>
+<rect x="141" y="120" width="90" height="7" rx="3" fill="#3f8fd6" opacity="0.85"/>
+<rect x="153" y="110" width="90" height="7" rx="3" fill="#3f8fd6" opacity="0.85"/>
+<rect x="139" y="266" width="102" height="22" rx="5" fill="#6b1fb0" opacity="0.14" stroke="#6b1fb0"/>
+<text x="190" y="281" text-anchor="middle" font-size="11.5" font-weight="700" fill="#6b1fb0">gene A</text>
+<text x="190" y="336" text-anchor="middle" font-size="22" font-weight="800" fill="#28303a">~1000</text>
+<text x="190" y="354" text-anchor="middle" font-size="10.5" fill="#5b6675">reads (high)</text>
+<rect x="365" y="250" width="90" height="7" rx="3" fill="#3f8fd6" opacity="0.85"/>
+<rect x="361" y="240" width="90" height="7" rx="3" fill="#3f8fd6" opacity="0.85"/>
+<rect x="373" y="230" width="90" height="7" rx="3" fill="#3f8fd6" opacity="0.85"/>
+<rect x="365" y="220" width="90" height="7" rx="3" fill="#3f8fd6" opacity="0.85"/>
+<rect x="369" y="210" width="90" height="7" rx="3" fill="#3f8fd6" opacity="0.85"/>
+<rect x="357" y="200" width="90" height="7" rx="3" fill="#3f8fd6" opacity="0.85"/>
+<rect x="359" y="266" width="102" height="22" rx="5" fill="#6b1fb0" opacity="0.14" stroke="#6b1fb0"/>
+<text x="410" y="281" text-anchor="middle" font-size="11.5" font-weight="700" fill="#6b1fb0">gene B</text>
+<text x="410" y="336" text-anchor="middle" font-size="22" font-weight="800" fill="#28303a">~200</text>
+<text x="410" y="354" text-anchor="middle" font-size="10.5" fill="#5b6675">reads (moderate)</text>
+<rect x="585" y="250" width="90" height="7" rx="3" fill="#3f8fd6" opacity="0.85"/>
+<rect x="581" y="240" width="90" height="7" rx="3" fill="#3f8fd6" opacity="0.85"/>
+<rect x="579" y="266" width="102" height="22" rx="5" fill="#6b1fb0" opacity="0.14" stroke="#6b1fb0"/>
+<text x="630" y="281" text-anchor="middle" font-size="11.5" font-weight="700" fill="#6b1fb0">gene C</text>
+<text x="630" y="336" text-anchor="middle" font-size="22" font-weight="800" fill="#28303a">~40</text>
+<text x="630" y="354" text-anchor="middle" font-size="10.5" fill="#5b6675">reads (low)</text>
+<line x1="60" y1="300" x2="760" y2="300" stroke="#6b7280" stroke-width="3"/>
+<text x="66" y="296" font-size="10.5" fill="#5b6675">reference genome</text>
+<text x="750" y="150" text-anchor="end" font-size="10.5" fill="#5b6675">taller pile</text>
+<text x="750" y="164" text-anchor="end" font-size="10.5" fill="#5b6675">= more reads</text>
+</svg>

@@ -1,0 +1,68 @@
+<svg viewBox="0 0 1000 300" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" role="img" aria-label="Three-panel stick-figure comic. Pendo, the PhD student, asks why a liver cell differs from a brain cell if every cell has the same DNA. Amina answers that they switch on different genes and RNA is the evidence. She holds a small bar chart and says counting the RNA from each gene is expression.">
+  <rect x="1" y="1" width="998" height="298" rx="10" fill="#ffffff" stroke="#d5dbe2"/>
+
+  <line x1="334" y1="16" x2="334" y2="284" stroke="#e2e6ea"/>
+  <line x1="667" y1="16" x2="667" y2="284" stroke="#e2e6ea"/>
+
+  <!-- Panel 1: Pendo, confused PhD student -->
+  <g stroke="#2b3138" stroke-width="3" fill="none" stroke-linecap="round">
+    <circle cx="80" cy="150" r="20" fill="#fdecd2"/>
+    <line x1="80" y1="170" x2="80" y2="222"/>
+    <line x1="80" y1="185" x2="54" y2="205"/>
+    <line x1="80" y1="185" x2="106" y2="205"/>
+    <line x1="80" y1="222" x2="62" y2="256"/>
+    <line x1="80" y1="222" x2="98" y2="256"/>
+  </g>
+  <text x="80" y="284" text-anchor="middle" font-size="12" font-weight="700" fill="#c47f1f">Pendo</text>
+  <g>
+    <rect x="150" y="40" width="176" height="74" rx="12" fill="#fff6e9" stroke="#e5c187"/>
+    <circle cx="146" cy="126" r="4" fill="#e5c187"/><circle cx="138" cy="138" r="3" fill="#e5c187"/>
+    <text x="164" y="64" font-size="12.5" fill="#2b3138">Every cell has the same</text>
+    <text x="164" y="84" font-size="12.5" fill="#2b3138">DNA. So why is a liver</text>
+    <text x="164" y="104" font-size="12.5" fill="#2b3138">cell not a brain cell?</text>
+  </g>
+
+  <!-- Panel 2: Amina answers -->
+  <g stroke="#2b3138" stroke-width="3" fill="none" stroke-linecap="round">
+    <circle cx="415" cy="150" r="20" fill="#e8f0fe"/>
+    <line x1="415" y1="170" x2="415" y2="222"/>
+    <line x1="415" y1="185" x2="389" y2="205"/>
+    <line x1="415" y1="185" x2="441" y2="205"/>
+    <line x1="415" y1="222" x2="397" y2="256"/>
+    <line x1="415" y1="222" x2="433" y2="256"/>
+  </g>
+  <text x="415" y="284" text-anchor="middle" font-size="12" font-weight="700" fill="#1a56b0">Amina</text>
+  <g>
+    <rect x="470" y="46" width="188" height="70" rx="12" fill="#eef5ff" stroke="#9cc0f5"/>
+    <path d="M486 116 l-8 16 l20 -8 z" fill="#eef5ff" stroke="#9cc0f5"/>
+    <text x="484" y="72" font-size="12.5" fill="#2b3138">They switch on different</text>
+    <text x="484" y="92" font-size="12.5" fill="#2b3138">genes. RNA is the</text>
+    <text x="484" y="112" font-size="12.5" fill="#2b3138">evidence of which ones.</text>
+  </g>
+
+  <!-- Panel 3: Amina with a bar chart -->
+  <g stroke="#2b3138" stroke-width="3" fill="none" stroke-linecap="round">
+    <circle cx="720" cy="150" r="20" fill="#e8f0fe"/>
+    <line x1="720" y1="170" x2="720" y2="222"/>
+    <line x1="720" y1="185" x2="694" y2="205"/>
+    <line x1="720" y1="185" x2="746" y2="205"/>
+    <line x1="720" y1="222" x2="702" y2="256"/>
+    <line x1="720" y1="222" x2="738" y2="256"/>
+  </g>
+  <!-- little bar chart motif -->
+  <g>
+    <line x1="806" y1="180" x2="806" y2="120" stroke="#6b7280" stroke-width="1.5"/>
+    <line x1="806" y1="180" x2="884" y2="180" stroke="#6b7280" stroke-width="1.5"/>
+    <rect x="814" y="150" width="12" height="30" fill="#2e9e5b"/>
+    <rect x="832" y="130" width="12" height="50" fill="#2e9e5b"/>
+    <rect x="850" y="162" width="12" height="18" fill="#2e9e5b"/>
+    <rect x="868" y="140" width="12" height="40" fill="#2e9e5b"/>
+  </g>
+  <text x="720" y="284" text-anchor="middle" font-size="12" font-weight="700" fill="#1a56b0">Amina</text>
+  <g>
+    <rect x="800" y="40" width="182" height="52" rx="12" fill="#e6f4ea" stroke="#8bd4a6"/>
+    <path d="M838 84 l-6 16 l18 -10 z" fill="#e6f4ea" stroke="#8bd4a6"/>
+    <text x="814" y="64" font-size="12.5" fill="#2b3138">Count the RNA per gene.</text>
+    <text x="814" y="84" font-size="12.5" fill="#2b3138">That count is expression.</text>
+  </g>
+</svg>
