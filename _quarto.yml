@@ -30,6 +30,8 @@ website:
             text: "07 · What Makes This Sample Different?"
           - href: modules/08-variant-annotation/index.qmd
             text: "08 · Does This Difference Even Matter?"
+          - href: modules/09-phylogenetics/index.qmd
+            text: "09 · How Are These Samples Related?"
     right:
       - text: "by Samuel Mwamburi, PhD"
         href: https://samuel-mwamburi.netlify.app/
@@ -55,6 +57,8 @@ website:
             text: "07 · What Makes This Sample Different?"
           - href: modules/08-variant-annotation/index.qmd
             text: "08 · Does This Difference Even Matter?"
+          - href: modules/09-phylogenetics/index.qmd
+            text: "09 · How Are These Samples Related?"
   page-footer:
     left: "© 2026 Samuel Mwamburi, PhD · CC BY 4.0"
     center: "Educational material. Verify all tool commands against current official documentation before use."

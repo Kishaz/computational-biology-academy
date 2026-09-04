@@ -1,0 +1,77 @@
+<svg viewBox="0 0 794 346" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" role="img" aria-label="A grid of six samples by six genome positions. Cells that differ from the reference are highlighted. All four positions of the D614G set are mutated in alpha1, alpha2, delta1 and delta2 but not in early, marking one shared clade. N501Y is mutated only in the two alpha samples; L452R only in the two delta samples. Shared mutations mark shared branches.">
+<rect x="1" y="1" width="792" height="344" rx="10" fill="#ffffff" stroke="#d5dbe2"/>
+<text x="24" y="40" font-size="15" font-weight="700" fill="#2b3138">Who shares which change? That pattern is the tree.</text>
+<text x="24" y="60" font-size="11.5" fill="#5b6675">Highlighted = differs from the reference. Genome position across the top.</text>
+<text x="202" y="78" text-anchor="middle" font-size="12" font-weight="700" fill="#2b3138" font-family="ui-monospace, Menlo, monospace">241</text>
+<text x="306" y="78" text-anchor="middle" font-size="12" font-weight="700" fill="#2b3138" font-family="ui-monospace, Menlo, monospace">3037</text>
+<text x="410" y="78" text-anchor="middle" font-size="12" font-weight="700" fill="#2b3138" font-family="ui-monospace, Menlo, monospace">14408</text>
+<text x="514" y="78" text-anchor="middle" font-size="12" font-weight="700" fill="#2b3138" font-family="ui-monospace, Menlo, monospace">23403</text>
+<text x="514" y="92" text-anchor="middle" font-size="10" font-weight="700" fill="#9b6fd4">D614G</text>
+<text x="618" y="78" text-anchor="middle" font-size="12" font-weight="700" fill="#2b3138" font-family="ui-monospace, Menlo, monospace">23063</text>
+<text x="618" y="92" text-anchor="middle" font-size="10" font-weight="700" fill="#4b8fe6">N501Y</text>
+<text x="722" y="78" text-anchor="middle" font-size="12" font-weight="700" fill="#2b3138" font-family="ui-monospace, Menlo, monospace">22917</text>
+<text x="722" y="92" text-anchor="middle" font-size="10" font-weight="700" fill="#e0922f">L452R</text>
+<text x="136" y="115" text-anchor="end" font-size="12" font-weight="400" fill="#8a94a0" font-family="ui-monospace, Menlo, monospace">reference</text>
+<text x="202" y="116" text-anchor="middle" font-size="13" font-weight="400" fill="#b6bcc4" font-family="ui-monospace, Menlo, monospace">C</text>
+<text x="306" y="116" text-anchor="middle" font-size="13" font-weight="400" fill="#b6bcc4" font-family="ui-monospace, Menlo, monospace">C</text>
+<text x="410" y="116" text-anchor="middle" font-size="13" font-weight="400" fill="#b6bcc4" font-family="ui-monospace, Menlo, monospace">C</text>
+<text x="514" y="116" text-anchor="middle" font-size="13" font-weight="400" fill="#b6bcc4" font-family="ui-monospace, Menlo, monospace">A</text>
+<text x="618" y="116" text-anchor="middle" font-size="13" font-weight="400" fill="#b6bcc4" font-family="ui-monospace, Menlo, monospace">A</text>
+<text x="722" y="116" text-anchor="middle" font-size="13" font-weight="400" fill="#b6bcc4" font-family="ui-monospace, Menlo, monospace">T</text>
+<text x="136" y="145" text-anchor="end" font-size="12" font-weight="700" fill="#2b3138" font-family="ui-monospace, Menlo, monospace">early</text>
+<text x="202" y="146" text-anchor="middle" font-size="13" font-weight="400" fill="#9aa2ad" font-family="ui-monospace, Menlo, monospace">C</text>
+<text x="306" y="146" text-anchor="middle" font-size="13" font-weight="400" fill="#9aa2ad" font-family="ui-monospace, Menlo, monospace">C</text>
+<text x="410" y="146" text-anchor="middle" font-size="13" font-weight="400" fill="#9aa2ad" font-family="ui-monospace, Menlo, monospace">C</text>
+<text x="514" y="146" text-anchor="middle" font-size="13" font-weight="400" fill="#9aa2ad" font-family="ui-monospace, Menlo, monospace">A</text>
+<text x="618" y="146" text-anchor="middle" font-size="13" font-weight="400" fill="#9aa2ad" font-family="ui-monospace, Menlo, monospace">A</text>
+<text x="722" y="146" text-anchor="middle" font-size="13" font-weight="400" fill="#9aa2ad" font-family="ui-monospace, Menlo, monospace">T</text>
+<text x="136" y="175" text-anchor="end" font-size="12" font-weight="700" fill="#2b3138" font-family="ui-monospace, Menlo, monospace">alpha1</text>
+<rect x="158" y="159" width="88" height="24" rx="5" fill="#e5d5f7" stroke="#9b6fd4"/>
+<text x="202" y="176" text-anchor="middle" font-size="13" font-weight="700" fill="#9b6fd4" font-family="ui-monospace, Menlo, monospace">T</text>
+<rect x="262" y="159" width="88" height="24" rx="5" fill="#e5d5f7" stroke="#9b6fd4"/>
+<text x="306" y="176" text-anchor="middle" font-size="13" font-weight="700" fill="#9b6fd4" font-family="ui-monospace, Menlo, monospace">T</text>
+<rect x="366" y="159" width="88" height="24" rx="5" fill="#e5d5f7" stroke="#9b6fd4"/>
+<text x="410" y="176" text-anchor="middle" font-size="13" font-weight="700" fill="#9b6fd4" font-family="ui-monospace, Menlo, monospace">T</text>
+<rect x="470" y="159" width="88" height="24" rx="5" fill="#e5d5f7" stroke="#9b6fd4"/>
+<text x="514" y="176" text-anchor="middle" font-size="13" font-weight="700" fill="#9b6fd4" font-family="ui-monospace, Menlo, monospace">G</text>
+<rect x="574" y="159" width="88" height="24" rx="5" fill="#cfe3ff" stroke="#4b8fe6"/>
+<text x="618" y="176" text-anchor="middle" font-size="13" font-weight="700" fill="#4b8fe6" font-family="ui-monospace, Menlo, monospace">T</text>
+<text x="722" y="176" text-anchor="middle" font-size="13" font-weight="400" fill="#9aa2ad" font-family="ui-monospace, Menlo, monospace">T</text>
+<text x="136" y="205" text-anchor="end" font-size="12" font-weight="700" fill="#2b3138" font-family="ui-monospace, Menlo, monospace">alpha2</text>
+<rect x="158" y="189" width="88" height="24" rx="5" fill="#e5d5f7" stroke="#9b6fd4"/>
+<text x="202" y="206" text-anchor="middle" font-size="13" font-weight="700" fill="#9b6fd4" font-family="ui-monospace, Menlo, monospace">T</text>
+<rect x="262" y="189" width="88" height="24" rx="5" fill="#e5d5f7" stroke="#9b6fd4"/>
+<text x="306" y="206" text-anchor="middle" font-size="13" font-weight="700" fill="#9b6fd4" font-family="ui-monospace, Menlo, monospace">T</text>
+<rect x="366" y="189" width="88" height="24" rx="5" fill="#e5d5f7" stroke="#9b6fd4"/>
+<text x="410" y="206" text-anchor="middle" font-size="13" font-weight="700" fill="#9b6fd4" font-family="ui-monospace, Menlo, monospace">T</text>
+<rect x="470" y="189" width="88" height="24" rx="5" fill="#e5d5f7" stroke="#9b6fd4"/>
+<text x="514" y="206" text-anchor="middle" font-size="13" font-weight="700" fill="#9b6fd4" font-family="ui-monospace, Menlo, monospace">G</text>
+<rect x="574" y="189" width="88" height="24" rx="5" fill="#cfe3ff" stroke="#4b8fe6"/>
+<text x="618" y="206" text-anchor="middle" font-size="13" font-weight="700" fill="#4b8fe6" font-family="ui-monospace, Menlo, monospace">T</text>
+<text x="722" y="206" text-anchor="middle" font-size="13" font-weight="400" fill="#9aa2ad" font-family="ui-monospace, Menlo, monospace">T</text>
+<text x="136" y="235" text-anchor="end" font-size="12" font-weight="700" fill="#2b3138" font-family="ui-monospace, Menlo, monospace">delta1</text>
+<rect x="158" y="219" width="88" height="24" rx="5" fill="#e5d5f7" stroke="#9b6fd4"/>
+<text x="202" y="236" text-anchor="middle" font-size="13" font-weight="700" fill="#9b6fd4" font-family="ui-monospace, Menlo, monospace">T</text>
+<rect x="262" y="219" width="88" height="24" rx="5" fill="#e5d5f7" stroke="#9b6fd4"/>
+<text x="306" y="236" text-anchor="middle" font-size="13" font-weight="700" fill="#9b6fd4" font-family="ui-monospace, Menlo, monospace">T</text>
+<rect x="366" y="219" width="88" height="24" rx="5" fill="#e5d5f7" stroke="#9b6fd4"/>
+<text x="410" y="236" text-anchor="middle" font-size="13" font-weight="700" fill="#9b6fd4" font-family="ui-monospace, Menlo, monospace">T</text>
+<rect x="470" y="219" width="88" height="24" rx="5" fill="#e5d5f7" stroke="#9b6fd4"/>
+<text x="514" y="236" text-anchor="middle" font-size="13" font-weight="700" fill="#9b6fd4" font-family="ui-monospace, Menlo, monospace">G</text>
+<text x="618" y="236" text-anchor="middle" font-size="13" font-weight="400" fill="#9aa2ad" font-family="ui-monospace, Menlo, monospace">A</text>
+<rect x="678" y="219" width="88" height="24" rx="5" fill="#fde7cf" stroke="#e0922f"/>
+<text x="722" y="236" text-anchor="middle" font-size="13" font-weight="700" fill="#e0922f" font-family="ui-monospace, Menlo, monospace">G</text>
+<text x="136" y="265" text-anchor="end" font-size="12" font-weight="700" fill="#2b3138" font-family="ui-monospace, Menlo, monospace">delta2</text>
+<rect x="158" y="249" width="88" height="24" rx="5" fill="#e5d5f7" stroke="#9b6fd4"/>
+<text x="202" y="266" text-anchor="middle" font-size="13" font-weight="700" fill="#9b6fd4" font-family="ui-monospace, Menlo, monospace">T</text>
+<rect x="262" y="249" width="88" height="24" rx="5" fill="#e5d5f7" stroke="#9b6fd4"/>
+<text x="306" y="266" text-anchor="middle" font-size="13" font-weight="700" fill="#9b6fd4" font-family="ui-monospace, Menlo, monospace">T</text>
+<rect x="366" y="249" width="88" height="24" rx="5" fill="#e5d5f7" stroke="#9b6fd4"/>
+<text x="410" y="266" text-anchor="middle" font-size="13" font-weight="700" fill="#9b6fd4" font-family="ui-monospace, Menlo, monospace">T</text>
+<rect x="470" y="249" width="88" height="24" rx="5" fill="#e5d5f7" stroke="#9b6fd4"/>
+<text x="514" y="266" text-anchor="middle" font-size="13" font-weight="700" fill="#9b6fd4" font-family="ui-monospace, Menlo, monospace">G</text>
+<text x="618" y="266" text-anchor="middle" font-size="13" font-weight="400" fill="#9aa2ad" font-family="ui-monospace, Menlo, monospace">A</text>
+<rect x="678" y="249" width="88" height="24" rx="5" fill="#fde7cf" stroke="#e0922f"/>
+<text x="722" y="266" text-anchor="middle" font-size="13" font-weight="700" fill="#e0922f" font-family="ui-monospace, Menlo, monospace">G</text>
+<text x="24" y="304" font-size="11.5" fill="#5b6675"><tspan fill="#9b6fd4" font-weight="700">Purple</tspan>: four samples share the D614G set, one deep clade. <tspan fill="#4b8fe6" font-weight="700">Blue</tspan>: only alpha shares N501Y. <tspan fill="#e0922f" font-weight="700">Orange</tspan>: only delta shares L452R.</text>
+</svg>

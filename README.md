@@ -36,6 +36,7 @@ impossible PI). Real tools, real data, real judgment.
 | 06 | [Where Did These Reads Come From?](modules/06-read-alignment/index.qmd) | Map reads to a reference genome and meet SAM, BAM and CRAM |
 | 07 | [What Makes This Sample Different?](modules/07-variant-calling/index.qmd) | Call variants with bcftools, read a VCF, and filter signal from noise |
 | 08 | [Does This Difference Even Matter?](modules/08-variant-annotation/index.qmd) | Annotate variants with SnpEff: synonymous, missense, and the famous D614G |
+| 09 | [How Are These Samples Related?](modules/09-phylogenetics/index.qmd) | Build a phylogenetic tree with MAFFT and IQ-TREE, and read its support |
 
 *New modules are added as they are ready. "Watch" the repository on GitHub to be notified
 when they land.*
