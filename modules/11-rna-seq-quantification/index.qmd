@@ -55,12 +55,41 @@ So the plan is exactly what that picture shows: align the RNA reads to the genom
 each gene, **count how many reads landed in it**. Do that for every sample and you have a
 table of activity.
 
+## One gene, edited before it is read
+
+There is a beautiful complication hiding inside "the cell transcribes a gene". A gene is not
+one clean stretch of message. It is split into **exons**, the parts that end up in the final
+message, separated by **introns**, filler that has to be removed first.
+
+So the first copy a cell makes, the **pre-mRNA**, still contains the introns. Before it can be
+used, the cell **splices** it: the introns are cut out and the exons are joined into the
+finished **mature mRNA**. Only that is translated into protein.
+
+![The central dogma, including the step that is easy to forget: a gene is transcribed into pre-mRNA that still has its introns, splicing removes them and joins the exons, and the mature mRNA is translated into protein.](img/central-dogma-splicing.svg){width=820 fig-alt="Vertical diagram: a DNA gene with exons and introns, transcribed into pre-mRNA, spliced into mature mRNA with the introns removed, then translated into protein."}
+
+::: {.didyouknow}
+Here is where it gets clever. A cell does not have to keep the *same* exons every time. By
+including or skipping different exons, one gene can be spliced into **several different mature
+mRNAs**, and so into **several different proteins**. This is **alternative splicing**, and it
+is a big reason roughly 20,000 human genes can build a far larger number of proteins.
+:::
+
+![Alternative splicing: one gene with four exons is spliced three different ways, keeping different exons each time, and each combination builds a different protein.](img/alternative-splicing.svg){width=820 fig-alt="One gene with four exons spliced into three isoforms that keep different exons, each making a different protein drawn as a chain of coloured beads."}
+
+Two things follow, and both matter for what we are about to do:
+
+- **This is why RNA reads need a splice-aware aligner.** A read from a mature mRNA can begin at
+  the end of one exon and continue at the start of the next, with the whole intron missing in
+  between. Mapped back to the genome, that read has to *jump over* the intron. A plain DNA
+  aligner cannot do that. **HISAT2** and STAR can.
+- **Counting per gene adds up the isoforms.** The counting step ahead tallies all of a gene's
+  reads together, whichever isoform they came from. That is the right place to begin. Telling
+  the isoforms apart is a separate, harder job (tools like Salmon do it) for another day.
+
 ## 🛠 Let's do it: from reads to counts
 
-One wrinkle makes RNA different from Module 06. A gene's RNA has its introns spliced out, so a
-single read can start in one exon and finish in the next, jumping over the missing intron. A
-plain DNA aligner would choke on that. RNA needs a **splice-aware** aligner. The common ones
-are **HISAT2** and STAR; we use HISAT2:
+You know the catch now, RNA reads span exon junctions, so the aligner must be **splice-aware**.
+We use **HISAT2**, with **featureCounts** to do the counting:
 
 ```bash
 conda activate align
@@ -95,7 +124,7 @@ The **real** summary it prints, per sample:
 
 ```text
 Process BAM file ctrl_1.bam...
-   Successfully assigned alignments : 3157 (100.0%)
+   Successfully assigned alignments : 3195 (100.0%)
 ```
 
 Every read placed into its gene. That is quantification.
@@ -109,32 +138,38 @@ columns):
 
 ```text
 Geneid   ctrl_1  ctrl_2  ctrl_3   treat_1  treat_2  treat_3
-HKA        866     944     920       976      998     1031
-HKB        736     809     695       826      865      675
-HKC        623     608     613       605      581      638
-MID        202     219     210       197      181      201
-LOWa        41      38      41        41       40       40
-LOWb        32      29      34        27       29       30
-UP          56      50      46       770      725      774
-DOWN       635     652     594        66       64       67
+geneA      866     993    1082       873      841      961
+geneB       46      51      45       841      726      822
+geneC      839     877     791       765      751      819
+geneD      612     652     580        64       69       65
+geneE      578     680     595       545      531      657
+geneF       36      34      42        44       41       38
+geneG      190     214     198       185      193      200
+geneH       28      32      30        31       26       33
 ```
 
-Read as a picture, the story jumps out:
+Notice the row names: `geneA`, `geneB`, and so on. That is the honest shape of a counts matrix.
+Real ones use gene identifiers (like `ENSG00000141510`, or a gene symbol), and **nothing in
+the table tells you how a gene behaved**. The matrix hands you genes and numbers. Working out
+*which genes changed* is the whole job still ahead.
 
-![The counts matrix as a heatmap: housekeeping genes hold steady across all six samples, while the UP gene is low in control and high in treated, and the DOWN gene does the opposite.](img/counts-heatmap.svg){width=740 fig-alt="Heatmap of eight genes by six samples; UP and DOWN rows change colour between the control and treated blocks while the others stay constant."}
+Read as a picture, though, the story starts to surface:
+
+![The counts matrix as a heatmap. Most rows hold a steady colour across all six samples, but two rows, geneB and geneD, flip between the control and treated blocks.](img/counts-heatmap.svg){width=740 fig-alt="Heatmap of eight genes (neutral names) by six samples; two rows change colour between the control and treated blocks while the others stay constant."}
 
 ::: {.insight}
 This experiment was **built with a known answer**: six genes were set to the same level in both
-conditions, one gene (`UP`) was switched on by the treatment, and one (`DOWN`) switched off.
-Look at the counts. The steady genes stayed steady, `UP` went from about 50 to about 750, and
-`DOWN` fell from about 600 to about 60. The pipeline recovered the truth. You did not measure
-sequence. You measured **activity**.
+conditions, one gene was switched on by the treatment, and one switched off. Now find them in
+the counts. `geneB` climbs from about 50 to about 800, and `geneD` drops from about 600 to
+about 60, while the rest hold roughly steady. The pipeline recovered the truth, and notice that
+you had to *read it out of the numbers*: nothing labelled those two genes for you. You did not
+measure sequence. You measured **activity**.
 :::
 
 ## 🧠 Think like a scientist, not a button
 
-It is tempting to point at `UP` and declare "the treatment increased this gene 15-fold, done."
-Slow down. Raw counts are honest but not yet comparable.
+It is tempting to point at `geneB` and declare "the treatment increased this gene 15-fold,
+done." Slow down. Raw counts are honest but not yet comparable.
 
 ::: {.mistake}
 You cannot compare raw counts across samples directly. If `treat_1` was simply sequenced more
@@ -156,7 +191,7 @@ Three habits to carry from here:
   without a full alignment. Different route, same destination: a counts (or abundance) matrix.
 
 ::: {.reality}
-Prof. Zola: "So gene UP went up 15-fold?"<br>
+Prof. Zola: "So geneB went up 15-fold?"<br>
 Amina: "Its raw counts did."<br>
 Prof. Zola: "Is that the real number?"<br>
 Amina: "Ask me after I normalise. Then we can argue about it properly."<br>

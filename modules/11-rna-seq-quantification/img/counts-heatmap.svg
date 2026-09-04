@@ -1,7 +1,7 @@
-<svg viewBox="0 0 716 460" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif" role="img" aria-label="A counts matrix heatmap: eight genes by six samples (three control, three treated). Housekeeping genes are steady across all samples. The UP gene is low in control and high in treated; the DOWN gene is high in control and low in treated.">
-<rect x="0.5" y="0.5" width="715" height="459" rx="14" fill="#ffffff" stroke="#dde3ea"/>
+<svg viewBox="0 0 716 484" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif" role="img" aria-label="A counts matrix heatmap: eight genes (neutral names geneA to geneH) by six samples, three control and three treated. Most genes hold a steady colour across all six samples. Two rows, geneB and geneD, flip colour between the control and treated blocks.">
+<rect x="0.5" y="0.5" width="715" height="483" rx="14" fill="#ffffff" stroke="#dde3ea"/>
 <text x="34" y="42" font-size="17" font-weight="800" fill="#28303a">The counts matrix: every gene, every sample</text>
-<text x="34" y="63" font-size="12.5" fill="#5b6675">Darker = more reads = higher expression. Housekeeping genes hold steady; two genes flip between conditions.</text>
+<text x="34" y="63" font-size="12" fill="#5b6675">Darker = more reads = higher expression. The row names say nothing about behaviour.</text>
 <rect x="140" y="72" width="274" height="22" rx="6" fill="#3f7fd0" opacity="0.15" stroke="#3f7fd0"/>
 <text x="277" y="87" text-anchor="middle" font-size="11.5" font-weight="700" fill="#3f7fd0">control</text>
 <rect x="416" y="72" width="274" height="22" rx="6" fill="#d9862f" opacity="0.15" stroke="#d9862f"/>
@@ -12,109 +12,110 @@
 <text x="462" y="110" text-anchor="middle" font-size="10.5" fill="#5b6675" font-family="ui-monospace, Menlo, monospace">treat_1</text>
 <text x="554" y="110" text-anchor="middle" font-size="10.5" fill="#5b6675" font-family="ui-monospace, Menlo, monospace">treat_2</text>
 <text x="646" y="110" text-anchor="middle" font-size="10.5" fill="#5b6675" font-family="ui-monospace, Menlo, monospace">treat_3</text>
-<text x="126" y="139" text-anchor="end" font-size="12.5" font-weight="700" fill="#5b6675" font-family="ui-monospace, Menlo, monospace">HKA</text>
-<rect x="140" y="118" width="90" height="32" rx="3" fill="rgb(24,114,101)"/>
+<text x="126" y="139" text-anchor="end" font-size="12.5" font-weight="700" fill="#5b6675" font-family="ui-monospace, Menlo, monospace">geneA</text>
+<rect x="140" y="118" width="90" height="32" rx="3" fill="rgb(27,115,103)"/>
 <text x="185" y="139" text-anchor="middle" font-size="11" font-weight="600" fill="#ffffff">866</text>
-<rect x="232" y="118" width="90" height="32" rx="3" fill="rgb(19,110,98)"/>
-<text x="277" y="139" text-anchor="middle" font-size="11" font-weight="600" fill="#ffffff">944</text>
-<rect x="324" y="118" width="90" height="32" rx="3" fill="rgb(21,111,99)"/>
-<text x="369" y="139" text-anchor="middle" font-size="11" font-weight="600" fill="#ffffff">920</text>
-<rect x="416" y="118" width="90" height="32" rx="3" fill="rgb(17,109,96)"/>
-<text x="461" y="139" text-anchor="middle" font-size="11" font-weight="600" fill="#ffffff">976</text>
-<rect x="508" y="118" width="90" height="32" rx="3" fill="rgb(16,108,95)"/>
-<text x="553" y="139" text-anchor="middle" font-size="11" font-weight="600" fill="#ffffff">998</text>
-<rect x="600" y="118" width="90" height="32" rx="3" fill="rgb(14,107,94)"/>
-<text x="645" y="139" text-anchor="middle" font-size="11" font-weight="600" fill="#ffffff">1031</text>
-<text x="126" y="173" text-anchor="end" font-size="12.5" font-weight="700" fill="#5b6675" font-family="ui-monospace, Menlo, monospace">HKB</text>
-<rect x="140" y="152" width="90" height="32" rx="3" fill="rgb(34,120,108)"/>
-<text x="185" y="173" text-anchor="middle" font-size="11" font-weight="600" fill="#ffffff">736</text>
-<rect x="232" y="152" width="90" height="32" rx="3" fill="rgb(29,116,104)"/>
-<text x="277" y="173" text-anchor="middle" font-size="11" font-weight="600" fill="#ffffff">809</text>
-<rect x="324" y="152" width="90" height="32" rx="3" fill="rgb(38,122,110)"/>
-<text x="369" y="173" text-anchor="middle" font-size="11" font-weight="600" fill="#ffffff">695</text>
-<rect x="416" y="152" width="90" height="32" rx="3" fill="rgb(27,115,103)"/>
-<text x="461" y="173" text-anchor="middle" font-size="11" font-weight="600" fill="#ffffff">826</text>
-<rect x="508" y="152" width="90" height="32" rx="3" fill="rgb(25,114,101)"/>
-<text x="553" y="173" text-anchor="middle" font-size="11" font-weight="600" fill="#ffffff">865</text>
-<rect x="600" y="152" width="90" height="32" rx="3" fill="rgb(39,123,111)"/>
-<text x="645" y="173" text-anchor="middle" font-size="11" font-weight="600" fill="#ffffff">675</text>
-<text x="126" y="207" text-anchor="end" font-size="12.5" font-weight="700" fill="#5b6675" font-family="ui-monospace, Menlo, monospace">HKC</text>
-<rect x="140" y="186" width="90" height="32" rx="3" fill="rgb(44,126,115)"/>
-<text x="185" y="207" text-anchor="middle" font-size="11" font-weight="600" fill="#ffffff">623</text>
-<rect x="232" y="186" width="90" height="32" rx="3" fill="rgb(46,127,116)"/>
-<text x="277" y="207" text-anchor="middle" font-size="11" font-weight="600" fill="#ffffff">608</text>
-<rect x="324" y="186" width="90" height="32" rx="3" fill="rgb(45,127,115)"/>
-<text x="369" y="207" text-anchor="middle" font-size="11" font-weight="600" fill="#ffffff">613</text>
-<rect x="416" y="186" width="90" height="32" rx="3" fill="rgb(46,127,116)"/>
-<text x="461" y="207" text-anchor="middle" font-size="11" font-weight="600" fill="#ffffff">605</text>
-<rect x="508" y="186" width="90" height="32" rx="3" fill="rgb(48,129,118)"/>
-<text x="553" y="207" text-anchor="middle" font-size="11" font-weight="600" fill="#ffffff">581</text>
-<rect x="600" y="186" width="90" height="32" rx="3" fill="rgb(43,125,114)"/>
-<text x="645" y="207" text-anchor="middle" font-size="11" font-weight="600" fill="#ffffff">638</text>
-<text x="126" y="241" text-anchor="end" font-size="12.5" font-weight="700" fill="#5b6675" font-family="ui-monospace, Menlo, monospace">MID</text>
-<rect x="140" y="220" width="90" height="32" rx="3" fill="rgb(112,169,161)"/>
-<text x="185" y="241" text-anchor="middle" font-size="11" font-weight="600" fill="#ffffff">202</text>
-<rect x="232" y="220" width="90" height="32" rx="3" fill="rgb(107,166,158)"/>
-<text x="277" y="241" text-anchor="middle" font-size="11" font-weight="600" fill="#ffffff">219</text>
-<rect x="324" y="220" width="90" height="32" rx="3" fill="rgb(110,168,160)"/>
-<text x="369" y="241" text-anchor="middle" font-size="11" font-weight="600" fill="#ffffff">210</text>
-<rect x="416" y="220" width="90" height="32" rx="3" fill="rgb(114,170,162)"/>
-<text x="461" y="241" text-anchor="middle" font-size="11" font-weight="600" fill="#ffffff">197</text>
-<rect x="508" y="220" width="90" height="32" rx="3" fill="rgb(119,173,166)"/>
-<text x="553" y="241" text-anchor="middle" font-size="11" font-weight="600" fill="#ffffff">181</text>
-<rect x="600" y="220" width="90" height="32" rx="3" fill="rgb(112,169,161)"/>
-<text x="645" y="241" text-anchor="middle" font-size="11" font-weight="600" fill="#ffffff">201</text>
-<text x="126" y="275" text-anchor="end" font-size="12.5" font-weight="700" fill="#5b6675" font-family="ui-monospace, Menlo, monospace">LOWa</text>
-<rect x="140" y="254" width="90" height="32" rx="3" fill="rgb(208,230,227)"/>
-<text x="185" y="275" text-anchor="middle" font-size="11" font-weight="600" fill="#28303a">41</text>
-<rect x="232" y="254" width="90" height="32" rx="3" fill="rgb(212,233,230)"/>
-<text x="277" y="275" text-anchor="middle" font-size="11" font-weight="600" fill="#28303a">38</text>
-<rect x="324" y="254" width="90" height="32" rx="3" fill="rgb(208,230,227)"/>
-<text x="369" y="275" text-anchor="middle" font-size="11" font-weight="600" fill="#28303a">41</text>
-<rect x="416" y="254" width="90" height="32" rx="3" fill="rgb(208,230,227)"/>
-<text x="461" y="275" text-anchor="middle" font-size="11" font-weight="600" fill="#28303a">41</text>
-<rect x="508" y="254" width="90" height="32" rx="3" fill="rgb(209,231,228)"/>
-<text x="553" y="275" text-anchor="middle" font-size="11" font-weight="600" fill="#28303a">40</text>
-<rect x="600" y="254" width="90" height="32" rx="3" fill="rgb(209,231,228)"/>
-<text x="645" y="275" text-anchor="middle" font-size="11" font-weight="600" fill="#28303a">40</text>
-<text x="126" y="309" text-anchor="end" font-size="12.5" font-weight="700" fill="#5b6675" font-family="ui-monospace, Menlo, monospace">LOWb</text>
-<rect x="140" y="288" width="90" height="32" rx="3" fill="rgb(223,240,237)"/>
-<text x="185" y="309" text-anchor="middle" font-size="11" font-weight="600" fill="#28303a">32</text>
-<rect x="232" y="288" width="90" height="32" rx="3" fill="rgb(229,243,241)"/>
-<text x="277" y="309" text-anchor="middle" font-size="11" font-weight="600" fill="#28303a">29</text>
-<rect x="324" y="288" width="90" height="32" rx="3" fill="rgb(219,237,235)"/>
-<text x="369" y="309" text-anchor="middle" font-size="11" font-weight="600" fill="#28303a">34</text>
-<rect x="416" y="288" width="90" height="32" rx="3" fill="rgb(233,246,244)"/>
-<text x="461" y="309" text-anchor="middle" font-size="11" font-weight="600" fill="#28303a">27</text>
-<rect x="508" y="288" width="90" height="32" rx="3" fill="rgb(229,243,241)"/>
-<text x="553" y="309" text-anchor="middle" font-size="11" font-weight="600" fill="#28303a">29</text>
-<rect x="600" y="288" width="90" height="32" rx="3" fill="rgb(227,242,240)"/>
-<text x="645" y="309" text-anchor="middle" font-size="11" font-weight="600" fill="#28303a">30</text>
-<text x="126" y="343" text-anchor="end" font-size="12.5" font-weight="800" fill="#28303a" font-family="ui-monospace, Menlo, monospace">UP</text>
-<rect x="140" y="322" width="90" height="32" rx="3" fill="rgb(189,218,214)"/>
-<text x="185" y="343" text-anchor="middle" font-size="11" font-weight="600" fill="#28303a">56</text>
-<rect x="232" y="322" width="90" height="32" rx="3" fill="rgb(196,222,219)"/>
-<text x="277" y="343" text-anchor="middle" font-size="11" font-weight="600" fill="#28303a">50</text>
-<rect x="324" y="322" width="90" height="32" rx="3" fill="rgb(201,226,222)"/>
-<text x="369" y="343" text-anchor="middle" font-size="11" font-weight="600" fill="#28303a">46</text>
-<rect x="416" y="322" width="90" height="32" rx="3" fill="rgb(32,118,106)"/>
-<text x="461" y="343" text-anchor="middle" font-size="11" font-weight="600" fill="#ffffff">770</text>
-<rect x="508" y="322" width="90" height="32" rx="3" fill="rgb(35,120,109)"/>
-<text x="553" y="343" text-anchor="middle" font-size="11" font-weight="600" fill="#ffffff">725</text>
-<rect x="600" y="322" width="90" height="32" rx="3" fill="rgb(31,118,106)"/>
-<text x="645" y="343" text-anchor="middle" font-size="11" font-weight="600" fill="#ffffff">774</text>
-<text x="126" y="377" text-anchor="end" font-size="12.5" font-weight="800" fill="#28303a" font-family="ui-monospace, Menlo, monospace">DOWN</text>
-<rect x="140" y="356" width="90" height="32" rx="3" fill="rgb(43,125,114)"/>
-<text x="185" y="377" text-anchor="middle" font-size="11" font-weight="600" fill="#ffffff">635</text>
-<rect x="232" y="356" width="90" height="32" rx="3" fill="rgb(42,124,113)"/>
-<text x="277" y="377" text-anchor="middle" font-size="11" font-weight="600" fill="#ffffff">652</text>
-<rect x="324" y="356" width="90" height="32" rx="3" fill="rgb(47,128,117)"/>
-<text x="369" y="377" text-anchor="middle" font-size="11" font-weight="600" fill="#ffffff">594</text>
-<rect x="416" y="356" width="90" height="32" rx="3" fill="rgb(179,212,207)"/>
-<text x="461" y="377" text-anchor="middle" font-size="11" font-weight="600" fill="#28303a">66</text>
-<rect x="508" y="356" width="90" height="32" rx="3" fill="rgb(181,213,208)"/>
-<text x="553" y="377" text-anchor="middle" font-size="11" font-weight="600" fill="#28303a">64</text>
-<rect x="600" y="356" width="90" height="32" rx="3" fill="rgb(178,211,207)"/>
-<text x="645" y="377" text-anchor="middle" font-size="11" font-weight="600" fill="#28303a">67</text>
-<text x="34" y="438" font-size="11.5" fill="#5b6675">Read the <tspan font-weight="700" fill="#28303a">UP</tspan> and <tspan font-weight="700" fill="#28303a">DOWN</tspan> rows: their colour flips between the control and treated blocks. Those are the genes the treatment changed.</text>
+<rect x="232" y="118" width="90" height="32" rx="3" fill="rgb(19,110,97)"/>
+<text x="277" y="139" text-anchor="middle" font-size="11" font-weight="600" fill="#ffffff">993</text>
+<rect x="324" y="118" width="90" height="32" rx="3" fill="rgb(14,107,94)"/>
+<text x="369" y="139" text-anchor="middle" font-size="11" font-weight="600" fill="#ffffff">1082</text>
+<rect x="416" y="118" width="90" height="32" rx="3" fill="rgb(27,115,103)"/>
+<text x="461" y="139" text-anchor="middle" font-size="11" font-weight="600" fill="#ffffff">873</text>
+<rect x="508" y="118" width="90" height="32" rx="3" fill="rgb(29,116,104)"/>
+<text x="553" y="139" text-anchor="middle" font-size="11" font-weight="600" fill="#ffffff">841</text>
+<rect x="600" y="118" width="90" height="32" rx="3" fill="rgb(21,111,99)"/>
+<text x="645" y="139" text-anchor="middle" font-size="11" font-weight="600" fill="#ffffff">961</text>
+<text x="126" y="173" text-anchor="end" font-size="12.5" font-weight="700" fill="#5b6675" font-family="ui-monospace, Menlo, monospace">geneB</text>
+<rect x="140" y="152" width="90" height="32" rx="3" fill="rgb(199,225,221)"/>
+<text x="185" y="173" text-anchor="middle" font-size="11" font-weight="600" fill="#28303a">46</text>
+<rect x="232" y="152" width="90" height="32" rx="3" fill="rgb(193,221,217)"/>
+<text x="277" y="173" text-anchor="middle" font-size="11" font-weight="600" fill="#28303a">51</text>
+<rect x="324" y="152" width="90" height="32" rx="3" fill="rgb(201,226,222)"/>
+<text x="369" y="173" text-anchor="middle" font-size="11" font-weight="600" fill="#28303a">45</text>
+<rect x="416" y="152" width="90" height="32" rx="3" fill="rgb(29,116,104)"/>
+<text x="461" y="173" text-anchor="middle" font-size="11" font-weight="600" fill="#ffffff">841</text>
+<rect x="508" y="152" width="90" height="32" rx="3" fill="rgb(37,122,110)"/>
+<text x="553" y="173" text-anchor="middle" font-size="11" font-weight="600" fill="#ffffff">726</text>
+<rect x="600" y="152" width="90" height="32" rx="3" fill="rgb(30,117,105)"/>
+<text x="645" y="173" text-anchor="middle" font-size="11" font-weight="600" fill="#ffffff">822</text>
+<text x="126" y="207" text-anchor="end" font-size="12.5" font-weight="700" fill="#5b6675" font-family="ui-monospace, Menlo, monospace">geneC</text>
+<rect x="140" y="186" width="90" height="32" rx="3" fill="rgb(29,116,104)"/>
+<text x="185" y="207" text-anchor="middle" font-size="11" font-weight="600" fill="#ffffff">839</text>
+<rect x="232" y="186" width="90" height="32" rx="3" fill="rgb(26,115,102)"/>
+<text x="277" y="207" text-anchor="middle" font-size="11" font-weight="600" fill="#ffffff">877</text>
+<rect x="324" y="186" width="90" height="32" rx="3" fill="rgb(32,119,107)"/>
+<text x="369" y="207" text-anchor="middle" font-size="11" font-weight="600" fill="#ffffff">791</text>
+<rect x="416" y="186" width="90" height="32" rx="3" fill="rgb(34,120,108)"/>
+<text x="461" y="207" text-anchor="middle" font-size="11" font-weight="600" fill="#ffffff">765</text>
+<rect x="508" y="186" width="90" height="32" rx="3" fill="rgb(35,121,109)"/>
+<text x="553" y="207" text-anchor="middle" font-size="11" font-weight="600" fill="#ffffff">751</text>
+<rect x="600" y="186" width="90" height="32" rx="3" fill="rgb(30,117,105)"/>
+<text x="645" y="207" text-anchor="middle" font-size="11" font-weight="600" fill="#ffffff">819</text>
+<text x="126" y="241" text-anchor="end" font-size="12.5" font-weight="700" fill="#5b6675" font-family="ui-monospace, Menlo, monospace">geneD</text>
+<rect x="140" y="220" width="90" height="32" rx="3" fill="rgb(47,128,117)"/>
+<text x="185" y="241" text-anchor="middle" font-size="11" font-weight="600" fill="#ffffff">612</text>
+<rect x="232" y="220" width="90" height="32" rx="3" fill="rgb(44,126,114)"/>
+<text x="277" y="241" text-anchor="middle" font-size="11" font-weight="600" fill="#ffffff">652</text>
+<rect x="324" y="220" width="90" height="32" rx="3" fill="rgb(51,130,119)"/>
+<text x="369" y="241" text-anchor="middle" font-size="11" font-weight="600" fill="#ffffff">580</text>
+<rect x="416" y="220" width="90" height="32" rx="3" fill="rgb(180,212,208)"/>
+<text x="461" y="241" text-anchor="middle" font-size="11" font-weight="600" fill="#28303a">64</text>
+<rect x="508" y="220" width="90" height="32" rx="3" fill="rgb(176,210,205)"/>
+<text x="553" y="241" text-anchor="middle" font-size="11" font-weight="600" fill="#28303a">69</text>
+<rect x="600" y="220" width="90" height="32" rx="3" fill="rgb(179,212,207)"/>
+<text x="645" y="241" text-anchor="middle" font-size="11" font-weight="600" fill="#28303a">65</text>
+<text x="126" y="275" text-anchor="end" font-size="12.5" font-weight="700" fill="#5b6675" font-family="ui-monospace, Menlo, monospace">geneE</text>
+<rect x="140" y="254" width="90" height="32" rx="3" fill="rgb(51,130,119)"/>
+<text x="185" y="275" text-anchor="middle" font-size="11" font-weight="600" fill="#ffffff">578</text>
+<rect x="232" y="254" width="90" height="32" rx="3" fill="rgb(41,124,113)"/>
+<text x="277" y="275" text-anchor="middle" font-size="11" font-weight="600" fill="#ffffff">680</text>
+<rect x="324" y="254" width="90" height="32" rx="3" fill="rgb(49,129,118)"/>
+<text x="369" y="275" text-anchor="middle" font-size="11" font-weight="600" fill="#ffffff">595</text>
+<rect x="416" y="254" width="90" height="32" rx="3" fill="rgb(54,133,122)"/>
+<text x="461" y="275" text-anchor="middle" font-size="11" font-weight="600" fill="#ffffff">545</text>
+<rect x="508" y="254" width="90" height="32" rx="3" fill="rgb(56,134,123)"/>
+<text x="553" y="275" text-anchor="middle" font-size="11" font-weight="600" fill="#ffffff">531</text>
+<rect x="600" y="254" width="90" height="32" rx="3" fill="rgb(43,126,114)"/>
+<text x="645" y="275" text-anchor="middle" font-size="11" font-weight="600" fill="#ffffff">657</text>
+<text x="126" y="309" text-anchor="end" font-size="12.5" font-weight="700" fill="#5b6675" font-family="ui-monospace, Menlo, monospace">geneF</text>
+<rect x="140" y="288" width="90" height="32" rx="3" fill="rgb(214,234,231)"/>
+<text x="185" y="309" text-anchor="middle" font-size="11" font-weight="600" fill="#28303a">36</text>
+<rect x="232" y="288" width="90" height="32" rx="3" fill="rgb(217,236,233)"/>
+<text x="277" y="309" text-anchor="middle" font-size="11" font-weight="600" fill="#28303a">34</text>
+<rect x="324" y="288" width="90" height="32" rx="3" fill="rgb(205,228,225)"/>
+<text x="369" y="309" text-anchor="middle" font-size="11" font-weight="600" fill="#28303a">42</text>
+<rect x="416" y="288" width="90" height="32" rx="3" fill="rgb(202,226,223)"/>
+<text x="461" y="309" text-anchor="middle" font-size="11" font-weight="600" fill="#28303a">44</text>
+<rect x="508" y="288" width="90" height="32" rx="3" fill="rgb(206,229,226)"/>
+<text x="553" y="309" text-anchor="middle" font-size="11" font-weight="600" fill="#28303a">41</text>
+<rect x="600" y="288" width="90" height="32" rx="3" fill="rgb(211,232,229)"/>
+<text x="645" y="309" text-anchor="middle" font-size="11" font-weight="600" fill="#28303a">38</text>
+<text x="126" y="343" text-anchor="end" font-size="12.5" font-weight="700" fill="#5b6675" font-family="ui-monospace, Menlo, monospace">geneG</text>
+<rect x="140" y="322" width="90" height="32" rx="3" fill="rgb(116,172,164)"/>
+<text x="185" y="343" text-anchor="middle" font-size="11" font-weight="600" fill="#ffffff">190</text>
+<rect x="232" y="322" width="90" height="32" rx="3" fill="rgb(109,167,159)"/>
+<text x="277" y="343" text-anchor="middle" font-size="11" font-weight="600" fill="#ffffff">214</text>
+<rect x="324" y="322" width="90" height="32" rx="3" fill="rgb(114,170,162)"/>
+<text x="369" y="343" text-anchor="middle" font-size="11" font-weight="600" fill="#ffffff">198</text>
+<rect x="416" y="322" width="90" height="32" rx="3" fill="rgb(118,173,165)"/>
+<text x="461" y="343" text-anchor="middle" font-size="11" font-weight="600" fill="#ffffff">185</text>
+<rect x="508" y="322" width="90" height="32" rx="3" fill="rgb(115,171,163)"/>
+<text x="553" y="343" text-anchor="middle" font-size="11" font-weight="600" fill="#ffffff">193</text>
+<rect x="600" y="322" width="90" height="32" rx="3" fill="rgb(113,170,162)"/>
+<text x="645" y="343" text-anchor="middle" font-size="11" font-weight="600" fill="#ffffff">200</text>
+<text x="126" y="377" text-anchor="end" font-size="12.5" font-weight="700" fill="#5b6675" font-family="ui-monospace, Menlo, monospace">geneH</text>
+<rect x="140" y="356" width="90" height="32" rx="3" fill="rgb(229,243,241)"/>
+<text x="185" y="377" text-anchor="middle" font-size="11" font-weight="600" fill="#28303a">28</text>
+<rect x="232" y="356" width="90" height="32" rx="3" fill="rgb(221,238,236)"/>
+<text x="277" y="377" text-anchor="middle" font-size="11" font-weight="600" fill="#28303a">32</text>
+<rect x="324" y="356" width="90" height="32" rx="3" fill="rgb(225,241,238)"/>
+<text x="369" y="377" text-anchor="middle" font-size="11" font-weight="600" fill="#28303a">30</text>
+<rect x="416" y="356" width="90" height="32" rx="3" fill="rgb(223,239,237)"/>
+<text x="461" y="377" text-anchor="middle" font-size="11" font-weight="600" fill="#28303a">31</text>
+<rect x="508" y="356" width="90" height="32" rx="3" fill="rgb(233,246,244)"/>
+<text x="553" y="377" text-anchor="middle" font-size="11" font-weight="600" fill="#28303a">26</text>
+<rect x="600" y="356" width="90" height="32" rx="3" fill="rgb(219,237,234)"/>
+<text x="645" y="377" text-anchor="middle" font-size="11" font-weight="600" fill="#28303a">33</text>
+<text x="34" y="416" font-size="11.5" fill="#5b6675">Two rows flip colour between the control and treated blocks. Nothing labels them as special:</text>
+<text x="34" y="434" font-size="11.5" fill="#5b6675">spotting them from the numbers is exactly what the next step does, properly.</text>
 </svg>
