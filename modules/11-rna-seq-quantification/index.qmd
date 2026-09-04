@@ -1,7 +1,7 @@
 ---
 title: "What Is This Cell Actually Doing?"
 subtitle: "A new act. Not what the genome is, but which genes it is using."
-date: "2026-09-07"
+date: "2026-09-04"
 categories: [story, rna-seq, expression, beginner]
 ---
 
