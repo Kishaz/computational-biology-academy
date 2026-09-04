@@ -42,19 +42,6 @@ impossible PI). Real tools, real data, real judgment.
 *New modules are added as they are ready. "Watch" the repository on GitHub to be notified
 when they land.*
 
-## Built with
-
-The site is a [Quarto](https://quarto.org) website, published to GitHub Pages. To preview
-it privately on your own machine:
-
-```bash
-quarto preview
-```
-
-Nothing is published until you push to the `main` branch, which triggers the deploy
-workflow in `.github/workflows/`. Notes on the layout and how modules are written live in
-[`CONTRIBUTING.md`](CONTRIBUTING.md).
-
 ## Feedback and corrections
 
 Spotted a mistake or an out-of-date command? Please

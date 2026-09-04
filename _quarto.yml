@@ -1,6 +1,10 @@
 project:
   type: website
   output-dir: _site
+  # Render only the .qmd content pages. This keeps loose Markdown files
+  # (CONTRIBUTING.md, the internal authoring playbook) off the public site.
+  render:
+    - "**/*.qmd"
 
 website:
   title: "The Computational Biology Academy"

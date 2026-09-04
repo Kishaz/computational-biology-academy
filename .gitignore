@@ -39,3 +39,6 @@ data/**/*.rds
 .vscode/
 
 **/*.quarto_ipynb
+
+# Private author-only files (internal authoring playbook, dev notes)
+CONTRIBUTING.md
