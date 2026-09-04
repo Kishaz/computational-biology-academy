@@ -37,6 +37,7 @@ impossible PI). Real tools, real data, real judgment.
 | 07 | [What Makes This Sample Different?](modules/07-variant-calling/index.qmd) | Call variants with bcftools, read a VCF, and filter signal from noise |
 | 08 | [Does This Difference Even Matter?](modules/08-variant-annotation/index.qmd) | Annotate variants with SnpEff: synonymous, missense, and the famous D614G |
 | 09 | [How Are These Samples Related?](modules/09-phylogenetics/index.qmd) | Build a phylogenetic tree with MAFFT and IQ-TREE, and read its support |
+| 10 | [Make the Whole Thing Run Itself](modules/10-workflow-automation/index.qmd) | Automate the pipeline with Snakemake, and meet Nextflow, WDL, CWL and Galaxy |
 
 *New modules are added as they are ready. "Watch" the repository on GitHub to be notified
 when they land.*

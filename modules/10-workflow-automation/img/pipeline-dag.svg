@@ -1,0 +1,46 @@
+<svg viewBox="0 0 820 650" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif" role="img" aria-label="The pipeline dependency graph. Raw reads feed the trim step (Module 05); the reference feeds the index step (Module 06); both feed align (Module 06); then call and filter (Module 07) and annotate (Module 08) in sequence, producing the annotated VCF.">
+<rect x="0.5" y="0.5" width="819" height="649" rx="14" fill="#ffffff" stroke="#dde3ea"/>
+<text x="36" y="46" font-size="18" font-weight="800" fill="#28303a">One file, the whole journey</text>
+<text x="36" y="69" font-size="12.5" fill="#5b6675">Snakemake reads the rules and works out this graph itself. Each box is one step you already did by hand.</text>
+<rect x="120" y="90" width="210" height="40" rx="20" fill="#f4f6f8" stroke="#9aa6b3" stroke-width="1.8"/><text x="225" y="115" text-anchor="middle" font-size="13" font-weight="700" fill="#28303a" font-family="ui-monospace, Menlo, monospace">reads/sampleA.fastq</text>
+<rect x="480" y="90" width="210" height="40" rx="20" fill="#f4f6f8" stroke="#9aa6b3" stroke-width="1.8"/><text x="585" y="115" text-anchor="middle" font-size="13" font-weight="700" fill="#28303a" font-family="ui-monospace, Menlo, monospace">ref/sars2.fasta</text>
+<line x1="225" y1="130" x2="225" y2="159" stroke="#9aa6b3" stroke-width="2.2"/><path d="M 225 168 l -5 -10 l 10 0 z" fill="#9aa6b3"/>
+<line x1="585" y1="130" x2="585" y2="159" stroke="#9aa6b3" stroke-width="2.2"/><path d="M 585 168 l -5 -10 l 10 0 z" fill="#9aa6b3"/>
+<rect x="110" y="168" width="230" height="60" rx="12" fill="#eaf3fd" stroke="#3f7fd0" stroke-width="1.8"/>
+<text x="126" y="192" font-size="15" font-weight="800" fill="#28303a">trim</text>
+<text x="126" y="211" font-size="11" fill="#5b6675">fastp</text>
+<rect x="258" y="179" width="70" height="17" rx="8.5" fill="#3f7fd0"/>
+<text x="293" y="191" text-anchor="middle" font-size="9.5" font-weight="700" fill="#ffffff">Module 05</text>
+<rect x="470" y="168" width="230" height="60" rx="12" fill="#f3eefb" stroke="#7c5cbf" stroke-width="1.8"/>
+<text x="486" y="192" font-size="15" font-weight="800" fill="#28303a">index_reference</text>
+<text x="486" y="211" font-size="11" fill="#5b6675">bwa index</text>
+<rect x="618" y="179" width="70" height="17" rx="8.5" fill="#7c5cbf"/>
+<text x="653" y="191" text-anchor="middle" font-size="9.5" font-weight="700" fill="#ffffff">Module 06</text>
+<line x1="225" y1="228" x2="365" y2="265" stroke="#9aa6b3" stroke-width="2.2"/><path d="M 365 274 l -5 -10 l 10 0 z" fill="#9aa6b3"/>
+<line x1="585" y1="228" x2="455" y2="265" stroke="#9aa6b3" stroke-width="2.2"/><path d="M 455 274 l -5 -10 l 10 0 z" fill="#9aa6b3"/>
+<rect x="285" y="274" width="250" height="60" rx="12" fill="#f3eefb" stroke="#7c5cbf" stroke-width="1.8"/>
+<text x="301" y="298" font-size="15" font-weight="800" fill="#28303a">align</text>
+<text x="301" y="317" font-size="11" fill="#5b6675">bwa mem + samtools sort</text>
+<rect x="453" y="285" width="70" height="17" rx="8.5" fill="#7c5cbf"/>
+<text x="488" y="297" text-anchor="middle" font-size="9.5" font-weight="700" fill="#ffffff">Module 06</text>
+<line x1="410" y1="334" x2="410" y2="357" stroke="#9aa6b3" stroke-width="2.2"/><path d="M 410 366 l -5 -10 l 10 0 z" fill="#9aa6b3"/>
+<rect x="285" y="366" width="250" height="60" rx="12" fill="#e5f6f4" stroke="#1f9c8f" stroke-width="1.8"/>
+<text x="301" y="390" font-size="15" font-weight="800" fill="#28303a">call</text>
+<text x="301" y="409" font-size="11" fill="#5b6675">bcftools mpileup + call</text>
+<rect x="453" y="377" width="70" height="17" rx="8.5" fill="#1f9c8f"/>
+<text x="488" y="389" text-anchor="middle" font-size="9.5" font-weight="700" fill="#ffffff">Module 07</text>
+<line x1="410" y1="426" x2="410" y2="449" stroke="#9aa6b3" stroke-width="2.2"/><path d="M 410 458 l -5 -10 l 10 0 z" fill="#9aa6b3"/>
+<rect x="285" y="458" width="250" height="60" rx="12" fill="#e5f6f4" stroke="#1f9c8f" stroke-width="1.8"/>
+<text x="301" y="482" font-size="15" font-weight="800" fill="#28303a">filter</text>
+<text x="301" y="501" font-size="11" fill="#5b6675">bcftools view (QUAL, DP)</text>
+<rect x="453" y="469" width="70" height="17" rx="8.5" fill="#1f9c8f"/>
+<text x="488" y="481" text-anchor="middle" font-size="9.5" font-weight="700" fill="#ffffff">Module 07</text>
+<line x1="410" y1="518" x2="410" y2="541" stroke="#9aa6b3" stroke-width="2.2"/><path d="M 410 550 l -5 -10 l 10 0 z" fill="#9aa6b3"/>
+<rect x="285" y="550" width="250" height="60" rx="12" fill="#fdf3e6" stroke="#d9862f" stroke-width="1.8"/>
+<text x="301" y="574" font-size="15" font-weight="800" fill="#28303a">annotate</text>
+<text x="301" y="593" font-size="11" fill="#5b6675">SnpEff</text>
+<rect x="453" y="561" width="70" height="17" rx="8.5" fill="#d9862f"/>
+<text x="488" y="573" text-anchor="middle" font-size="9.5" font-weight="700" fill="#ffffff">Module 08</text>
+<line x1="410" y1="610" x2="410" y2="593" stroke="#9aa6b3" stroke-width="2.2"/><path d="M 410 602 l -5 -10 l 10 0 z" fill="#9aa6b3"/>
+<rect x="250" y="604" width="320" height="40" rx="20" fill="#e8f5ed" stroke="#2e8b57" stroke-width="1.8"/><text x="410" y="629" text-anchor="middle" font-size="13" font-weight="700" fill="#28303a" font-family="ui-monospace, Menlo, monospace">results/sampleA.annotated.vcf</text>
+</svg>

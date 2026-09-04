@@ -32,6 +32,8 @@ website:
             text: "08 · Does This Difference Even Matter?"
           - href: modules/09-phylogenetics/index.qmd
             text: "09 · How Are These Samples Related?"
+          - href: modules/10-workflow-automation/index.qmd
+            text: "10 · Make the Whole Thing Run Itself"
     right:
       - text: "by Samuel Mwamburi, PhD"
         href: https://samuel-mwamburi.netlify.app/
@@ -59,6 +61,8 @@ website:
             text: "08 · Does This Difference Even Matter?"
           - href: modules/09-phylogenetics/index.qmd
             text: "09 · How Are These Samples Related?"
+          - href: modules/10-workflow-automation/index.qmd
+            text: "10 · Make the Whole Thing Run Itself"
   page-footer:
     left: "© 2026 Samuel Mwamburi, PhD · CC BY 4.0"
     center: "Educational material. Verify all tool commands against current official documentation before use."

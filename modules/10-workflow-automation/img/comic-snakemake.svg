@@ -1,0 +1,60 @@
+<svg viewBox="0 0 1000 300" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" role="img" aria-label="Three-panel stick-figure comic. Prof. Zola demands five hundred samples by Friday. Baraka, the programmer, says do not repeat yourself, write the pipeline once. Amina realises one command can run all five hundred, the same way every time.">
+  <rect x="1" y="1" width="998" height="298" rx="10" fill="#ffffff" stroke="#d5dbe2"/>
+
+  <line x1="334" y1="16" x2="334" y2="284" stroke="#e2e6ea"/>
+  <line x1="667" y1="16" x2="667" y2="284" stroke="#e2e6ea"/>
+
+  <!-- Panel 1: Prof. Zola -->
+  <g stroke="#2b3138" stroke-width="3" fill="none" stroke-linecap="round">
+    <circle cx="80" cy="150" r="20" fill="#f3e8fd"/>
+    <line x1="80" y1="170" x2="80" y2="222"/>
+    <line x1="80" y1="185" x2="54" y2="208"/>
+    <line x1="80" y1="185" x2="112" y2="200"/>
+    <line x1="80" y1="222" x2="62" y2="256"/>
+    <line x1="80" y1="222" x2="98" y2="256"/>
+  </g>
+  <rect x="104" y="188" width="26" height="18" rx="3" fill="#dfe4ea" stroke="#2b3138" stroke-width="2"/>
+  <text x="80" y="284" text-anchor="middle" font-size="12" font-weight="700" fill="#6b1fb0">Prof. Zola</text>
+  <g>
+    <rect x="150" y="52" width="168" height="70" rx="12" fill="#f7f9fb" stroke="#b9c2cc"/>
+    <path d="M150 104 l-16 14 l24 -4 z" fill="#f7f9fb" stroke="#b9c2cc"/>
+    <text x="164" y="80" font-size="12.5" fill="#2b3138">Five hundred samples.</text>
+    <text x="164" y="100" font-size="12.5" fill="#2b3138">By Friday.</text>
+  </g>
+
+  <!-- Panel 2: Baraka the programmer -->
+  <g stroke="#2b3138" stroke-width="3" fill="none" stroke-linecap="round">
+    <circle cx="415" cy="150" r="20" fill="#e6f4ea"/>
+    <line x1="415" y1="170" x2="415" y2="222"/>
+    <line x1="415" y1="185" x2="389" y2="205"/>
+    <line x1="415" y1="185" x2="441" y2="205"/>
+    <line x1="415" y1="222" x2="397" y2="256"/>
+    <line x1="415" y1="222" x2="433" y2="256"/>
+  </g>
+  <text x="415" y="284" text-anchor="middle" font-size="12" font-weight="700" fill="#2e7d46">Baraka</text>
+  <g>
+    <rect x="470" y="46" width="192" height="74" rx="12" fill="#e9f6ee" stroke="#8bd4a6"/>
+    <path d="M486 120 l-8 16 l20 -8 z" fill="#e9f6ee" stroke="#8bd4a6"/>
+    <text x="484" y="72" font-size="12.5" fill="#2b3138">Do not repeat yourself.</text>
+    <text x="484" y="92" font-size="12.5" fill="#2b3138">Write the pipeline</text>
+    <text x="484" y="112" font-size="12.5" fill="#2b3138">once.</text>
+  </g>
+
+  <!-- Panel 3: Amina -->
+  <g stroke="#2b3138" stroke-width="3" fill="none" stroke-linecap="round">
+    <circle cx="748" cy="150" r="20" fill="#e8f0fe"/>
+    <line x1="748" y1="170" x2="748" y2="222"/>
+    <line x1="748" y1="185" x2="722" y2="205"/>
+    <line x1="748" y1="185" x2="774" y2="205"/>
+    <line x1="748" y1="222" x2="730" y2="256"/>
+    <line x1="748" y1="222" x2="766" y2="256"/>
+  </g>
+  <text x="748" y="284" text-anchor="middle" font-size="12" font-weight="700" fill="#1a56b0">Amina</text>
+  <g>
+    <rect x="800" y="46" width="184" height="74" rx="12" fill="#eef5ff" stroke="#9cc0f5"/>
+    <path d="M840 120 l-6 16 l18 -10 z" fill="#eef5ff" stroke="#9cc0f5"/>
+    <text x="814" y="72" font-size="12.5" fill="#2b3138">One command runs</text>
+    <text x="814" y="92" font-size="12.5" fill="#2b3138">all five hundred. Same</text>
+    <text x="814" y="112" font-size="12.5" fill="#2b3138">way every time.</text>
+  </g>
+</svg>

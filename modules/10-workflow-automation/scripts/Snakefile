@@ -1,0 +1,69 @@
+# Snakefile: the whole Module 05-08 journey, automated.
+# reads -> trim (fastp) -> align (bwa) -> call (bcftools) -> filter -> annotate (SnpEff)
+#
+# Run it:   snakemake --cores 1
+# Preview:  snakemake -n            (dry run, plans without doing)
+# Picture:  snakemake --dag | dot -Tsvg > dag.svg
+
+SAMPLE = "sampleA"
+REF = "ref/sars2.fasta"
+
+# The one thing we ultimately want. Snakemake works backwards from here.
+rule all:
+    input:
+        f"results/{SAMPLE}.annotated.vcf"
+
+rule trim:
+    input:
+        "reads/{sample}.fastq"
+    output:
+        "trimmed/{sample}.fastq"
+    shell:
+        "fastp -i {input} -o {output} "
+        "--cut_tail --cut_tail_mean_quality 20 --length_required 30 "
+        "-j trimmed/{wildcards.sample}.fastp.json -h trimmed/{wildcards.sample}.fastp.html"
+
+rule index_reference:
+    input:
+        REF
+    output:
+        REF + ".bwt"
+    shell:
+        "bwa index {input}"
+
+rule align:
+    input:
+        ref=REF,
+        index=REF + ".bwt",
+        reads="trimmed/{sample}.fastq"
+    output:
+        "aligned/{sample}.sorted.bam"
+    shell:
+        "bwa mem {input.ref} {input.reads} | samtools sort -O bam -o {output} - && "
+        "samtools index {output}"
+
+rule call:
+    input:
+        ref=REF,
+        bam="aligned/{sample}.sorted.bam"
+    output:
+        "calls/{sample}.vcf.gz"
+    shell:
+        "bcftools mpileup -f {input.ref} {input.bam} | "
+        "bcftools call -mv -Oz -o {output} && bcftools index {output}"
+
+rule filter:
+    input:
+        "calls/{sample}.vcf.gz"
+    output:
+        "calls/{sample}.filtered.vcf"
+    shell:
+        "bcftools view -i 'QUAL>=20 && INFO/DP>=10' {input} -Ov -o {output}"
+
+rule annotate:
+    input:
+        "calls/{sample}.filtered.vcf"
+    output:
+        "results/{sample}.annotated.vcf"
+    shell:
+        "snpEff NC_045512.2 {input} > {output}"
