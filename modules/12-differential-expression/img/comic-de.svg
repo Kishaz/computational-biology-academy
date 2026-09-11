@@ -1,0 +1,60 @@
+<svg viewBox="0 0 1000 300" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" role="img" aria-label="Three-panel stick-figure comic. Prof. Zola says geneB doubled and asks if it is real. Amina answers not until she normalises for sequencing depth and tests against the replicates. She holds a volcano-plot shape and says a big change with a tiny p-value is a real hit.">
+  <rect x="1" y="1" width="998" height="298" rx="10" fill="#ffffff" stroke="#d5dbe2"/>
+  <line x1="334" y1="16" x2="334" y2="284" stroke="#e2e6ea"/>
+  <line x1="667" y1="16" x2="667" y2="284" stroke="#e2e6ea"/>
+
+  <!-- Panel 1: Prof. Zola -->
+  <g stroke="#2b3138" stroke-width="3" fill="none" stroke-linecap="round">
+    <circle cx="80" cy="150" r="20" fill="#f3e8fd"/>
+    <line x1="80" y1="170" x2="80" y2="222"/><line x1="80" y1="185" x2="54" y2="208"/>
+    <line x1="80" y1="185" x2="112" y2="200"/><line x1="80" y1="222" x2="62" y2="256"/>
+    <line x1="80" y1="222" x2="98" y2="256"/>
+  </g>
+  <rect x="104" y="188" width="26" height="18" rx="3" fill="#dfe4ea" stroke="#2b3138" stroke-width="2"/>
+  <text x="80" y="284" text-anchor="middle" font-size="12" font-weight="700" fill="#6b1fb0">Prof. Zola</text>
+  <g>
+    <rect x="150" y="52" width="168" height="70" rx="12" fill="#f7f9fb" stroke="#b9c2cc"/>
+    <path d="M150 104 l-16 14 l24 -4 z" fill="#f7f9fb" stroke="#b9c2cc"/>
+    <text x="164" y="80" font-size="12.5" fill="#2b3138">geneB doubled.</text>
+    <text x="164" y="100" font-size="12.5" fill="#2b3138">Is that real?</text>
+  </g>
+
+  <!-- Panel 2: Amina -->
+  <g stroke="#2b3138" stroke-width="3" fill="none" stroke-linecap="round">
+    <circle cx="415" cy="150" r="20" fill="#e8f0fe"/>
+    <line x1="415" y1="170" x2="415" y2="222"/><line x1="415" y1="185" x2="389" y2="205"/>
+    <line x1="415" y1="185" x2="441" y2="205"/><line x1="415" y1="222" x2="397" y2="256"/>
+    <line x1="415" y1="222" x2="433" y2="256"/>
+  </g>
+  <text x="415" y="284" text-anchor="middle" font-size="12" font-weight="700" fill="#1a56b0">Amina</text>
+  <g>
+    <rect x="470" y="44" width="190" height="74" rx="12" fill="#eef5ff" stroke="#9cc0f5"/>
+    <path d="M486 118 l-8 16 l20 -8 z" fill="#eef5ff" stroke="#9cc0f5"/>
+    <text x="484" y="70" font-size="12.5" fill="#2b3138">Not until I normalise for</text>
+    <text x="484" y="90" font-size="12.5" fill="#2b3138">depth and test it against</text>
+    <text x="484" y="110" font-size="12.5" fill="#2b3138">the replicates.</text>
+  </g>
+
+  <!-- Panel 3: Amina with volcano -->
+  <g stroke="#2b3138" stroke-width="3" fill="none" stroke-linecap="round">
+    <circle cx="720" cy="150" r="20" fill="#e8f0fe"/>
+    <line x1="720" y1="170" x2="720" y2="222"/><line x1="720" y1="185" x2="694" y2="205"/>
+    <line x1="720" y1="185" x2="746" y2="205"/><line x1="720" y1="222" x2="702" y2="256"/>
+    <line x1="720" y1="222" x2="738" y2="256"/>
+  </g>
+  <!-- little volcano motif -->
+  <g>
+    <line x1="806" y1="182" x2="806" y2="120" stroke="#6b7280" stroke-width="1.5"/>
+    <line x1="806" y1="182" x2="884" y2="182" stroke="#6b7280" stroke-width="1.5"/>
+    <g fill="#c2ccd6"><circle cx="842" cy="172" r="2.5"/><circle cx="848" cy="168" r="2.5"/><circle cx="838" cy="176" r="2.5"/><circle cx="852" cy="174" r="2.5"/><circle cx="845" cy="164" r="2.5"/></g>
+    <circle cx="820" cy="132" r="3.5" fill="#2f6fb3"/><circle cx="874" cy="128" r="3.5" fill="#c0392b"/>
+  </g>
+  <text x="720" y="284" text-anchor="middle" font-size="12" font-weight="700" fill="#1a56b0">Amina</text>
+  <g>
+    <rect x="800" y="40" width="184" height="72" rx="12" fill="#e6f4ea" stroke="#8bd4a6"/>
+    <path d="M840 106 l-6 16 l18 -10 z" fill="#e6f4ea" stroke="#8bd4a6"/>
+    <text x="814" y="66" font-size="12.5" fill="#2b3138">Big change and a tiny</text>
+    <text x="814" y="86" font-size="12.5" fill="#2b3138">p-value. Those are the</text>
+    <text x="814" y="106" font-size="12.5" fill="#2b3138">real hits.</text>
+  </g>
+</svg>

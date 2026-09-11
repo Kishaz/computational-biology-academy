@@ -8,7 +8,7 @@ project:
 
 website:
   title: "The Computational Biology Academy"
-  description: "Learn computational biology through stories, real datasets, and hands-on projects. From FASTQ to Nature paper."
+  description: "Learn computational biology through stories, real datasets, and hands-on projects. From FASTQ to publication."
   repo-url: https://github.com/Kishaz/computational-biology-academy
   repo-actions: [issue, source]
   page-navigation: true
@@ -40,6 +40,8 @@ website:
             text: "10 · Make the Whole Thing Run Itself"
           - href: modules/11-rna-seq-quantification/index.qmd
             text: "11 · What Is This Cell Actually Doing?"
+          - href: modules/12-differential-expression/index.qmd
+            text: "12 · Which Genes Really Changed?"
     right:
       - text: "by Samuel Mwamburi, PhD"
         href: https://samuel-mwamburi.netlify.app/
@@ -71,6 +73,8 @@ website:
             text: "10 · Make the Whole Thing Run Itself"
           - href: modules/11-rna-seq-quantification/index.qmd
             text: "11 · What Is This Cell Actually Doing?"
+          - href: modules/12-differential-expression/index.qmd
+            text: "12 · Which Genes Really Changed?"
   page-footer:
     left: "© 2026 Samuel Mwamburi, PhD · CC BY 4.0"
     center: "Educational material. Verify all tool commands against current official documentation before use."

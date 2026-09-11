@@ -39,6 +39,7 @@ impossible PI). Real tools, real data, real judgment.
 | 09 | [How Are These Samples Related?](modules/09-phylogenetics/index.qmd) | Build a phylogenetic tree with MAFFT and IQ-TREE, and read its support |
 | 10 | [Make the Whole Thing Run Itself](modules/10-workflow-automation/index.qmd) | Automate the pipeline with Snakemake, and meet Nextflow, WDL, CWL and Galaxy |
 | 11 | [What Is This Cell Actually Doing?](modules/11-rna-seq-quantification/index.qmd) | Measure gene expression: align RNA reads with HISAT2 and count them into a matrix |
+| 12 | [Which Genes Really Changed?](modules/12-differential-expression/index.qmd) | Find differentially expressed genes with DESeq2: normalise, test, and read a volcano plot |
 
 *New modules are added as they are ready. "Watch" the repository on GitHub to be notified
 when they land.*
