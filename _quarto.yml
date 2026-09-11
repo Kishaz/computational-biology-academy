@@ -42,6 +42,8 @@ website:
             text: "11 · What Is This Cell Actually Doing?"
           - href: modules/12-differential-expression/index.qmd
             text: "12 · Which Genes Really Changed?"
+          - href: modules/13-single-cell-intro/index.qmd
+            text: "13 · One Cell at a Time"
     right:
       - text: "by Samuel Mwamburi, PhD"
         href: https://samuel-mwamburi.netlify.app/
@@ -75,6 +77,8 @@ website:
             text: "11 · What Is This Cell Actually Doing?"
           - href: modules/12-differential-expression/index.qmd
             text: "12 · Which Genes Really Changed?"
+          - href: modules/13-single-cell-intro/index.qmd
+            text: "13 · One Cell at a Time"
   page-footer:
     left: "© 2026 Samuel Mwamburi, PhD · CC BY 4.0"
     center: "Educational material. Verify all tool commands against current official documentation before use."
