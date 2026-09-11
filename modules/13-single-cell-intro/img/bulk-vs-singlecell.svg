@@ -1,65 +1,70 @@
-<svg viewBox="0 0 820 420" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif" role="img" aria-label="A mixed tissue of three cell types. Bulk RNA-seq blends them into one averaged profile that matches no single type. Single-cell RNA-seq measures each cell separately, so the three cell types stay visible.">
-<rect x="0.5" y="0.5" width="819" height="419" rx="14" fill="#ffffff" stroke="#dde3ea"/>
-<text x="34" y="42" font-size="17" font-weight="800" fill="#28303a">Bulk hides the crowd; single-cell sees each cell</text>
-<text x="105" y="205" text-anchor="middle" font-size="12.5" font-weight="700" fill="#28303a">a tissue</text>
-<text x="105" y="221" text-anchor="middle" font-size="10.5" fill="#5b6675">(mixed cells)</text>
-<rect x="40" y="90" width="130" height="95" rx="10" fill="#f7f9fb" stroke="#c4ccd4"/>
-<circle cx="79" cy="140" r="5" fill="#3f7fd0" opacity="0.9"/>
-<circle cx="92" cy="144" r="5" fill="#d9862f" opacity="0.9"/>
-<circle cx="118" cy="107" r="5" fill="#2e9c6d" opacity="0.9"/>
-<circle cx="56" cy="161" r="5" fill="#3f7fd0" opacity="0.9"/>
-<circle cx="81" cy="118" r="5" fill="#d9862f" opacity="0.9"/>
-<circle cx="155" cy="135" r="5" fill="#2e9c6d" opacity="0.9"/>
-<circle cx="139" cy="135" r="5" fill="#3f7fd0" opacity="0.9"/>
-<circle cx="119" cy="113" r="5" fill="#d9862f" opacity="0.9"/>
-<circle cx="118" cy="163" r="5" fill="#2e9c6d" opacity="0.9"/>
-<circle cx="107" cy="154" r="5" fill="#3f7fd0" opacity="0.9"/>
-<circle cx="122" cy="106" r="5" fill="#d9862f" opacity="0.9"/>
-<circle cx="131" cy="143" r="5" fill="#2e9c6d" opacity="0.9"/>
-<circle cx="85" cy="104" r="5" fill="#3f7fd0" opacity="0.9"/>
-<circle cx="142" cy="135" r="5" fill="#d9862f" opacity="0.9"/>
-<circle cx="127" cy="164" r="5" fill="#2e9c6d" opacity="0.9"/>
-<circle cx="126" cy="166" r="5" fill="#3f7fd0" opacity="0.9"/>
-<circle cx="94" cy="158" r="5" fill="#d9862f" opacity="0.9"/>
-<circle cx="99" cy="167" r="5" fill="#2e9c6d" opacity="0.9"/>
-<circle cx="143" cy="109" r="5" fill="#3f7fd0" opacity="0.9"/>
-<circle cx="69" cy="117" r="5" fill="#d9862f" opacity="0.9"/>
-<circle cx="152" cy="133" r="5" fill="#2e9c6d" opacity="0.9"/>
-<line x1="180" y1="115" x2="300" y2="95" stroke="#9aa6b3" stroke-width="2"/>
-<path d="M300 95 l-11 -1 l4 10 z" fill="#9aa6b3"/>
-<text x="240" y="80" text-anchor="middle" font-size="11.5" font-weight="700" fill="#5b6675">BULK: blend all cells</text>
-<text x="360" y="76" text-anchor="middle" font-size="12" font-weight="700" fill="#28303a">one averaged profile</text>
-<rect x="320" y="122" width="10" height="28" rx="2" fill="#9aa6b3"/>
-<rect x="334" y="119" width="10" height="31" rx="2" fill="#9aa6b3"/>
-<rect x="348" y="123" width="10" height="27" rx="2" fill="#9aa6b3"/>
-<rect x="362" y="121" width="10" height="29" rx="2" fill="#9aa6b3"/>
-<rect x="376" y="122" width="10" height="28" rx="2" fill="#9aa6b3"/>
-<rect x="390" y="121" width="10" height="29" rx="2" fill="#9aa6b3"/>
-<text x="360" y="172" text-anchor="middle" font-size="10.5" fill="#c0392b">which cell types? hidden</text>
-<line x1="180" y1="160" x2="300" y2="250" stroke="#9aa6b3" stroke-width="2"/>
-<path d="M300 250 l-10 -5 l-1 11 z" fill="#9aa6b3"/>
-<text x="240" y="225" text-anchor="middle" font-size="11.5" font-weight="700" fill="#5b6675">SINGLE-CELL: one at a time</text>
-<text x="560" y="212" text-anchor="middle" font-size="12" font-weight="700" fill="#28303a">a profile for every cell, so the types separate</text>
-<text x="357" y="345" text-anchor="middle" font-size="10.5" font-weight="700" fill="#3f7fd0">type 1</text>
-<rect x="330" y="300" width="10" height="20" rx="2" fill="#3f7fd0"/>
-<rect x="344" y="313" width="10" height="7" rx="2" fill="#3f7fd0"/>
-<rect x="358" y="316" width="10" height="4" rx="2" fill="#3f7fd0"/>
-<rect x="372" y="313" width="10" height="7" rx="2" fill="#3f7fd0"/>
-<rect x="386" y="316" width="10" height="4" rx="2" fill="#3f7fd0"/>
-<rect x="400" y="316" width="10" height="4" rx="2" fill="#3f7fd0"/>
-<text x="497" y="345" text-anchor="middle" font-size="10.5" font-weight="700" fill="#d9862f">type 2</text>
-<rect x="470" y="316" width="10" height="4" rx="2" fill="#d9862f"/>
-<rect x="484" y="300" width="10" height="20" rx="2" fill="#d9862f"/>
-<rect x="498" y="316" width="10" height="4" rx="2" fill="#d9862f"/>
-<rect x="512" y="313" width="10" height="7" rx="2" fill="#d9862f"/>
-<rect x="526" y="316" width="10" height="4" rx="2" fill="#d9862f"/>
-<rect x="540" y="313" width="10" height="7" rx="2" fill="#d9862f"/>
-<text x="637" y="345" text-anchor="middle" font-size="10.5" font-weight="700" fill="#2e9c6d">type 3</text>
-<rect x="610" y="316" width="10" height="4" rx="2" fill="#2e9c6d"/>
-<rect x="624" y="313" width="10" height="7" rx="2" fill="#2e9c6d"/>
-<rect x="638" y="316" width="10" height="4" rx="2" fill="#2e9c6d"/>
-<rect x="652" y="300" width="10" height="20" rx="2" fill="#2e9c6d"/>
-<rect x="666" y="313" width="10" height="7" rx="2" fill="#2e9c6d"/>
-<rect x="680" y="316" width="10" height="4" rx="2" fill="#2e9c6d"/>
-<text x="34" y="404" font-size="11.5" fill="#5b6675">The bulk average looks like no real cell. Measuring cells one by one keeps each cell type&#39;s distinct pattern intact.</text>
+<svg viewBox="0 0 840 470" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif" role="img" aria-label="A mixed tissue forks into two paths. Bulk RNA-seq blends all cells into one flat averaged profile where the cell types are hidden. Single-cell RNA-seq measures each cell, giving three distinct profiles so the cell types stay visible.">
+<rect x="0.5" y="0.5" width="839" height="469" rx="14" fill="#ffffff" stroke="#dde3ea"/>
+<text x="34" y="40" font-size="17" font-weight="800" fill="#28303a">Bulk hides the crowd; single-cell sees each cell</text>
+<rect x="44" y="198" width="120" height="104" rx="10" fill="#f7f9fb" stroke="#c4ccd4"/>
+<circle cx="80" cy="253" r="5" fill="#3f7fd0" opacity="0.9"/>
+<circle cx="92" cy="258" r="5" fill="#d9862f" opacity="0.9"/>
+<circle cx="116" cy="217" r="5" fill="#2e9c6d" opacity="0.9"/>
+<circle cx="59" cy="276" r="5" fill="#3f7fd0" opacity="0.9"/>
+<circle cx="82" cy="230" r="5" fill="#d9862f" opacity="0.9"/>
+<circle cx="150" cy="248" r="5" fill="#2e9c6d" opacity="0.9"/>
+<circle cx="135" cy="248" r="5" fill="#3f7fd0" opacity="0.9"/>
+<circle cx="117" cy="223" r="5" fill="#d9862f" opacity="0.9"/>
+<circle cx="116" cy="278" r="5" fill="#2e9c6d" opacity="0.9"/>
+<circle cx="106" cy="268" r="5" fill="#3f7fd0" opacity="0.9"/>
+<circle cx="120" cy="217" r="5" fill="#d9862f" opacity="0.9"/>
+<circle cx="128" cy="257" r="5" fill="#2e9c6d" opacity="0.9"/>
+<circle cx="86" cy="214" r="5" fill="#3f7fd0" opacity="0.9"/>
+<circle cx="138" cy="248" r="5" fill="#d9862f" opacity="0.9"/>
+<circle cx="124" cy="279" r="5" fill="#2e9c6d" opacity="0.9"/>
+<circle cx="124" cy="282" r="5" fill="#3f7fd0" opacity="0.9"/>
+<circle cx="94" cy="273" r="5" fill="#d9862f" opacity="0.9"/>
+<circle cx="99" cy="283" r="5" fill="#2e9c6d" opacity="0.9"/>
+<circle cx="139" cy="219" r="5" fill="#3f7fd0" opacity="0.9"/>
+<circle cx="71" cy="228" r="5" fill="#d9862f" opacity="0.9"/>
+<circle cx="147" cy="245" r="5" fill="#2e9c6d" opacity="0.9"/>
+<text x="104" y="324" text-anchor="middle" font-size="12.5" font-weight="700" fill="#28303a">a tissue</text>
+<text x="104" y="340" text-anchor="middle" font-size="10.5" fill="#5b6675">a mix of cell types</text>
+<line x1="164" y1="250" x2="200" y2="250" stroke="#aab3bd" stroke-width="2.4"/>
+<line x1="200" y1="150" x2="200" y2="360" stroke="#aab3bd" stroke-width="2.4"/>
+<line x1="200" y1="150" x2="262" y2="150" stroke="#aab3bd" stroke-width="2.4"/>
+<path d="M 270 150 l -9 -5 l 0 10 z" fill="#aab3bd"/>
+<line x1="200" y1="360" x2="262" y2="360" stroke="#aab3bd" stroke-width="2.4"/>
+<path d="M 270 360 l -9 -5 l 0 10 z" fill="#aab3bd"/>
+<text x="288" y="108" font-size="13" font-weight="800" fill="#28303a">BULK: blend all cells</text>
+<rect x="288" y="140" width="9" height="21" rx="2" fill="#9aa6b3"/>
+<rect x="301" y="138" width="9" height="22" rx="2" fill="#9aa6b3"/>
+<rect x="314" y="140" width="9" height="21" rx="2" fill="#9aa6b3"/>
+<rect x="327" y="140" width="9" height="21" rx="2" fill="#9aa6b3"/>
+<rect x="340" y="138" width="9" height="22" rx="2" fill="#9aa6b3"/>
+<rect x="353" y="140" width="9" height="21" rx="2" fill="#9aa6b3"/>
+<text x="343" y="176" text-anchor="middle" font-size="10.5" fill="#5b6675">one averaged profile</text>
+<line x1="370" y1="147" x2="414" y2="147" stroke="#aab3bd" stroke-width="2.4"/>
+<path d="M 422 147 l -9 -5 l 0 10 z" fill="#aab3bd"/>
+<text x="430" y="142" font-size="12" font-weight="700" fill="#c0392b">cell types</text>
+<text x="430" y="158" font-size="12" font-weight="700" fill="#c0392b">hidden</text>
+<text x="288" y="318" font-size="13" font-weight="800" fill="#28303a">SINGLE-CELL: read each cell</text>
+<rect x="288" y="350" width="9" height="21" rx="2" fill="#3f7fd0"/>
+<rect x="301" y="366" width="9" height="5" rx="2" fill="#3f7fd0"/>
+<rect x="314" y="366" width="9" height="5" rx="2" fill="#3f7fd0"/>
+<rect x="327" y="366" width="9" height="5" rx="2" fill="#3f7fd0"/>
+<rect x="340" y="366" width="9" height="5" rx="2" fill="#3f7fd0"/>
+<rect x="353" y="366" width="9" height="5" rx="2" fill="#3f7fd0"/><text x="325" y="387" text-anchor="middle" font-size="10.5" font-weight="700" fill="#3f7fd0">type 1</text>
+<rect x="410" y="366" width="9" height="5" rx="2" fill="#d9862f"/>
+<rect x="423" y="350" width="9" height="21" rx="2" fill="#d9862f"/>
+<rect x="436" y="366" width="9" height="5" rx="2" fill="#d9862f"/>
+<rect x="449" y="366" width="9" height="5" rx="2" fill="#d9862f"/>
+<rect x="462" y="366" width="9" height="5" rx="2" fill="#d9862f"/>
+<rect x="475" y="366" width="9" height="5" rx="2" fill="#d9862f"/><text x="447" y="387" text-anchor="middle" font-size="10.5" font-weight="700" fill="#d9862f">type 2</text>
+<rect x="532" y="366" width="9" height="5" rx="2" fill="#2e9c6d"/>
+<rect x="545" y="366" width="9" height="5" rx="2" fill="#2e9c6d"/>
+<rect x="558" y="366" width="9" height="5" rx="2" fill="#2e9c6d"/>
+<rect x="571" y="350" width="9" height="21" rx="2" fill="#2e9c6d"/>
+<rect x="584" y="366" width="9" height="5" rx="2" fill="#2e9c6d"/>
+<rect x="597" y="366" width="9" height="5" rx="2" fill="#2e9c6d"/><text x="569" y="387" text-anchor="middle" font-size="10.5" font-weight="700" fill="#2e9c6d">type 3</text>
+<line x1="614" y1="357" x2="658" y2="357" stroke="#aab3bd" stroke-width="2.4"/>
+<path d="M 666 357 l -9 -5 l 0 10 z" fill="#aab3bd"/>
+<text x="674" y="352" font-size="12" font-weight="700" fill="#2e8b57">cell types</text>
+<text x="674" y="368" font-size="12" font-weight="700" fill="#2e8b57">visible</text>
+<text x="34" y="452" font-size="11.5" fill="#5b6675">The bulk average looks like no real cell. Measuring cells one by one keeps each cell type&#39;s distinct pattern intact.</text>
 </svg>
