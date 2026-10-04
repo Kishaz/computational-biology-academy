@@ -41,6 +41,7 @@ impossible PI). Real tools, real data, real judgment.
 | 11 | [What Is This Cell Actually Doing?](modules/11-rna-seq-quantification/index.qmd) | Measure gene expression: align RNA reads with HISAT2 and count them into a matrix |
 | 12 | [Which Genes Really Changed?](modules/12-differential-expression/index.qmd) | Find differentially expressed genes with DESeq2: normalise, test, and read a volcano plot |
 | 13 | [One Cell at a Time](modules/13-single-cell-intro/index.qmd) | Cluster single cells with Scanpy, read a UMAP, and annotate cell types with markers |
+| 14 | [Where in the Tissue?](modules/14-spatial-transcriptomics/index.qmd) | Map cell types back onto the tissue with spatial transcriptomics and Scanpy |
 
 *New modules are added as they are ready. "Watch" the repository on GitHub to be notified
 when they land.*
