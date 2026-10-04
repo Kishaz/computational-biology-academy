@@ -17,7 +17,7 @@
   <text x="80" y="284" text-anchor="middle" font-size="12" font-weight="700" fill="#6b1fb0">Prof. Zola</text>
   <g>
     <rect x="150" y="52" width="168" height="70" rx="12" fill="#f7f9fb" stroke="#b9c2cc"/>
-    <path d="M150 104 l-16 14 l24 -4 z" fill="#f7f9fb" stroke="#b9c2cc"/>
+    <circle cx="146" cy="133" r="4" fill="#b9c2cc"/><circle cx="138" cy="145" r="3" fill="#b9c2cc"/>
     <text x="164" y="80" font-size="12.5" fill="#2b3138">Five hundred samples.</text>
     <text x="164" y="100" font-size="12.5" fill="#2b3138">By Friday.</text>
   </g>
@@ -34,7 +34,7 @@
   <text x="415" y="284" text-anchor="middle" font-size="12" font-weight="700" fill="#2e7d46">Baraka</text>
   <g>
     <rect x="470" y="46" width="192" height="74" rx="12" fill="#e9f6ee" stroke="#8bd4a6"/>
-    <path d="M486 120 l-8 16 l20 -8 z" fill="#e9f6ee" stroke="#8bd4a6"/>
+    <circle cx="466" cy="131" r="4" fill="#8bd4a6"/><circle cx="458" cy="143" r="3" fill="#8bd4a6"/>
     <text x="484" y="72" font-size="12.5" fill="#2b3138">Do not repeat yourself.</text>
     <text x="484" y="92" font-size="12.5" fill="#2b3138">Write the pipeline</text>
     <text x="484" y="112" font-size="12.5" fill="#2b3138">once.</text>
@@ -52,7 +52,7 @@
   <text x="748" y="284" text-anchor="middle" font-size="12" font-weight="700" fill="#1a56b0">Amina</text>
   <g>
     <rect x="800" y="46" width="184" height="74" rx="12" fill="#eef5ff" stroke="#9cc0f5"/>
-    <path d="M840 120 l-6 16 l18 -10 z" fill="#eef5ff" stroke="#9cc0f5"/>
+    <circle cx="796" cy="131" r="4" fill="#9cc0f5"/><circle cx="788" cy="143" r="3" fill="#9cc0f5"/>
     <text x="814" y="72" font-size="12.5" fill="#2b3138">One command runs</text>
     <text x="814" y="92" font-size="12.5" fill="#2b3138">all five hundred. Same</text>
     <text x="814" y="112" font-size="12.5" fill="#2b3138">way every time.</text>

@@ -15,7 +15,7 @@
   <text x="80" y="284" text-anchor="middle" font-size="12" font-weight="700" fill="#b06000">Prof. Zola</text>
   <g>
     <rect x="150" y="54" width="168" height="56" rx="12" fill="#f7f9fb" stroke="#b9c2cc"/>
-    <path d="M150 96 l-16 14 l24 -4 z" fill="#f7f9fb" stroke="#b9c2cc"/>
+    <circle cx="146" cy="121" r="4" fill="#b9c2cc"/><circle cx="138" cy="133" r="3" fill="#b9c2cc"/>
     <text x="164" y="82" font-size="12.5" fill="#2b3138">Go find me</text>
     <text x="164" y="102" font-size="12.5" fill="#2b3138">some data.</text>
   </g>
@@ -50,7 +50,7 @@
   <text x="748" y="284" text-anchor="middle" font-size="12" font-weight="700" fill="#137333">Baraka</text>
   <g>
     <rect x="800" y="46" width="176" height="70" rx="12" fill="#f7f9fb" stroke="#b9c2cc"/>
-    <path d="M800 100 l-16 14 l24 -4 z" fill="#f7f9fb" stroke="#b9c2cc"/>
+    <circle cx="796" cy="127" r="4" fill="#b9c2cc"/><circle cx="788" cy="139" r="3" fill="#b9c2cc"/>
     <text x="814" y="72" font-size="12.5" fill="#2b3138">You cannot hunt</text>
     <text x="814" y="92" font-size="12.5" fill="#2b3138">until you know</text>
     <text x="814" y="112" font-size="12.5" fill="#2b3138">what you seek.</text>

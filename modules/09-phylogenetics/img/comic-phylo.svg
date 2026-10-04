@@ -17,7 +17,7 @@
   <text x="80" y="284" text-anchor="middle" font-size="12" font-weight="700" fill="#6b1fb0">Prof. Zola</text>
   <g>
     <rect x="150" y="42" width="176" height="74" rx="12" fill="#f7f9fb" stroke="#b9c2cc"/>
-    <path d="M150 98 l-16 14 l24 -4 z" fill="#f7f9fb" stroke="#b9c2cc"/>
+    <circle cx="146" cy="127" r="4" fill="#b9c2cc"/><circle cx="138" cy="139" r="3" fill="#b9c2cc"/>
     <text x="164" y="66" font-size="12.5" fill="#2b3138">Five samples, and five</text>
     <text x="164" y="86" font-size="12.5" fill="#2b3138">hundred more coming.</text>
     <text x="164" y="106" font-size="12.5" fill="#2b3138">How are they related?</text>
@@ -60,7 +60,7 @@
   <text x="720" y="284" text-anchor="middle" font-size="12" font-weight="700" fill="#1a56b0">Amina</text>
   <g>
     <rect x="800" y="40" width="180" height="52" rx="12" fill="#e6f4ea" stroke="#8bd4a6"/>
-    <path d="M838 84 l-6 16 l18 -10 z" fill="#e6f4ea" stroke="#8bd4a6"/>
+    <circle cx="796" cy="103" r="4" fill="#8bd4a6"/><circle cx="788" cy="115" r="3" fill="#8bd4a6"/>
     <text x="814" y="64" font-size="12.5" fill="#2b3138">Two clades, exactly</text>
     <text x="814" y="84" font-size="12.5" fill="#2b3138">as expected.</text>
   </g>

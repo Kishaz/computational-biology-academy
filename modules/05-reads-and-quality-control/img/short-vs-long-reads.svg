@@ -1,6 +1,6 @@
 <svg viewBox="0 0 1000 430" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" role="img" aria-label="Comparison of short reads (many tiny fragments) and long reads (a few long fragments) covering the same stretch of genome.">
   <rect x="1" y="1" width="998" height="428" rx="10" fill="#ffffff" stroke="#d5dbe2"/>
-  <text x="500" y="30" text-anchor="middle" font-size="18" font-weight="700" fill="#2b3138">Short reads vs long reads — two ways to read the same genome</text>
+  <text x="500" y="30" text-anchor="middle" font-size="18" font-weight="700" fill="#2b3138">Short reads vs long reads: two ways to read the same genome</text>
 
   <!-- ============ LEFT: SHORT READS ============ -->
   <rect x="24" y="52" width="452" height="352" rx="10" fill="#f7f9fb" stroke="#cfd6dd"/>

@@ -23,7 +23,7 @@
   <text x="80" y="284" text-anchor="middle" font-size="12" font-weight="700" fill="#1a56b0">Amina</text>
   <g>
     <rect x="150" y="40" width="170" height="74" rx="12" fill="#eef5ff" stroke="#9cc0f5"/>
-    <path d="M150 96 l-16 14 l24 -4 z" fill="#eef5ff" stroke="#9cc0f5"/>
+    <circle cx="146" cy="125" r="4" fill="#9cc0f5"/><circle cx="138" cy="137" r="3" fill="#9cc0f5"/>
     <text x="164" y="66" font-size="12.5" fill="#2b3138">Thousands of clean</text>
     <text x="164" y="86" font-size="12.5" fill="#2b3138">fragments. But where</text>
     <text x="164" y="106" font-size="12.5" fill="#2b3138">does each one belong?</text>
@@ -69,7 +69,7 @@
   <text x="748" y="284" text-anchor="middle" font-size="12" font-weight="700" fill="#1a56b0">Amina</text>
   <g>
     <rect x="800" y="40" width="176" height="52" rx="12" fill="#e6f4ea" stroke="#8bd4a6"/>
-    <path d="M840 84 l-6 16 l18 -10 z" fill="#e6f4ea" stroke="#8bd4a6"/>
+    <circle cx="796" cy="103" r="4" fill="#8bd4a6"/><circle cx="788" cy="115" r="3" fill="#8bd4a6"/>
     <text x="814" y="64" font-size="12.5" fill="#2b3138">Now every read</text>
     <text x="814" y="84" font-size="12.5" fill="#2b3138">has an address.</text>
   </g>

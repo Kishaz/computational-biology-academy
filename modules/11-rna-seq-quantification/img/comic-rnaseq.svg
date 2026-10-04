@@ -34,7 +34,7 @@
   <text x="415" y="284" text-anchor="middle" font-size="12" font-weight="700" fill="#1a56b0">Amina</text>
   <g>
     <rect x="470" y="46" width="188" height="70" rx="12" fill="#eef5ff" stroke="#9cc0f5"/>
-    <path d="M486 116 l-8 16 l20 -8 z" fill="#eef5ff" stroke="#9cc0f5"/>
+    <circle cx="466" cy="127" r="4" fill="#9cc0f5"/><circle cx="458" cy="139" r="3" fill="#9cc0f5"/>
     <text x="484" y="72" font-size="12.5" fill="#2b3138">They switch on different</text>
     <text x="484" y="92" font-size="12.5" fill="#2b3138">genes. RNA is the</text>
     <text x="484" y="112" font-size="12.5" fill="#2b3138">evidence of which ones.</text>
@@ -61,7 +61,7 @@
   <text x="720" y="284" text-anchor="middle" font-size="12" font-weight="700" fill="#1a56b0">Amina</text>
   <g>
     <rect x="800" y="40" width="182" height="52" rx="12" fill="#e6f4ea" stroke="#8bd4a6"/>
-    <path d="M838 84 l-6 16 l18 -10 z" fill="#e6f4ea" stroke="#8bd4a6"/>
+    <circle cx="796" cy="103" r="4" fill="#8bd4a6"/><circle cx="788" cy="115" r="3" fill="#8bd4a6"/>
     <text x="814" y="64" font-size="12.5" fill="#2b3138">Count the RNA per gene.</text>
     <text x="814" y="84" font-size="12.5" fill="#2b3138">That count is expression.</text>
   </g>

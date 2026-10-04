@@ -15,7 +15,7 @@
   <text x="80" y="284" text-anchor="middle" font-size="12" font-weight="700" fill="#b06000">Prof. Zola</text>
   <g>
     <rect x="150" y="46" width="176" height="70" rx="12" fill="#f7f9fb" stroke="#b9c2cc"/>
-    <path d="M150 100 l-16 14 l24 -4 z" fill="#f7f9fb" stroke="#b9c2cc"/>
+    <circle cx="146" cy="127" r="4" fill="#b9c2cc"/><circle cx="138" cy="139" r="3" fill="#b9c2cc"/>
     <text x="164" y="72" font-size="12.5" fill="#2b3138">Everything real</text>
     <text x="164" y="92" font-size="12.5" fill="#2b3138">happens here.</text>
     <text x="164" y="112" font-size="12.5" fill="#2b3138">Talk to it.</text>
@@ -51,7 +51,7 @@
   <text x="748" y="284" text-anchor="middle" font-size="12" font-weight="700" fill="#1a56b0">Amina</text>
   <g>
     <rect x="800" y="46" width="176" height="70" rx="12" fill="#e6f4ea" stroke="#8bd4a6"/>
-    <path d="M800 100 l-16 14 l24 -4 z" fill="#e6f4ea" stroke="#8bd4a6"/>
+    <circle cx="796" cy="127" r="4" fill="#8bd4a6"/><circle cx="788" cy="139" r="3" fill="#8bd4a6"/>
     <text x="814" y="72" font-size="12.5" fill="#2b3138">Oh. It is just</text>
     <text x="814" y="92" font-size="12.5" fill="#2b3138">a language. I can</text>
     <text x="814" y="112" font-size="12.5" fill="#2b3138">learn a few words.</text>

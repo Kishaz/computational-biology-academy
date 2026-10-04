@@ -17,7 +17,7 @@
   <text x="80" y="284" text-anchor="middle" font-size="12" font-weight="700" fill="#1a56b0">Amina</text>
   <g>
     <rect x="150" y="46" width="176" height="70" rx="12" fill="#eef5ff" stroke="#9cc0f5"/>
-    <path d="M150 100 l-16 14 l24 -4 z" fill="#eef5ff" stroke="#9cc0f5"/>
+    <circle cx="146" cy="127" r="4" fill="#9cc0f5"/><circle cx="138" cy="139" r="3" fill="#9cc0f5"/>
     <text x="164" y="72" font-size="12.5" fill="#2b3138">Four variants. But</text>
     <text x="164" y="92" font-size="12.5" fill="#2b3138">what do they</text>
     <text x="164" y="112" font-size="12.5" fill="#2b3138">actually do?</text>
@@ -35,7 +35,7 @@
   <text x="415" y="284" text-anchor="middle" font-size="12" font-weight="700" fill="#6b1fb0">Prof. Zola</text>
   <g>
     <rect x="470" y="46" width="192" height="70" rx="12" fill="#f7f9fb" stroke="#b9c2cc"/>
-    <path d="M486 116 l-8 16 l20 -8 z" fill="#f7f9fb" stroke="#b9c2cc"/>
+    <circle cx="466" cy="127" r="4" fill="#b9c2cc"/><circle cx="458" cy="139" r="3" fill="#b9c2cc"/>
     <text x="484" y="72" font-size="12.5" fill="#2b3138">A difference is not</text>
     <text x="484" y="92" font-size="12.5" fill="#2b3138">the same thing as</text>
     <text x="484" y="112" font-size="12.5" fill="#2b3138">a consequence.</text>
@@ -53,7 +53,7 @@
   <text x="748" y="284" text-anchor="middle" font-size="12" font-weight="700" fill="#1a56b0">Amina</text>
   <g>
     <rect x="800" y="42" width="184" height="72" rx="12" fill="#e6f4ea" stroke="#8bd4a6"/>
-    <path d="M840 106 l-6 16 l18 -10 z" fill="#e6f4ea" stroke="#8bd4a6"/>
+    <circle cx="796" cy="125" r="4" fill="#8bd4a6"/><circle cx="788" cy="137" r="3" fill="#8bd4a6"/>
     <text x="814" y="66" font-size="12.5" fill="#2b3138">One is silent. One</text>
     <text x="814" y="86" font-size="12.5" fill="#2b3138">rewrites the spike</text>
     <text x="814" y="106" font-size="12.5" fill="#2b3138">protein. D614G.</text>

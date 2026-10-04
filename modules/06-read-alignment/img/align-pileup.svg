@@ -5,23 +5,17 @@
 
   <!-- reads stacked above the genome -->
   <g font-size="10" fill="#5b6675">
-    <!-- read A -->
-    <rect x="70"  y="70"  width="150" height="14" rx="3" fill="#cfe3ff" stroke="#4b8fe6"/>
-    <text x="76" y="66" font-size="9">read_11594   CIGAR 150M</text>
-    <!-- read B -->
-    <rect x="150" y="92"  width="150" height="14" rx="3" fill="#cfe3ff" stroke="#4b8fe6"/>
-    <!-- read C -->
-    <rect x="250" y="114" width="150" height="14" rx="3" fill="#cfe3ff" stroke="#4b8fe6"/>
-    <!-- soft-clipped read: 53 matched (solid) + 97 clipped (faded, dashed) -->
-    <rect x="360" y="136" width="53"  height="14" rx="3" fill="#cfe3ff" stroke="#4b8fe6"/>
-    <rect x="413" y="136" width="97"  height="14" rx="3" fill="#f0f1f3" stroke="#c4c9d0" stroke-dasharray="4 3"/>
-    <text x="360" y="132" font-size="9" fill="#5b6675">read_9100   CIGAR 53M97S</text>
-    <text x="418" y="147" font-size="8.5" fill="#9aa2ad">soft-clipped adapter</text>
-    <!-- read E -->
-    <rect x="470" y="114" width="150" height="14" rx="3" fill="#cfe3ff" stroke="#4b8fe6"/>
-    <!-- read F -->
-    <rect x="560" y="92"  width="150" height="14" rx="3" fill="#cfe3ff" stroke="#4b8fe6"/>
-    <rect x="640" y="70"  width="130" height="14" rx="3" fill="#cfe3ff" stroke="#4b8fe6"/>
+    <rect x="70"  y="66"  width="150" height="14" rx="3" fill="#cfe3ff" stroke="#4b8fe6"/>
+    <text x="76" y="61" font-size="9">read_11594   CIGAR 150M</text>
+    <rect x="150" y="88"  width="150" height="14" rx="3" fill="#cfe3ff" stroke="#4b8fe6"/>
+    <rect x="250" y="110" width="150" height="14" rx="3" fill="#cfe3ff" stroke="#4b8fe6"/>
+    <rect x="470" y="110" width="150" height="14" rx="3" fill="#cfe3ff" stroke="#4b8fe6"/>
+    <rect x="560" y="88"  width="150" height="14" rx="3" fill="#cfe3ff" stroke="#4b8fe6"/>
+    <rect x="640" y="66"  width="130" height="14" rx="3" fill="#cfe3ff" stroke="#4b8fe6"/>
+    <!-- soft-clipped read on its own clear row, with one label above it -->
+    <text x="300" y="146" font-size="9" fill="#5b6675">read_9100   CIGAR 53M97S   (97 bases soft-clipped: adapter)</text>
+    <rect x="300" y="150" width="53"  height="14" rx="3" fill="#cfe3ff" stroke="#4b8fe6"/>
+    <rect x="353" y="150" width="97"  height="14" rx="3" fill="#f0f1f3" stroke="#c4c9d0" stroke-dasharray="4 3"/>
   </g>
 
   <!-- the reference genome bar -->
