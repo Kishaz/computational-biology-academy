@@ -1,5 +1,5 @@
 <svg viewBox="0 0 820 280" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" role="img" aria-label="Bar chart comparing file sizes for the same 20,000 aligned reads: SAM is 7.28 megabytes, BAM is 2.38 megabytes, and CRAM is 1.39 megabytes. Each format stores the same information in less space.">
-  <rect x="1" y="1" width="818" height="278" rx="10" fill="#ffffff" stroke="#d5dbe2"/>
+  <rect x="1" y="1" width="818" height="278" rx="10" fill="#ffffff" stroke="#111111"/>
 
   <text x="24" y="36" font-size="15" font-weight="700" fill="#2b3138">The same 20,000 aligned reads, three formats</text>
 

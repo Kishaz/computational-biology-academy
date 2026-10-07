@@ -1,5 +1,5 @@
 <svg viewBox="0 0 1000 300" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" role="img" aria-label="Three-panel stick-figure comic. Prof. Zola says the RNA-seq averaged a million cells into one number. Amina says a tumour is a crowd of different cell types, so the average is nobody. She points at scattered dots and says read every cell and the cell types appear.">
-  <rect x="1" y="1" width="998" height="298" rx="10" fill="#ffffff" stroke="#d5dbe2"/>
+  <rect x="1" y="1" width="998" height="298" rx="10" fill="#ffffff" stroke="#111111"/>
   <line x1="334" y1="16" x2="334" y2="284" stroke="#e2e6ea"/>
   <line x1="667" y1="16" x2="667" y2="284" stroke="#e2e6ea"/>
 
@@ -10,11 +10,11 @@
     <line x1="80" y1="185" x2="112" y2="200"/><line x1="80" y1="222" x2="62" y2="256"/>
     <line x1="80" y1="222" x2="98" y2="256"/>
   </g>
-  <rect x="104" y="188" width="26" height="18" rx="3" fill="#dfe4ea" stroke="#2b3138" stroke-width="2"/>
+  <rect x="104" y="188" width="26" height="18" rx="3" fill="#dfe4ea" stroke="#111111" stroke-width="2"/>
   <text x="80" y="284" text-anchor="middle" font-size="12" font-weight="700" fill="#6b1fb0">Prof. Zola</text>
   <g>
-    <rect x="150" y="46" width="180" height="72" rx="12" fill="#f7f9fb" stroke="#b9c2cc"/>
-    <circle cx="146" cy="129" r="4" fill="#b9c2cc"/><circle cx="138" cy="141" r="3" fill="#b9c2cc"/>
+    <rect x="150" y="46" width="180" height="72" rx="12" fill="#f7f9fb" stroke="#111111"/>
+    <circle cx="146" cy="129" r="4" fill="#111111"/><circle cx="138" cy="141" r="3" fill="#111111"/>
     <text x="164" y="70" font-size="12.5" fill="#2b3138">Your RNA-seq averaged</text>
     <text x="164" y="90" font-size="12.5" fill="#2b3138">a million cells into</text>
     <text x="164" y="110" font-size="12.5" fill="#2b3138">one number.</text>
@@ -29,8 +29,8 @@
   </g>
   <text x="415" y="284" text-anchor="middle" font-size="12" font-weight="700" fill="#1a56b0">Amina</text>
   <g>
-    <rect x="470" y="44" width="190" height="74" rx="12" fill="#eef5ff" stroke="#9cc0f5"/>
-    <circle cx="466" cy="129" r="4" fill="#9cc0f5"/><circle cx="458" cy="141" r="3" fill="#9cc0f5"/>
+    <rect x="470" y="44" width="190" height="74" rx="12" fill="#eef5ff" stroke="#111111"/>
+    <circle cx="466" cy="129" r="4" fill="#111111"/><circle cx="458" cy="141" r="3" fill="#111111"/>
     <text x="484" y="70" font-size="12.5" fill="#2b3138">A tumour is a crowd:</text>
     <text x="484" y="90" font-size="12.5" fill="#2b3138">many cell types. The</text>
     <text x="484" y="110" font-size="12.5" fill="#2b3138">average is nobody.</text>
@@ -51,8 +51,8 @@
   </g>
   <text x="720" y="284" text-anchor="middle" font-size="12" font-weight="700" fill="#1a56b0">Amina</text>
   <g>
-    <rect x="800" y="40" width="184" height="52" rx="12" fill="#e6f4ea" stroke="#8bd4a6"/>
-    <circle cx="796" cy="103" r="4" fill="#8bd4a6"/><circle cx="788" cy="115" r="3" fill="#8bd4a6"/>
+    <rect x="800" y="40" width="184" height="52" rx="12" fill="#e6f4ea" stroke="#111111"/>
+    <circle cx="796" cy="103" r="4" fill="#111111"/><circle cx="788" cy="115" r="3" fill="#111111"/>
     <text x="814" y="64" font-size="12.5" fill="#2b3138">Read every cell. The</text>
     <text x="814" y="84" font-size="12.5" fill="#2b3138">cell types appear.</text>
   </g>

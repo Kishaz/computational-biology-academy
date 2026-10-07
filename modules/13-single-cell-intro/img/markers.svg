@@ -1,5 +1,5 @@
 <svg viewBox="0 0 720 330" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif" role="img" aria-label="A dot plot: three clusters by three marker genes. Cluster 0 strongly expresses markerA, cluster 1 markerB, cluster 2 markerC. Each cluster is therefore named as the matching cell type.">
-<rect x="0.5" y="0.5" width="719" height="329" rx="14" fill="#ffffff" stroke="#dde3ea"/>
+<rect x="0.5" y="0.5" width="719" height="329" rx="14" fill="#ffffff" stroke="#111111"/>
 <text x="34" y="40" font-size="17" font-weight="800" fill="#28303a">Naming the clusters: each is marked by a gene</text>
 <text x="34" y="60" font-size="12" fill="#5b6675">Bigger, darker dot = the gene is more active in that cluster.</text>
 <text x="200" y="92" text-anchor="middle" font-size="12" font-weight="700" fill="#28303a" font-family="ui-monospace, Menlo, monospace">markerA</text>

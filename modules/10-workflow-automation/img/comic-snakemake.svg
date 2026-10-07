@@ -1,5 +1,5 @@
 <svg viewBox="0 0 1000 300" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" role="img" aria-label="Three-panel stick-figure comic. Prof. Zola demands five hundred samples by Friday. Baraka, the programmer, says do not repeat yourself, write the pipeline once. Amina realises one command can run all five hundred, the same way every time.">
-  <rect x="1" y="1" width="998" height="298" rx="10" fill="#ffffff" stroke="#d5dbe2"/>
+  <rect x="1" y="1" width="998" height="298" rx="10" fill="#ffffff" stroke="#111111"/>
 
   <line x1="334" y1="16" x2="334" y2="284" stroke="#e2e6ea"/>
   <line x1="667" y1="16" x2="667" y2="284" stroke="#e2e6ea"/>
@@ -13,11 +13,11 @@
     <line x1="80" y1="222" x2="62" y2="256"/>
     <line x1="80" y1="222" x2="98" y2="256"/>
   </g>
-  <rect x="104" y="188" width="26" height="18" rx="3" fill="#dfe4ea" stroke="#2b3138" stroke-width="2"/>
+  <rect x="104" y="188" width="26" height="18" rx="3" fill="#dfe4ea" stroke="#111111" stroke-width="2"/>
   <text x="80" y="284" text-anchor="middle" font-size="12" font-weight="700" fill="#6b1fb0">Prof. Zola</text>
   <g>
-    <rect x="150" y="52" width="168" height="70" rx="12" fill="#f7f9fb" stroke="#b9c2cc"/>
-    <circle cx="146" cy="133" r="4" fill="#b9c2cc"/><circle cx="138" cy="145" r="3" fill="#b9c2cc"/>
+    <rect x="150" y="52" width="168" height="70" rx="12" fill="#f7f9fb" stroke="#111111"/>
+    <circle cx="146" cy="133" r="4" fill="#111111"/><circle cx="138" cy="145" r="3" fill="#111111"/>
     <text x="164" y="80" font-size="12.5" fill="#2b3138">Five hundred samples.</text>
     <text x="164" y="100" font-size="12.5" fill="#2b3138">By Friday.</text>
   </g>
@@ -33,8 +33,8 @@
   </g>
   <text x="415" y="284" text-anchor="middle" font-size="12" font-weight="700" fill="#2e7d46">Baraka</text>
   <g>
-    <rect x="470" y="46" width="192" height="74" rx="12" fill="#e9f6ee" stroke="#8bd4a6"/>
-    <circle cx="466" cy="131" r="4" fill="#8bd4a6"/><circle cx="458" cy="143" r="3" fill="#8bd4a6"/>
+    <rect x="470" y="46" width="192" height="74" rx="12" fill="#e9f6ee" stroke="#111111"/>
+    <circle cx="466" cy="131" r="4" fill="#111111"/><circle cx="458" cy="143" r="3" fill="#111111"/>
     <text x="484" y="72" font-size="12.5" fill="#2b3138">Do not repeat yourself.</text>
     <text x="484" y="92" font-size="12.5" fill="#2b3138">Write the pipeline</text>
     <text x="484" y="112" font-size="12.5" fill="#2b3138">once.</text>
@@ -51,8 +51,8 @@
   </g>
   <text x="748" y="284" text-anchor="middle" font-size="12" font-weight="700" fill="#1a56b0">Amina</text>
   <g>
-    <rect x="800" y="46" width="184" height="74" rx="12" fill="#eef5ff" stroke="#9cc0f5"/>
-    <circle cx="796" cy="131" r="4" fill="#9cc0f5"/><circle cx="788" cy="143" r="3" fill="#9cc0f5"/>
+    <rect x="800" y="46" width="184" height="74" rx="12" fill="#eef5ff" stroke="#111111"/>
+    <circle cx="796" cy="131" r="4" fill="#111111"/><circle cx="788" cy="143" r="3" fill="#111111"/>
     <text x="814" y="72" font-size="12.5" fill="#2b3138">One command runs</text>
     <text x="814" y="92" font-size="12.5" fill="#2b3138">all five hundred. Same</text>
     <text x="814" y="112" font-size="12.5" fill="#2b3138">way every time.</text>

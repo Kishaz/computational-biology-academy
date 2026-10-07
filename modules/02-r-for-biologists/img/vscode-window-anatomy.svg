@@ -1,6 +1,6 @@
 <svg viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" role="img" aria-label="Labelled diagram of the VS Code window: activity bar, explorer file tree, editor, integrated terminal, and status bar.">
   <!-- window -->
-  <rect x="2" y="2" width="996" height="596" rx="10" fill="#ffffff" stroke="#c7ced6" stroke-width="2"/>
+  <rect x="2" y="2" width="996" height="596" rx="10" fill="#ffffff" stroke="#111111" stroke-width="2"/>
 
   <!-- title bar -->
   <path d="M2 12 A10 10 0 0 1 12 2 H988 A10 10 0 0 1 998 12 V34 H2 Z" fill="#e9edf1"/>
@@ -11,12 +11,12 @@
 
   <!-- Activity Bar (far left, dark) -->
   <rect x="2" y="34" width="52" height="540" fill="#37373d"/>
-  <g fill="#c9ccd1">
+  <g fill="#111111">
     <rect x="18" y="56" width="20" height="16" rx="2"/>            <!-- explorer -->
-    <circle cx="28" cy="104" r="9" fill="none" stroke="#c9ccd1" stroke-width="2"/> <!-- search -->
-    <path d="M20 148 a8 8 0 1 0 0.01 0 M28 140 v16" stroke="#c9ccd1" stroke-width="2" fill="none"/> <!-- source control-ish -->
+    <circle cx="28" cy="104" r="9" fill="none" stroke="#111111" stroke-width="2"/> <!-- search -->
+    <path d="M20 148 a8 8 0 1 0 0.01 0 M28 140 v16" stroke="#111111" stroke-width="2" fill="none"/> <!-- source control-ish -->
     <path d="M20 196 l10 -6 l10 6 v14 h-20 z" />                  <!-- run -->
-    <rect x="18" y="244" width="9" height="9"/><rect x="31" y="244" width="9" height="9"/><rect x="18" y="257" width="9" height="9"/><rect x="31" y="257" width="9" height="9" fill="none" stroke="#c9ccd1" stroke-width="2"/> <!-- extensions -->
+    <rect x="18" y="244" width="9" height="9"/><rect x="31" y="244" width="9" height="9"/><rect x="18" y="257" width="9" height="9"/><rect x="31" y="257" width="9" height="9" fill="none" stroke="#111111" stroke-width="2"/> <!-- extensions -->
   </g>
 
   <!-- Side Bar: Explorer -->
@@ -36,7 +36,7 @@
   <rect x="264" y="34" width="734" height="358" fill="#ffffff"/>
   <!-- tabs -->
   <rect x="264" y="34" width="734" height="28" fill="#eef1f4"/>
-  <rect x="264" y="34" width="130" height="28" fill="#ffffff" stroke="#e0e4e8"/>
+  <rect x="264" y="34" width="130" height="28" fill="#ffffff" stroke="#111111"/>
   <text x="280" y="53" font-size="12.5" fill="#2b3138">analysis.R</text>
   <text x="410" y="53" font-size="12.5" fill="#8894a2">notes.md</text>
   <!-- code lines -->

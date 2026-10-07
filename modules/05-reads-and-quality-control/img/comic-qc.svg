@@ -1,5 +1,5 @@
 <svg viewBox="0 0 1000 300" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" role="img" aria-label="Three-panel stick-figure comic. Prof. Zola hands over 300 GB of data and asks what is happening. Amina decides to check the data quality first, comparing it to inspecting groceries.">
-  <rect x="1" y="1" width="998" height="298" rx="10" fill="#ffffff" stroke="#d5dbe2"/>
+  <rect x="1" y="1" width="998" height="298" rx="10" fill="#ffffff" stroke="#111111"/>
 
   <!-- panel dividers -->
   <line x1="334" y1="16" x2="334" y2="284" stroke="#e2e6ea"/>
@@ -14,11 +14,11 @@
     <line x1="80" y1="222" x2="62" y2="256"/>
     <line x1="80" y1="222" x2="98" y2="256"/>
   </g>
-  <rect x="104" y="188" width="26" height="18" rx="3" fill="#dfe4ea" stroke="#2b3138" stroke-width="2"/>
+  <rect x="104" y="188" width="26" height="18" rx="3" fill="#dfe4ea" stroke="#111111" stroke-width="2"/>
   <text x="80" y="284" text-anchor="middle" font-size="12" font-weight="700" fill="#6b1fb0">Prof. Zola</text>
   <g>
-    <rect x="150" y="40" width="168" height="74" rx="12" fill="#f7f9fb" stroke="#b9c2cc"/>
-    <circle cx="146" cy="125" r="4" fill="#b9c2cc"/><circle cx="138" cy="137" r="3" fill="#b9c2cc"/>
+    <rect x="150" y="40" width="168" height="74" rx="12" fill="#f7f9fb" stroke="#111111"/>
+    <circle cx="146" cy="125" r="4" fill="#111111"/><circle cx="138" cy="137" r="3" fill="#111111"/>
     <text x="164" y="66" font-size="12.5" fill="#2b3138">Here is 300 GB of data.</text>
     <text x="164" y="86" font-size="12.5" fill="#2b3138">Can you tell me what</text>
     <text x="164" y="106" font-size="12.5" fill="#2b3138">is happening?</text>
@@ -35,8 +35,8 @@
   </g>
   <text x="415" y="284" text-anchor="middle" font-size="12" font-weight="700" fill="#1a56b0">Amina</text>
   <g>
-    <rect x="470" y="46" width="182" height="70" rx="12" fill="#eef5ff" stroke="#9cc0f5"/>
-    <circle cx="466" cy="128" r="4" fill="#9cc0f5"/><circle cx="458" cy="140" r="3" fill="#9cc0f5"/>
+    <rect x="470" y="46" width="182" height="70" rx="12" fill="#eef5ff" stroke="#111111"/>
+    <circle cx="466" cy="128" r="4" fill="#111111"/><circle cx="458" cy="140" r="3" fill="#111111"/>
     <text x="484" y="72" font-size="12.5" fill="#2b3138">Wait. Can we even</text>
     <text x="484" y="92" font-size="12.5" fill="#2b3138">trust these reads</text>
     <text x="484" y="112" font-size="12.5" fill="#2b3138">in the first place?</text>
@@ -53,8 +53,8 @@
   </g>
   <text x="748" y="284" text-anchor="middle" font-size="12" font-weight="700" fill="#1a56b0">Amina</text>
   <g>
-    <rect x="800" y="52" width="176" height="70" rx="12" fill="#e6f4ea" stroke="#8bd4a6"/>
-    <circle cx="796" cy="133" r="4" fill="#8bd4a6"/><circle cx="788" cy="145" r="3" fill="#8bd4a6"/>
+    <rect x="800" y="52" width="176" height="70" rx="12" fill="#e6f4ea" stroke="#111111"/>
+    <circle cx="796" cy="133" r="4" fill="#111111"/><circle cx="788" cy="145" r="3" fill="#111111"/>
     <text x="814" y="78" font-size="12.5" fill="#2b3138">First, I inspect the</text>
     <text x="814" y="98" font-size="12.5" fill="#2b3138">groceries. Then I</text>
     <text x="814" y="118" font-size="12.5" fill="#2b3138">decide what to cook.</text>

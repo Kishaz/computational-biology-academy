@@ -1,5 +1,5 @@
 <svg viewBox="0 0 1000 372" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" role="img" aria-label="Diagram breaking a command into its parts: the prompt, the command, its options/flags, and its argument.">
-  <rect x="1" y="1" width="998" height="370" rx="10" fill="#ffffff" stroke="#d5dbe2"/>
+  <rect x="1" y="1" width="998" height="370" rx="10" fill="#ffffff" stroke="#111111"/>
   <text x="500" y="30" text-anchor="middle" font-size="18" font-weight="700" fill="#2b3138">The anatomy of a command</text>
 
   <!-- terminal box -->

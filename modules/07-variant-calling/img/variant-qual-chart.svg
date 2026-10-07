@@ -1,5 +1,5 @@
 <svg viewBox="0 0 820 300" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" role="img" aria-label="Bar chart of the quality score for five called variants. Four real variants score about 225. One sequencing-error call scores 17, far below a quality threshold of 20, so a simple filter removes it and keeps the four real ones.">
-  <rect x="1" y="1" width="818" height="298" rx="10" fill="#ffffff" stroke="#d5dbe2"/>
+  <rect x="1" y="1" width="818" height="298" rx="10" fill="#ffffff" stroke="#111111"/>
 
   <text x="24" y="34" font-size="15" font-weight="700" fill="#2b3138">Quality score sorts the real from the noise</text>
 

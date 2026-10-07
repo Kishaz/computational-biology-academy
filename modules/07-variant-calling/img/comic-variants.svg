@@ -1,5 +1,5 @@
 <svg viewBox="0 0 1000 300" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" role="img" aria-label="Three-panel stick-figure comic. Prof. Zola hands Amina a new sample and asks which variant it is. Amina notices a column where every read says G while the reference says A, a real difference. She concludes it carries four solid differences, the D614G lineage.">
-  <rect x="1" y="1" width="998" height="298" rx="10" fill="#ffffff" stroke="#d5dbe2"/>
+  <rect x="1" y="1" width="998" height="298" rx="10" fill="#ffffff" stroke="#111111"/>
 
   <!-- panel dividers -->
   <line x1="334" y1="16" x2="334" y2="284" stroke="#e2e6ea"/>
@@ -14,11 +14,11 @@
     <line x1="80" y1="222" x2="62" y2="256"/>
     <line x1="80" y1="222" x2="98" y2="256"/>
   </g>
-  <rect x="104" y="188" width="26" height="18" rx="3" fill="#dfe4ea" stroke="#2b3138" stroke-width="2"/>
+  <rect x="104" y="188" width="26" height="18" rx="3" fill="#dfe4ea" stroke="#111111" stroke-width="2"/>
   <text x="80" y="284" text-anchor="middle" font-size="12" font-weight="700" fill="#6b1fb0">Prof. Zola</text>
   <g>
-    <rect x="150" y="46" width="168" height="70" rx="12" fill="#f7f9fb" stroke="#b9c2cc"/>
-    <circle cx="146" cy="127" r="4" fill="#b9c2cc"/><circle cx="138" cy="139" r="3" fill="#b9c2cc"/>
+    <rect x="150" y="46" width="168" height="70" rx="12" fill="#f7f9fb" stroke="#111111"/>
+    <circle cx="146" cy="127" r="4" fill="#111111"/><circle cx="138" cy="139" r="3" fill="#111111"/>
     <text x="164" y="72" font-size="12.5" fill="#2b3138">A new sample.</text>
     <text x="164" y="92" font-size="12.5" fill="#2b3138">Which variant</text>
     <text x="164" y="112" font-size="12.5" fill="#2b3138">is it?</text>
@@ -35,16 +35,16 @@
   </g>
   <!-- little column of matching reads with one changed base -->
   <g font-size="12" font-weight="700" font-family="monospace">
-    <text x="452" y="196" fill="#9aa2ad">A</text>
-    <text x="470" y="196" fill="#9aa2ad">ref</text>
+    <text x="452" y="196" fill="#111111">A</text>
+    <text x="470" y="196" fill="#111111">ref</text>
     <text x="452" y="212" fill="#2e9e5b">G</text>
     <text x="452" y="226" fill="#2e9e5b">G</text>
     <text x="452" y="240" fill="#2e9e5b">G</text>
   </g>
   <text x="415" y="284" text-anchor="middle" font-size="12" font-weight="700" fill="#1a56b0">Amina</text>
   <g>
-    <rect x="470" y="42" width="190" height="70" rx="12" fill="#eef5ff" stroke="#9cc0f5"/>
-    <circle cx="466" cy="124" r="4" fill="#9cc0f5"/><circle cx="458" cy="136" r="3" fill="#9cc0f5"/>
+    <rect x="470" y="42" width="190" height="70" rx="12" fill="#eef5ff" stroke="#111111"/>
+    <circle cx="466" cy="124" r="4" fill="#111111"/><circle cx="458" cy="136" r="3" fill="#111111"/>
     <text x="484" y="68" font-size="12.5" fill="#2b3138">Every read says G.</text>
     <text x="484" y="88" font-size="12.5" fill="#2b3138">The reference says A.</text>
     <text x="484" y="108" font-size="12.5" fill="#2b3138">That is a real difference.</text>
@@ -61,8 +61,8 @@
   </g>
   <text x="748" y="284" text-anchor="middle" font-size="12" font-weight="700" fill="#1a56b0">Amina</text>
   <g>
-    <rect x="800" y="46" width="180" height="70" rx="12" fill="#e6f4ea" stroke="#8bd4a6"/>
-    <circle cx="796" cy="127" r="4" fill="#8bd4a6"/><circle cx="788" cy="139" r="3" fill="#8bd4a6"/>
+    <rect x="800" y="46" width="180" height="70" rx="12" fill="#e6f4ea" stroke="#111111"/>
+    <circle cx="796" cy="127" r="4" fill="#111111"/><circle cx="788" cy="139" r="3" fill="#111111"/>
     <text x="814" y="72" font-size="12.5" fill="#2b3138">Four solid differences.</text>
     <text x="814" y="92" font-size="12.5" fill="#2b3138">Meet the D614G</text>
     <text x="814" y="112" font-size="12.5" fill="#2b3138">lineage.</text>

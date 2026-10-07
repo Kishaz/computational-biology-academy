@@ -1,7 +1,7 @@
 <svg viewBox="0 0 840 470" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif" role="img" aria-label="A mixed tissue forks into two paths. Bulk RNA-seq blends all cells into one flat averaged profile where the cell types are hidden. Single-cell RNA-seq measures each cell, giving three distinct profiles so the cell types stay visible.">
-<rect x="0.5" y="0.5" width="839" height="469" rx="14" fill="#ffffff" stroke="#dde3ea"/>
+<rect x="0.5" y="0.5" width="839" height="469" rx="14" fill="#ffffff" stroke="#111111"/>
 <text x="34" y="40" font-size="17" font-weight="800" fill="#28303a">Bulk hides the crowd; single-cell sees each cell</text>
-<rect x="44" y="198" width="120" height="104" rx="10" fill="#f7f9fb" stroke="#c4ccd4"/>
+<rect x="44" y="198" width="120" height="104" rx="10" fill="#f7f9fb" stroke="#111111"/>
 <circle cx="80" cy="253" r="5" fill="#3f7fd0" opacity="0.9"/>
 <circle cx="92" cy="258" r="5" fill="#d9862f" opacity="0.9"/>
 <circle cx="116" cy="217" r="5" fill="#2e9c6d" opacity="0.9"/>
@@ -25,22 +25,22 @@
 <circle cx="147" cy="245" r="5" fill="#2e9c6d" opacity="0.9"/>
 <text x="104" y="324" text-anchor="middle" font-size="12.5" font-weight="700" fill="#28303a">a tissue</text>
 <text x="104" y="340" text-anchor="middle" font-size="10.5" fill="#5b6675">a mix of cell types</text>
-<line x1="164" y1="250" x2="200" y2="250" stroke="#aab3bd" stroke-width="2.4"/>
-<line x1="200" y1="150" x2="200" y2="360" stroke="#aab3bd" stroke-width="2.4"/>
-<line x1="200" y1="150" x2="262" y2="150" stroke="#aab3bd" stroke-width="2.4"/>
-<path d="M 270 150 l -9 -5 l 0 10 z" fill="#aab3bd"/>
-<line x1="200" y1="360" x2="262" y2="360" stroke="#aab3bd" stroke-width="2.4"/>
-<path d="M 270 360 l -9 -5 l 0 10 z" fill="#aab3bd"/>
+<line x1="164" y1="250" x2="200" y2="250" stroke="#111111" stroke-width="2.4"/>
+<line x1="200" y1="150" x2="200" y2="360" stroke="#111111" stroke-width="2.4"/>
+<line x1="200" y1="150" x2="262" y2="150" stroke="#111111" stroke-width="2.4"/>
+<path d="M 270 150 l -9 -5 l 0 10 z" fill="#111111"/>
+<line x1="200" y1="360" x2="262" y2="360" stroke="#111111" stroke-width="2.4"/>
+<path d="M 270 360 l -9 -5 l 0 10 z" fill="#111111"/>
 <text x="288" y="108" font-size="13" font-weight="800" fill="#28303a">BULK: blend all cells</text>
-<rect x="288" y="140" width="9" height="21" rx="2" fill="#9aa6b3"/>
-<rect x="301" y="138" width="9" height="22" rx="2" fill="#9aa6b3"/>
-<rect x="314" y="140" width="9" height="21" rx="2" fill="#9aa6b3"/>
-<rect x="327" y="140" width="9" height="21" rx="2" fill="#9aa6b3"/>
-<rect x="340" y="138" width="9" height="22" rx="2" fill="#9aa6b3"/>
-<rect x="353" y="140" width="9" height="21" rx="2" fill="#9aa6b3"/>
+<rect x="288" y="140" width="9" height="21" rx="2" fill="#111111"/>
+<rect x="301" y="138" width="9" height="22" rx="2" fill="#111111"/>
+<rect x="314" y="140" width="9" height="21" rx="2" fill="#111111"/>
+<rect x="327" y="140" width="9" height="21" rx="2" fill="#111111"/>
+<rect x="340" y="138" width="9" height="22" rx="2" fill="#111111"/>
+<rect x="353" y="140" width="9" height="21" rx="2" fill="#111111"/>
 <text x="343" y="176" text-anchor="middle" font-size="10.5" fill="#5b6675">one averaged profile</text>
-<line x1="370" y1="147" x2="414" y2="147" stroke="#aab3bd" stroke-width="2.4"/>
-<path d="M 422 147 l -9 -5 l 0 10 z" fill="#aab3bd"/>
+<line x1="370" y1="147" x2="414" y2="147" stroke="#111111" stroke-width="2.4"/>
+<path d="M 422 147 l -9 -5 l 0 10 z" fill="#111111"/>
 <text x="430" y="142" font-size="12" font-weight="700" fill="#c0392b">cell types</text>
 <text x="430" y="158" font-size="12" font-weight="700" fill="#c0392b">hidden</text>
 <text x="288" y="318" font-size="13" font-weight="800" fill="#28303a">SINGLE-CELL: read each cell</text>
@@ -62,8 +62,8 @@
 <rect x="571" y="350" width="9" height="21" rx="2" fill="#2e9c6d"/>
 <rect x="584" y="366" width="9" height="5" rx="2" fill="#2e9c6d"/>
 <rect x="597" y="366" width="9" height="5" rx="2" fill="#2e9c6d"/><text x="569" y="387" text-anchor="middle" font-size="10.5" font-weight="700" fill="#2e9c6d">type 3</text>
-<line x1="614" y1="357" x2="658" y2="357" stroke="#aab3bd" stroke-width="2.4"/>
-<path d="M 666 357 l -9 -5 l 0 10 z" fill="#aab3bd"/>
+<line x1="614" y1="357" x2="658" y2="357" stroke="#111111" stroke-width="2.4"/>
+<path d="M 666 357 l -9 -5 l 0 10 z" fill="#111111"/>
 <text x="674" y="352" font-size="12" font-weight="700" fill="#2e8b57">cell types</text>
 <text x="674" y="368" font-size="12" font-weight="700" fill="#2e8b57">visible</text>
 <text x="34" y="452" font-size="11.5" fill="#5b6675">The bulk average looks like no real cell. Measuring cells one by one keeps each cell type&#39;s distinct pattern intact.</text>

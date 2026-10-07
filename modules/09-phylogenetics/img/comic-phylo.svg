@@ -1,5 +1,5 @@
 <svg viewBox="0 0 1000 300" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" role="img" aria-label="Three-panel stick-figure comic. Prof. Zola asks how five samples, and five hundred more coming, are all related. Amina realises samples that share the same mutations share an ancestor, so the pattern is a family tree. She aligns them and a tree with two clades draws itself.">
-  <rect x="1" y="1" width="998" height="298" rx="10" fill="#ffffff" stroke="#d5dbe2"/>
+  <rect x="1" y="1" width="998" height="298" rx="10" fill="#ffffff" stroke="#111111"/>
 
   <line x1="334" y1="16" x2="334" y2="284" stroke="#e2e6ea"/>
   <line x1="667" y1="16" x2="667" y2="284" stroke="#e2e6ea"/>
@@ -13,11 +13,11 @@
     <line x1="80" y1="222" x2="62" y2="256"/>
     <line x1="80" y1="222" x2="98" y2="256"/>
   </g>
-  <rect x="104" y="188" width="26" height="18" rx="3" fill="#dfe4ea" stroke="#2b3138" stroke-width="2"/>
+  <rect x="104" y="188" width="26" height="18" rx="3" fill="#dfe4ea" stroke="#111111" stroke-width="2"/>
   <text x="80" y="284" text-anchor="middle" font-size="12" font-weight="700" fill="#6b1fb0">Prof. Zola</text>
   <g>
-    <rect x="150" y="42" width="176" height="74" rx="12" fill="#f7f9fb" stroke="#b9c2cc"/>
-    <circle cx="146" cy="127" r="4" fill="#b9c2cc"/><circle cx="138" cy="139" r="3" fill="#b9c2cc"/>
+    <rect x="150" y="42" width="176" height="74" rx="12" fill="#f7f9fb" stroke="#111111"/>
+    <circle cx="146" cy="127" r="4" fill="#111111"/><circle cx="138" cy="139" r="3" fill="#111111"/>
     <text x="164" y="66" font-size="12.5" fill="#2b3138">Five samples, and five</text>
     <text x="164" y="86" font-size="12.5" fill="#2b3138">hundred more coming.</text>
     <text x="164" y="106" font-size="12.5" fill="#2b3138">How are they related?</text>
@@ -34,8 +34,8 @@
   </g>
   <text x="415" y="284" text-anchor="middle" font-size="12" font-weight="700" fill="#1a56b0">Amina</text>
   <g>
-    <rect x="470" y="42" width="192" height="74" rx="12" fill="#eef5ff" stroke="#9cc0f5"/>
-    <circle cx="466" cy="128" r="4" fill="#9cc0f5"/><circle cx="458" cy="140" r="3" fill="#9cc0f5"/>
+    <rect x="470" y="42" width="192" height="74" rx="12" fill="#eef5ff" stroke="#111111"/>
+    <circle cx="466" cy="128" r="4" fill="#111111"/><circle cx="458" cy="140" r="3" fill="#111111"/>
     <text x="484" y="64" font-size="12.5" fill="#2b3138">Share the same</text>
     <text x="484" y="84" font-size="12.5" fill="#2b3138">mutations, share an</text>
     <text x="484" y="104" font-size="12.5" fill="#2b3138">ancestor. It is a tree.</text>
@@ -59,8 +59,8 @@
   </g>
   <text x="720" y="284" text-anchor="middle" font-size="12" font-weight="700" fill="#1a56b0">Amina</text>
   <g>
-    <rect x="800" y="40" width="180" height="52" rx="12" fill="#e6f4ea" stroke="#8bd4a6"/>
-    <circle cx="796" cy="103" r="4" fill="#8bd4a6"/><circle cx="788" cy="115" r="3" fill="#8bd4a6"/>
+    <rect x="800" y="40" width="180" height="52" rx="12" fill="#e6f4ea" stroke="#111111"/>
+    <circle cx="796" cy="103" r="4" fill="#111111"/><circle cx="788" cy="115" r="3" fill="#111111"/>
     <text x="814" y="64" font-size="12.5" fill="#2b3138">Two clades, exactly</text>
     <text x="814" y="84" font-size="12.5" fill="#2b3138">as expected.</text>
   </g>
