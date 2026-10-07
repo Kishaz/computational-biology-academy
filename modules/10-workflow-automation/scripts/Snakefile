@@ -1,5 +1,5 @@
 # Snakefile: the whole Module 05-08 journey, automated.
-# reads -> trim (fastp) -> align (bwa) -> call (bcftools) -> filter -> annotate (SnpEff)
+# reads -> clean (fastp) -> align (bwa) -> call (bcftools) -> filter -> annotate (SnpEff)
 #
 # Run it:   snakemake --cores 1
 # Preview:  snakemake -n            (dry run, plans without doing)
@@ -13,15 +13,17 @@ rule all:
     input:
         f"results/{SAMPLE}.annotated.vcf"
 
-rule trim:
+# fastp cleans the reads: removes adapters, filters low-quality reads, and
+# trims weak tails, all in one pass (this is the Module 05 QC step).
+rule clean:
     input:
         "reads/{sample}.fastq"
     output:
-        "trimmed/{sample}.fastq"
+        "clean/{sample}.fastq"
     shell:
         "fastp -i {input} -o {output} "
         "--cut_tail --cut_tail_mean_quality 20 --length_required 30 "
-        "-j trimmed/{wildcards.sample}.fastp.json -h trimmed/{wildcards.sample}.fastp.html"
+        "-j clean/{wildcards.sample}.fastp.json -h clean/{wildcards.sample}.fastp.html"
 
 rule index_reference:
     input:
@@ -35,7 +37,7 @@ rule align:
     input:
         ref=REF,
         index=REF + ".bwt",
-        reads="trimmed/{sample}.fastq"
+        reads="clean/{sample}.fastq"
     output:
         "aligned/{sample}.sorted.bam"
     shell:

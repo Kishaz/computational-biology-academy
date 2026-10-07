@@ -7,7 +7,7 @@
 <line x1="225" y1="130" x2="225" y2="159" stroke="#111111" stroke-width="2.2"/><path d="M 225 168 l -5 -10 l 10 0 z" fill="#111111"/>
 <line x1="585" y1="130" x2="585" y2="159" stroke="#111111" stroke-width="2.2"/><path d="M 585 168 l -5 -10 l 10 0 z" fill="#111111"/>
 <rect x="110" y="168" width="230" height="60" rx="12" fill="#eaf3fd" stroke="#111111" stroke-width="1.8"/>
-<text x="126" y="192" font-size="15" font-weight="800" fill="#28303a">trim</text>
+<text x="126" y="192" font-size="15" font-weight="800" fill="#28303a">clean</text>
 <text x="126" y="211" font-size="11" fill="#5b6675">fastp</text>
 <rect x="258" y="179" width="70" height="17" rx="8.5" fill="#3f7fd0"/>
 <text x="293" y="191" text-anchor="middle" font-size="9.5" font-weight="700" fill="#ffffff">Module 05</text>

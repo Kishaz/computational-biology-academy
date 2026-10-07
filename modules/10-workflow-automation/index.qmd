@@ -42,7 +42,7 @@ The tool that does this is called a **workflow manager**, and the one you will u
 **Snakemake**. The idea behind it is quietly brilliant, and it is worth slowing down for.
 
 ::: {.story}
-You do not write a workflow as a to-do list ("first trim, then align, then call..."). You
+You do not write a workflow as a to-do list ("first clean, then align, then call..."). You
 write it as a set of **rules**, where each rule states only two things: what it *needs*
 (inputs) and what it *makes* (outputs).
 
@@ -54,12 +54,14 @@ figures out the order itself.
 
 ## 🛠 Let's do it: write the rules
 
-A Snakemake rule is short. Here is the one that trims a sample's reads (Module 05, now a rule):
+A Snakemake rule is short. Here is the one that **cleans** a sample's reads: the Module 05 QC
+step, where `fastp` removes adapters, filters out low-quality reads, and trims weak tails, all
+in one pass. (It is more than just trimming, which is why we call the step `clean`.)
 
 ```python
-rule trim:
+rule clean:
     input:  "reads/{sample}.fastq"
-    output: "trimmed/{sample}.fastq"
+    output: "clean/{sample}.fastq"
     shell:  "fastp -i {input} -o {output} --cut_tail --cut_tail_mean_quality 20 --length_required 30"
 ```
 
@@ -77,7 +79,7 @@ rule all:
 
 Snakemake works *backwards* from that final file. To make the annotated VCF it needs the
 filtered VCF; to make that it needs the calls; and so on back to the raw reads. String the
-rules together (trim, align, call, filter, annotate) and Snakemake reads the whole chain.
+rules together (clean, align, call, filter, annotate) and Snakemake reads the whole chain.
 
 Ask it what it *would* do, without doing anything, with a dry run:
 
@@ -91,8 +93,8 @@ The **real** plan it produced:
 Job stats:
 job                count
 ---------------  -------
+clean                  1
 index_reference        1
-trim                   1
 align                  1
 call                   1
 filter                 1
@@ -104,7 +106,7 @@ total                  7
 Seven steps, worked out from your rules. You can even see the shape of it. Snakemake draws
 the **dependency graph** for you (`snakemake --dag | dot -Tsvg`):
 
-![The pipeline Snakemake inferred: raw reads are trimmed and the reference is indexed, both feed alignment, then calling, filtering and annotation follow in order. Each box is a step from an earlier lesson.](img/pipeline-dag.svg){width=820 fig-alt="A flowchart: reads feed a trim step and the reference feeds an index step, both feed align, then call, filter and annotate in sequence, producing the annotated VCF."}
+![The pipeline Snakemake inferred: raw reads are cleaned and the reference is indexed, both feed alignment, then calling, filtering and annotation follow in order. Each box is a step from an earlier lesson.](img/pipeline-dag.svg){width=820 fig-alt="A flowchart: reads feed a clean step and the reference feeds an index step, both feed align, then call, filter and annotate in sequence, producing the annotated VCF."}
 
 That is your entire course, from Module 05 to Module 08, as one picture. You did not draw it.
 Snakemake worked it out from the rules.
@@ -154,12 +156,12 @@ It did nothing, on purpose. Every output already exists and is newer than its in
 is nothing to redo. Now change *one* input, say new reads arrive for that sample, and ask
 again what it would do:
 
-![Change one input and Snakemake reruns only what depends on it. The reference index is untouched, so it is skipped; everything downstream of the reads is redone.](img/rerun-logic.svg){width=820 fig-alt="The pipeline with the reads input marked changed. Trim, align, call, filter and annotate are marked rerun; index_reference is marked cached and skipped."}
+![Change one input and Snakemake reruns only what depends on it. The reference index is untouched, so it is skipped; everything downstream of the reads is redone.](img/rerun-logic.svg){width=820 fig-alt="The pipeline with the reads input marked changed. Clean, align, call, filter and annotate are marked rerun; index_reference is marked cached and skipped."}
 
 ```text
 job         count
 --------  -------
-trim            1
+clean           1
 align           1
 call            1
 filter          1
@@ -233,14 +235,14 @@ Prof. Zola: "...I have no follow-up question."
 
 ::: {.challenge}
 You run your pipeline on 500 samples overnight. In the morning you notice the *annotation*
-step used the wrong database, so you fix that one rule. Everything else, the trimming,
+step used the wrong database, so you fix that one rule. Everything else, the cleaning,
 alignment and calling, was fine.
 
 If your workflow is written as Snakemake rules, what will re-running do? What if it were one
 long shell script instead?
 
 **Answer:** Snakemake will rerun only the annotation step (and anything downstream of it),
-because only that rule's command changed. The expensive trimming, alignment and calling for
+because only that rule's command changed. The expensive cleaning, alignment and calling for
 all 500 samples are untouched. A plain shell script has no memory of what is up to date, so it
 would redo everything from the first command, hours of work, to fix one step at the end.
 :::
