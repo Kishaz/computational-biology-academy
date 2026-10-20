@@ -69,6 +69,7 @@ teaches you the rest of the everyday phrasebook.
 
 By the end of this story you will be able to:
 
+::: {.cba-modsteps}
 1. Read the **anatomy of a command**: the command, its options (flags), and its arguments.
 2. Use **`man`** (and friends) to look up *any* command's details yourself.
 3. Confidently use the **essential commands** for moving around, managing files, and
@@ -76,13 +77,14 @@ By the end of this story you will be able to:
 4. Save time with **Tab completion** and **command history**.
 5. Recognise **pipes and redirection**, a first taste of how commands combine into
    pipelines.
+:::
 
 Before you start, make sure you have a working terminal from
 [Module 01](../01-setup-environment/index.qmd) (Ubuntu/WSL on Windows, or Terminal on
 macOS), and that you have met `pwd`, `cd`, `mkdir`, and `ls` in
 [Module 03](../03-molecular-data-types/index.qmd). We build straight on those.
 
-::: {.callout-warning}
+::: {.callout-warning collapse="true"}
 ## ⚠️ Verify: small differences between systems
 Linux (including WSL) and macOS share the same core commands, but a few options differ
 between them (Linux tools are mostly "GNU"; macOS tools are mostly "BSD"). Where it
@@ -190,8 +192,14 @@ Many commands also print a short help summary if you add `--help`:
 mkdir --help
 ```
 
-::: {.callout-warning}
-## ⚠️ Verify
+```
+# expected (yours may differ)
+Usage: mkdir [OPTION]... DIRECTORY...
+Create the DIRECTORY(ies), if they do not already exist.
+```
+
+::: {.callout-warning collapse="true"}
+## ⚠️ Verify: `--help` on macOS
 `--help` works for most Linux (GNU) tools, but several **macOS** commands do not support
 it (you will get an error). On macOS, reach for `man` instead; it always works. This is a
 common early "why does this not work?" moment, and now you know why.
@@ -205,6 +213,12 @@ tool is installed and on your `PATH`:
 ```bash
 which ls
 which conda
+```
+
+```
+# expected (yours may differ)
+/bin/ls
+/home/you/miniforge3/bin/conda
 ```
 
 ## The phrasebook: your essential commands
@@ -430,7 +444,10 @@ without opening a single one by hand.
 
 Which two commands from your new phrasebook would you combine, and roughly how? Think
 before you read on.
+:::
 
+::: {.callout-note collapse="true"}
+## Reveal the answer
 **Answer:** reach for **`find`** to locate them, and pipe the result into **`wc -l`** to
 count them:
 

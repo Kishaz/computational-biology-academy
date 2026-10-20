@@ -96,6 +96,14 @@ conda activate align
 conda install -c conda-forge -c bioconda hisat2 subread
 ```
 
+```text
+# expected (yours may differ)
+...
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+```
+
 Index the reference once, then align each sample's reads:
 
 ```bash
@@ -205,7 +213,10 @@ You look at a single gene: 300 reads in your control sample, 600 in your treated
 labmate says "it doubled, write it down."
 
 Name two things you would check before believing that.
+:::
 
+::: {.callout-note collapse="true"}
+## Reveal the answer
 **Answer:** at least these. **One:** was the treated sample sequenced more deeply overall? If
 it has more reads for *every* gene, this one did not really double. You need normalised values,
 not raw counts. **Two:** is the change consistent across replicates, or is 300-versus-600 just

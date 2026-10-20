@@ -47,7 +47,21 @@ The field is drowning in acronyms, and nobody is born knowing them. You will not
 analyses here. You will walk away able to place a dataset on a map, and that orientation
 makes every later module easier.
 
-::: {.callout-warning}
+## Your path through this module
+
+This is a field guide, not a procedure, so there are no steps to follow in order. Instead,
+here are the stops on the tour. You can follow the outline on the side as you go.
+
+::: {.cba-modsteps}
+- **The central dogma and "-omics"** &nbsp;·&nbsp; the one storyline that organises every data type
+- **The resolution revolution** &nbsp;·&nbsp; bulk to single-cell to spatial
+- **Common file formats** &nbsp;·&nbsp; the shared language, and what each file looks like
+- **A layer-by-layer tour** &nbsp;·&nbsp; DNA, RNA, protein, and spatial data, one at a time
+- **Metadata and references** &nbsp;·&nbsp; the bookkeeping that makes the data meaningful
+- **Hands-on** &nbsp;·&nbsp; set up a project folder and download your first dataset
+:::
+
+::: {.callout-warning collapse="true"}
 ## ⚠️ Verify: this is a fast-moving field
 New technologies, file formats, and databases appear constantly, and older ones change.
 Everything here is a snapshot and a starting point. Spatial methods in particular are
@@ -78,7 +92,7 @@ Here is the map we will follow:
 
 ![The central dogma (DNA to RNA to protein) with the data types that measure each layer, plus the epigenome (regulation) and a spatial overlay.](img/central-dogma-data-types.svg){width=820 fig-alt="Diagram mapping molecular data types onto the central dogma."}
 
-::: {.callout-note}
+::: {.callout-note collapse="true"}
 ## Acronym key for the diagram above
 - **DNA**: deoxyribonucleic acid (the genome; your instructions).
 - **RNA**: ribonucleic acid (working copies of genes that are switched on).
@@ -149,7 +163,7 @@ The good news: you never need to memorise them. Just apply the rule. Strip off t
 that is the entire meaning.
 :::
 
-::: {.callout-warning}
+::: {.callout-warning collapse="true"}
 ## ⚠️ Verify
 "-omics" is a fast-growing, loosely-policed vocabulary. New words appear often, and some
 are used more strictly than others. If you meet an unfamiliar one, check how that specific
@@ -198,7 +212,7 @@ Do not worry about the details now. Just know the trend: **more layers, one cell
 time.**
 :::
 
-::: {.callout-warning}
+::: {.callout-warning collapse="true"}
 ## ⚠️ Verify
 Approximate history: bulk sequencing came first, single-cell methods became practical
 later, and spatial methods are newer still. The exact dates and "firsts" vary by
@@ -263,7 +277,11 @@ not invest hours memorising this. The goal of this section is not fluency, it is
 *appreciate what is inside* so these formats stop feeling like scary black boxes. Skim,
 enjoy the tour, and move on.
 
-#### FASTA: sequences
+::: {.panel-tabset}
+
+### FASTA
+
+#### sequences
 
 This is a **real** snippet of the SARS-CoV-2 reference genome (the one you will download
 in Part K):
@@ -278,7 +296,9 @@ CGAACTTTAAAATCTGTGTGGCTGTCACTCGGCTGCATGCTTAGTGCACTCACGCAGTATAATTAATAAC
 - Everything after it is the **sequence** (the A/C/G/T letters), wrapped across lines.
 - A file can hold one sequence (like this genome) or millions (like all human proteins).
 
-#### FASTQ: raw sequencing reads
+### FASTQ
+
+#### raw sequencing reads
 
 A sequencer does not hand you a tidy genome. It hands you millions of short **reads**,
 each stored as **four lines**.
@@ -305,7 +325,9 @@ IIIIIIIHHHHGGGFFF@@@
   line 2). Higher means the machine was more confident. Storing that confidence is why
   FASTQ is bigger than FASTA.
 
-#### BAM (and SAM): reads aligned to a reference
+### BAM (and SAM)
+
+#### reads aligned to a reference
 
 Once reads are **aligned** (matched to their place on a reference genome), they are stored
 as **BAM**, **b**inary **a**lignment **m**ap, a compressed, *binary* file you cannot read
@@ -325,7 +347,9 @@ Reading the important columns left to right:
 - **`20M`**: the **CIGAR** string, here meaning "20 bases match."
 - Then the **sequence** and its **quality scores** again.
 
-#### VCF: variants (differences from the reference)
+### VCF
+
+#### variants (differences from the reference)
 
 Where a sample differs from the reference, those differences are recorded in a **VCF**
 (**v**ariant **c**all **f**ormat) file (simplified example):
@@ -346,7 +370,9 @@ Where a sample differs from the reference, those differences are recorded in a *
 - The **`ID`** column often holds a database name (an "rsID" from dbSNP). A **`.`** means
   none was assigned.
 
-#### Count matrix: expression tables
+### Count matrix
+
+#### expression tables
 
 Gene-expression results (from RNA-seq) usually arrive as a **count matrix**: a plain table
 of **genes (rows) by samples (columns)**, where each number is how much of that gene was
@@ -366,6 +392,8 @@ GAPDH       1800     1750     1900     1880
   tens of thousands of them. Because most entries are zero, single-cell matrices are stored
   **sparsely** (the "10x" `matrix.mtx` trio, or bundled into `h5ad`) rather than as one
   giant plain table.
+
+:::
 
 ::: {.insight}
 Spot the same read, `AGGTCAGTTCAAGGCTAACG`, in the FASTQ example and then aligned in the
@@ -513,7 +541,7 @@ arranged and who their neighbours are.
   [10x Genomics datasets](https://www.10xgenomics.com/datasets) and various specialised
   portals.
 
-::: {.callout-warning}
+::: {.callout-warning collapse="true"}
 ## ⚠️ Verify
 Spatial technology is changing faster than almost anything else in the field. Platforms,
 formats, and best-practice tools are all moving targets. Treat the names above as examples
@@ -617,6 +645,11 @@ it, type **`pwd`**, *print working directory*:
 
 ```bash
 pwd
+```
+
+```
+# expected (yours may differ)
+/home/yourname
 ```
 
 It prints something like `/home/yourname` (Linux/WSL) or `/Users/yourname` (macOS), your
@@ -741,7 +774,7 @@ folder built to hold it. Amina went from "find me some data" to holding an actua
 a tidy project, in about three commands. *That* is a workflow Prof. Zola would nod at.
 :::
 
-::: {.callout-note}
+::: {.callout-note collapse="true"}
 ## For *real* sequencing data, use the proper tools
 The `curl` trick is perfect for small records. For real sequencing datasets (which can be
 gigabytes), the standard tools, installable with Conda from the *bioconda* channel you set
@@ -780,7 +813,7 @@ The **real output**:
 [1] ">NC_045512.2 Severe acute respiratory syndrome coronavirus 2 isolate Wuhan-Hu-1, complete genome"
 ```
 
-::: {.callout-note}
+::: {.callout-note collapse="true"}
 ## Going further in R
 For real biological datasets, R has purpose-built helpers (from **Bioconductor**, introduced
 in Module 02). Two you will meet later:
@@ -823,7 +856,10 @@ different rows.
 
 Two quick questions before you read on. First: what stage of an analysis is this data at,
 raw, aligned, or results? Second: what will bite Pendo later about that condition column?
+:::
 
+::: {.callout-note collapse="true"}
+## Reveal the answer
 **Answer:** the `.fastq.gz` files are **raw reads** (`.gz` just means compressed), so this
 is the very start of the pipeline, before alignment. And `Treated`, `treated`, and `TREATED`
 are **three different labels** to a computer, so any grouping or counting will split one

@@ -64,12 +64,29 @@ conda activate align
 conda install -c conda-forge -c bioconda mafft iqtree
 ```
 
+```text
+# expected (yours may differ)
+...
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+```
+
 ```bash
 # 1) align the genomes to each other
 mafft --auto samples.fasta > aligned.fasta
 
 # 2) infer the tree (GTR+G model, 1000 quick bootstraps, rooted on the reference)
 iqtree -s aligned.fasta -m GTR+G -B 1000 -o reference
+```
+
+```text
+# expected (yours may differ)
+...
+Analysis results written to:
+  Maximum-likelihood tree:  aligned.fasta.treefile
+  Screen log file:          aligned.fasta.log
+...
 ```
 
 IQ-TREE writes several files. The one you want is `aligned.fasta.treefile`.
@@ -158,7 +175,10 @@ On a tree, one branch grouping two samples has a bootstrap support of **41**. A 
 writes in the paper that these two samples "form a distinct lineage."
 
 Is that claim safe? What would you say?
+:::
 
+::: {.callout-note collapse="true"}
+## Reveal the answer
 **Answer:** no, not on support of 41. That means the grouping appeared in fewer than half the
 resamples, so the data barely favour it over alternatives. The two samples *might* form a
 lineage, but the tree does not show it convincingly. You would ask for more data, or soften

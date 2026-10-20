@@ -52,6 +52,16 @@ reading the cards can work it out: sauce before pasta. The machine reads your ru
 figures out the order itself.
 :::
 
+## Your path through this module
+
+::: {.cba-modsteps}
+1. **Write the rules** &nbsp;·&nbsp; each one states only its inputs and its outputs
+2. **Declare your goal** &nbsp;·&nbsp; name the final file and let Snakemake find the order
+3. **Dry-run the plan** &nbsp;·&nbsp; `snakemake -n` shows what would run, before anything does
+4. **Run it with one command** &nbsp;·&nbsp; every step executes in the right order
+5. **Rerun only what changed** &nbsp;·&nbsp; change one input and the rest is skipped
+:::
+
 ## 🛠 Let's do it: write the rules
 
 A Snakemake rule is short. Here is the one that **cleans** a sample's reads: the Module 05 QC
@@ -240,7 +250,10 @@ alignment and calling, was fine.
 
 If your workflow is written as Snakemake rules, what will re-running do? What if it were one
 long shell script instead?
+:::
 
+::: {.callout-note collapse="true"}
+## Reveal the answer
 **Answer:** Snakemake will rerun only the annotation step (and anything downstream of it),
 because only that rule's command changed. The expensive cleaning, alignment and calling for
 all 500 samples are untouched. A plain shell script has no memory of what is up to date, so it

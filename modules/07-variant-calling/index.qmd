@@ -54,6 +54,16 @@ accident. Someone changed the original. That is a variant.
 That picture *is* the job. The tool you are about to run does exactly this counting, at
 every position, and weighs the evidence.
 
+## Your path through this module
+
+From here on it is hands-on. Three moves take you from an alignment to a trustworthy list of variants:
+
+::: {.cba-modsteps}
+1. **Call** &nbsp;·&nbsp; pile up the reads and let bcftools find the variants
+2. **Read** &nbsp;·&nbsp; open the VCF and weigh the evidence (depth, quality)
+3. **Filter** &nbsp;·&nbsp; drop the weak calls and keep the real variants
+:::
+
 ## 🛠 Let's do it: call the variants
 
 You need one new tool, **bcftools**, from the same family as samtools. Add it to the `align`
@@ -72,6 +82,12 @@ are real variants:
 bcftools mpileup -f sars2.fasta aln.sorted.bam \
   | bcftools call -mv -Oz -o calls.vcf.gz
 bcftools index calls.vcf.gz
+```
+
+```
+# expected (yours may differ)
+# bcftools prints a few progress notes, then two files appear:
+# calls.vcf.gz  calls.vcf.gz.csi
 ```
 
 In plain words: `-f` gives it the reference to compare against, `-m` uses the modern calling
@@ -194,7 +210,10 @@ A collaborator sends you a VCF and points at a single exciting row: a variant in
 care about. Its `INFO` field shows `DP=4` and its `QUAL` is `12`.
 
 Should you get excited yet? Why or why not?
+:::
 
+::: {.callout-note collapse="true"}
+## Reveal the answer
 **Answer:** not yet. Depth 4 and quality 12 is exactly the profile of a sequencing error,
 the smudge on one photocopy. Before believing it, you would want more depth and a much higher
 quality score, ideally with support on both strands. It might be real, but this evidence is

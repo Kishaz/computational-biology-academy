@@ -95,6 +95,17 @@ read. First you inspect. Then you decide. The blunt version:
 > Garbage in, garbage out. Every result you ever produce is only as good as the reads it
 > was built from.
 
+## Your path through this module
+
+From here on it is hands-on. Four moves take you from raw reads to clean, trustworthy data:
+
+::: {.cba-modsteps}
+1. **Inspect** &nbsp;·&nbsp; run FastQC and read the quality and adapter plots
+2. **Interpret** &nbsp;·&nbsp; tell real problems from normal grumbles
+3. **Clean** &nbsp;·&nbsp; trim weak tails and strip adapters with fastp
+4. **Verify** &nbsp;·&nbsp; re-run FastQC and compare before and after
+:::
+
 ## 🛠 Let's do it: inspect the reads
 
 Now, and only now, the commands. You have your bench, your tools, and you can talk to
@@ -247,7 +258,10 @@ Another team's per-base-quality plot sits comfortably in the **green** from the 
 letter to the last, with no adapter showing.
 
 Should you trim it? Think before you read on.
+:::
 
+::: {.callout-note collapse="true"}
+## Reveal the answer
 **Answer:** almost certainly not. If everything is green and clean, trimming would just
 throw away good data for nothing. Fix real problems, not imaginary ones.
 :::

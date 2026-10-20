@@ -33,6 +33,17 @@ samples per group. Is a gene's change real, or just the wobble you would see bet
 dishes? Hold both thoughts.
 :::
 
+## Your path through this module
+
+Four moves take a counts matrix to a gene list you can defend.
+
+::: {.cba-modsteps}
+1. **Normalise** &nbsp;·&nbsp; divide out each sample's sequencing depth so counts are comparable
+2. **Test every gene** &nbsp;·&nbsp; ask whether each change beats the noise between replicates
+3. **Correct for many tests** &nbsp;·&nbsp; judge significance on the adjusted p-value, never the raw one
+4. **See it at a glance** &nbsp;·&nbsp; read the whole experiment off a volcano plot
+:::
+
 ## First problem: raw counts are not comparable
 
 Before comparing anything, you have to put the samples on the same footing. This is
@@ -64,6 +75,16 @@ dds <- DESeqDataSetFromMatrix(countData = counts,
                               colData   = coldata,     # sample -> condition
                               design    = ~ condition)
 dds <- DESeq(dds)
+```
+
+```
+# expected (yours may differ)
+estimating size factors
+estimating dispersions
+gene-wise dispersion estimates
+mean-dispersion relationship
+final dispersion estimates
+fitting model and testing
 ```
 
 That one `DESeq()` call does three things: it estimates each sample's sequencing depth
@@ -184,7 +205,10 @@ Two genes come back from DESeq2. `geneX`: `log2FoldChange = 4.0`, `padj = 0.30`.
 `log2FoldChange = 0.3`, `padj = 0.001`.
 
 Which one is a "real hit", and would you build a story around either?
+:::
 
+::: {.callout-note collapse="true"}
+## Reveal the answer
 **Answer:** `geneY` is the statistically real change, its `padj` says the difference is very
 unlikely to be noise, while `geneX`'s `padj` of 0.30 means its dramatic-looking 16-fold change
 is probably just scatter (common in low-count genes). But `geneY` only changed by about 23%

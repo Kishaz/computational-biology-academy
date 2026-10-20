@@ -60,6 +60,16 @@ acid itself, and the protein reads differently.
 So the job of this lesson is to take each variant, find the codon it lands in, and ask: did
 the amino acid change? That process is called **annotation**.
 
+## Your path through this module
+
+From here on it is hands-on. Three moves take you from a list of positions to a list of consequences:
+
+::: {.cba-modsteps}
+1. **Annotate** &nbsp;·&nbsp; run SnpEff against the gene map
+2. **Read** &nbsp;·&nbsp; open the ANN field and find the amino-acid change
+3. **Interpret** &nbsp;·&nbsp; treat the impact band as triage, not a verdict
+:::
+
 ## 🛠 Let's do it: annotate the variants
 
 Calling variants only needed the reference sequence. Annotation needs one more thing: a map
@@ -79,6 +89,12 @@ first run downloads the gene map for our reference:
 
 ```bash
 snpEff NC_045512.2 calls.filtered.vcf > annotated.vcf
+```
+
+```
+# expected (yours may differ)
+# SnpEff prints a run summary, writes annotated.vcf,
+# and drops a summary HTML report in the same folder
 ```
 
 That is it. SnpEff walked each variant into its gene, translated the codon before and after,
@@ -173,7 +189,10 @@ You annotate two variants. Variant A is `synonymous_variant`, `LOW` impact. Vari
 `missense_variant`, `MODERATE` impact, in a gene central to your study.
 
 Your labmate says: "Ignore A, chase B." Is that reasonable, and what is the risk?
+:::
 
+::: {.callout-note collapse="true"}
+## Reveal the answer
 **Answer:** it is a reasonable *first* prioritisation. Missense changes in a gene you care
 about are exactly what annotation is meant to surface, and there are only so many hours in a
 day. But the risk is treating the label as truth: variant B being "MODERATE" does not make

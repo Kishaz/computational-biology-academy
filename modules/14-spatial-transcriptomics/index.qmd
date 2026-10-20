@@ -35,6 +35,17 @@ ringed outside is excluded. So here is the question: what if you could read each
 **without ever moving it**?
 :::
 
+## Your path through this module
+
+The clustering is the single-cell workflow again; position is the new ingredient.
+
+::: {.cba-modsteps}
+1. **Cluster on expression** &nbsp;·&nbsp; find the cell types from gene activity alone, ignoring position
+2. **Map back onto the slide** &nbsp;·&nbsp; draw each cell at its real x, y coordinates
+3. **Read the architecture** &nbsp;·&nbsp; see the clusters fall into spatial domains
+4. **Ask who neighbours whom** &nbsp;·&nbsp; use position to study which cell types sit together
+:::
+
 ## Reading cells in place
 
 That is **spatial transcriptomics**. Instead of dissociating the tissue, it measures gene
@@ -151,7 +162,10 @@ boundary and never enter the core".
 
 Both are correct. Why might Lab B's result change how the patient is treated, when Lab A's does
 not?
+:::
 
+::: {.callout-note collapse="true"}
+## Reveal the answer
 **Answer:** because *where* the immune cells are tells you whether they can do their job. Lab A's
 40% sounds like a strong immune response, but if (as Lab B shows) those cells are locked out at
 the boundary, the tumour is effectively hiding from them. That pattern, an "excluded" tumour,

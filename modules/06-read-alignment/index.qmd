@@ -69,6 +69,17 @@ its quality scores, and gains one new thing: an address on the genome. That is t
 job of this step.
 :::
 
+## Your path through this module
+
+From here on it is hands-on. Four moves take you from a pile of reads to a tidy, indexed alignment:
+
+::: {.cba-modsteps}
+1. **Index** &nbsp;·&nbsp; prepare the reference so it can be searched
+2. **Map** &nbsp;·&nbsp; place every read with bwa mem
+3. **Check** &nbsp;·&nbsp; confirm the mapping rate with samtools flagstat
+4. **Store** &nbsp;·&nbsp; sort, index, and shrink from SAM to BAM to CRAM
+:::
+
 ## 🛠 Let's do it: map the reads
 
 Now the commands. You will use two tools: **bwa** to do the mapping, and **samtools** to
@@ -85,6 +96,12 @@ building the index at the back of a book so you are not reading every page to fi
 
 ```bash
 bwa index sars2.fasta
+```
+
+```
+# expected (yours may differ)
+# bwa prints progress, then five index files sit beside the reference:
+# sars2.fasta.amb  sars2.fasta.ann  sars2.fasta.bwt  sars2.fasta.pac  sars2.fasta.sa
 ```
 
 Now map the clean reads against it:
@@ -298,7 +315,10 @@ open it and samtools complains it cannot find the reference.
 
 What is the one thing you need to ask them for, and how will you know you received the right
 one?
+:::
 
+::: {.callout-note collapse="true"}
+## Reveal the answer
 **Answer:** ask for the exact **reference FASTA** the CRAM was built against. You will know
 it is the right one because its checksum must match the **`M5`** value in the CRAM header
 (`samtools view -H sample.cram` shows it). Same `M5`, right reference. Different `M5`, wrong

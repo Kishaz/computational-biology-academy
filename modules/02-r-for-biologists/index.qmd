@@ -36,7 +36,7 @@ or just **ask**, in a language your data understands? Hold that thought. We will
 together.
 :::
 
-::: {.callout-note appearance="simple"}
+::: {.callout-note appearance="simple" collapse="true"}
 ## A gentle welcome before we begin
 
 If the letter "R" has been floating around your lab as something everyone seems to use but
@@ -89,7 +89,7 @@ the *answer*, but R remembers the *question*. Ask it again next year, and it giv
 same answer, the same way. That is the difference between a result and a reproducible
 result.
 
-::: {.callout-tip}
+::: {.callout-tip collapse="true"}
 ## R or Python? (a calm answer)
 You may hear people debate R vs Python. Honestly: **both are excellent, and many biologists
 use both.** R has historically had the edge for statistics and for the Bioconductor
@@ -113,7 +113,7 @@ powers a huge share of the statistics behind published biology. Every time you r
 analysed the data in R" in a paper, someone was doing exactly what you are about to learn.
 :::
 
-::: {.callout-tip}
+::: {.callout-tip collapse="true"}
 ## Explore these (it helps to see them)
 Clicking through the official homes of these tools makes them feel much less abstract. Have
 a quick look:
@@ -146,7 +146,7 @@ By the end of this module you will be able to:
   directly on that.
 - You are comfortable activating a Conda environment (`conda activate ...`).
 
-::: {.callout-warning}
+::: {.callout-warning collapse="true"}
 ## ⚠️ Verify: versions change
 R, Bioconductor, and every package have their own release cycles, and specific version
 numbers below are **examples**. Bioconductor in particular is tied to your R version, so
@@ -183,9 +183,14 @@ R --version
 ```
 This should print R's version and license information. If you get "command not found", make
 sure the `r-intro` environment is **activated**.
+
+```
+# expected (yours may differ)
+R version 4.x.x (YYYY-MM-DD) -- "..."
+```
 :::
 
-::: {.callout-tip}
+::: {.callout-tip collapse="true"}
 ## Want a batch of common packages at once?
 The `r-essentials` bundle installs R plus many popular packages (including the
 [tidyverse](https://www.tidyverse.org/) and others) in one go:
@@ -197,7 +202,7 @@ conda create -n r-intro r-base r-essentials
 It is convenient but larger to download. For a first look, plain `r-base` is enough.
 :::
 
-::: {.callout-warning}
+::: {.callout-warning collapse="true"}
 ## ⚠️ Verify: other ways to install R exist
 Installing via Conda keeps things consistent with the rest of this series, but it is **not
 the only way**. R can also be installed from the
@@ -353,6 +358,11 @@ The tool for this is **`Rscript`**.
 Rscript -e 'print(mean(c(2, 4, 6, 8)))'
 ```
 
+```
+# expected (yours may differ)
+[1] 5
+```
+
 **Script files.** Create a file called `hello.R` with these contents:
 
 ```{.r filename="hello.R"}
@@ -366,6 +376,12 @@ Then run it:
 
 ```bash
 Rscript hello.R
+```
+
+```
+# expected (yours may differ)
+[1] 5
+R is working!
 ```
 
 ## 🚧 The gotcha that catches everyone: scripts stay quiet
@@ -435,7 +451,7 @@ The console *inside* RStudio and the console you get by typing `R` in a terminal
 and script sections works identically either way.
 :::
 
-::: {.callout-warning}
+::: {.callout-warning collapse="true"}
 ## ⚠️ Verify
 RStudio's exact layout, button labels, and features (assistant tools included) change between
 releases, so your real window may differ a little from this schematic. The current
@@ -483,16 +499,24 @@ Pane by pane (the numbers match the diagram):
 Download it from the official site,
 [code.visualstudio.com](https://code.visualstudio.com/):
 
-- **macOS:** download the app from the site, or install it with Homebrew:
+::: {.panel-tabset}
 
-  ```bash
-  brew install --cask visual-studio-code
-  ```
+### 🍎 macOS
 
-- **Windows:** download and run the installer from the site. Then, importantly, install the
-  **WSL extension**, which lets VS Code work *inside* your Ubuntu/WSL environment (the one
-  you set up in Module 01). With it in place, you can type `code .` in any project folder from
-  your Ubuntu terminal to open that folder in VS Code, connected straight to Linux.
+download the app from the site, or install it with Homebrew:
+
+```bash
+brew install --cask visual-studio-code
+```
+
+### 🪟 Windows
+
+download and run the installer from the site. Then, importantly, install the
+**WSL extension**, which lets VS Code work *inside* your Ubuntu/WSL environment (the one
+you set up in Module 01). With it in place, you can type `code .` in any project folder from
+your Ubuntu terminal to open that folder in VS Code, connected straight to Linux.
+
+:::
 
 #### Opening it
 
@@ -513,7 +537,7 @@ experience, so if you only want R, RStudio is the gentler choice. VS Code really
 project mixes R with Bash, Python, and other file types. You get a single home for all of it,
 terminal included.
 
-::: {.callout-warning}
+::: {.callout-warning collapse="true"}
 ## ⚠️ Verify
 VS Code, its installers, and its extensions change frequently, and the Windows plus WSL setup
 in particular has several moving parts. Follow the current official guides rather than trusting
@@ -522,7 +546,7 @@ exact steps here: [code.visualstudio.com](https://code.visualstudio.com/), the
 inside it, the [R in VS Code](https://code.visualstudio.com/docs/languages/r) guide.
 :::
 
-::: {.callout-tip}
+::: {.callout-tip collapse="true"}
 ## RStudio or VS Code, which should I use?
 Either is fine, and you can switch any time. A rough rule of thumb: choose **RStudio** if your
 work is mostly R and statistics. Choose **VS Code** if you juggle several languages and file
@@ -555,7 +579,7 @@ is geographically near you. After it finishes, load the package to use it:
 library(ggplot2)
 ```
 
-::: {.callout-tip}
+::: {.callout-tip collapse="true"}
 ## Installing from a script or one-liner
 Because a non-interactive run cannot prompt you to pick a mirror, specify one:
 
@@ -566,7 +590,7 @@ Rscript -e 'install.packages("ggplot2", repos="https://cloud.r-project.org")'
 `https://cloud.r-project.org` is CRAN's official, globally load-balanced mirror.
 :::
 
-::: {.callout-tip}
+::: {.callout-tip collapse="true"}
 ## A cleaner option with Conda: install R packages as Conda packages
 Because you are in a Conda environment, many R packages are **also** available as Conda
 packages, named with an `r-` prefix, for example:
@@ -598,7 +622,7 @@ Here [`DESeq2`](https://bioconductor.org/packages/DESeq2/) is just an **example*
 well-known RNA-seq analysis package. We are not using it yet, it is only to show the pattern.
 The `::` means "the `install` function from the `BiocManager` package."
 
-::: {.callout-warning}
+::: {.callout-warning collapse="true"}
 ## ⚠️ Verify: Bioconductor is tied to your R version
 Bioconductor releases are matched to specific R versions, so a package that "will not install"
 is very often an R/Bioconductor version mismatch rather than anything you did wrong. Check the
@@ -620,7 +644,7 @@ trustworthy if it can be recreated.** Two common approaches:
   worth learning once you are comfortable. Look up the current `renv` documentation when you
   get there.
 
-::: {.callout-warning}
+::: {.callout-warning collapse="true"}
 ## ⚠️ Verify
 `renv` is a real, widely used package, but its commands and workflow evolve. Confirm current
 usage in its official documentation before relying on it. I am mentioning it as a signpost,
@@ -737,7 +761,7 @@ A ready-to-run copy of this script is included alongside this module at
 `scripts/gene-counts-demo.R`.
 :::
 
-::: {.callout-warning}
+::: {.callout-warning collapse="true"}
 ## 🧰 Troubleshooting
 - **`Rscript: command not found`** means your `r-intro` environment is not activated
   (`conda activate r-intro`), or R did not install correctly (revisit the install section).
@@ -781,7 +805,10 @@ appears on screen. Your gene counts are definitely loaded. Is R broken? What is 
 you need to add?
 
 Think before you read on.
+:::
 
+::: {.callout-note collapse="true"}
+## Reveal the answer
 **Answer:** R is not broken. Scripts do not auto-print. Wrap it: `print(mean(counts))`. That
 one word is the difference between a silent script and a helpful one, and it catches nearly
 everyone at least once.
@@ -838,7 +865,7 @@ doing the hard part just by showing up and typing. Keep at it.
 4. Change the demo's `barplot(...)` to a `boxplot(counts)` and re-run the script. How does the
    figure change?
 
-::: {.callout-important}
+::: {.callout-important collapse="true"}
 ## One more time on accuracy
 If a command here behaved differently, it is most likely an R/package version difference. The
 authoritative sources are the **R Project / CRAN**, **Bioconductor**, and each package's own

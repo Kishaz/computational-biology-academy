@@ -35,6 +35,17 @@ Bulk RNA-seq blends cells. So here is the question: what if you never blended? W
 measured the RNA of **every single cell, separately**?
 :::
 
+## Your path through this module
+
+The single-cell workflow has a fixed shape, and every analysis follows it.
+
+::: {.cba-modsteps}
+1. **Normalise and reduce** &nbsp;·&nbsp; correct each cell's depth, then compress to its main axes of variation
+2. **Build a similarity graph** &nbsp;·&nbsp; connect each cell to the cells most like it
+3. **Cluster** &nbsp;·&nbsp; let Leiden group similar cells into candidate cell types
+4. **Visualise and annotate** &nbsp;·&nbsp; lay the cells out with UMAP, then name the clusters with marker genes
+:::
+
 ## The crowd, not the average
 
 That is exactly what **single-cell RNA-seq** does. Instead of one profile for the whole tissue,
@@ -151,7 +162,10 @@ You run the same cells at a higher clustering resolution and now get **5** clust
 3. A labmate says "great, we found two new cell types!"
 
 Are they right? What would you check?
+:::
 
+::: {.callout-note collapse="true"}
+## Reveal the answer
 **Answer:** maybe, maybe not. Turning up the resolution *always* splits clusters, whether or not
 the split is real. Before claiming two new cell types, check whether the new clusters are
 defined by **distinct marker genes** (real biology) or just carve one type into arbitrary
