@@ -1,0 +1,32 @@
+/*-- scss:defaults --*/
+// The Computational Biology Academy — light brand layer over `cosmo`.
+// Palette: navy #14263D, teal #147D78, cyan #53BFC2, mist #EDF5F3, white #FAFBFC.
+
+$navy:  #14263D;
+$teal:  #147D78;
+$cyan:  #53BFC2;
+$mist:  #EDF5F3;
+$white: #FAFBFC;
+
+$primary:        $teal;
+$body-bg:        $white;
+$body-color:     #1f2d3d;
+$link-color:     $teal;
+$link-hover-color: darken($teal, 10%);
+$headings-color: $navy;
+$headings-font-weight: 700;
+
+// Navy navbar for a strong, consistent top band.
+$navbar-bg: $navy;
+$navbar-light-color:        rgba(255,255,255,0.78);
+$navbar-light-hover-color:  #ffffff;
+$navbar-light-active-color: #ffffff;
+$navbar-light-brand-color:  #ffffff;
+$navbar-light-brand-hover-color: #ffffff;
+
+$border-radius: 0.6rem;
+
+/*-- scss:rules --*/
+.navbar { border-bottom: 3px solid $teal; }
+.btn-primary { border-color: $teal; }
+.btn-primary:hover { background-color: darken($teal, 8%); border-color: darken($teal, 8%); }

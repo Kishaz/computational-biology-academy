@@ -1,192 +1,293 @@
 /* ============================================================
-   The Computational Biology Academy visual system
-   Theme-safe: uses translucent backgrounds + inherited text
-   so everything reads in both light and dark mode.
+   The Computational Biology Academy — visual system
+   Palette: navy #14263D · teal #147D78 · cyan #53BFC2
+            mist #EDF5F3 · white #FAFBFC
+   Theme-aware: tokens switch under body.quarto-dark so every
+   surface reads in both light and dark mode.
    ============================================================ */
+
+:root {
+  --cba-navy:  #14263D;
+  --cba-teal:  #147D78;
+  --cba-cyan:  #53BFC2;
+  --cba-mist:  #EDF5F3;
+  --cba-white: #FAFBFC;
+
+  --cba-accent:  #147D78;              /* primary accent on light */
+  --cba-ink:     #14263D;              /* strong text on light surfaces */
+  --cba-surface: #EDF5F3;             /* soft section background */
+  --cba-card-bg: #ffffff;
+  --cba-border:  rgba(20, 38, 61, 0.14);
+  --cba-shadow:  0 8px 24px rgba(20, 38, 61, 0.10);
+}
+body.quarto-dark {
+  --cba-accent:  #53BFC2;
+  --cba-ink:     #e8eef2;
+  --cba-surface: rgba(255, 255, 255, 0.04);
+  --cba-card-bg: rgba(255, 255, 255, 0.03);
+  --cba-border:  rgba(255, 255, 255, 0.14);
+  --cba-shadow:  0 8px 24px rgba(0, 0, 0, 0.35);
+}
 
 /* Code blocks: a touch more breathing room */
 pre.sourceCode { border-radius: 6px; font-size: 0.9em; }
-.page-columns .content { line-height: 1.6; }
+.page-columns .content { line-height: 1.65; }
 
 /* ---------- Homepage hero ---------- */
 .cba-hero {
   text-align: center;
-  padding: 2.2rem 1rem 1.4rem;
+  padding: 2.6rem 1rem 1.6rem;
+  background:
+    radial-gradient(60% 120% at 50% -10%,
+      color-mix(in srgb, var(--cba-teal) 14%, transparent), transparent 70%);
+  border-radius: 18px;
 }
 .cba-hero .eyebrow {
   text-transform: uppercase;
-  letter-spacing: 0.14em;
-  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  font-size: 0.78rem;
   font-weight: 700;
-  opacity: 0.6;
+  color: var(--cba-accent);
 }
 .cba-hero h1 { border: none; }
-/* The big Academy name that pops */
 .cba-name {
-  font-size: clamp(2.4rem, 6.2vw, 4.2rem);
-  font-weight: 900;
-  line-height: 1.04;
-  letter-spacing: -0.01em;
-  margin: 0.05em 0 0.3em;
+  font-size: clamp(2.3rem, 6vw, 4rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+  margin: 0.15em 0 0.35em;
+  color: var(--cba-ink);
 }
-.cba-name .accent { color: #12a4a4; }
-/* The punchy promise under the name */
+.cba-name .accent { color: var(--cba-accent); }
 .cba-punch {
-  font-size: clamp(1.15rem, 2.6vw, 1.6rem);
+  font-size: clamp(1.1rem, 2.4vw, 1.5rem);
   font-weight: 700;
-  max-width: 26ch;
+  max-width: 30ch;
   margin: 0.2em auto 0.5em;
-  opacity: 0.92;
 }
 .cba-hero .tagline {
-  font-size: clamp(1rem, 2.1vw, 1.25rem);
-  max-width: 44ch;
-  margin: 0.4em auto 0.2em;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  max-width: 46ch;
+  margin: 0.4em auto 1.1em;
+  opacity: 0.82;
+}
+.cba-hero .cba-cta { display: flex; gap: 0.7rem; justify-content: center; flex-wrap: wrap; }
+
+/* small trio of promises under the hero */
+.cba-promises {
+  display: flex; flex-wrap: wrap; gap: 0.5rem 1.4rem;
+  justify-content: center;
+  margin: 1.1rem 0 0;
+  font-size: 0.9rem; font-weight: 600;
   opacity: 0.8;
 }
-.cba-hero .fromto {
-  font-weight: 700;
-  margin-top: 0.6em;
-  opacity: 0.75;
-}
+.cba-promises span::before { content: "— "; color: var(--cba-accent); font-weight: 800; }
 
 /* ---------- Section band ---------- */
 .cba-band {
-  border: 1px solid rgba(128,128,128,0.25);
-  border-radius: 14px;
-  background: rgba(128,128,128,0.05);
-  padding: 1.3rem 1.4rem;
-  margin: 1.6rem 0;
+  border: 1px solid var(--cba-border);
+  border-radius: 16px;
+  background: var(--cba-surface);
+  padding: 1.5rem 1.6rem;
+  margin: 1.8rem 0;
 }
 .cba-band h2, .cba-band h3 { border: none; margin-top: 0; }
 .cba-philosophy { font-size: 1.15rem; font-weight: 600; text-align: center; }
 
-/* ---------- Learning-path steps (horizontal) ---------- */
-.cba-paths {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
-  justify-content: center;
-  gap: 0.4rem;
+/* ---------- Section heads ---------- */
+.cba-h { margin: 2.2rem 0 0.2rem; border: none; }
+.cba-sub { opacity: 0.78; margin-top: 0; }
+
+/* ---------- Learning modes (Explore / Investigate / Discover) ---------- */
+.cba-modes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 0.9rem;
   margin: 1.2rem 0;
 }
-.cba-path {
-  flex: 1 1 240px;
-  max-width: 330px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 0.7rem;
-  padding: 1.5rem 1.2rem;
-  border: 1px solid rgba(128,128,128,0.2);
-  border-top: 4px solid var(--cba-accent, #2780e3);
+.cba-mode {
+  padding: 1.3rem 1.2rem;
+  border: 1px solid var(--cba-border);
+  border-top: 4px solid var(--cba-accent);
+  border-radius: 14px;
+  background: var(--cba-card-bg);
+  box-shadow: var(--cba-shadow);
+}
+.cba-mode .step { font-size: 0.74rem; font-weight: 800; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--cba-accent); }
+.cba-mode .name { font-size: 1.3rem; font-weight: 800; margin: 0.15rem 0 0.3rem;
+  color: var(--cba-ink); }
+.cba-mode .desc { opacity: 0.82; margin: 0; }
+
+/* ---------- Interactive mystery widget ---------- */
+.cba-mystery {
+  border: 1px solid var(--cba-border);
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--cba-card-bg);
+  box-shadow: var(--cba-shadow);
+  margin: 1.4rem 0;
+}
+.cba-mystery .head {
+  background: var(--cba-navy);
+  color: #fff;
+  padding: 0.85rem 1.2rem;
+  display: flex; align-items: center; justify-content: space-between; gap: 0.6rem;
+}
+.cba-mystery .head .title { font-weight: 800; }
+.cba-mystery .head .pill {
+  background: var(--cba-teal); color: #fff;
+  font-size: 0.72rem; font-weight: 800; letter-spacing: 0.05em;
+  padding: 0.25rem 0.6rem; border-radius: 999px; white-space: nowrap;
+}
+.cba-mystery .body { padding: 1.2rem 1.3rem; }
+.cba-mystery .prompt { margin: 0 0 0.3rem; }
+.cba-mystery .file {
+  font-family: var(--bs-font-monospace, monospace);
+  background: color-mix(in srgb, var(--cba-cyan) 18%, transparent);
+  border: 1px solid var(--cba-border);
+  padding: 0.15rem 0.5rem; border-radius: 6px; font-size: 0.9rem;
+}
+.cba-mystery .quote { font-style: italic; opacity: 0.85; margin: 0.6rem 0 0.2rem; }
+.cba-mystery .quote .who { font-style: normal; font-weight: 700; opacity: 0.9; }
+.cba-mystery .ask { font-weight: 700; margin: 1rem 0 0.6rem; }
+.cba-opt {
+  display: block; width: 100%; text-align: left;
+  border: 1px solid var(--cba-border); border-radius: 10px;
+  background: var(--cba-surface);
+  padding: 0.7rem 0.9rem; margin: 0.5rem 0;
+  font: inherit; cursor: pointer;
+  transition: border-color 0.12s ease, transform 0.08s ease;
+}
+.cba-opt:hover { border-color: var(--cba-accent); transform: translateY(-1px); }
+.cba-opt.correct { border-color: var(--cba-teal);
+  background: color-mix(in srgb, var(--cba-teal) 14%, transparent); }
+.cba-opt.wrong { border-color: #c0392b;
+  background: color-mix(in srgb, #c0392b 12%, transparent); }
+.cba-opt .verdict { display: block; font-size: 0.85rem; margin-top: 0.35rem; opacity: 0.9; }
+.cba-mystery .outcome {
+  display: none; margin-top: 0.9rem; padding-top: 0.9rem;
+  border-top: 1px dashed var(--cba-border);
+}
+.cba-mystery .outcome.show { display: block; }
+
+/* ---------- Module explorer ---------- */
+.cba-filter { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.8rem 0 1.1rem; }
+.cba-filter button {
+  border: 1px solid var(--cba-border); border-radius: 999px;
+  background: var(--cba-card-bg); color: inherit;
+  padding: 0.35rem 0.95rem; font: inherit; font-weight: 600; cursor: pointer;
+  transition: all 0.12s ease;
+}
+.cba-filter button:hover { border-color: var(--cba-accent); }
+.cba-filter button.active { background: var(--cba-accent); border-color: var(--cba-accent); color: #fff; }
+
+.cba-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 0.9rem;
+}
+a.cba-modcard {
+  display: flex; flex-direction: column; gap: 0.3rem;
+  border: 1px solid var(--cba-border);
+  border-left: 4px solid var(--cba-accent);
   border-radius: 12px;
-  background: rgba(128,128,128,0.04);
+  background: var(--cba-card-bg);
+  padding: 1rem 1.1rem;
+  text-decoration: none; color: inherit;
   transition: transform 0.12s ease, box-shadow 0.12s ease;
 }
-.cba-path:hover { transform: translateY(-3px); box-shadow: 0 6px 18px rgba(0,0,0,0.08); }
-.cba-path .emoji {
-  display: block;
-  width: 3rem; height: 3rem; line-height: 3rem;
-  font-size: 1.7rem; text-align: center;
-  border-radius: 50%;
-  background: color-mix(in srgb, var(--cba-accent, #888) 15%, transparent);
+a.cba-modcard:hover { transform: translateY(-3px); box-shadow: var(--cba-shadow); }
+.cba-modcard .num { font-size: 0.7rem; font-weight: 800; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--cba-accent); }
+.cba-modcard .mtitle { font-weight: 800; color: var(--cba-ink); line-height: 1.25; }
+.cba-modcard .topic { opacity: 0.78; font-size: 0.92rem; }
+.cba-modcard .meta { margin-top: 0.3rem; }
+.cba-modcard .tag {
+  display: inline-block; font-size: 0.72rem; font-weight: 700;
+  border: 1px solid var(--cba-border); border-radius: 999px;
+  padding: 0.12rem 0.55rem; opacity: 0.85;
 }
-.cba-path .line { font-size: 1rem; line-height: 1.45; }
-.cba-paths .arrow {
-  display: flex;
-  align-items: center;
-  font-size: 1.5rem;
-  opacity: 0.3;
-  padding: 0 0.05rem;
-}
-@media (max-width: 560px) { .cba-paths .arrow { display: none; } }
+.cba-modcard[hidden] { display: none; }
 
 /* ---------- Cast cards ---------- */
 .cba-cast {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 0.8rem;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 0.9rem;
   margin: 1rem 0;
 }
 .cba-card {
-  border: 1px solid rgba(128,128,128,0.22);
-  border-top: 4px solid var(--card-accent, #888);
+  border: 1px solid var(--cba-border);
+  border-top: 4px solid var(--cba-accent);
   border-radius: 12px;
-  padding: 1rem;
-  background: rgba(128,128,128,0.04);
+  padding: 1.1rem 1rem;
+  background: var(--cba-card-bg);
   text-align: center;
+  box-shadow: var(--cba-shadow);
 }
 .cba-card .avatar {
   font-size: 2rem;
   width: 3.2rem; height: 3.2rem; line-height: 3.2rem;
-  margin: 0 auto 0.2rem;
+  margin: 0 auto 0.3rem;
   border-radius: 50%;
-  background: color-mix(in srgb, var(--card-accent, #888) 16%, transparent);
+  background: color-mix(in srgb, var(--cba-teal) 16%, transparent);
 }
-.cba-card .name { font-weight: 800; margin-top: 0.2rem; color: var(--card-accent, inherit); }
-.cba-card .role { opacity: 0.75; font-size: 0.92rem; }
+.cba-card .name { font-weight: 800; margin-top: 0.2rem; color: var(--cba-ink); }
+.cba-card .tagrole { font-size: 0.72rem; font-weight: 800; letter-spacing: 0.06em;
+  text-transform: uppercase; color: var(--cba-accent); margin: 0.1rem 0; }
+.cba-card .role { opacity: 0.8; font-size: 0.92rem; }
+
+/* ---------- Research journey (vertical timeline) ---------- */
+.cba-journey { list-style: none; counter-reset: step; padding: 0; margin: 1rem 0; }
+.cba-journey li {
+  position: relative; padding: 0 0 1.1rem 2.6rem; margin: 0;
+  border-left: 2px solid var(--cba-border);
+}
+.cba-journey li:last-child { border-left-color: transparent; padding-bottom: 0; }
+.cba-journey li::before {
+  counter-increment: step; content: counter(step);
+  position: absolute; left: -0.95rem; top: -0.1rem;
+  width: 1.8rem; height: 1.8rem; line-height: 1.8rem; text-align: center;
+  border-radius: 50%; background: var(--cba-accent); color: #fff;
+  font-weight: 800; font-size: 0.9rem;
+}
+.cba-journey .q { font-weight: 800; color: var(--cba-ink); }
+.cba-journey .a { opacity: 0.82; }
 
 /* ---------- Template step chips ---------- */
-.cba-steps {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin: 0.8rem 0;
-}
+.cba-steps { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.8rem 0; }
 .cba-steps .chip {
-  border: 1px solid rgba(128,128,128,0.3);
-  border-radius: 999px;
-  padding: 0.35rem 0.8rem;
-  font-size: 0.9rem;
-  background: rgba(128,128,128,0.05);
+  border: 1px solid var(--cba-border); border-radius: 999px;
+  padding: 0.35rem 0.8rem; font-size: 0.9rem; background: var(--cba-surface);
 }
-
-/* ---------- Story flow (the continuous project) ---------- */
-.cba-flow {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.4rem 0.5rem;
-  justify-content: center;
-  margin: 0.8rem 0;
-}
-.cba-flow .node {
-  border: 1px solid rgba(128,128,128,0.3);
-  border-radius: 8px;
-  padding: 0.3rem 0.7rem;
-  font-weight: 600;
-  font-size: 0.92rem;
-  background: rgba(128,128,128,0.05);
-}
-.cba-flow .sep { opacity: 0.4; font-weight: 700; }
 
 /* ============================================================
    Branded lesson boxes (used inside lessons)
    Usage:  ::: {.think}  ...  :::
+   Recolored to the restrained palette: teal/cyan for guidance,
+   amber for takeaways, red kept only for genuine mistakes.
    ============================================================ */
 .think, .story, .mistake, .takeaway, .reality, .insight, .didyouknow, .challenge {
-  border: 1px solid rgba(128,128,128,0.28);
-  border-left: 5px solid var(--box-accent, #888);
+  border: 1px solid var(--cba-border);
+  border-left: 5px solid var(--box-accent, var(--cba-accent));
   border-radius: 10px;
-  padding: 0.9rem 1.1rem;
+  padding: 0.95rem 1.1rem;
   margin: 1.2rem 0;
-  background: rgba(128,128,128,0.045);
+  background: var(--cba-surface);
 }
-.think    { --box-accent: #2780e3; }
-.story    { --box-accent: #22a06b; }
-.mistake  { --box-accent: #e5484d; }
-.takeaway { --box-accent: #f5a623; background: rgba(245,166,35,0.08); }
-.reality  { --box-accent: #8b5cf6; }
-.insight  { --box-accent: #12a4a4; }
-.didyouknow { --box-accent: #2780e3; }
-.challenge { --box-accent: #22a06b; }
+.think    { --box-accent: var(--cba-teal); }
+.story    { --box-accent: var(--cba-cyan); }
+.mistake  { --box-accent: #c0392b; }
+.takeaway { --box-accent: #d98a00; background: color-mix(in srgb, #d98a00 8%, transparent); }
+.reality  { --box-accent: var(--cba-cyan); }
+.insight  { --box-accent: var(--cba-teal); }
+.didyouknow { --box-accent: var(--cba-teal); }
+.challenge { --box-accent: var(--cba-navy); }
+body.quarto-dark .challenge { --box-accent: var(--cba-cyan); }
 .think::before, .story::before, .mistake::before, .takeaway::before,
 .reality::before, .insight::before, .didyouknow::before, .challenge::before {
-  font-weight: 800;
-  display: block;
-  margin-bottom: 0.35rem;
+  font-weight: 800; display: block; margin-bottom: 0.35rem;
 }
 .think::before    { content: "🧠 Think"; }
 .story::before    { content: "💬 Story"; }
@@ -203,9 +304,7 @@ pre.sourceCode { border-radius: 6px; font-size: 0.9em; }
 
 /* "Go make coffee" sign-off */
 .cba-signoff {
-  text-align: center;
-  font-weight: 700;
-  border-top: 1px dashed rgba(128,128,128,0.4);
-  padding-top: 1rem;
-  margin-top: 1.6rem;
+  text-align: center; font-weight: 700;
+  border-top: 1px dashed var(--cba-border);
+  padding-top: 1rem; margin-top: 1.6rem;
 }

@@ -1,0 +1,23 @@
+/*-- scss:defaults --*/
+// The Computational Biology Academy — dark brand layer over `darkly`.
+// On dark surfaces, cyan carries the accent (teal is too dark to read).
+
+$navy:  #14263D;
+$teal:  #147D78;
+$cyan:  #53BFC2;
+
+$primary:          $cyan;
+$body-bg:          #0f1b2d;
+$link-color:       $cyan;
+$link-hover-color: lighten($cyan, 8%);
+
+$navbar-bg: #0c1626;
+$navbar-dark-color:        rgba(255,255,255,0.72);
+$navbar-dark-hover-color:  #ffffff;
+$navbar-dark-active-color: #ffffff;
+
+$border-radius: 0.6rem;
+
+/*-- scss:rules --*/
+.navbar { border-bottom: 3px solid $cyan; }
+.btn-primary { color: #06212a; }

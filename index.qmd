@@ -8,40 +8,192 @@ sidebar: false
 
 ```{=html}
 <style>#title-block-header{ display:none !important; }</style>
+
 <section class="cba-hero">
-  <p class="eyebrow">Welcome to</p>
+  <p class="eyebrow">Explore · Investigate · Discover</p>
   <h1 class="cba-name">The <span class="accent">Computational Biology</span> Academy</h1>
   <p class="cba-punch">Stop memorizing commands. Start answering biological questions.</p>
-  <p class="tagline">Learn computational biology through stories, real datasets, and hands-on projects. No command memorizing. No walls of text. Just curiosity.</p>
-  <p class="fromto">From FASTQ to publication.</p>
-  <p><a class="btn btn-primary btn-lg" href="modules/01-setup-environment/" role="button">Start your first mystery →</a></p>
+  <p class="tagline">Learn computational biology through short stories, real datasets, and interactive challenges, all the way from a raw FASTQ file to a published result.</p>
+  <div class="cba-cta">
+    <a class="btn btn-primary btn-lg" href="modules/01-setup-environment/" role="button">Start learning</a>
+    <a class="btn btn-outline-primary btn-lg" href="#modules" role="button">Explore the modules</a>
+  </div>
+  <p class="cba-promises"><span>Short lessons</span><span>Hands-on practice</span><span>Biological reasoning</span></p>
 </section>
+
+<!-- ============ INTERACTIVE MYSTERY ============ -->
+<h2 class="cba-h">Try your first mystery</h2>
+<p class="cba-sub">No sign-up, no setup. Make one decision and see how a computational biologist actually thinks.</p>
+
+<div class="cba-mystery" id="cba-mystery">
+  <div class="head">
+    <span class="title">Your first mystery</span>
+    <span class="pill">30-SECOND CHALLENGE</span>
+  </div>
+  <div class="body">
+    <p class="prompt">Prof. Zola has just dropped a sequencing file on your desk:</p>
+    <p><span class="file">tumor_sample_R1.fastq.gz</span></p>
+    <p class="quote">"Find out which genes are differentially expressed. I need results by Friday." <span class="who">— Prof. Zola</span></p>
+    <p class="ask">What should you do first?</p>
+
+    <button class="cba-opt" data-correct="false"
+      data-why="Tempting, but you have no idea yet whether the reads are any good, or even what you are comparing against. Garbage in, garbage out.">
+      Run differential expression analysis immediately
+    </button>
+    <button class="cba-opt" data-correct="true"
+      data-why="Exactly. Before any analysis, you inspect read quality and understand the study design: what are the groups, the replicates, the comparison? This one habit separates results you can defend from results you cannot.">
+      Check the sequencing data quality and the study design
+    </button>
+    <button class="cba-opt" data-correct="false"
+      data-why="Volcano plots are lovely, but a plot built on unchecked data and an unknown comparison answers no biological question.">
+      Make a volcano plot. Scientists love volcano plots.
+    </button>
+
+    <div class="outcome" id="cba-outcome">
+      <p><strong>That is the Academy way.</strong> Every module starts with a question, not a command. You will learn to earn each result before you trust it.</p>
+      <p><a class="btn btn-primary" href="modules/05-reads-and-quality-control/" role="button">See how we check data quality →</a></p>
+    </div>
+  </div>
+</div>
 
 <section class="cba-band cba-philosophy">
 The best way to learn computational biology is not by memorizing commands. It is by asking biological questions. Everything here follows from that one idea.
 </section>
 
-<h2>🧭 Where are you right now?</h2>
-<p>Find the line that sounds like you. Each step builds on the one before, and the Academy carries you to the next.</p>
-<div class="cba-paths">
-  <div class="cba-path" style="--cba-accent:#22a06b"><span class="emoji">🌱</span><div class="line">"I have never opened a terminal, and that is fine."</div></div>
-  <div class="arrow">→</div>
-  <div class="cba-path" style="--cba-accent:#2780e3"><span class="emoji">🔬</span><div class="line">"I can run standard analyses and make sense of the results."</div></div>
-  <div class="arrow">→</div>
-  <div class="cba-path" style="--cba-accent:#8b5cf6"><span class="emoji">🧬</span><div class="line">"I can turn a biological question into the analysis that answers it, and sometimes invent a new way to answer."</div></div>
+<!-- ============ THREE LEARNING MODES ============ -->
+<h2 class="cba-h" id="modes">Three ways to learn</h2>
+<p class="cba-sub">These are learning modes, not levels you graduate from. Beginners can start asking real questions on day one, and experienced researchers can drop back to shore up a foundation.</p>
+<div class="cba-modes">
+  <div class="cba-mode">
+    <div class="step">Explore</div>
+    <div class="name">Explore</div>
+    <p class="desc">Understand biology, data, and the essential tools: the terminal, R, Conda, and the file formats everything else is built on.</p>
+  </div>
+  <div class="cba-mode">
+    <div class="step">Investigate</div>
+    <div class="name">Investigate</div>
+    <p class="desc">Analyze real data and interpret the evidence: quality control, alignment, variants, quantification, and automation.</p>
+  </div>
+  <div class="cba-mode">
+    <div class="step">Discover</div>
+    <div class="name">Discover</div>
+    <p class="desc">Design studies and generate new insight: differential expression, single-cell, and spatial biology.</p>
+  </div>
 </div>
 
-<h2>Meet your lab</h2>
-<p>You will not learn alone. The same four people show up in every story.</p>
+<!-- ============ MODULE EXPLORER ============ -->
+<h2 class="cba-h" id="modules">Explore the modules</h2>
+<p class="cba-sub">Fourteen self-contained stories. Filter by learning mode, then open any one.</p>
+
+<div class="cba-filter" id="cba-filter">
+  <button class="active" data-filter="all">All</button>
+  <button data-filter="explore">Explore</button>
+  <button data-filter="investigate">Investigate</button>
+  <button data-filter="discover">Discover</button>
+</div>
+
+<div class="cba-grid" id="cba-grid">
+  <a class="cba-modcard" data-mode="explore" href="modules/01-setup-environment/">
+    <span class="num">Module 01</span><span class="mtitle">Build Your Dry Lab Bench</span>
+    <span class="topic">Linux, Conda &amp; environments</span>
+    <span class="meta"><span class="tag">Guided setup</span></span></a>
+  <a class="cba-modcard" data-mode="explore" href="modules/02-r-for-biologists/">
+    <span class="num">Module 02</span><span class="mtitle">A Language for Asking Questions</span>
+    <span class="topic">R for biologists</span>
+    <span class="meta"><span class="tag">Foundations</span></span></a>
+  <a class="cba-modcard" data-mode="explore" href="modules/03-molecular-data-types/">
+    <span class="num">Module 03</span><span class="mtitle">A Field Guide to Your Data</span>
+    <span class="topic">FASTQ, FASTA, BAM &amp; VCF</span>
+    <span class="meta"><span class="tag">Foundations</span></span></a>
+  <a class="cba-modcard" data-mode="explore" href="modules/04-command-line-essentials/">
+    <span class="num">Module 04</span><span class="mtitle">Talking to Computers</span>
+    <span class="topic">Command-line essentials</span>
+    <span class="meta"><span class="tag">Foundations</span></span></a>
+  <a class="cba-modcard" data-mode="investigate" href="modules/05-reads-and-quality-control/">
+    <span class="num">Module 05</span><span class="mtitle">Is This Data Any Good?</span>
+    <span class="topic">Sequencing quality control</span>
+    <span class="meta"><span class="tag">Hands-on</span></span></a>
+  <a class="cba-modcard" data-mode="investigate" href="modules/06-read-alignment/">
+    <span class="num">Module 06</span><span class="mtitle">Where Did These Reads Come From?</span>
+    <span class="topic">Read alignment</span>
+    <span class="meta"><span class="tag">Hands-on</span></span></a>
+  <a class="cba-modcard" data-mode="investigate" href="modules/07-variant-calling/">
+    <span class="num">Module 07</span><span class="mtitle">What Makes This Sample Different?</span>
+    <span class="topic">Variant calling</span>
+    <span class="meta"><span class="tag">Hands-on</span></span></a>
+  <a class="cba-modcard" data-mode="investigate" href="modules/08-variant-annotation/">
+    <span class="num">Module 08</span><span class="mtitle">Does This Difference Even Matter?</span>
+    <span class="topic">Variant annotation</span>
+    <span class="meta"><span class="tag">Hands-on</span></span></a>
+  <a class="cba-modcard" data-mode="investigate" href="modules/09-phylogenetics/">
+    <span class="num">Module 09</span><span class="mtitle">How Are These Samples Related?</span>
+    <span class="topic">Phylogenetics</span>
+    <span class="meta"><span class="tag">Hands-on</span></span></a>
+  <a class="cba-modcard" data-mode="investigate" href="modules/10-workflow-automation/">
+    <span class="num">Module 10</span><span class="mtitle">Make the Whole Thing Run Itself</span>
+    <span class="topic">Workflow automation</span>
+    <span class="meta"><span class="tag">Hands-on</span></span></a>
+  <a class="cba-modcard" data-mode="investigate" href="modules/11-rna-seq-quantification/">
+    <span class="num">Module 11</span><span class="mtitle">What Is This Cell Actually Doing?</span>
+    <span class="topic">RNA-seq quantification</span>
+    <span class="meta"><span class="tag">Hands-on</span></span></a>
+  <a class="cba-modcard" data-mode="discover" href="modules/12-differential-expression/">
+    <span class="num">Module 12</span><span class="mtitle">Which Genes Really Changed?</span>
+    <span class="topic">Differential gene expression</span>
+    <span class="meta"><span class="tag">Hands-on</span></span></a>
+  <a class="cba-modcard" data-mode="discover" href="modules/13-single-cell-intro/">
+    <span class="num">Module 13</span><span class="mtitle">One Cell at a Time</span>
+    <span class="topic">Single-cell transcriptomics</span>
+    <span class="meta"><span class="tag">Advanced</span></span></a>
+  <a class="cba-modcard" data-mode="discover" href="modules/14-spatial-transcriptomics/">
+    <span class="num">Module 14</span><span class="mtitle">Where in the Tissue?</span>
+    <span class="topic">Spatial omics</span>
+    <span class="meta"><span class="tag">Advanced</span></span></a>
+</div>
+
+<!-- ============ RESEARCH JOURNEY ============ -->
+<section class="cba-band">
+<h3>The lab's first research project</h3>
+<p>You join a lab, the data arrives, and you take it all the way. Follow one experiment from raw data to a defensible scientific conclusion.</p>
+<ol class="cba-journey">
+  <li><span class="q">The samples arrive.</span> <span class="a">Understand the study design and metadata.</span></li>
+  <li><span class="q">Can we trust the data?</span> <span class="a">Inspect quality and identify problems before analysis.</span></li>
+  <li><span class="q">What changed?</span> <span class="a">Quantify and compare gene expression between groups.</span></li>
+  <li><span class="q">Does it make biological sense?</span> <span class="a">Interpret pathways and validate the conclusion.</span></li>
+  <li><span class="q">Can someone reproduce it?</span> <span class="a">Package the workflow, figures, and methods.</span></li>
+</ol>
+<p class="cba-sub" style="margin-top:0.9rem"><strong>A note on honesty:</strong> the single-cell and spatial modules use their own datasets suited to those methods. They are not treated as automatic downstream products of one bulk RNA-seq run, because in real science they would not be.</p>
+</section>
+
+<!-- ============ MEET YOUR LAB ============ -->
+<h2 class="cba-h">Meet your lab</h2>
+<p class="cba-sub">You will not learn alone. The same people show up in every story, each with a clear job.</p>
 <div class="cba-cast">
-  <div class="cba-card" style="--card-accent:#2780e3"><div class="avatar">👩🏾‍🔬</div><div class="name">Amina</div><div class="role">The curious scientist. That is you.</div></div>
-  <div class="cba-card" style="--card-accent:#8b5cf6"><div class="avatar">🧑🏾‍🎓</div><div class="name">Pendo</div><div class="role">The PhD student, gloriously confused.</div></div>
-  <div class="cba-card" style="--card-accent:#22a06b"><div class="avatar">🧑🏿‍💻</div><div class="name">Baraka</div><div class="role">The programmer who fixes everything.</div></div>
-  <div class="cba-card" style="--card-accent:#f5a623"><div class="avatar">🧑🏾‍🏫</div><div class="name">Prof. Zola</div><div class="role">The PI. Wanted results yesterday.</div></div>
+  <div class="cba-card">
+    <div class="avatar">👩🏾‍🔬</div><div class="name">Amina</div>
+    <div class="tagrole">The curious scientist</div>
+    <div class="role">Asks the questions you are afraid to ask. That is you.</div>
+  </div>
+  <div class="cba-card">
+    <div class="avatar">🧑🏿‍💻</div><div class="name">Baraka</div>
+    <div class="tagrole">The computational guide</div>
+    <div class="role">Explains code, reproducibility, and debugging without the jargon.</div>
+  </div>
+  <div class="cba-card">
+    <div class="avatar">🧑🏾‍🏫</div><div class="name">Prof. Zola</div>
+    <div class="tagrole">The scientific challenger</div>
+    <div class="role">Pushes you to justify every conclusion. "What question does this answer?"</div>
+  </div>
+  <div class="cba-card">
+    <div class="avatar">🧑🏾‍🎓</div><div class="name">Pendo</div>
+    <div class="tagrole">The fellow learner</div>
+    <div class="role">Makes the common mistakes first, so you can learn from them.</div>
+  </div>
 </div>
 
-<h2>Every module is a story</h2>
-<p>The same shape every time, so it never feels random. Complete, self-contained journeys, start to finish.</p>
+<!-- ============ EVERY MODULE IS A STORY ============ -->
+<h2 class="cba-h">Every module is a story</h2>
+<p class="cba-sub">The same shape every time, so it never feels random: a complete, self-contained journey from a question to an answer you can defend.</p>
 <div class="cba-steps">
   <span class="chip">🧩 Start with a mystery</span>
   <span class="chip">🤔 Think first</span>
@@ -53,30 +205,54 @@ The best way to learn computational biology is not by memorizing commands. It is
   <span class="chip">🎯 Key takeaway</span>
 </div>
 
-<section class="cba-band">
-<h3>🧪 One lab. One story. From week one to publication.</h3>
-<p>You join a lab. The data arrives. You take it all the way.</p>
-<div class="cba-flow">
-  <span class="node">FASTQs arrive</span><span class="sep">→</span>
-  <span class="node">QC</span><span class="sep">→</span>
-  <span class="node">Alignment</span><span class="sep">→</span>
-  <span class="node">Counts</span><span class="sep">→</span>
-  <span class="node">Differential expression</span><span class="sep">→</span>
-  <span class="node">Single-cell</span><span class="sep">→</span>
-  <span class="node">Spatial</span><span class="sep">→</span>
-  <span class="node">Publication</span><span class="sep">→</span>
-  <span class="node">Reviewer #2</span>
-</div>
-<p style="text-align:center;opacity:0.7">Everything connects. Nothing is a random dataset.</p>
-</section>
-
 <section class="cba-band" style="text-align:center">
 <h3>Teach why before how. Always.</h3>
-<p style="opacity:0.85">Anyone can copy a command. We want you to know what question it answers, and why the answer matters. That is the whole difference between running software and doing science.</p>
+<p style="opacity:0.85;max-width:60ch;margin:0.4rem auto 0">Anyone can copy a command. We want you to know what question it answers, and why the answer matters. That is the whole difference between running software and doing science.</p>
 </section>
 
-<section class="cba-hero" style="padding-top:0.6rem">
-  <p><a class="btn btn-primary btn-lg" href="modules/01-setup-environment/" role="button">Start your first mystery →</a></p>
-  <p style="opacity:0.65">Built by <a href="https://samuel-mwamburi.netlify.app/">Samuel Mwamburi, PhD</a>. Free and open under CC BY 4.0.</p>
+<section class="cba-hero" style="padding:1.6rem 1rem">
+  <div class="cba-cta">
+    <a class="btn btn-primary btn-lg" href="modules/01-setup-environment/" role="button">Start your first module</a>
+  </div>
+  <p style="opacity:0.65;margin-top:0.9rem">Built by <a href="https://samuel-mwamburi.netlify.app/">Samuel Mwamburi, PhD</a>. Free and open under CC BY 4.0.</p>
 </section>
+
+<script>
+(function () {
+  // --- Interactive mystery ---
+  var mystery = document.getElementById('cba-mystery');
+  if (mystery) {
+    var opts = mystery.querySelectorAll('.cba-opt');
+    var outcome = document.getElementById('cba-outcome');
+    opts.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        if (btn.querySelector('.verdict')) return; // already answered
+        var correct = btn.getAttribute('data-correct') === 'true';
+        btn.classList.add(correct ? 'correct' : 'wrong');
+        var v = document.createElement('span');
+        v.className = 'verdict';
+        v.textContent = (correct ? '✓ ' : '✗ ') + btn.getAttribute('data-why');
+        btn.appendChild(v);
+        if (correct && outcome) outcome.classList.add('show');
+      });
+    });
+  }
+  // --- Module filter ---
+  var filter = document.getElementById('cba-filter');
+  var grid = document.getElementById('cba-grid');
+  if (filter && grid) {
+    var cards = grid.querySelectorAll('.cba-modcard');
+    filter.querySelectorAll('button').forEach(function (b) {
+      b.addEventListener('click', function () {
+        filter.querySelectorAll('button').forEach(function (x) { x.classList.remove('active'); });
+        b.classList.add('active');
+        var f = b.getAttribute('data-filter');
+        cards.forEach(function (c) {
+          c.hidden = !(f === 'all' || c.getAttribute('data-mode') === f);
+        });
+      });
+    });
+  }
+})();
+</script>
 ```
