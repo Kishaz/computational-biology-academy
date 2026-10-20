@@ -255,6 +255,32 @@ a.cba-modcard:hover { transform: translateY(-3px); box-shadow: var(--cba-shadow)
 .cba-journey .q { font-weight: 800; color: var(--cba-ink); }
 .cba-journey .a { opacity: 0.82; }
 
+/* ---------- Module step overview (inside a lesson) ---------- */
+.cba-modsteps {
+  counter-reset: mstep;
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  display: grid;
+  gap: 0.6rem;
+}
+.cba-modsteps li {
+  position: relative;
+  padding: 0.85rem 1rem 0.85rem 3.1rem;
+  border: 1px solid var(--cba-border);
+  border-left: 4px solid var(--cba-accent);
+  border-radius: 10px;
+  background: var(--cba-card-bg);
+}
+.cba-modsteps li::before {
+  counter-increment: mstep;
+  content: counter(mstep);
+  position: absolute; left: 0.9rem; top: 50%; transform: translateY(-50%);
+  width: 1.7rem; height: 1.7rem; line-height: 1.7rem; text-align: center;
+  border-radius: 50%; background: var(--cba-accent); color: #fff;
+  font-weight: 800; font-size: 0.9rem;
+}
+
 /* ---------- Template step chips ---------- */
 .cba-steps { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.8rem 0; }
 .cba-steps .chip {

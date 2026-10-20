@@ -45,8 +45,8 @@ right language yet? **Yes? No? Not sure?** Hold that thought. We will sort it
 out together, one small step at a time.
 :::
 
-::: {.callout-note appearance="simple"}
-## A gentle word before we begin
+::: {.callout-note appearance="simple" collapse="true"}
+## A gentle word before we begin (read if you are nervous)
 
 If you have ever opened a "beginner" tutorial and met a wall of cryptic
 commands on line one, welcome. You are among friends, and that is *not*
@@ -67,28 +67,28 @@ Three honest things to set expectations:
   an error is not failure, it *is* the work. Every bioinformatician you admire
   has squinted at a baffling error message today.
 - **Go at your own pace.** No points for speed, nobody is timing you. When a
-  step misbehaves, take a breath. The **⚠️ Verify** and **🧰 Troubleshooting**
-  notes exist precisely because you are not the first person to trip there.
+  step misbehaves, take a breath. The **Verify** and **Troubleshooting** notes
+  exist precisely because you are not the first person to trip there.
 
 One small step at a time, and you will be fine. Let us build your bench.
 :::
 
-## What you will have built by the end
+## Your path through this module
 
-By the end of this module you will have:
+Four small steps. The first one depends on your operating system; the rest are
+the same for everyone. You can follow the progress outline on the side as you go.
 
-1. A working **Unix command-line environment**: **Ubuntu Linux via WSL2** on
-   Windows, or the built-in **Terminal** on macOS.
-2. **Conda** (via Miniforge) installed as your package and environment manager.
-3. The **Bioconda** and **conda-forge** channels configured, so you can install
-   thousands of bioinformatics tools with one command.
-4. Your **first isolated environment** with a couple of real tools in it, plus
-   the skill to *reproduce* that environment from a file.
+::: {.cba-modsteps}
+1. **Get a Unix shell** &nbsp;·&nbsp; the environment every tool expects
+2. **Install Conda** &nbsp;·&nbsp; your package and environment manager
+3. **Configure channels and build your first environment** &nbsp;·&nbsp; the bench gets its tools
+4. **Make it reproducible** &nbsp;·&nbsp; save an environment you can rebuild anywhere
+:::
 
-This is the foundation for every other module in the series. Take your time. A
-clean setup now saves hours later.
-
-## 💬 Why a whole "bench" and not just one tool?
+By the end you will have a working Unix command line, Conda installed via
+Miniforge, the Bioconda and conda-forge channels configured, and your first
+isolated environment with real tools in it, plus the skill to recreate it from a
+file. This is the foundation for every other module. Take your time.
 
 ::: {.story}
 Picture a chemistry bench. The reason a scientist keeps reagents in labelled,
@@ -97,264 +97,174 @@ uses one buffer and project B needs another, mixing them ruins both.
 
 Software is the same. Tools have versions, and versions clash. Conda gives you
 labelled bottles for software, called **environments**, so project A's tools
-never break project B's. That is the whole reason we bother with all this
-setup.
+never break project B's. That is the whole reason we bother with all this setup.
 :::
 
-::: {.callout-note}
-## Who needs which part: pick your track
-This module has **two setup tracks** that then merge:
+::: {.callout-warning collapse="true"}
+## Before you start: prerequisites and a word on versions
 
-- **On Windows?** Do **Part A (Windows)**, install Ubuntu with WSL2, then
-  continue to Part B and C.
-- **On a Mac?** Do **Part A (macOS)**, prepare Terminal and developer tools,
-  then continue to Part B and C.
-- **On native Linux?** You already have a shell. Skim Part A, then start at
-  [Part B](#part-b-install-conda-miniforge).
+**Windows:** Windows 10 (version 2004 or newer) or Windows 11, with
+administrator rights.
 
-Parts **B (Conda)** and **C (channels plus first environment)** are the **same
-for everyone**.
-:::
+**macOS:** a reasonably recent macOS. Note whether your Mac has an **Apple
+Silicon** chip (M-series) or an **Intel** chip; it matters in Step 3. Check via
+the **Apple menu → About This Mac**.
 
-### Before you start (prerequisites)
+**Everyone:** a stable internet connection, a few GB of free disk space, and
+comfort with copy-pasting commands and reading the output carefully.
 
-**Windows:**
-
-- **Windows 10 (version 2004 or newer) or Windows 11**, with administrator
-  rights.
-
-**macOS:**
-
-- A reasonably recent version of **macOS**. Note whether your Mac has an
-  **Apple Silicon** chip (M-series) or an **Intel** chip. It matters later
-  (see the Apple Silicon callout in Part C). Check via the
-  **Apple menu → About This Mac**.
-
-**Everyone:**
-
-- A stable internet connection and a few GB of free disk space.
-- Comfort with copy-pasting commands and reading the output carefully.
-
-::: {.callout-warning}
-## ⚠️ Verify: versions change
 Every version number below (Ubuntu release, Miniforge, tool versions) is an
 **example at the time of writing**. Installation methods for WSL and Conda have
-changed before and may change again after my knowledge cutoff. When a step
-matters, I point you to the official source to confirm. If a command behaves
-differently than described, check the official docs first. Do not assume the
-tutorial is still current.
+changed before and may change again. When a step matters, confirm it against the
+official source. If a command behaves differently than described, trust the
+official docs over this tutorial.
 :::
 
 ---
 
-## Part A (Windows): Install Linux (Ubuntu) with WSL2
+## Step 1 · Get a Unix shell {#step-1}
 
-Think of this part as arriving in a new country. Your Windows machine speaks
-one language, and bioinformatics tools speak Unix. Instead of emigrating (wiping
-Windows), you are opening a small, fully functional Ubuntu embassy inside
-Windows. Same building, second language, both work.
+Bioinformatics tools speak Unix. This step gets you a real Unix command line.
+**Pick your operating system below.** You only need your own tab.
 
-::: {.callout-tip}
-**On a Mac?** Skip this section and jump to
-[Part A (macOS)](#part-a-macos-prepare-your-mac).
-:::
+::: {.panel-tabset}
 
-### A.1 What is WSL, and why do we need it?
+### 🪟 Windows
 
-Most bioinformatics tools are written for **Unix-like systems (Linux/macOS)**.
-Rather than dual-booting or wiping Windows, **WSL (Windows Subsystem for Linux)**
-lets you run a real Ubuntu Linux environment *inside* Windows. "WSL2" is the
-current architecture, which runs a genuine Linux kernel and is what you want for
-bioinformatics.
+Your Windows machine speaks one language, and bioinformatics tools speak Unix.
+Instead of wiping Windows, you open a small, fully functional Ubuntu Linux
+"embassy" inside it using **WSL (Windows Subsystem for Linux)**. WSL2 runs a
+genuine Linux kernel and is what you want.
 
-You get a real Linux terminal, real Linux tools, and your Windows files are still
-accessible. This is the standard, well-supported way for Windows users to do
-bioinformatics.
-
-### A.2 Check your Windows version
-
-WSL's simple one-command install needs a recent Windows. To check:
+#### Check your Windows version
 
 - Press `Windows key + R`, type `winver`, press Enter.
 - You want **Windows 10 version 2004 (build 19041) or higher**, or **Windows 11**.
 
-::: {.callout-note}
-If you are on an older build, update Windows first (Settings → Windows Update).
-Older manual WSL installation paths exist but are more error-prone. Updating is
-the smoother route.
-:::
+If you are on an older build, update Windows first (Settings → Windows Update)
+before continuing.
 
-### A.3 Install WSL + Ubuntu
+#### Install WSL and Ubuntu
 
-Open **PowerShell as Administrator**:
-
-- Click Start, type `PowerShell`, right-click **Windows PowerShell**, choose
-  **Run as administrator**.
-
-Then run:
+Open **PowerShell as Administrator** (click Start, type `PowerShell`, right-click
+**Windows PowerShell**, choose **Run as administrator**), then run:
 
 ```powershell
 wsl --install
 ```
 
 On a supported, up-to-date Windows this single command enables the required
-features and installs the **default Ubuntu** distribution.
+features and installs the **default Ubuntu** distribution. **Reboot when
+prompted.** After rebooting, Ubuntu often finishes setup automatically and opens
+a terminal window.
 
-::: {.callout-warning}
-## ⚠️ Verify
-`wsl --install` and its behavior are defined by Microsoft and have changed across
-Windows updates. The authoritative, current instructions live in Microsoft's
-official WSL documentation. If `wsl --install` errors out, search Microsoft's
-official "Install WSL" documentation for your exact Windows version rather than
-trusting any single fixed command.
+::: {.callout-note collapse="true"}
+## Optional: choose a specific Ubuntu version
+```powershell
+wsl --list --online          # see available distributions
+wsl --install -d Ubuntu-22.04 # install a specific one (confirm the exact name)
+```
+For teaching, stick with a recent **LTS** (Long-Term Support) release, since
+tutorials and tools target LTS. Which release is "current LTS" changes over
+time; check ubuntu.com if unsure.
 :::
 
-**Reboot when prompted.** After rebooting, Ubuntu often finishes its setup
-automatically and opens a terminal window.
+#### First launch: create your Linux user
 
-#### Choosing a specific Ubuntu version (optional)
-
-To see available distributions:
-
-```powershell
-wsl --list --online
-```
-
-To install a specific one (example, confirm the exact name from the list above):
-
-```powershell
-wsl --install -d Ubuntu-22.04
-```
-
-::: {.callout-tip}
-For teaching, I suggest sticking with a recent **LTS** ("Long-Term Support")
-Ubuntu release, because tutorials and tool support target LTS versions. Which
-release is "current LTS" changes over time. Check ubuntu.com if unsure.
-:::
-
-### A.4 First launch: create your Linux user
-
-The first time Ubuntu starts, it asks you to create a **UNIX username and
-password**. Notes:
+The first time Ubuntu starts, it asks for a **UNIX username and password**.
 
 - This user is **separate** from your Windows account.
-- When typing the password, **nothing appears on screen** (no dots, no stars).
-  That is normal Linux behavior, not a frozen terminal. Type it and press Enter.
-- Remember this password: you will need it for `sudo` (administrator) commands.
+- When typing the password, **nothing appears on screen**. That is normal Linux
+  behavior, not a frozen terminal. Type it and press Enter.
+- Remember this password: you need it for `sudo` (administrator) commands.
 
-::: {.callout-important}
-## Security: never paste secrets you do not understand
-Only run commands you understand or that come from a trusted source. Never paste
-a command from a random website that asks for your password without knowing what
-it does.
-:::
+#### Update the package lists
 
-### A.5 Update the package lists
-
-Inside your new Ubuntu terminal, update the software catalog and upgrade installed
-packages:
+Inside your new Ubuntu terminal:
 
 ```bash
 sudo apt update && sudo apt upgrade -y
 ```
 
-- `sudo` = run as administrator (it will ask for the Linux password from A.4).
-- `apt` is Ubuntu's system package manager (different from Conda, which we install
-  next).
-- `-y` auto-confirms the upgrade.
+`sudo` runs as administrator (it asks for the Linux password you just set), `apt`
+is Ubuntu's system package manager, and `-y` auto-confirms.
 
 ::: {.callout-note collapse="true"}
 ## ✅ Check: did it work?
-When it finishes without red `E:` error lines, you are good. You can confirm your
-Ubuntu version with:
-
+It finished without red `E:` error lines. Confirm your Ubuntu version with:
 ```bash
 lsb_release -a
 ```
+Expected (yours will differ):
+```
+Distributor ID: Ubuntu
+Description:    Ubuntu 22.04.x LTS
+```
 :::
 
-### A.6 Where are my files? (Windows ↔ Linux)
+#### Where are my files? (Windows ↔ Linux)
 
-This trips up almost everyone at first. Think of it as two rooms connected by a
-narrow doorway:
+This trips up almost everyone. Think of two rooms connected by a narrow doorway:
 
-- Your **Windows** drives are visible inside Linux under `/mnt/`. For example your
-  Windows `C:\` drive is at `/mnt/c/`, so your Downloads folder is roughly
-  `/mnt/c/Users/<YourWindowsName>/Downloads`.
-- Your **Linux home** directory is `~` (which is `/home/<your-linux-user>`).
-- From Windows, you can browse Linux files by opening File Explorer and typing
-  `\\wsl$\` (or `\\wsl.localhost\`) in the address bar.
+- Your **Windows** drives appear inside Linux under `/mnt/`. Your `C:\` drive is
+  at `/mnt/c/`, so Downloads is roughly `/mnt/c/Users/<YourWindowsName>/Downloads`.
+- Your **Linux home** directory is `~` (that is `/home/<your-linux-user>`).
+- From Windows, browse Linux files by typing `\\wsl$\` in File Explorer's address bar.
 
 ::: {.callout-tip}
 ## Performance tip that matters a lot
 Keep your **analysis project files inside the Linux filesystem** (for example in
-`~` or a subfolder), **not** under `/mnt/c/...`. Reading and writing many files
-across the Windows/Linux boundary is noticeably slower and can cause
-file-permission headaches. Treat `/mnt/c` as a place to *copy files in and out*,
-not to run pipelines from.
+`~`), **not** under `/mnt/c/...`. Crossing the Windows/Linux boundary for many
+files is noticeably slower and causes permission headaches. Treat `/mnt/c` as a
+place to copy files in and out, not to run pipelines from.
 :::
 
-### A.7 (Optional but recommended) Nicer tools
+::: {.callout-note collapse="true"}
+## Optional: nicer tools
+- **Windows Terminal** (from the Microsoft Store): tabs and better fonts for WSL.
+- **VS Code + the "WSL" extension**: edit files and run the terminal inside your
+  Linux environment. From Ubuntu, launch it in the current folder with `code .`
+  (the first time, VS Code installs a small helper into WSL).
+:::
 
-- **Windows Terminal**: a modern terminal app that makes working with WSL much
-  more pleasant (tabs, better fonts). Available from the Microsoft Store.
-- **VS Code + the "WSL" extension**: lets you edit files and run the terminal
-  seamlessly inside your Linux environment from a graphical editor. From your
-  Ubuntu terminal you can typically launch it in the current folder with:
-
-  ```bash
-  code .
-  ```
-
-  (The first time, VS Code installs a small helper into WSL.)
-
-::: {.callout-warning}
-## 🧰 Troubleshooting Part A
-- **`wsl --install` says it is not a recognized command** → your Windows is likely
-  too old, or you are not in PowerShell. Update Windows; use PowerShell (not the
-  legacy Command Prompt) as Administrator.
+::: {.callout-warning collapse="true"}
+## 🧰 Troubleshooting (Windows)
+- **`wsl --install` is not recognized** → your Windows is likely too old, or you
+  are not in PowerShell. Update Windows; use PowerShell (not Command Prompt) as
+  Administrator.
 - **Virtualization error / WSL2 will not start** → virtualization may be disabled
-  in your BIOS/UEFI, or the "Virtual Machine Platform" Windows feature is not
-  enabled. This is hardware/firmware specific; consult Microsoft's official WSL
-  troubleshooting page for your machine. I cannot give a one-size-fits-all fix
-  here, and I will not guess your BIOS layout.
+  in your BIOS/UEFI, or the "Virtual Machine Platform" Windows feature is off.
+  This is firmware specific; consult Microsoft's official WSL troubleshooting
+  page for your machine.
 - **Forgot your Linux password** → it can be reset, but the procedure differs by
   setup; look up the current official method rather than an old forum command.
+- **`wsl --install` still errors** → the command is defined by Microsoft and has
+  changed across Windows updates. Search Microsoft's official "Install WSL" docs
+  for your exact Windows version.
 :::
 
----
+### 🍎 macOS
 
-## Part A (macOS): Prepare your Mac
+Good news: macOS is built on a Unix foundation, so, unlike Windows, you **do not
+need WSL**. You already have a real Unix shell. There are just a few things to
+set up so bioinformatics tools install cleanly. Your bench is half built already.
 
-::: {.callout-tip}
-**On Windows?** This section is not for you. Use
-[Part A (Windows)](#part-a-windows-install-linux-ubuntu-with-wsl2) instead.
-:::
-
-### A.1 (Mac) Good news: you already have Unix
-
-macOS is built on a Unix foundation, so, unlike Windows, you **do not need WSL**.
-You already have a real Unix shell. There are just a few things to set up so
-bioinformatics tools install cleanly.
-
-Your bench is half built already. You just need to lay out a few tools.
-
-### A.2 (Mac) Open the Terminal
+#### Open the Terminal
 
 - Press `Cmd + Space`, type `Terminal`, press Enter.
 - Modern macOS uses **`zsh`** as the default shell (older versions used `bash`).
-  Everything in this series works in either; occasionally you will see a note where
-  they differ.
+  Everything here works in either; occasionally you will see a note where they
+  differ.
 
 ::: {.callout-note collapse="true"}
 ## ✅ Check: which shell am I in?
 ```bash
 echo $SHELL
 ```
-This prints something ending in `zsh` or `bash`.
+Prints something ending in `zsh` or `bash`, for example `/bin/zsh`.
 :::
 
-### A.3 (Mac) Install the Command Line Developer Tools
+#### Install the Command Line Developer Tools
 
 These provide essentials like `git`, `curl`, and compilers that many tools expect:
 
@@ -362,214 +272,179 @@ These provide essentials like `git`, `curl`, and compilers that many tools expec
 xcode-select --install
 ```
 
-A dialog box will pop up. Click **Install** and accept the license. If it says
-the tools are *already installed*, you are good.
+A dialog pops up. Click **Install** and accept the license. If it says the tools
+are *already installed*, you are good.
 
-::: {.callout-warning}
-## ⚠️ Verify
-Apple's developer-tools installation flow changes between macOS releases. If the
-command above does not behave as described, check Apple's current guidance for
-installing the Command Line Tools for your macOS version.
-:::
-
-### A.4 (Mac) Know your chip: Apple Silicon vs Intel
+#### Know your chip: Apple Silicon vs Intel
 
 This is the one Mac-specific thing that genuinely affects bioinformatics, so note
 it now:
-
-- **Apple Silicon** = M-series chips (the architecture is called `arm64`).
-- **Intel** Macs use the `x86_64` architecture.
-
-Check with either the **Apple menu → About This Mac**, or in the Terminal:
 
 ```bash
 uname -m
 ```
 
-- `arm64` → Apple Silicon
-- `x86_64` → Intel
+Expected output, one of:
 
-**Why it matters:** historically, some bioinformatics packages on Bioconda were
-built for Intel Macs (`osx-64`) but **not** yet for Apple Silicon (`osx-arm64`).
-We handle this in [Part C's Apple Silicon callout](#apple-silicon-note). For now,
-just know which chip you have.
+```
+arm64     # Apple Silicon (M-series)
+x86_64    # Intel
+```
 
-::: {.callout-warning}
-## ⚠️ Verify: this situation improves over time
-The availability of native Apple-Silicon (`osx-arm64`) builds for bioinformatics
-packages has been **increasing over time**, so what is true today may be better by
-the time you read this. Do not assume a tool is unavailable on Apple Silicon
-without checking the current Bioconda package listings.
-:::
+**Why it matters:** historically, some Bioconda packages were built for Intel
+Macs (`osx-64`) but not yet for Apple Silicon (`osx-arm64`). We handle this in
+[Step 3's Apple Silicon note](#apple-silicon-note). For now, just know which chip
+you have.
 
-#### (Optional) Rosetta 2: running Intel software on Apple Silicon
-
-If you are on Apple Silicon and later need to run `x86_64`-only software, macOS uses
-a translation layer called **Rosetta 2**. You can install it with:
-
+::: {.callout-note collapse="true"}
+## Optional: Rosetta 2 (running Intel software on Apple Silicon)
+If you are on Apple Silicon and later need `x86_64`-only software, macOS uses a
+translation layer called **Rosetta 2**:
 ```bash
 softwareupdate --install-rosetta --agree-to-license
 ```
-
-::: {.callout-warning}
-## ⚠️ Verify
-`--agree-to-license` auto-accepts Apple's software license agreement on your
-behalf. Only run it if you are comfortable doing so; otherwise omit that flag and
-accept the license interactively. Confirm the current command in Apple's
-documentation. Intel-Mac users do **not** need Rosetta.
+`--agree-to-license` auto-accepts Apple's license. Only run it if you are
+comfortable; otherwise omit the flag and accept interactively. Intel-Mac users do
+**not** need Rosetta.
 :::
 
-### A.5 (Mac) A note on Homebrew (optional)
+#### File locations
 
-Many Mac users install **Homebrew**, a general-purpose macOS package manager. It is
-genuinely useful for everyday tools, **but for this series we use Conda** for
-bioinformatics software, because Conda environments are how we keep projects
-reproducible and isolated. You do **not** need Homebrew to follow these tutorials.
-If you already have it, that is fine; if not, skip it for now.
+There is no Windows/Linux boundary to worry about; it is all one native
+filesystem. Your home directory is `~` (that is, `/Users/<your-username>`). Keep
+your analysis projects anywhere convenient in your home folder.
 
-### A.6 (Mac) File locations
+::: {.callout-note collapse="true"}
+## A note on Homebrew (optional)
+Many Mac users install **Homebrew**, a general macOS package manager. It is handy
+for everyday tools, **but for this series we use Conda** for bioinformatics
+software, because Conda environments keep projects reproducible and isolated. You
+do **not** need Homebrew to follow along.
+:::
 
-Unlike WSL, there is no Windows/Linux boundary to worry about. It is all one native
-filesystem. Your home directory is `~` (that is, `/Users/<your-username>`). Keep your
-analysis projects anywhere convenient in your home folder.
-
-::: {.callout-warning}
-## 🧰 Troubleshooting Part A (Mac)
-- **`xcode-select --install` says "command line tools are already installed"** →
-  that is fine, nothing to do.
+::: {.callout-warning collapse="true"}
+## 🧰 Troubleshooting (macOS)
+- **`xcode-select --install` says the tools are already installed** → that is
+  fine, nothing to do.
 - **A tool later fails to install on Apple Silicon** → see the
-  [Apple Silicon callout in Part C](#apple-silicon-note); it is almost always an
+  [Apple Silicon note in Step 3](#apple-silicon-note); it is almost always an
   architecture (`osx-arm64` vs `osx-64`) issue, not a mistake on your part.
+- **The install flow does not match** → Apple's developer-tools flow changes
+  between macOS releases; check Apple's current guidance for your version.
+:::
+
+### 🐧 Linux
+
+You already have a real Unix shell, so there is nothing to install here. Make
+sure your package lists are current:
+
+```bash
+sudo apt update && sudo apt upgrade -y   # Debian/Ubuntu; use your distro's manager otherwise
+```
+
+Then continue straight to **Step 2**.
+
+:::
+
+::: {.callout-tip}
+## ✅ End of Step 1
+You now have a working Unix command line. On Windows that is your Ubuntu/WSL
+terminal; on macOS and Linux it is your Terminal. The rest of the module is the
+same for everyone.
 :::
 
 ---
 
-## Part B: Install Conda (Miniforge)
+## Step 2 · Install Conda (Miniforge)
 
-You now have a bench (a Unix shell). Next you need a way to fetch and organise
-tools without chaos. That is Conda.
+You have a bench (a Unix shell). Next you need a way to fetch and organise tools
+without chaos. That is Conda.
 
-::: {.callout-note}
-✅ From here on, the steps are the **same for Windows (inside your Ubuntu/WSL
-terminal) and macOS (in Terminal)** unless a callout says otherwise.
+**Conda** is a package and environment manager. It lets you install scientific
+software (and its dependencies) without `sudo`, and create **isolated
+environments** so Project A's tools do not break Project B's.
+
+We use **Miniforge**, a minimal, community-maintained installer that defaults to
+the **conda-forge** channel. Recent Miniforge installers also include **`mamba`**,
+a faster drop-in alternative to the `conda` command (anywhere you see
+`conda install ...`, you can usually use `mamba install ...`).
+
+::: {.callout-warning collapse="true"}
+## ⚠️ Verify: why Miniforge and not Miniconda/Anaconda
+Historically people installed Miniconda or Anaconda, which use Anaconda, Inc.'s
+"defaults" channel. **Anaconda changed the terms of service** for those channels,
+and some organizational or commercial uses may require a paid license. **Miniforge**
+sidesteps this by defaulting to the community **conda-forge** channel. If
+licensing matters for your institution, verify the *current* terms yourself; I
+cannot give legal advice.
 :::
 
-### B.1 What is Conda, and why Miniforge?
+#### Download and run the installer
 
-**Conda** is a package and environment manager. It lets you:
-
-- Install scientific software (and its dependencies) without `sudo`.
-- Create **isolated environments** so Project A's tools do not break Project B's.
-
-There are several ways to get Conda. This tutorial uses **Miniforge**, a minimal
-installer that is community-maintained and defaults to the **conda-forge**
-channel.
-
-::: {.callout-warning}
-## ⚠️ Verify: licensing has changed before
-Historically people installed "Miniconda"/"Anaconda", which use Anaconda, Inc.'s
-"defaults" channel. **Anaconda changed the terms of service** for using their
-channels, and some organizational/commercial uses may require a paid license.
-This is exactly the kind of thing that changes over time and that I cannot
-authoritatively rule on for your situation. **Miniforge** sidesteps this by using
-the community **conda-forge** channel by default, which is why it is recommended
-here. If licensing matters for your institution, verify the *current* terms
-yourself. I am not able to give you legal advice.
-:::
-
-Recent Miniforge installers also include **`mamba`**, a faster drop-in
-alternative to the `conda` command. Where you see `conda install ...` below, you
-can usually substitute `mamba install ...` for speed.
-
-### B.2 Download and run the installer
-
-The Miniforge project provides installers on its official GitHub releases page
-(the `conda-forge/miniforge` repository). A commonly documented one-line download
-that auto-detects your OS and CPU architecture is:
+A commonly documented one-liner auto-detects your OS and CPU architecture:
 
 ```bash
 curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
-```
-
-Then run the installer:
-
-```bash
 bash Miniforge3-$(uname)-$(uname -m).sh
 ```
 
-Follow the prompts:
+Follow the prompts: page through the license and type `yes` to accept, accept the
+default install location (usually `~/miniforge3`), and answer `yes` when asked to
+run `conda init` so `conda` is available in new terminals.
 
-- Press Enter / `q` to page through the license, then type `yes` to accept.
-- Accept the default install location (usually `~/miniforge3`) unless you have a
-  reason not to.
-- When asked whether to run `conda init`, answering `yes` sets up your shell so
-  `conda` is available in new terminals.
-
-::: {.callout-warning}
-## ⚠️ Verify
-Download URLs, installer filenames, and available architectures are defined by the
-Miniforge project and can change. If the `curl` command 404s, go to the official
+::: {.callout-warning collapse="true"}
+## ⚠️ Verify: the download URL can change
+Installer filenames and available architectures are defined by the Miniforge
+project. If the `curl` command returns a 404, open the official
 `conda-forge/miniforge` GitHub releases page and copy the current installer link
-for your system. Do not trust the exact URL above blindly. Confirm it resolves.
+for your system. Confirm it resolves rather than trusting the URL above blindly.
 :::
 
-### B.3 Activate conda in your shell
+#### Activate conda in your shell
 
 Close and reopen your terminal (or run the command the installer suggests, often
-`source ~/.bashrc`). You should now see `(base)` at the start of your prompt,
-indicating the base conda environment is active.
+`source ~/.bashrc`). You should now see `(base)` at the start of your prompt:
+
+```
+(base) amina@laptop:~$
+```
 
 ::: {.callout-note collapse="true"}
 ## ✅ Check: is conda working?
 ```bash
 conda --version
 ```
-This should print a version number. If instead you get "command not found", the
-shell init step did not run. Reopen the terminal, and if it still fails, re-run
-the installer's init step (look up the current `conda init` usage).
+Expected (version will differ):
+```
+conda 24.x.x
+```
+If instead you get "command not found", the shell init step did not run. Reopen
+the terminal; if it still fails, re-run the installer's `conda init` step.
 :::
 
-::: {.callout-tip}
-## Stop `(base)` from auto-activating (optional preference)
-Some people prefer conda *not* to auto-activate its base environment in every new
-shell. If that is you:
-
+::: {.callout-tip collapse="true"}
+## Optional: stop `(base)` auto-activating in every shell
 ```bash
 conda config --set auto_activate_base false
 ```
 :::
 
-::: {.callout-note}
-## macOS note
-The `curl` one-liner in B.2 auto-detects macOS vs Linux and Intel vs Apple Silicon
-via `$(uname)` and `$(uname -m)`, so the same commands work. You installed `curl`
-already with the Command Line Tools in Part A (macOS). Apple-Silicon users: see the
-[Apple Silicon callout in Part C](#apple-silicon-note) about package availability.
-:::
-
 ---
 
-## Part C: Configure channels and build your first environment
+## Step 3 · Configure channels and build your first environment
 
-Conda is installed. The final step is to tell it *where* to find bioinformatics
-software, and then build your very first environment. This is the moment the
-bench actually gets its tools.
+Conda is installed. Now tell it *where* to find bioinformatics software, then
+build your first environment. This is the moment the bench gets its tools.
 
-### C.1 What are "channels"?
+#### What are "channels"?
 
-Channels are the repositories Conda downloads packages from. For bioinformatics
-the two that matter are:
+Channels are the repositories Conda downloads from. Two matter for bioinformatics:
 
 - **conda-forge**: a huge community channel of general scientific software.
-- **bioconda**: the channel specifically for bioinformatics tools
-  (aligners, samtools, etc.). **Bioconda depends on conda-forge.**
+- **bioconda**: the channel for bioinformatics tools (aligners, samtools, and so
+  on). **Bioconda depends on conda-forge.**
 
-Think of them as two supply catalogues your bench orders from.
-
-### C.2 Configure the channels
-
-The Bioconda project documents a specific channel setup. A widely used
-configuration is:
+#### Configure the channels
 
 ```bash
 conda config --add channels bioconda
@@ -577,96 +452,80 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Because `--add` puts each new channel on top, the resulting priority order is
-**conda-forge (highest) → bioconda → (whatever else)**, which is the order
-Bioconda expects. `channel_priority strict` makes dependency resolution more
-reliable and faster.
-
-::: {.callout-warning}
-## ⚠️ Verify: this is a "check the current docs" step
-Bioconda's recommended channel configuration has been updated over time,
-partly in response to the Anaconda "defaults" channel licensing changes mentioned
-earlier. The three commands above reflect the common conda-forge-first pattern,
-**but the officially recommended setup is exactly the kind of thing that changes**.
-Before relying on this for real work, confirm the current recommended channel
-configuration on the **official Bioconda documentation site**. If your later
-`conda install` commands fail to find packages or complain about channels, an
-out-of-date channel config is the first thing to check.
-:::
+Because `--add` puts each new channel on top, the resulting priority is
+**conda-forge (highest) → bioconda → everything else**, which is what Bioconda
+expects. `channel_priority strict` makes dependency resolution more reliable and
+faster.
 
 ::: {.callout-note collapse="true"}
 ## ✅ Check your channel config
 ```bash
 conda config --show channels
 ```
-Confirm `conda-forge` is listed above `bioconda`.
+Expected order (conda-forge above bioconda):
+```
+channels:
+  - conda-forge
+  - bioconda
+```
 :::
 
-### Apple Silicon: when a Mac package "is not found" {#apple-silicon-note}
+::: {.callout-warning collapse="true"}
+## ⚠️ Verify: confirm the current Bioconda setup
+Bioconda's recommended channel configuration has been updated over time, partly in
+response to the Anaconda "defaults" licensing changes. The three commands above
+reflect the common conda-forge-first pattern, but confirm the current recommended
+setup on the **official Bioconda documentation** before relying on it for real
+work. If later `conda install` commands cannot find packages, an out-of-date
+channel config is the first thing to check.
+:::
 
-**Apple Silicon (M-series) users, read this before C.3.** Intel Mac, Windows,
-and Linux users can skip to C.3.
+::: {.callout-important collapse="true"}
+## Apple Silicon: when a Mac package "is not found" {#apple-silicon-note}
+**Apple Silicon (M-series) users only.** Intel Mac, Windows, and Linux users can
+skip this.
 
 Sometimes on Apple Silicon a `conda create`/`conda install` fails with a
-`PackagesNotFoundError` for a bioinformatics tool. A common cause is that the tool
-has an Intel-Mac build (`osx-64`) but not yet a native Apple-Silicon build
-(`osx-arm64`). A widely used workaround is to create an **Intel (`osx-64`)
-environment**, which then runs through **Rosetta 2** (installed in Part A):
+`PackagesNotFoundError` because the tool has an Intel-Mac build (`osx-64`) but not
+yet a native Apple-Silicon build (`osx-arm64`). A common workaround is to create
+an **Intel (`osx-64`) environment**, which runs through Rosetta 2:
 
 ```bash
-# Create the env forcing the Intel package set:
 CONDA_SUBDIR=osx-64 conda create -n bioinfo-intro fastqc samtools
-
-# Activate it, then make future installs into THIS env also use osx-64:
 conda activate bioinfo-intro
-conda config --env --set subdir osx-64
+conda config --env --set subdir osx-64   # future installs in THIS env also use osx-64
 ```
 
-::: {.callout-warning}
-## ⚠️ Verify: this is version- and tool-dependent
-Two important caveats I want to be honest about:
-
-1. **Native `osx-arm64` support keeps improving.** For many tools you may *not*
-   need this workaround at all. Try the normal command in C.3 first, and only
-   fall back to `osx-64` if you actually hit a "not found" error.
-2. The `CONDA_SUBDIR` / `conda config --env --set subdir` approach reflects a
-   commonly documented pattern, but the **exact mechanism can change between conda
-   versions**. Confirm the current recommended approach in the official conda
-   documentation before relying on it, and check the tool's Bioconda page to see
-   whether an `osx-arm64` build now exists.
+Two honest caveats: native `osx-arm64` support keeps improving, so try the normal
+command in the next section first and only fall back to this if you hit a "not
+found" error; and the exact `CONDA_SUBDIR` mechanism can change between conda
+versions, so confirm it in the current conda docs.
 :::
 
-### C.3 Create your first environment
+#### Create your first environment
 
-**Never install project tools into `base`.** Instead, make a dedicated
-environment. This is the labelled-bottle rule from the very start of the module,
-now in practice. Let us create one called `bioinfo-intro` with two classic tools:
-
-- **FastQC**: quality control reports for sequencing reads.
-- **samtools**: a Swiss-army knife for reading/writing sequence alignment files.
+**Never install project tools into `base`.** Make a dedicated environment. This
+is the labelled-bottle rule, now in practice. Create one called `bioinfo-intro`
+with two classic tools: **FastQC** (quality-control reports for sequencing reads)
+and **samtools** (a Swiss-army knife for sequence alignment files):
 
 ```bash
 conda create -n bioinfo-intro fastqc samtools
 ```
 
-- `-n bioinfo-intro` names the environment.
-- Conda will show a plan of packages to install; type `y` to proceed.
+`-n bioinfo-intro` names the environment; Conda shows a plan of packages, type `y`
+to proceed. (Swap `conda` for `mamba` for a faster solve if Miniforge installed
+it.)
 
-::: {.callout-tip}
-Swap `conda` for `mamba` for a faster solve if Miniforge installed it:
-`mamba create -n bioinfo-intro fastqc samtools`.
-:::
-
-::: {.callout-warning}
+::: {.callout-warning collapse="true"}
 ## ⚠️ Verify: pin versions for real projects
-For a quick demo, installing "latest" is fine. For **reproducible** work you
-should pin versions, for example `fastqc=<version>` and `samtools=<version>`. I am
-deliberately *not* hard-coding version numbers here because whatever I write would
-go stale. When you build a real analysis environment, record the exact versions
-you used (see C.6).
+For a quick demo, installing "latest" is fine. For **reproducible** work, pin
+versions (for example `fastqc=<version>`, `samtools=<version>`). I deliberately do
+not hard-code numbers here because they go stale. When you build a real analysis
+environment, record the exact versions you used (see Step 4).
 :::
 
-### C.4 Activate and use the environment
+#### Activate and use the environment
 
 ```bash
 conda activate bioinfo-intro
@@ -681,57 +540,48 @@ samtools --version
 
 ::: {.callout-note collapse="true"}
 ## ✅ Check
-Each command should print a version string. If you get "command not found", make
-sure the environment is **activated** (you should see `(bioinfo-intro)` in your
-prompt), not `(base)`.
+Each prints a version string, for example:
+```
+FastQC v0.xx.x
+samtools 1.xx
+```
+If you get "command not found", make sure the environment is **activated** (you
+should see `(bioinfo-intro)` in your prompt, not `(base)`).
 :::
 
-### C.5 Deactivate / switch environments
-
+::: {.callout-note collapse="true"}
+## Switching and listing environments
 ```bash
-conda deactivate
+conda deactivate         # back to base / no environment
+conda activate <name>    # switch to another project
+conda env list           # list all your environments
 ```
-
-This returns you to `base` (or no environment). Switching between projects is just
-`conda activate <name>`. List all your environments any time with:
-
-```bash
-conda env list
-```
-
-## 🎉 What just happened?
+:::
 
 ::: {.insight}
 Step back and see what you built. You did not just install two tools. You built a
-sealed room, `bioinfo-intro`, put FastQC and samtools inside it, and can now open
-and close that room at will with `conda activate` and `conda deactivate`.
-
-Next project needs different tools? Build a different room. They never touch each
-other. That isolation is the entire point, and it is why your future self will
-never spend a week debugging "it worked yesterday."
+sealed room, `bioinfo-intro`, put FastQC and samtools inside it, and can open and
+close that room at will. Next project needs different tools? Build a different
+room. They never touch each other. That isolation is the entire point, and it is
+why your future self will never spend a week debugging "it worked yesterday."
 :::
 
-### C.6 Reproducibility: export and rebuild an environment
+---
+
+## Step 4 · Make it reproducible
 
 This is one of the most important habits in bioinformatics. **Your analysis is
 only trustworthy if someone else (including future-you) can recreate the exact
 software environment.**
 
-Export the currently active environment to a file:
+Export the currently active environment to a file, and recreate it anywhere:
 
 ```bash
-conda env export > environment.yml
+conda env export > environment.yml          # save it
+conda env create -f environment.yml         # rebuild it elsewhere
 ```
 
-This `environment.yml` records the channels and the exact package versions. To
-recreate the environment somewhere else (another machine, a collaborator's
-laptop):
-
-```bash
-conda env create -f environment.yml
-```
-
-::: {.callout-tip}
+::: {.callout-tip collapse="true"}
 ## Two flavors of export
 - `conda env export` captures everything, including exact builds. Most
   reproducible, but can be OS-specific.
@@ -739,12 +589,12 @@ conda env create -f environment.yml
   asked for*. More portable across operating systems, less exact.
 
 For teaching/portability, `--from-history` is often nicer; for locking down a
-production pipeline, the full export is safer. **Verify the exact flag behavior in
-the current conda docs**, as export options have been refined over time.
+production pipeline, the full export is safer. Verify the exact flag behavior in
+the current conda docs.
 :::
 
-A minimal hand-written `environment.yml` looks like this (you can keep one of
-these per module in an `env/` folder):
+A minimal hand-written `environment.yml` looks like this (keep one per module in
+an `env/` folder):
 
 ```{.yaml filename="env/bioinfo-intro.yml"}
 name: bioinfo-intro
@@ -758,26 +608,20 @@ dependencies:
   #   - samtools=1.XX      # <-- replace with a real, current version
 ```
 
-::: {.callout-warning}
+::: {.callout-warning collapse="true"}
 ## ⚠️ Verify
-The `1.XX` above is a placeholder, **not a real version number**. I am not
-asserting a specific samtools version exists. Look up the current version on the
-tool's official page or with `conda search samtools` before pinning.
+The `1.XX` above is a placeholder, **not a real version number**. Look up the
+current version on the tool's official page or with `conda search samtools` before
+pinning.
 :::
 
-### C.7 Cleaning up (optional)
-
-To remove an environment you no longer need:
-
+::: {.callout-note collapse="true"}
+## Optional: cleaning up
 ```bash
-conda env remove -n bioinfo-intro
+conda env remove -n bioinfo-intro   # remove an environment you no longer need
+conda clean --all                   # reclaim disk space from cached downloads
 ```
-
-To reclaim disk space from cached downloads:
-
-```bash
-conda clean --all
-```
+:::
 
 ## 🚧 The mistake almost everyone makes
 
@@ -797,13 +641,16 @@ named environment. Always.
 ## 🧩 Mini challenge
 
 ::: {.challenge}
-Prof. Zola drops by and says: "Build me a second environment called `align-demo`
-with an aligner in it, and hand me a file I can use to rebuild it exactly."
+Prof. Zola drops by: "Build me a second environment called `align-demo` with an
+aligner in it, and hand me a file I can use to rebuild it exactly."
 
 Before you read on, sketch the commands in your head.
+:::
 
-**Answer:** create the environment (verify the package name first with
-`conda search`), activate it, then export it.
+::: {.callout-note collapse="true"}
+## Reveal the answer
+Create the environment (verify the package name first with `conda search`),
+activate it, then export it:
 
 ```bash
 conda create -n align-demo bwa      # or bowtie2; confirm the name with conda search
@@ -824,19 +671,20 @@ Amina: "...give me one minute."<br>
 Prof. Zola: "That minute is the whole job."
 :::
 
-## Three quick questions
+## Check yourself
 
-Not graded. Just checking yourself.
+Not graded. Just a quick self-test.
 
 1. Should you install project tools into `base`, or into a named environment?
 2. Which command saves an environment to a file you can rebuild it from?
-3. On the channel priority order, should `conda-forge` sit above or below
+3. In the channel priority order, should `conda-forge` sit above or below
    `bioconda`?
 
 ::: {.callout-note collapse="true"}
 ## Answers
-A named environment (never `base`). `conda env export > environment.yml`.
-`conda-forge` sits *above* `bioconda`, the order Bioconda expects.
+1. A named environment, never `base`.
+2. `conda env export > environment.yml`.
+3. `conda-forge` sits *above* `bioconda`, the order Bioconda expects.
 :::
 
 ## 🎯 Key takeaway
@@ -858,9 +706,9 @@ that countless labs around the world rely on every day.
 ## Where to go next
 
 You have finished the setup module, the foundation the rest of the series builds
-on. If parts of this felt fiddly, that is completely normal and not a sign you are
-"not a computer person." Shells and package managers are genuinely unintuitive at
-first, and become second nature only with repetition.
+on. If parts of this felt fiddly, that is completely normal and not a sign you
+are "not a computer person." Shells and package managers are genuinely
+unintuitive at first, and become second nature only with repetition.
 
 So the most useful thing you can do now is **practise**: create a few throwaway
 environments, install tools, break them, delete them, rebuild them. Muscle memory
@@ -868,13 +716,13 @@ is the whole game. And remember these tutorials are a starting point, not the
 finish line. Lean on the official docs for WSL, Conda, and Bioconda whenever you
 want to go deeper.
 
-::: {.callout-important}
+::: {.callout-important collapse="true"}
 ## One more time on accuracy
 If any command in this module did not behave as described, the most likely reasons
-are (1) a version/OS difference, or (2) the tool changed after this was written.
-Check the official documentation for **WSL (Microsoft)**, **Miniforge
-(conda-forge)**, **Conda**, and **Bioconda**. Those are the authoritative sources,
-and they supersede this tutorial whenever they disagree with it.
+are a version/OS difference, or the tool changed after this was written. Check the
+official documentation for **WSL (Microsoft)**, **Miniforge (conda-forge)**,
+**Conda**, and **Bioconda**. Those are the authoritative sources, and they
+supersede this tutorial whenever they disagree with it.
 :::
 
 ```{=html}
