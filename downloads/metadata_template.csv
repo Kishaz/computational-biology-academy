@@ -1,0 +1,7 @@
+sample_id,group,replicate,condition,fastq_r1,fastq_r2
+S01,control,1,untreated,S01_R1.fastq.gz,S01_R2.fastq.gz
+S02,control,2,untreated,S02_R1.fastq.gz,S02_R2.fastq.gz
+S03,control,3,untreated,S03_R1.fastq.gz,S03_R2.fastq.gz
+S04,treatment,1,treated,S04_R1.fastq.gz,S04_R2.fastq.gz
+S05,treatment,2,treated,S05_R1.fastq.gz,S05_R2.fastq.gz
+S06,treatment,3,treated,S06_R1.fastq.gz,S06_R2.fastq.gz

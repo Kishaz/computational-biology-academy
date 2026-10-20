@@ -5,6 +5,9 @@ project:
   # (CONTRIBUTING.md, the internal authoring playbook) off the public site.
   render:
     - "**/*.qmd"
+  # Copy the downloadable practice pack into the published site.
+  resources:
+    - downloads/
 
 website:
   title: "The Computational Biology Academy"
@@ -16,6 +19,8 @@ website:
     left:
       - href: index.qmd
         text: Home
+      - href: practice.qmd
+        text: "Practice data"
       - text: "Modules"
         menu:
           - href: modules/01-setup-environment/index.qmd
@@ -103,7 +108,9 @@ format:
     code-copy: true
     code-overflow: wrap
     css: styles.css
-    include-after-body: _coffee-signoff.html
+    include-after-body:
+      - _coffee-signoff.html
+      - _progress.html
 
 # NOTE: Version numbers of Quarto, R, Python and every bioinformatics tool
 # referenced in these tutorials change over time. Treat all version strings

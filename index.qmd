@@ -83,7 +83,9 @@ The best way to learn computational biology is not by memorizing commands. It is
 
 <!-- ============ MODULE EXPLORER ============ -->
 <h2 class="cba-h" id="modules">Explore the modules</h2>
-<p class="cba-sub">Fourteen self-contained stories. Filter by learning mode, then open any one.</p>
+<p class="cba-sub">Fourteen self-contained stories. Filter by learning mode, then open any one. Mark each one complete as you go, and your progress is saved in this browser.</p>
+
+<div class="cba-progress" id="cba-progress"></div>
 
 <div class="cba-filter" id="cba-filter">
   <button class="active" data-filter="all">All</button>

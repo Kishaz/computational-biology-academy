@@ -1,0 +1,67 @@
+<!-- Browser-local progress tracking for the Academy.
+     State lives in localStorage on the visitor's own device only.
+     It is never uploaded anywhere (this is a static site). -->
+<script>
+(function () {
+  var KEY = "cba-progress-v1";
+  function load() { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; } }
+  function save(o) { try { localStorage.setItem(KEY, JSON.stringify(o)); } catch (e) {} }
+  // Match "modules/<slug>/" whether or not there is a leading slash, so it
+  // works on both the page path (/modules/x/) and relative card hrefs (modules/x/).
+  function slugFrom(path) { var m = (path || "").match(/modules\/([^\/]+)\//); return m ? m[1] : null; }
+
+  var done = load();
+  var slug = slugFrom(location.pathname);
+
+  // ---- On a module page: add a "mark complete" control at the end ----
+  if (slug) {
+    var main = document.querySelector("main#quarto-document-content")
+            || document.querySelector("main.content")
+            || document.querySelector("main");
+    if (main) {
+      var box = document.createElement("div");
+      box.className = "cba-complete";
+      var btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "cba-complete-btn";
+      function render() {
+        var isDone = !!done[slug];
+        box.classList.toggle("is-done", isDone);
+        btn.textContent = isDone ? "✓ Completed (click to unmark)" : "Mark this module as complete";
+      }
+      btn.addEventListener("click", function () {
+        done = load();
+        if (done[slug]) { delete done[slug]; } else { done[slug] = Date.now(); }
+        save(done);
+        render();
+      });
+      box.appendChild(btn);
+      main.appendChild(box);
+      render();
+    }
+  }
+
+  // ---- On any page with a progress bar (the homepage) ----
+  var bar = document.getElementById("cba-progress");
+  if (bar) {
+    var cards = document.querySelectorAll(".cba-modcard");
+    var total = cards.length || 14, count = 0;
+    cards.forEach(function (c) {
+      var s = slugFrom(c.getAttribute("href") || "");
+      if (s && done[s]) { c.classList.add("is-done"); count++; }
+    });
+    var pct = total ? Math.round(count / total * 100) : 0;
+    var head = document.createElement("div");
+    head.className = "cba-progress-head";
+    head.innerHTML = "<span>Your progress</span><span>" + count + " of " + total + " complete</span>";
+    var track = document.createElement("div");
+    track.className = "cba-progress-track";
+    var fill = document.createElement("div");
+    fill.className = "cba-progress-fill";
+    track.appendChild(fill);
+    bar.appendChild(head);
+    bar.appendChild(track);
+    requestAnimationFrame(function () { fill.style.width = pct + "%"; });
+  }
+})();
+</script>

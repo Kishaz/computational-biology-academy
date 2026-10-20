@@ -324,6 +324,72 @@ body.quarto-dark .challenge { --box-accent: var(--cba-cyan); }
 .didyouknow::before { content: "💡 Did you know?"; }
 .challenge::before  { content: "🧩 Mini challenge"; }
 
+/* ============================================================
+   Progress tracking (browser-local, see _progress.html)
+   ============================================================ */
+
+/* Homepage progress bar */
+.cba-progress { margin: 0 0 1.1rem; }
+.cba-progress-head {
+  display: flex; justify-content: space-between; align-items: baseline;
+  font-weight: 700; font-size: 0.92rem; margin-bottom: 0.35rem;
+}
+.cba-progress-head span:last-child { color: var(--cba-accent); }
+.cba-progress-track {
+  height: 10px; border-radius: 999px;
+  background: color-mix(in srgb, var(--cba-navy) 12%, transparent);
+  overflow: hidden;
+}
+body.quarto-dark .cba-progress-track { background: rgba(255,255,255,0.1); }
+.cba-progress-fill {
+  height: 100%; width: 0;
+  background: linear-gradient(90deg, var(--cba-teal), var(--cba-cyan));
+  border-radius: 999px; transition: width 0.4s ease;
+}
+
+/* Completed module card badge (homepage) */
+a.cba-modcard.is-done { border-left-color: var(--cba-teal); }
+a.cba-modcard.is-done .num::after {
+  content: " ✓ done"; color: var(--cba-teal); font-weight: 800;
+}
+
+/* Per-module "mark complete" control */
+.cba-complete { text-align: center; margin: 2rem 0 0.5rem; }
+.cba-complete-btn {
+  font: inherit; font-weight: 700; cursor: pointer;
+  border: 2px solid var(--cba-accent); color: var(--cba-accent);
+  background: transparent; border-radius: 999px;
+  padding: 0.6rem 1.4rem; transition: all 0.15s ease;
+}
+.cba-complete-btn:hover { background: color-mix(in srgb, var(--cba-accent) 12%, transparent); }
+.cba-complete.is-done .cba-complete-btn {
+  background: var(--cba-teal); border-color: var(--cba-teal); color: #fff;
+}
+
+/* ============================================================
+   Practice / downloads
+   ============================================================ */
+.cba-downloads {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0.9rem; margin: 1.2rem 0;
+}
+a.cba-dl {
+  display: block; text-decoration: none; color: inherit;
+  border: 1px solid var(--cba-border);
+  border-left: 4px solid var(--cba-accent);
+  border-radius: 12px; padding: 1rem 1.1rem;
+  background: var(--cba-card-bg);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+a.cba-dl:hover { transform: translateY(-3px); box-shadow: var(--cba-shadow); }
+.cba-dl .dl-name { font-weight: 800; color: var(--cba-ink); }
+.cba-dl .dl-file {
+  font-family: var(--bs-font-monospace, monospace);
+  font-size: 0.82rem; color: var(--cba-accent);
+}
+.cba-dl .dl-desc { opacity: 0.8; font-size: 0.92rem; margin-top: 0.3rem; }
+
 /* Comic figure */
 .cba-comic { text-align: center; margin: 1.4rem 0; }
 .cba-comic img { max-width: 100%; border-radius: 10px; }

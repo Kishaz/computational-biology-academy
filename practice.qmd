@@ -1,0 +1,81 @@
+---
+title: "Practice data"
+subtitle: "A small, honest starter pack so you can actually run the commands."
+toc: true
+---
+
+The fastest way to learn is to run things yourself. This page gives you a tiny
+starter pack: a study-design template, a few synthetic reads for instant format
+practice, and a reproducible script that fetches a real reference genome. Nothing
+here is large, and nothing pretends to be something it is not.
+
+## Download the starter pack
+
+```{=html}
+<div class="cba-downloads">
+  <a class="cba-dl" href="downloads/metadata_template.csv" download>
+    <div class="dl-name">Study-design template</div>
+    <div class="dl-file">metadata_template.csv</div>
+    <div class="dl-desc">Sample, group, replicate, and condition columns. Copy it and describe your own experiment. Good study design starts here, before any analysis.</div>
+  </a>
+  <a class="cba-dl" href="downloads/toy_reads_R1.fastq" download>
+    <div class="dl-name">Toy reads (R1)</div>
+    <div class="dl-file">toy_reads_R1.fastq</div>
+    <div class="dl-desc">Six tiny synthetic forward reads. Perfect for practising FASTQ structure and quality control without any download.</div>
+  </a>
+  <a class="cba-dl" href="downloads/toy_reads_R2.fastq" download>
+    <div class="dl-name">Toy reads (R2)</div>
+    <div class="dl-file">toy_reads_R2.fastq</div>
+    <div class="dl-desc">The matching reverse reads, so you can practise paired-end thinking too.</div>
+  </a>
+  <a class="cba-dl" href="downloads/get_reference.sh" download>
+    <div class="dl-name">Reference fetcher</div>
+    <div class="dl-file">get_reference.sh</div>
+    <div class="dl-desc">A reproducible script that downloads a real reference genome (SARS-CoV-2, about 30 kb) from NCBI. This is how real data should travel: by script, not by email.</div>
+  </a>
+</div>
+```
+
+## How to use it
+
+::: {.cba-modsteps}
+1. **Make a project folder** &nbsp;·&nbsp; keep everything for one analysis together
+2. **Add the metadata** &nbsp;·&nbsp; copy `metadata_template.csv` and fill in your samples
+3. **Get the reads** &nbsp;·&nbsp; start with the toy reads, or run `get_reference.sh` for a real genome
+4. **Run the module** &nbsp;·&nbsp; follow the matching lesson and compare against its expected output
+:::
+
+Put the files in one folder and run the fetch script from a terminal where Conda
+is active (see [Module 01](modules/01-setup-environment/)):
+
+```bash
+mkdir practice-project && cd practice-project
+# copy the downloaded files into this folder, then:
+bash get_reference.sh
+ls
+```
+
+```
+# expected (yours may differ)
+get_reference.sh   metadata_template.csv   sars2.fasta   toy_reads_R1.fastq   toy_reads_R2.fastq
+```
+
+## Expected outputs
+
+You do not have to guess whether a command worked. Every module shows the output
+you should expect to see after each key step, so you can compare line by line. If
+your result does not match, that mismatch is the lesson: go back and find out why.
+
+::: {.callout-important collapse="true"}
+## A note on honesty (please read)
+- The **toy reads are synthetic**. They are made-up sequences for format practice,
+  not real biological data. Never report results from them as if they meant
+  something.
+- Real datasets are kept **out of the repository on purpose**. The honest,
+  reproducible way to share data is a small script that fetches it (like
+  `get_reference.sh`), so anyone can recreate the exact inputs.
+- The **single-cell and spatial modules use their own datasets** suited to those
+  methods. They are not automatic downstream products of one bulk RNA-seq run.
+- Accessions, URLs, and tool behaviour change over time. When something does not
+  match, trust the official documentation over this page.
+:::
